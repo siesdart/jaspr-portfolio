@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for siesdart on 2024-02-06T11:11:07+09:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'siesdart'
+primary_region = 'nrt'
+
+[build]
+
+[http_service]
+  internal_port = 8043
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 256

@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Files and directories created by pub.
+**/.dart_tool
+**/.packages
+
+# Conventional directory for cache.
+**/.cache
+
+# flyctl launch added from .gitignore
+fly.toml

@@ -1,0 +1,19 @@
+# Files and directories created by pub.
+.dart_tool/
+.packages
+
+# Dependency directories
+node_modules/
+
+# Conventional directory for build output.
+build/
+
+# Conventional directory for cache.
+.cache/
+
+# dotenv environment variable files.
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local

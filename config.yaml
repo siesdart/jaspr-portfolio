@@ -1,0 +1,50 @@
+title: siesdart.fly.dev
+description: 자신만의 철학을 바탕으로 길을 걷는 개발자
+url: https://siesdart.fly.dev
+locale: ko_KR
+github:
+  - title: siesdart
+    user: siesdart
+  - title: (구) Winrobrine
+    user: Winrobrine-zz
+birth: 2000. 03. 20
+location: 충청북도 영동군
+mail: ghwhsbsb123@naver.com
+project:
+  - Winrobrine-zz/KAIST_GenChem
+  - sparcs-kaist/otl-app
+  - systil3/madcamp_week3
+  - estherjsong/madweek4
+  - Winrobrine-zz/AlphaGu2
+  - Winrobrine-zz/OpticalSimulator
+education:
+  - period: 2019-03 ~ 재학 중
+    imageUrl: icons/kaist.svg
+    title: 한국과학기술원(KAIST)
+    content: 전산학부 · 기술경영학부 학사
+award:
+  - period: '2017.09'
+    imageUrl: icons/koi.webp
+    title: 제34회 한국정보올림피아드 공모대회
+    content: 고등부 동상
+  - period: '2015.07'
+    imageUrl: icons/koi.webp
+    title: 제32회 한국정보올림피아드 경시대회
+    content: 중등부 동상
+etc:
+  - period: '2024.01'
+    imageUrl: icons/madcamp.png
+    title: '몰입캠프: 프로그래밍과 스타트업'
+    content: 2023년 겨울학기
+  - period: 2021.08 ~ 2023.05
+    imageUrl: icons/rokaf.png
+    title: 컴퓨터자산관리체계 유지보수 및 개발
+    content: 대한민국 공군 군수사령부
+  - period: '2019.11'
+    imageUrl: icons/devfest.webp
+    title: DevFest on Campus 2019
+    content: Flutter 코드랩 튜터
+  - period: '2019.05'
+    imageUrl: icons/topcit.svg
+    title: TOPCIT
+    content: 255점 수준 2

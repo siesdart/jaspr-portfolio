@@ -1,0 +1,23 @@
+import 'package:jaspr/jaspr.dart';
+
+class Footer extends StatelessComponent {
+  @override
+  Iterable<Component> build(BuildContext context) sync* {
+    yield footer(classes: 'border-t text-center mx-2 py-4 lg:py-8', [
+      a(
+        classes:
+            'text-xs decoration-2 decoration-[#00BCD4] underline underline-offset-8 mx-auto lg:text-sm',
+        [
+          text('본 홈페이지는 '),
+          span(
+            classes: 'font-bold',
+            [text('Jaspr')],
+          ),
+          text('를 사용해 제작되었습니다.'),
+        ],
+        href: 'https://github.com/schultek/jaspr',
+        target: Target.blank,
+      ),
+    ]);
+  }
+}
