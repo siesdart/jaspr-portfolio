@@ -25,17 +25,17 @@ class Skill extends StatelessComponent {
       div(
         classes:
             'absolute top-28 left-[calc(50%-1.25rem)] lg:top-48 lg:left-[calc(50%-2.5rem)]',
-        [_buildIcon('csharp/csharp-original.svg')],
+        [_buildIcon('csharp/csharp-original.svg', 'csharp icon')],
       ),
       div(
         classes:
             'absolute top-14 left-[calc(50%-1.25rem)] lg:top-24 lg:left-[calc(50%-2.5rem)]',
-        [_buildIcon('icons/wpf.png', false)],
+        [_buildIcon('icons/wpf.png', 'wpf icon', false)],
       ),
       div(
         classes: 'absolute left-[calc(50%-1.25rem)] lg:left-[calc(50%-2.5rem)]',
         [
-          _buildIcon('icons/mldotnet.png', false),
+          _buildIcon('icons/mldotnet.png', 'ml.net icon', false),
         ],
       ),
     ];
@@ -43,68 +43,68 @@ class Skill extends StatelessComponent {
       div(
         classes:
             'absolute top-[9.5rem] left-[calc(50%-3.75rem)] lg:top-[17rem] lg:left-[calc(50%-6.5rem)]',
-        [_buildIcon('typescript/typescript-original.svg')],
+        [_buildIcon('typescript/typescript-original.svg', 'typescript icon')],
       ),
       div(
         classes:
             'absolute top-48 left-[calc(50%-6.25rem)]  lg:top-[22rem] lg:left-[calc(50%-11rem)]',
-        [_buildIcon('svelte/svelte-original.svg')],
+        [_buildIcon('svelte/svelte-original.svg', 'svelte icon')],
       ),
       div(
         classes:
             'absolute top-[14.5rem] left-[calc(50%-8.75rem)] lg:top-[27rem] lg:left-[calc(50%-15.5rem)]',
-        [_buildIcon('express/express-original.svg')],
+        [_buildIcon('express/express-original.svg', 'express icon')],
       ),
     ];
     final dart = [
       div(
         classes:
             'absolute top-[9.5rem] left-[calc(50%+1.25rem)] lg:top-[17rem] lg:left-[calc(50%+1.5rem)]',
-        [_buildIcon('dart/dart-original.svg')],
+        [_buildIcon('dart/dart-original.svg', 'dart icon')],
       ),
       div(
         classes:
             'absolute top-48 left-[calc(50%+3.75rem)] lg:top-[22rem] lg:left-[calc(50%+6rem)]',
-        [_buildIcon('flutter/flutter-original.svg')],
+        [_buildIcon('flutter/flutter-original.svg', 'flutter icon')],
       ),
       div(
         classes:
             'absolute top-[14.5rem] left-[calc(50%+6.25rem)] lg:top-[27rem] lg:left-[calc(50%+10.5rem)]',
-        [_buildIcon('icons/jaspr.png', false)],
+        [_buildIcon('icons/jaspr.png', 'jaspr icon', false)],
       ),
     ];
     final etc1 = [
       div(
         classes:
             'absolute top-16 left-[calc(10%-1.45rem)] lg:top-36 lg:left-[calc(5%-1.25rem)]',
-        [_buildIcon('firebase/firebase-plain.svg')],
+        [_buildIcon('firebase/firebase-plain.svg', 'firebase icon')],
       ),
       div(
         classes:
             'absolute top-16 left-[calc(10%+1.95rem)] lg:top-36 lg:left-[calc(5%+4.75rem)]',
-        [_buildIcon('azure/azure-original.svg')],
+        [_buildIcon('azure/azure-original.svg', 'azure icon')],
       ),
       div(
         classes:
             'absolute top-28 left-[calc(10%+0.25rem)] lg:top-56 lg:left-[calc(5%+1.75rem)]',
-        [_buildIcon('tailwindcss/tailwindcss-plain.svg')],
+        [_buildIcon('tailwindcss/tailwindcss-plain.svg', 'tailwindcss icon')],
       ),
     ];
     final etc2 = [
       div(
         classes:
             'absolute top-16 right-[calc(10%+1.95rem)] lg:top-36 lg:right-[calc(5%+4.75rem)]',
-        [_buildIcon('postgresql/postgresql-original.svg')],
+        [_buildIcon('postgresql/postgresql-original.svg', 'postgresql icon')],
       ),
       div(
         classes:
             'absolute top-16 right-[calc(10%-1.45rem)] lg:top-36 lg:right-[calc(5%-1.25rem)]',
-        [_buildIcon('mongodb/mongodb-original.svg')],
+        [_buildIcon('mongodb/mongodb-original.svg', 'mongodb icon')],
       ),
       div(
         classes:
             'absolute top-28 right-[calc(10%+0.25rem)] lg:top-56 lg:right-[calc(5%+1.75rem)]',
-        [_buildIcon('icons/drizzle.svg', false)],
+        [_buildIcon('icons/drizzle.svg', 'drizzle icon', false)],
       ),
     ];
     return div(classes: 'relative h-[18rem] lg:h-[34rem]', [
@@ -116,7 +116,7 @@ class Skill extends StatelessComponent {
     ]);
   }
 
-  Component _buildIcon(String icon, [bool devIcon = true]) {
+  Component _buildIcon(String icon, String alt, [bool devIcon = true]) {
     return div(
       classes:
           'inline-block bg-gray-100 p-2 rounded-full hover:bg-gray-200 lg:p-4',
@@ -126,6 +126,7 @@ class Skill extends StatelessComponent {
           src: devIcon
               ? 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/$icon'
               : icon,
+          alt: alt,
           loading: MediaLoading.lazy,
         ),
       ],
