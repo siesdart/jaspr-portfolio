@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: deploy-group
     steps:
-      - uses: actions/checkout@v3
-      - uses: superfly/flyctl-actions@1.5
-      - run: flyctl deploy --remote-only
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+      - name: 🚀 Deploy Production
+        uses: superfly/flyctl-actions@1.5
+        with:
+          args: deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
