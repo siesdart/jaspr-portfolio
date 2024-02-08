@@ -8,5 +8,4 @@ node_modules/
 # Conventional directory for cache.
 **/.cache
 
-# flyctl launch added from .gitignore
 fly.toml
