@@ -7,13 +7,12 @@ class Aside extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     final config = context.watch(configProvider).value!;
     yield aside(
-      classes:
-          'flex-none flex flex-col gap-2 lg:w-56 lg:mx-8 lg:fixed lg:top-64',
+      classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-64',
       [
         ...config.github.map(
           (github) => _buildItem(
             svg(
-              classes: 'w-5 h-5 lg:w-6 lg:h-6 fill-slate-900',
+              classes: 'size-5 lg:size-6 fill-slate-900',
               viewBox: '0 0 24 24',
               [
                 path(
@@ -29,7 +28,7 @@ class Aside extends StatelessComponent {
         hr(classes: 'my-1 lg:my-2'),
         _buildItem(
           svg(
-            classes: 'w-5 h-5 lg:w-6 lg:h-6 fill-none stroke-slate-900',
+            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
             viewBox: '0 0 24 24',
             [
               path(
@@ -42,7 +41,7 @@ class Aside extends StatelessComponent {
         ),
         _buildItem(
           svg(
-            classes: 'w-5 h-5 lg:w-6 lg:h-6 fill-none stroke-slate-900',
+            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
             viewBox: '0 0 24 24',
             [
               path([], d: 'M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'),
@@ -56,7 +55,7 @@ class Aside extends StatelessComponent {
         ),
         _buildItem(
           svg(
-            classes: 'w-5 h-5 lg:w-6 lg:h-6 fill-none stroke-slate-900',
+            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
             viewBox: '0 0 24 24',
             [
               path(
@@ -70,7 +69,6 @@ class Aside extends StatelessComponent {
         ),
       ],
     );
-    yield div(classes: 'w-0 lg:w-72', []);
   }
 
   Component _buildItem(Component svg, String title, [String? href]) {

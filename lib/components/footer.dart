@@ -3,7 +3,7 @@ import 'package:jaspr/jaspr.dart';
 class Footer extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield footer(classes: 'border-t text-center mx-2 py-4 lg:py-8', [
+    yield footer(classes: 'border-t text-center mx-2 py-6 lg:py-8', [
       a(
         classes:
             'text-xs decoration-2 decoration-[#00BCD4] underline underline-offset-8 mx-auto lg:text-sm',

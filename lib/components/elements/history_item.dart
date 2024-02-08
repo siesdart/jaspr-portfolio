@@ -30,7 +30,7 @@ class HistoryItem extends StatelessComponent {
         [text(period)],
       ),
       img(
-        classes: 'flex-none w-12 h-12',
+        classes: 'flex-none size-12',
         src: imageUrl,
         loading: MediaLoading.lazy,
       ),

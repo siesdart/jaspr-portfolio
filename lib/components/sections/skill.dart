@@ -109,7 +109,7 @@ class Skill extends StatelessComponent {
         [_buildIcon('icons/drizzle.svg', 'drizzle icon', false)],
       ),
     ];
-    return div(classes: 'relative h-[18rem] lg:h-[34rem]', [
+    return div(classes: 'relative h-72 lg:h-[34rem]', [
       ...csharp,
       ...ts,
       ...dart,
@@ -124,7 +124,7 @@ class Skill extends StatelessComponent {
           'inline-block bg-gray-100 p-2 rounded-full hover:bg-gray-200 lg:p-4',
       [
         img(
-          classes: 'w-8 h-8 lg:w-12 lg:h-12',
+          classes: 'size-8 lg:size-12',
           src: devIcon
               ? 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/$icon'
               : icon,

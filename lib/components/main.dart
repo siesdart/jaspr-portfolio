@@ -15,12 +15,12 @@ class Main extends StatelessComponent {
     yield DomComponent(
       tag: 'main',
       classes:
-          'flex flex-col items-center my-4 lg:flex-row lg:items-start lg:my-8',
+          'grid grid-cols-1 place-items-center my-4 px-6 lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:my-8 lg:px-8',
       children: [
         Aside(),
         div(
           classes:
-              'max-w-screen-sm flex-none flex flex-col gap-6 mt-4 mx-6 lg:max-w-screen-md lg:mt-0 lg:mx-auto',
+              'max-w-screen-sm flex flex-col gap-6 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
           [
             Section(id: 'intro', title: '1. 소개', children: [Introduction()]),
             Section(id: 'skill', title: '2. 기술 스택', children: [Skill()]),

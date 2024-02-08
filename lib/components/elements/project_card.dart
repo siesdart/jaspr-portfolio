@@ -38,7 +38,7 @@ class ProjectCard extends StatelessComponent {
         ),
         div(classes: 'flex items-center text-xs mt-2 lg:text-sm', [
           svg(
-            classes: 'w-5 h-5 fill-slate-900 mr-1',
+            classes: 'size-5 fill-slate-900 mr-1',
             viewBox: '0 0 24 24',
             [
               path(
@@ -49,7 +49,7 @@ class ProjectCard extends StatelessComponent {
           ),
           span([text(stargazersCount.toString())]),
           svg(
-            classes: 'w-4 h-4 fill-slate-900 ml-3 mr-1',
+            classes: 'size-4 fill-slate-900 ml-3 mr-1',
             viewBox: '0 0 16 16',
             [
               path(
