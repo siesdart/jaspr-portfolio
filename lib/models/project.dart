@@ -10,6 +10,7 @@ class Project with ProjectMappable {
   final String? description;
   final int stargazersCount;
   final int forks;
+  final DateTime createdAt;
   final DateTime pushedAt;
 
   Project({
@@ -18,6 +19,7 @@ class Project with ProjectMappable {
     required this.description,
     required this.stargazersCount,
     required this.forks,
+    required this.createdAt,
     required this.pushedAt,
   });
 }

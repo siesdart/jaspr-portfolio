@@ -24,7 +24,12 @@ class Main extends StatelessComponent {
           [
             Section(id: 'intro', title: '1. 소개', children: [Introduction()]),
             Section(id: 'skill', title: '2. 기술 스택', children: [Skill()]),
-            Section(id: 'project', title: '3. 프로젝트', children: [Project()]),
+            Section(
+              id: 'project',
+              title: '3. 프로젝트',
+              border: true,
+              children: [Project()],
+            ),
             Section(
               id: 'edu',
               title: '4. 학력',
