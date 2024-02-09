@@ -14,7 +14,7 @@ class Config with ConfigMappable {
   final String birth;
   final String location;
   final String mail;
-  final List<String> project;
+  final List<Map<String, dynamic>> project;
   final List<History> education;
   final List<History> award;
   final List<History> etc;

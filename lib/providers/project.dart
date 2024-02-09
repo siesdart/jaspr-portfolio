@@ -8,9 +8,10 @@ final projectsProvider = SyncProvider<List<Project>>(
   (ref) async {
     final repos = ref.read(configProvider).value!.project;
     final projects = await Future.wait(repos.map((repo) async {
-      final response =
-          await dio.get<String>('https://api.github.com/repos/$repo');
-      return ProjectMapper.fromJson(response.data!);
+      final response = await dio.get<Map<String, dynamic>>(
+        'https://api.github.com/repos/${repo['repo']}',
+      );
+      return ProjectMapper.fromMap({...response.data!, 'year': repo['year']});
     }));
     return projects;
   },

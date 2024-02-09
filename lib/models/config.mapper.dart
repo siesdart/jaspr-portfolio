@@ -41,8 +41,8 @@ class ConfigMapper extends ClassMapperBase<Config> {
       Field('location', _$location);
   static String _$mail(Config v) => v.mail;
   static const Field<Config, String> _f$mail = Field('mail', _$mail);
-  static List<String> _$project(Config v) => v.project;
-  static const Field<Config, List<String>> _f$project =
+  static List<Map<String, dynamic>> _$project(Config v) => v.project;
+  static const Field<Config, List<Map<String, dynamic>>> _f$project =
       Field('project', _$project);
   static List<History> _$education(Config v) => v.education;
   static const Field<Config, List<History>> _f$education =
@@ -134,7 +134,9 @@ extension ConfigValueCopy<$R, $Out> on ObjectCopyWith<$R, Config, $Out> {
 abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github;
-  ListCopyWith<$R, String, ObjectCopyWith<$R, String, String>> get project;
+  ListCopyWith<$R, Map<String, dynamic>,
+          ObjectCopyWith<$R, Map<String, dynamic>, Map<String, dynamic>>>
+      get project;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
       get education;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get award;
@@ -148,7 +150,7 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
       String? birth,
       String? location,
       String? mail,
-      List<String>? project,
+      List<Map<String, dynamic>>? project,
       List<History>? education,
       List<History>? award,
       List<History>? etc});
@@ -166,9 +168,10 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       ListCopyWith($value.github, (v, t) => v.copyWith.$chain(t),
           (v) => call(github: v));
   @override
-  ListCopyWith<$R, String, ObjectCopyWith<$R, String, String>> get project =>
-      ListCopyWith($value.project, (v, t) => ObjectCopyWith(v, $identity, t),
-          (v) => call(project: v));
+  ListCopyWith<$R, Map<String, dynamic>,
+          ObjectCopyWith<$R, Map<String, dynamic>, Map<String, dynamic>>>
+      get project => ListCopyWith($value.project,
+          (v, t) => ObjectCopyWith(v, $identity, t), (v) => call(project: v));
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
       get education => ListCopyWith($value.education,
@@ -191,7 +194,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
           String? birth,
           String? location,
           String? mail,
-          List<String>? project,
+          List<Map<String, dynamic>>? project,
           List<History>? education,
           List<History>? award,
           List<History>? etc}) =>

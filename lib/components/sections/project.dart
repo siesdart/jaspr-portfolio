@@ -9,7 +9,7 @@ class Project extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     switch (context.watch(projectsProvider)) {
       case AsyncData(:final value):
-        final projects = groupBy(value, (project) => project.createdAt.year)
+        final projects = groupBy(value, (project) => project.year)
             .entries
             .sorted((a, b) => b.key.compareTo(a.key));
         for (final MapEntry(:key, :value) in projects) {

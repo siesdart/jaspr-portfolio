@@ -11,13 +11,20 @@ birth: 2000. 03. 20
 location: 충청북도 영동군
 mail: ghwhsbsb123@naver.com
 project:
-  - Winrobrine-zz/KAIST_GenChem
-  - sparcs-kaist/otl-app
-  - siesdart/jaspr-portfolio
-  - systil3/madcamp_week3
-  - estherjsong/madweek4
-  - Winrobrine-zz/AlphaGu2
-  - Winrobrine-zz/OpticalSimulator
+  - year: 2019
+    repo: Winrobrine-zz/KAIST_GenChem
+  - year: 2020
+    repo: sparcs-kaist/otl-app
+  - year: 2024
+    repo: siesdart/jaspr-portfolio
+  - year: 2024
+    repo: systil3/madcamp_week3
+  - year: 2024
+    repo: estherjsong/madweek4
+  - year: 2018
+    repo: Winrobrine-zz/AlphaGu2
+  - year: 2018
+    repo: Winrobrine-zz/OpticalSimulator
 education:
   - period: 2019-03 ~ 재학 중
     imageUrl: icons/kaist.svg

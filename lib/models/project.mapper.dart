@@ -34,9 +34,8 @@ class ProjectMapper extends ClassMapperBase<Project> {
       Field('stargazersCount', _$stargazersCount, key: 'stargazers_count');
   static int _$forks(Project v) => v.forks;
   static const Field<Project, int> _f$forks = Field('forks', _$forks);
-  static DateTime _$createdAt(Project v) => v.createdAt;
-  static const Field<Project, DateTime> _f$createdAt =
-      Field('createdAt', _$createdAt, key: 'created_at');
+  static int _$year(Project v) => v.year;
+  static const Field<Project, int> _f$year = Field('year', _$year);
   static DateTime _$pushedAt(Project v) => v.pushedAt;
   static const Field<Project, DateTime> _f$pushedAt =
       Field('pushedAt', _$pushedAt, key: 'pushed_at');
@@ -48,7 +47,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
     #description: _f$description,
     #stargazersCount: _f$stargazersCount,
     #forks: _f$forks,
-    #createdAt: _f$createdAt,
+    #year: _f$year,
     #pushedAt: _f$pushedAt,
   };
 
@@ -59,7 +58,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
         description: data.dec(_f$description),
         stargazersCount: data.dec(_f$stargazersCount),
         forks: data.dec(_f$forks),
-        createdAt: data.dec(_f$createdAt),
+        year: data.dec(_f$year),
         pushedAt: data.dec(_f$pushedAt));
   }
 
@@ -120,7 +119,7 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
       String? description,
       int? stargazersCount,
       int? forks,
-      DateTime? createdAt,
+      int? year,
       DateTime? pushedAt});
   ProjectCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
@@ -140,7 +139,7 @@ class _ProjectCopyWithImpl<$R, $Out>
           Object? description = $none,
           int? stargazersCount,
           int? forks,
-          DateTime? createdAt,
+          int? year,
           DateTime? pushedAt}) =>
       $apply(FieldCopyWithData({
         if (url != null) #url: url,
@@ -148,7 +147,7 @@ class _ProjectCopyWithImpl<$R, $Out>
         if (description != $none) #description: description,
         if (stargazersCount != null) #stargazersCount: stargazersCount,
         if (forks != null) #forks: forks,
-        if (createdAt != null) #createdAt: createdAt,
+        if (year != null) #year: year,
         if (pushedAt != null) #pushedAt: pushedAt
       }));
   @override
@@ -158,7 +157,7 @@ class _ProjectCopyWithImpl<$R, $Out>
       description: data.get(#description, or: $value.description),
       stargazersCount: data.get(#stargazersCount, or: $value.stargazersCount),
       forks: data.get(#forks, or: $value.forks),
-      createdAt: data.get(#createdAt, or: $value.createdAt),
+      year: data.get(#year, or: $value.year),
       pushedAt: data.get(#pushedAt, or: $value.pushedAt));
 
   @override
