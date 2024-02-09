@@ -109,7 +109,7 @@ class Skill extends StatelessComponent {
         [_buildIcon('icons/drizzle.svg', 'drizzle icon', false)],
       ),
     ];
-    return div(classes: 'relative h-72 lg:h-[34rem]', [
+    return div(classes: 'relative h-72 lg:h-[30rem]', [
       ...csharp,
       ...ts,
       ...dart,
