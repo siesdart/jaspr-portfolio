@@ -1,4 +1,5 @@
 # Files and directories created by pub.
+**/doc/api/
 .dart_tool/
 .packages
 
@@ -6,10 +7,26 @@
 node_modules/
 
 # Conventional directory for build output.
-build/
+/build/
 
-# Conventional directory for cache.
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
 .cache/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
 # dotenv environment variable files.
 .env
@@ -17,3 +34,8 @@ build/
 .env.test.local
 .env.production.local
 .env.local
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/

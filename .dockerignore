@@ -1,11 +1,41 @@
+# Files and directories created by pub.
+**/doc/api/
+.dart_tool/
+.packages
+
 # Dependency directories
 node_modules/
 
-# Files and directories created by pub.
-**/.dart_tool
-**/.packages
+# Conventional directory for build output.
+/build/
 
-# Conventional directory for cache.
-**/.cache
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.cache/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Files and directories related to git.
+.git/
+.github/
+.gitignore
 
 fly.toml
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/

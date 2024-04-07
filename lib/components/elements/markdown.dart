@@ -51,7 +51,7 @@ class _MarkdownState extends State<Markdown> {
   Iterable<Component> buildMarkdown(Iterable<Node> nodes) sync* {
     for (final node in nodes) {
       if (node is md.Text) {
-        yield span([text(node.text, rawHtml: true)]);
+        yield span([raw(node.text)]);
       } else if (node is md.Element) {
         yield DomComponent(
           tag: node.tag,
