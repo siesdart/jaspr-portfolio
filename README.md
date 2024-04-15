@@ -24,11 +24,8 @@ jaspr serve
 ## Deployment 📦
 
 ```bash
-# Build the SSR web app
+# Build the website
 jaspr build
-
-# Generate a static website
-jaspr generate
 
 # Deploy to fly.io (flyctl needed)
 flyctl deploy --remote-only
