@@ -28,6 +28,7 @@ void main() async {
   runApp(Document(
     title: config.title,
     head: [link(href: 'styles.css', rel: 'stylesheet')],
+    lang: config.locale.split('_')[0],
     meta: {
       'description': config.description,
       'robots': 'index, follow',
