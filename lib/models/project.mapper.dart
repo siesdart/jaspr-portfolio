@@ -29,6 +29,10 @@ class ProjectMapper extends ClassMapperBase<Project> {
   static String? _$description(Project v) => v.description;
   static const Field<Project, String> _f$description =
       Field('description', _$description);
+  static String _$lang(Project v) => v.lang;
+  static const Field<Project, String> _f$lang = Field('lang', _$lang);
+  static String _$tech(Project v) => v.tech;
+  static const Field<Project, String> _f$tech = Field('tech', _$tech);
   static int _$stargazersCount(Project v) => v.stargazersCount;
   static const Field<Project, int> _f$stargazersCount =
       Field('stargazersCount', _$stargazersCount, key: 'stargazers_count');
@@ -36,19 +40,17 @@ class ProjectMapper extends ClassMapperBase<Project> {
   static const Field<Project, int> _f$forks = Field('forks', _$forks);
   static int _$year(Project v) => v.year;
   static const Field<Project, int> _f$year = Field('year', _$year);
-  static DateTime _$pushedAt(Project v) => v.pushedAt;
-  static const Field<Project, DateTime> _f$pushedAt =
-      Field('pushedAt', _$pushedAt, key: 'pushed_at');
 
   @override
   final MappableFields<Project> fields = const {
     #url: _f$url,
     #fullName: _f$fullName,
     #description: _f$description,
+    #lang: _f$lang,
+    #tech: _f$tech,
     #stargazersCount: _f$stargazersCount,
     #forks: _f$forks,
     #year: _f$year,
-    #pushedAt: _f$pushedAt,
   };
 
   static Project _instantiate(DecodingData data) {
@@ -56,10 +58,11 @@ class ProjectMapper extends ClassMapperBase<Project> {
         url: data.dec(_f$url),
         fullName: data.dec(_f$fullName),
         description: data.dec(_f$description),
+        lang: data.dec(_f$lang),
+        tech: data.dec(_f$tech),
         stargazersCount: data.dec(_f$stargazersCount),
         forks: data.dec(_f$forks),
-        year: data.dec(_f$year),
-        pushedAt: data.dec(_f$pushedAt));
+        year: data.dec(_f$year));
   }
 
   @override
@@ -115,10 +118,11 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
       {String? url,
       String? fullName,
       String? description,
+      String? lang,
+      String? tech,
       int? stargazersCount,
       int? forks,
-      int? year,
-      DateTime? pushedAt});
+      int? year});
   ProjectCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -135,28 +139,31 @@ class _ProjectCopyWithImpl<$R, $Out>
           {String? url,
           String? fullName,
           Object? description = $none,
+          String? lang,
+          String? tech,
           int? stargazersCount,
           int? forks,
-          int? year,
-          DateTime? pushedAt}) =>
+          int? year}) =>
       $apply(FieldCopyWithData({
         if (url != null) #url: url,
         if (fullName != null) #fullName: fullName,
         if (description != $none) #description: description,
+        if (lang != null) #lang: lang,
+        if (tech != null) #tech: tech,
         if (stargazersCount != null) #stargazersCount: stargazersCount,
         if (forks != null) #forks: forks,
-        if (year != null) #year: year,
-        if (pushedAt != null) #pushedAt: pushedAt
+        if (year != null) #year: year
       }));
   @override
   Project $make(CopyWithData data) => Project(
       url: data.get(#url, or: $value.url),
       fullName: data.get(#fullName, or: $value.fullName),
       description: data.get(#description, or: $value.description),
+      lang: data.get(#lang, or: $value.lang),
+      tech: data.get(#tech, or: $value.tech),
       stargazersCount: data.get(#stargazersCount, or: $value.stargazersCount),
       forks: data.get(#forks, or: $value.forks),
-      year: data.get(#year, or: $value.year),
-      pushedAt: data.get(#pushedAt, or: $value.pushedAt));
+      year: data.get(#year, or: $value.year));
 
   @override
   ProjectCopyWith<$R2, Project, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>

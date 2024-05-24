@@ -1,21 +1,22 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:timeago/timeago.dart' as timeago;
 
 class ProjectCard extends StatelessComponent {
   final String url;
   final String fullName;
   final String description;
+  final String lang;
+  final String tech;
   final int stargazersCount;
   final int forks;
-  final DateTime pushedAt;
 
   const ProjectCard({
     required this.url,
     required this.fullName,
     required this.description,
+    required this.lang,
+    required this.tech,
     required this.stargazersCount,
     required this.forks,
-    required this.pushedAt,
   });
 
   @override
@@ -59,7 +60,19 @@ class ProjectCard extends StatelessComponent {
             ],
           ),
           span([text(forks.toString())]),
-          span(classes: 'flex-1 text-end', [text(timeago.format(pushedAt))]),
+          span(classes: 'flex-1', []),
+          svg(
+            classes: 'size-5 mr-1',
+            styles: Styles.raw({'fill': '#$lang'}),
+            viewBox: '0 0 16 16',
+            [
+              path(
+                [],
+                d: 'M8 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z',
+              ),
+            ],
+          ),
+          span(classes: 'text-end', [text(tech)]),
         ]),
       ],
     );

@@ -11,7 +11,12 @@ final projectsProvider = SyncProvider<List<Project>>(
       final response = await dio.get<Map<String, dynamic>>(
         'https://api.github.com/repos/${repo['repo']}',
       );
-      return ProjectMapper.fromMap({...response.data!, 'year': repo['year']});
+      return ProjectMapper.fromMap({
+        ...response.data!,
+        'year': repo['year'],
+        'lang': repo['lang'],
+        'tech': repo['tech'],
+      });
     }));
     return projects;
   },

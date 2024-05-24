@@ -22,9 +22,10 @@ class Project extends StatelessComponent {
                         url: project.url,
                         fullName: project.fullName,
                         description: project.description ?? '',
+                        lang: project.lang,
+                        tech: project.tech,
                         stargazersCount: project.stargazersCount,
                         forks: project.forks,
-                        pushedAt: project.pushedAt,
                       ))
                   .toList(),
             ),
