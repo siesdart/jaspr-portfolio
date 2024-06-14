@@ -1,0 +1,8 @@
+id: fps
+title: CurtainFPS @ 몰입캠프
+introduction: 탄막 슈팅 요소를 접목한 싱글 FPS 게임
+year: 2024
+repo: systil3/madcamp_week3
+color: 178600
+image: null
+tags: [C#, Unity]

@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/project_card.dart';
+import 'package:portfolio/components/elements/project_item.dart';
 import 'package:portfolio/providers/project.dart';
 
 class Project extends StatelessComponent {
@@ -13,21 +13,11 @@ class Project extends StatelessComponent {
             .entries
             .sorted((a, b) => b.key.compareTo(a.key));
         for (final MapEntry(:key, :value) in projects) {
-          yield div(classes: 'flex gap-4', [
+          yield div(classes: 'flex flex-col gap-2', [
             span(classes: 'text-gray-400', [text(key.toString())]),
-            div(
-              classes: 'flex-1 grid grid-cols-1 gap-4 md:grid-cols-2',
-              value
-                  .map((project) => ProjectCard(
-                        url: project.url,
-                        fullName: project.fullName,
-                        description: project.description ?? '',
-                        lang: project.lang,
-                        tech: project.tech,
-                        stargazersCount: project.stargazersCount,
-                        forks: project.forks,
-                      ))
-                  .toList(),
+            ul(
+              classes: 'list-disc ml-8 space-y-2',
+              value.map(ProjectItem.new).toList(),
             ),
           ]);
         }

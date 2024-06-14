@@ -1,0 +1,8 @@
+id: genchem
+title: KAIST GenChem
+introduction: KAIST 일반화학 & 일반화학실험 비공식 모바일 어플리케이션
+year: 2019
+repo: Winrobrine-zz/KAIST_GenChem
+color: 00B4AB
+image: null
+tags: [Dart, Flutter, Provider]

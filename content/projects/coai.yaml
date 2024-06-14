@@ -1,0 +1,8 @@
+id: coai
+title: CoAI @ 몰입캠프
+introduction: 개발자들이 질문을 하고 지식을 공유할 수 있는 AI 플랫폼
+year: 2024
+repo: estherjsong/madweek4
+color: 3178C6
+image: null
+tags: [TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]

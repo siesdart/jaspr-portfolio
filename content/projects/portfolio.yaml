@@ -1,0 +1,8 @@
+id: portfolio
+title: Jaspr Portfolio
+introduction: Dart 기반 웹 프레임워크인 Jaspr로 개발한 개인 포트폴리오 홈페이지
+year: 2024
+repo: siesdart/jaspr-portfolio
+color: 00B4AB
+image: null
+tags: [Dart, Jaspr, Tailwind CSS, Docker]

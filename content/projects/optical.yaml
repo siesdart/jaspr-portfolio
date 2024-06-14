@@ -1,0 +1,8 @@
+id: optical
+title: 광학 시뮬레이터
+introduction: 고등학교 물리Ⅱ(2009 개정 교육과정)에서 다루는 광학의 상을 시뮬레이션하여 시각화하는 프로그램
+year: 2018
+repo: Winrobrine-zz/OpticalSimulator
+color: 178600
+image: null
+tags: [C#, WPF, MVVM, Skia]

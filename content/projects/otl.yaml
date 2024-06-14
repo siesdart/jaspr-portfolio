@@ -1,0 +1,8 @@
+id: otl
+title: OTL Mobile @ SPARCS
+introduction: KAIST의 서비스 개발 단체 SPARCS에서 운영하는 시간표 관리 서비스 OTL의 모바일 어플리케이션
+year: 2020
+repo: sparcs-kaist/otl-app
+color: 00B4AB
+image: null
+tags: [Dart, Flutter, Provider]

@@ -20,49 +20,46 @@ class ProjectMapper extends ClassMapperBase<Project> {
   @override
   final String id = 'Project';
 
-  static String _$url(Project v) => v.url;
-  static const Field<Project, String> _f$url =
-      Field('url', _$url, key: 'html_url');
-  static String _$fullName(Project v) => v.fullName;
-  static const Field<Project, String> _f$fullName =
-      Field('fullName', _$fullName, key: 'full_name');
-  static String? _$description(Project v) => v.description;
-  static const Field<Project, String> _f$description =
-      Field('description', _$description);
-  static String _$lang(Project v) => v.lang;
-  static const Field<Project, String> _f$lang = Field('lang', _$lang);
-  static String _$tech(Project v) => v.tech;
-  static const Field<Project, String> _f$tech = Field('tech', _$tech);
-  static int _$stargazersCount(Project v) => v.stargazersCount;
-  static const Field<Project, int> _f$stargazersCount =
-      Field('stargazersCount', _$stargazersCount, key: 'stargazers_count');
-  static int _$forks(Project v) => v.forks;
-  static const Field<Project, int> _f$forks = Field('forks', _$forks);
+  static String _$id(Project v) => v.id;
+  static const Field<Project, String> _f$id = Field('id', _$id);
+  static String _$title(Project v) => v.title;
+  static const Field<Project, String> _f$title = Field('title', _$title);
+  static String _$introduction(Project v) => v.introduction;
+  static const Field<Project, String> _f$introduction =
+      Field('introduction', _$introduction);
   static int _$year(Project v) => v.year;
   static const Field<Project, int> _f$year = Field('year', _$year);
+  static String? _$repo(Project v) => v.repo;
+  static const Field<Project, String> _f$repo = Field('repo', _$repo);
+  static String _$color(Project v) => v.color;
+  static const Field<Project, String> _f$color = Field('color', _$color);
+  static String? _$image(Project v) => v.image;
+  static const Field<Project, String> _f$image = Field('image', _$image);
+  static List<String> _$tags(Project v) => v.tags;
+  static const Field<Project, List<String>> _f$tags = Field('tags', _$tags);
 
   @override
   final MappableFields<Project> fields = const {
-    #url: _f$url,
-    #fullName: _f$fullName,
-    #description: _f$description,
-    #lang: _f$lang,
-    #tech: _f$tech,
-    #stargazersCount: _f$stargazersCount,
-    #forks: _f$forks,
+    #id: _f$id,
+    #title: _f$title,
+    #introduction: _f$introduction,
     #year: _f$year,
+    #repo: _f$repo,
+    #color: _f$color,
+    #image: _f$image,
+    #tags: _f$tags,
   };
 
   static Project _instantiate(DecodingData data) {
     return Project(
-        url: data.dec(_f$url),
-        fullName: data.dec(_f$fullName),
-        description: data.dec(_f$description),
-        lang: data.dec(_f$lang),
-        tech: data.dec(_f$tech),
-        stargazersCount: data.dec(_f$stargazersCount),
-        forks: data.dec(_f$forks),
-        year: data.dec(_f$year));
+        id: data.dec(_f$id),
+        title: data.dec(_f$title),
+        introduction: data.dec(_f$introduction),
+        year: data.dec(_f$year),
+        repo: data.dec(_f$repo),
+        color: data.dec(_f$color),
+        image: data.dec(_f$image),
+        tags: data.dec(_f$tags));
   }
 
   @override
@@ -114,15 +111,16 @@ extension ProjectValueCopy<$R, $Out> on ObjectCopyWith<$R, Project, $Out> {
 
 abstract class ProjectCopyWith<$R, $In extends Project, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
+  ListCopyWith<$R, String, ObjectCopyWith<$R, String, String>> get tags;
   $R call(
-      {String? url,
-      String? fullName,
-      String? description,
-      String? lang,
-      String? tech,
-      int? stargazersCount,
-      int? forks,
-      int? year});
+      {String? id,
+      String? title,
+      String? introduction,
+      int? year,
+      String? repo,
+      String? color,
+      String? image,
+      List<String>? tags});
   ProjectCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -135,35 +133,39 @@ class _ProjectCopyWithImpl<$R, $Out>
   late final ClassMapperBase<Project> $mapper =
       ProjectMapper.ensureInitialized();
   @override
+  ListCopyWith<$R, String, ObjectCopyWith<$R, String, String>> get tags =>
+      ListCopyWith($value.tags, (v, t) => ObjectCopyWith(v, $identity, t),
+          (v) => call(tags: v));
+  @override
   $R call(
-          {String? url,
-          String? fullName,
-          Object? description = $none,
-          String? lang,
-          String? tech,
-          int? stargazersCount,
-          int? forks,
-          int? year}) =>
+          {String? id,
+          String? title,
+          String? introduction,
+          int? year,
+          Object? repo = $none,
+          String? color,
+          Object? image = $none,
+          List<String>? tags}) =>
       $apply(FieldCopyWithData({
-        if (url != null) #url: url,
-        if (fullName != null) #fullName: fullName,
-        if (description != $none) #description: description,
-        if (lang != null) #lang: lang,
-        if (tech != null) #tech: tech,
-        if (stargazersCount != null) #stargazersCount: stargazersCount,
-        if (forks != null) #forks: forks,
-        if (year != null) #year: year
+        if (id != null) #id: id,
+        if (title != null) #title: title,
+        if (introduction != null) #introduction: introduction,
+        if (year != null) #year: year,
+        if (repo != $none) #repo: repo,
+        if (color != null) #color: color,
+        if (image != $none) #image: image,
+        if (tags != null) #tags: tags
       }));
   @override
   Project $make(CopyWithData data) => Project(
-      url: data.get(#url, or: $value.url),
-      fullName: data.get(#fullName, or: $value.fullName),
-      description: data.get(#description, or: $value.description),
-      lang: data.get(#lang, or: $value.lang),
-      tech: data.get(#tech, or: $value.tech),
-      stargazersCount: data.get(#stargazersCount, or: $value.stargazersCount),
-      forks: data.get(#forks, or: $value.forks),
-      year: data.get(#year, or: $value.year));
+      id: data.get(#id, or: $value.id),
+      title: data.get(#title, or: $value.title),
+      introduction: data.get(#introduction, or: $value.introduction),
+      year: data.get(#year, or: $value.year),
+      repo: data.get(#repo, or: $value.repo),
+      color: data.get(#color, or: $value.color),
+      image: data.get(#image, or: $value.image),
+      tags: data.get(#tags, or: $value.tags));
 
   @override
   ProjectCopyWith<$R2, Project, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>

@@ -1,0 +1,8 @@
+id: alphagu
+title: AlphaGu
+introduction: 컴퓨터와 일대일로 대결하는 숫자야구 게임
+year: 2018
+repo: Winrobrine-zz/AlphaGu2
+color: 178600
+image: null
+tags: [C#, WPF, MVVM]

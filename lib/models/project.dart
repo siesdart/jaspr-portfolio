@@ -2,26 +2,25 @@ import 'package:dart_mappable/dart_mappable.dart';
 
 part 'project.mapper.dart';
 
-@MappableClass(caseStyle: CaseStyle.snakeCase)
+@MappableClass()
 class Project with ProjectMappable {
-  @MappableField(key: 'html_url')
-  final String url;
-  final String fullName;
-  final String? description;
-  final String lang;
-  final String tech;
-  final int stargazersCount;
-  final int forks;
+  final String id;
+  final String title;
+  final String introduction;
   final int year;
+  final String? repo;
+  final String color;
+  final String? image;
+  final List<String> tags;
 
   Project({
-    required this.url,
-    required this.fullName,
-    required this.description,
-    required this.lang,
-    required this.tech,
-    required this.stargazersCount,
-    required this.forks,
+    required this.id,
+    required this.title,
+    required this.introduction,
     required this.year,
+    required this.repo,
+    required this.color,
+    required this.image,
+    required this.tags,
   });
 }

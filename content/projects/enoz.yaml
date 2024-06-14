@@ -1,0 +1,8 @@
+id: enoz
+title: ENOZ
+introduction: 뛰어난 디자인을 자랑하는 윈도우 음악 플레이어
+year: 2018
+repo: null
+color: 178600
+image: null
+tags: [C#, WPF, MVVM, CSCore]
