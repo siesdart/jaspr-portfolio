@@ -16,6 +16,7 @@ class HistoryItem extends StatelessComponent {
       img(
         classes: 'flex-none size-12',
         src: history.imageUrl,
+        alt: '${history.title} 이미지',
         loading: MediaLoading.lazy,
       ),
       div(classes: 'flex-1 flex flex-col justify-center ml-1', [
