@@ -24,12 +24,12 @@ class App extends StatelessComponent with SyncProviderDependencies {
     yield DomComponent(
       tag: 'main',
       classes:
-          'grid grid-cols-1 place-items-center my-4 px-6 lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:my-8 lg:px-8',
+          'grid grid-cols-1 place-items-center min-h-64 my-4 px-6 lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:my-8 lg:px-8',
       children: [
         Aside(),
         div(
           classes:
-              'max-w-screen-sm flex flex-col gap-6 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
+              'max-w-screen-sm w-full flex flex-col gap-6 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
           [
             Router(
               routes: [

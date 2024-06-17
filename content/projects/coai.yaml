@@ -1,8 +1,14 @@
 id: coai
 title: CoAI @ 몰입캠프
 introduction: 개발자들이 질문을 하고 지식을 공유할 수 있는 AI 플랫폼
+description: >
+  KAIST 몰입캠프에서 만든, StackOverflow와 유사한 느낌의 개발자 지식 공유 사이트. 2인 1조의 팀으로 진행하였으며 그 중 백엔드를 맡아 진행하였다.
+  대표적인 기능으로는 AI 답변이 있는데, 질문을 쓰는 POST 요청에서 AI 답변을 요청했음이 확인되면 랭체인을 통해 GPT와 연동하여 스트림을 통해 실제 ChatGPT처럼 실시간으로 답변이 작성되는 기능을 구현하였다.
+  이 때 실시간으로 들어오는 스트림 형식의 답변과 본래 서버에서 보내야 할 응답이 모두 클라이언트로 전달되어야 하는데, 응답이 스트림 형식으로 보내지는만큼 이 부분을 하나로 합치는데 상당히 애를 먹었다.
+  최종적으로 Node.js에 내장된 Transform 스트림을 활용하여, 생성자에서 기존 응답을 답변이 들어오기 전에 먼저 보내고 그 다음 들어오는 스트림을 그대로 클라이언트로 넘겨주는 방식을 생각해내 해결하였다.
 year: 2024
+order: 2
 repo: estherjsong/madweek4
 color: 3178C6
-image: null
+image: projects/coai.png
 tags: [TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]

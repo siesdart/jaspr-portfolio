@@ -7,7 +7,9 @@ class Project with ProjectMappable {
   final String id;
   final String title;
   final String introduction;
+  final String description;
   final int year;
+  final int order;
   final String? repo;
   final String color;
   final String? image;
@@ -17,7 +19,9 @@ class Project with ProjectMappable {
     required this.id,
     required this.title,
     required this.introduction,
+    required this.description,
     required this.year,
+    required this.order,
     required this.repo,
     required this.color,
     required this.image,

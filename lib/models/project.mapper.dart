@@ -27,8 +27,13 @@ class ProjectMapper extends ClassMapperBase<Project> {
   static String _$introduction(Project v) => v.introduction;
   static const Field<Project, String> _f$introduction =
       Field('introduction', _$introduction);
+  static String _$description(Project v) => v.description;
+  static const Field<Project, String> _f$description =
+      Field('description', _$description);
   static int _$year(Project v) => v.year;
   static const Field<Project, int> _f$year = Field('year', _$year);
+  static int _$order(Project v) => v.order;
+  static const Field<Project, int> _f$order = Field('order', _$order);
   static String? _$repo(Project v) => v.repo;
   static const Field<Project, String> _f$repo = Field('repo', _$repo);
   static String _$color(Project v) => v.color;
@@ -43,7 +48,9 @@ class ProjectMapper extends ClassMapperBase<Project> {
     #id: _f$id,
     #title: _f$title,
     #introduction: _f$introduction,
+    #description: _f$description,
     #year: _f$year,
+    #order: _f$order,
     #repo: _f$repo,
     #color: _f$color,
     #image: _f$image,
@@ -55,7 +62,9 @@ class ProjectMapper extends ClassMapperBase<Project> {
         id: data.dec(_f$id),
         title: data.dec(_f$title),
         introduction: data.dec(_f$introduction),
+        description: data.dec(_f$description),
         year: data.dec(_f$year),
+        order: data.dec(_f$order),
         repo: data.dec(_f$repo),
         color: data.dec(_f$color),
         image: data.dec(_f$image),
@@ -116,7 +125,9 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
       {String? id,
       String? title,
       String? introduction,
+      String? description,
       int? year,
+      int? order,
       String? repo,
       String? color,
       String? image,
@@ -141,7 +152,9 @@ class _ProjectCopyWithImpl<$R, $Out>
           {String? id,
           String? title,
           String? introduction,
+          String? description,
           int? year,
+          int? order,
           Object? repo = $none,
           String? color,
           Object? image = $none,
@@ -150,7 +163,9 @@ class _ProjectCopyWithImpl<$R, $Out>
         if (id != null) #id: id,
         if (title != null) #title: title,
         if (introduction != null) #introduction: introduction,
+        if (description != null) #description: description,
         if (year != null) #year: year,
+        if (order != null) #order: order,
         if (repo != $none) #repo: repo,
         if (color != null) #color: color,
         if (image != $none) #image: image,
@@ -161,7 +176,9 @@ class _ProjectCopyWithImpl<$R, $Out>
       id: data.get(#id, or: $value.id),
       title: data.get(#title, or: $value.title),
       introduction: data.get(#introduction, or: $value.introduction),
+      description: data.get(#description, or: $value.description),
       year: data.get(#year, or: $value.year),
+      order: data.get(#order, or: $value.order),
       repo: data.get(#repo, or: $value.repo),
       color: data.get(#color, or: $value.color),
       image: data.get(#image, or: $value.image),

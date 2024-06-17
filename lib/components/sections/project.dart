@@ -17,7 +17,10 @@ class Project extends StatelessComponent {
             span(classes: 'text-gray-400', [text(key.toString())]),
             ul(
               classes: 'list-disc ml-8 space-y-2',
-              value.map(ProjectItem.new).toList(),
+              value
+                  .sorted((a, b) => b.order.compareTo(a.order))
+                  .map(ProjectItem.new)
+                  .toList(),
             ),
           ]);
         }
