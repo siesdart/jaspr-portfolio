@@ -10,9 +10,13 @@ class ProjectItem extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield li([
       article(classes: 'flex flex-col items-start', [
-        a(href: 'projects/${project.id}', [
-          h5(classes: 'font-medium', [text(project.title)]),
-        ]),
+        a(
+          classes: 'font-medium hover:bg-[#B8EAFE]',
+          [
+            h5([text(project.title)]),
+          ],
+          href: 'projects/${project.id}',
+        ),
         p(classes: 'font-light', [text(project.introduction)]),
         span(
           classes: 'font-extralight',

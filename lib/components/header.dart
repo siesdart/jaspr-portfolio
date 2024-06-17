@@ -20,13 +20,18 @@ class Header extends StatelessComponent {
           ),
         ]),
         div(classes: 'mx-auto lg:col-start-2', [
-          h2(classes: 'font-semibold text-4xl text-[#1967D2] lg:text-7xl', [
-            text('(${config.title.substring(0, index)}'),
-            span(
-              classes: 'text-[#13B9FD]',
-              [text('${config.title.substring(index)})')],
-            ),
-          ]),
+          a(
+            [
+              h2(classes: 'font-semibold text-4xl text-[#1967D2] lg:text-7xl', [
+                text('(${config.title.substring(0, index)}'),
+                span(
+                  classes: 'text-[#13B9FD]',
+                  [text('${config.title.substring(index)})')],
+                ),
+              ]),
+            ],
+            href: '/',
+          ),
           h3(
             classes:
                 'font-light text-center text-gray-500 mt-1 lg:text-end lg:text-xl lg:mt-2',
