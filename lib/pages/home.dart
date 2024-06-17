@@ -30,19 +30,19 @@ class Home extends StatelessComponent {
           id: 'edu',
           title: '4. 학력',
           border: true,
-          children: config.education.map(HistoryItem.fromHistory).toList(),
+          children: config.education.map(HistoryItem.new).toList(),
         ),
         Section(
           id: 'award',
           title: '5. 수상 내역',
           border: true,
-          children: config.award.map(HistoryItem.fromHistory).toList(),
+          children: config.award.map(HistoryItem.new).toList(),
         ),
         Section(
           id: 'etc',
           title: '6. 기타',
           border: true,
-          children: config.etc.map(HistoryItem.fromHistory).toList(),
+          children: config.etc.map(HistoryItem.new).toList(),
         ),
       ],
     );
