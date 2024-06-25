@@ -25,7 +25,7 @@ dev_dependencies:
   dart_mappable_builder: ^4.2.3
   jaspr_builder: ^0.13.2
   jaspr_tailwind: ^0.2.0
-  very_good_analysis: ^5.1.0
+  very_good_analysis: ^6.0.0
 
 jaspr:
   mode: static
