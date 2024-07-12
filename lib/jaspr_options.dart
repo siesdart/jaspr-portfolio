@@ -4,8 +4,8 @@
 import 'package:jaspr/jaspr.dart';
 
 import 'pages/home.dart' as c0;
-import 'pages/project_list.dart' as c1;
-import 'pages/project_detail.dart' as c2;
+import 'pages/project_detail.dart' as c1;
+import 'pages/project_list.dart' as c2;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -26,9 +26,9 @@ import 'pages/project_detail.dart' as c2;
 const defaultJasprOptions = JasprOptions(
   targets: {
     c0.HomePage: ClientTarget<c0.HomePage>('pages/home'),
-    c1.ProjectListPage: ClientTarget<c1.ProjectListPage>('pages/project_list'),
-    c2.ProjectDetailPage: ClientTarget<c2.ProjectDetailPage>('pages/project_detail', params: _params2ProjectDetailPage),
+    c1.ProjectDetailPage: ClientTarget<c1.ProjectDetailPage>('pages/project_detail', params: _params1ProjectDetailPage),
+    c2.ProjectListPage: ClientTarget<c2.ProjectListPage>('pages/project_list'),
   },
 );
 
-Map<String, dynamic> _params2ProjectDetailPage(c2.ProjectDetailPage c) => {'project': c.project};
+Map<String, dynamic> _params1ProjectDetailPage(c1.ProjectDetailPage c) => {'project': c.project};

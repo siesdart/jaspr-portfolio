@@ -63,8 +63,8 @@ class ProjectDetailPage extends StatelessComponent {
       ],
     );
     yield a(
-      classes: 'mx-auto text-gray-600 tracking-wide',
-      [raw('목록 보기')],
+      classes: 'mx-auto text-gray-600',
+      [text('목록 보기')],
       href: '/projects',
     );
   }

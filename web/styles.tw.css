@@ -10,4 +10,9 @@
     @apply lg:text-base;
     @apply scroll-smooth;
   }
+
+  a {
+    @apply hover:bg-[#B8EAFE];
+    @apply hover:lg:bg-inherit;
+  }
 }

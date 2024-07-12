@@ -8,12 +8,13 @@ class ProjectListItem extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'flex flex-col py-3', [
+    yield li([
       a(
+        classes: 'flex flex-col my-3',
         [
           div(classes: 'flex items-center gap-2', [
             svg(
-              classes: 'size-1 lg:size-2',
+              classes: 'size-2',
               styles: Styles.raw({'fill': '#${project.color}'}),
               viewBox: '0 0 16 16',
               [circle([], cx: '8', cy: '8', r: '8')],

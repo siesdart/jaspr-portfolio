@@ -76,7 +76,6 @@ class Aside extends StatelessComponent {
       svg,
       if (href != null)
         a(
-          classes: 'hover:underline',
           [text(title)],
           href: href,
           target: Target.blank,
