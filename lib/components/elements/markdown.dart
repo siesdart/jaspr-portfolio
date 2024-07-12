@@ -43,7 +43,8 @@ class _MarkdownState extends State<Markdown> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield article(
-      classes: 'prose leading-5 max-w-full lg:leading-6',
+      classes:
+          'prose prose-li:marker:text-inherit prose-li:prose-li:list-dash leading-5 max-w-full lg:leading-6',
       buildMarkdown(nodes).toList(),
     );
   }

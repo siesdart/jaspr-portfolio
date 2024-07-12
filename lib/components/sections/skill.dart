@@ -1,23 +1,18 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:portfolio/components/elements/markdown.dart';
+import 'package:portfolio/providers/content.dart';
 
-class Skill extends StatelessComponent {
+class Skill extends StatelessComponent with SyncProviderDependencies {
+  @override
+  // ignore: strict_raw_type
+  Iterable<SyncProvider> get preloadDependencies => [skillProvider];
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    final markdown = context.watch(skillProvider);
     yield _buildSkill();
-    yield ul(classes: 'list-disc ml-4 space-y-1', [
-      li([text('언어: C#, Dart, TypeScript 등')]),
-      li([text('모바일: Flutter')]),
-      li([text('데스크톱: WPF, Flutter')]),
-      li([text('인공지능: ML.NET')]),
-      li([
-        text('웹'),
-        ul(classes: 'list-dash ml-4 mt-1 space-y-1', [
-          li([text('프론트엔드: Svelte, Jaspr, Tailwind CSS')]),
-          li([text('백엔드: Express, Firebase, Microsoft Azure')]),
-          li([text('데이터베이스: PostgreSQL, MongoDB, Drizzle ORM')]),
-        ]),
-      ]),
-    ]);
+    yield Markdown(markdown: markdown.valueOrNull ?? '');
   }
 
   Component _buildSkill() {

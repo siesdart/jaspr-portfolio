@@ -1,0 +1,8 @@
+- 언어: C#, Dart, TypeScript 등
+- 모바일: Flutter
+- 데스크톱: WPF, Flutter
+- 인공지능: ML.NET
+- 웹
+  - 프론트엔드: Svelte, Jaspr, Tailwind CSS
+  - 백엔드: Express, Firebase, Microsoft Azure
+  - 데이터베이스: PostgreSQL, MongoDB, Drizzle ORM

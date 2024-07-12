@@ -15,6 +15,14 @@ final introductionProvider = SyncProvider<String>(
   id: 'introduction',
 );
 
+final skillProvider = SyncProvider<String>(
+  (ref) async {
+    final file = File(p.join('content', 'skill.md'));
+    return file.readAsString();
+  },
+  id: 'skill',
+);
+
 final projectsProvider = SyncProvider<List<Project>>(
   (ref) async {
     return Directory(p.join('content', 'projects'))
