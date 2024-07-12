@@ -8,8 +8,8 @@ import 'package:portfolio/components/sections/skill.dart';
 import 'package:portfolio/providers/config.dart';
 
 @client
-class Home extends StatelessComponent {
-  const Home({super.key});
+class HomePage extends StatelessComponent {
+  const HomePage({super.key});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

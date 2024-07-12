@@ -1,11 +1,11 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/models/project.dart' as model;
+import 'package:portfolio/models/project.dart';
 
 @client
-class Project extends StatelessComponent {
-  final model.Project project;
+class ProjectDetailPage extends StatelessComponent {
+  final Project project;
 
-  const Project(this.project, {super.key});
+  const ProjectDetailPage(this.project, {super.key});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
@@ -61,6 +61,11 @@ class Project extends StatelessComponent {
           [text(project.tags.map((tag) => '#$tag').join(' '))],
         ),
       ],
+    );
+    yield a(
+      classes: 'mx-auto text-gray-600 tracking-wide',
+      [raw('목록 보기')],
+      href: '/projects',
     );
   }
 }

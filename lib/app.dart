@@ -5,7 +5,8 @@ import 'package:portfolio/components/aside.dart';
 import 'package:portfolio/components/footer.dart';
 import 'package:portfolio/components/header.dart';
 import 'package:portfolio/pages/home.dart';
-import 'package:portfolio/pages/project.dart';
+import 'package:portfolio/pages/project_detail.dart';
+import 'package:portfolio/pages/project_list.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 
@@ -33,13 +34,17 @@ class App extends StatelessComponent with SyncProviderDependencies {
           [
             Router(
               routes: [
-                Route(path: '/', builder: (context, state) => const Home()),
+                Route(path: '/', builder: (context, state) => const HomePage()),
+                Route(
+                  path: '/projects',
+                  builder: (context, state) => const ProjectListPage(),
+                ),
                 if (context.watch(projectsProvider)
                     case AsyncData(:final value))
                   for (final project in value)
                     Route(
                       path: '/projects/${project.id}',
-                      builder: (context, state) => Project(project),
+                      builder: (context, state) => ProjectDetailPage(project),
                     ),
               ],
             ),
