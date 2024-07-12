@@ -13,7 +13,7 @@ class App extends StatelessComponent with SyncProviderDependencies {
   @override
   // ignore: strict_raw_type
   Iterable<SyncProvider> get preloadDependencies =>
-      [configProvider, introductionProvider, projectsProvider];
+      [configProvider, projectsProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
