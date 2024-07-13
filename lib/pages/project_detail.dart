@@ -1,5 +1,7 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/models/project.dart';
+import 'package:portfolio/providers/config.dart';
 
 class ProjectDetailPage extends StatelessComponent {
   final Project project;
@@ -8,6 +10,18 @@ class ProjectDetailPage extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    final config = context.watch(configProvider).value!;
+    yield Head(
+      title: '${project.title} - ${config.title}',
+      meta: {
+        'description': project.introduction,
+        'keywords': project.tags.join(', '),
+        'og:title': '${project.title} - ${config.title}',
+        'og:description': project.introduction,
+        'og:url': '${config.url}${context.binding.currentUri}',
+      },
+    );
+
     yield article(
       classes: 'prose leading-5 max-w-full lg:leading-6',
       [
