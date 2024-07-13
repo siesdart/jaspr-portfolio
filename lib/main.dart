@@ -39,11 +39,6 @@ void main() async {
       'og:type': 'website',
       'og:url': config.url,
     },
-    styles: const [
-      StyleRule.import(
-        'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap',
-      ),
-    ],
     body: Builder.single(
       builder: (context) => ProviderScope(
         overrides: [configProvider.overrideWith((ref) => config)],
