@@ -36,3 +36,4 @@ flyctl deploy --remote-only
 - [Jaspr](https://github.com/schultek/jaspr) - Web framework
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - [Markdown](https://pub.dev/packages/markdown) - Dart Markdown library
+- [Pdf](https://pub.dev/packages/pdf) - Dart Pdf library

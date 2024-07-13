@@ -1,7 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/models/project.dart';
 
-@client
 class ProjectDetailPage extends StatelessComponent {
   final Project project;
 

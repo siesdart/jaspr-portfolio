@@ -1,4 +1,6 @@
+import 'package:collection/collection.dart';
 import 'package:dart_mappable/dart_mappable.dart';
+import 'package:jaspr/jaspr.dart';
 
 part 'project.mapper.dart';
 
@@ -27,4 +29,30 @@ class Project with ProjectMappable {
     required this.image,
     required this.tags,
   });
+
+  @decoder
+  static Project fromJson(String json) => ProjectMapper.fromJson(json);
+
+  @encoder
+  @override
+  String toJson() => super.toJson();
+}
+
+extension ProjectCollection on List<Project> {
+  List<MapEntry<int, List<Project>>> groupByYear() {
+    return groupBy(this, (project) => project.year)
+        .entries
+        .sorted((a, b) => b.key.compareTo(a.key));
+  }
+
+  List<Project> sortedByOrder() {
+    return sorted((a, b) => b.order.compareTo(a.order));
+  }
+
+  List<Project> sortedByYearAndOrder() {
+    return sorted((a, b) {
+      final c = b.year.compareTo(a.year);
+      return c == 0 ? b.order.compareTo(a.order) : c;
+    });
+  }
 }

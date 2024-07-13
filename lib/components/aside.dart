@@ -1,11 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:portfolio/components/elements/resume_button.dart';
 import 'package:portfolio/providers/config.dart';
+import 'package:portfolio/providers/content.dart';
 
 class Aside extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     final config = context.watch(configProvider).value!;
+    final introduction = context.watch(introductionProvider);
+    final skill = context.watch(skillProvider);
+    final projects = context.watch(projectsProvider);
+
     yield aside(
       classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-64',
       [
@@ -66,6 +72,14 @@ class Aside extends StatelessComponent {
           ),
           config.mail,
           'mailto:${config.mail}',
+        ),
+        div(classes: 'my-1', []),
+        ResumeButton(
+          config: config,
+          introduction: introduction.value ?? '',
+          skill: skill.value ?? '',
+          projects: projects.value ?? [],
+          disabled: [introduction, skill, projects].any((e) => e is! AsyncData),
         ),
       ],
     );

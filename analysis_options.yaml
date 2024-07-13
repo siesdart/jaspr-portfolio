@@ -3,8 +3,10 @@ include: package:very_good_analysis/analysis_options.yaml
 analyzer:
   exclude:
     - build/**
+    - lib/generated/**
     - lib/**.g.dart
     - lib/**.init.dart
+    - lib/**.imports.dart
     - lib/**.mapper.dart
     - lib/jaspr_options.dart
 

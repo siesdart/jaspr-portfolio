@@ -3,9 +3,7 @@
 
 import 'package:jaspr/jaspr.dart';
 
-import 'pages/home.dart' as c0;
-import 'pages/project_detail.dart' as c1;
-import 'pages/project_list.dart' as c2;
+import 'components/elements/resume_button.dart' as c0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -25,10 +23,14 @@ import 'pages/project_list.dart' as c2;
 /// ```
 const defaultJasprOptions = JasprOptions(
   targets: {
-    c0.HomePage: ClientTarget<c0.HomePage>('pages/home'),
-    c1.ProjectDetailPage: ClientTarget<c1.ProjectDetailPage>('pages/project_detail', params: _params1ProjectDetailPage),
-    c2.ProjectListPage: ClientTarget<c2.ProjectListPage>('pages/project_list'),
+    c0.ResumeButton: ClientTarget<c0.ResumeButton>('components/elements/resume_button', params: _params0ResumeButton),
   },
 );
 
-Map<String, dynamic> _params1ProjectDetailPage(c1.ProjectDetailPage c) => {'project': c.project};
+Map<String, dynamic> _params0ResumeButton(c0.ResumeButton c) => {
+      'config': c.config.toJson(),
+      'introduction': c.introduction,
+      'skill': c.skill,
+      'projects': c.projects.map((i) => i.toJson()).toList(),
+      'disabled': c.disabled
+    };

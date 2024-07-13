@@ -9,14 +9,12 @@ dependencies:
   collection: ^1.19.0
   dart_mappable: ^4.2.2
   dio: ^5.5.0+1
-  dio_cache_interceptor: ^3.5.0
-  dio_cache_interceptor_file_store: ^1.2.3
-  dotenv: ^4.2.0
   jaspr: ^0.13.3
   jaspr_riverpod: ^0.3.12
   jaspr_router: ^0.4.2
   markdown: ^7.2.2
   path: ^1.9.0
+  pdf: ^3.11.0
   yaml: ^3.1.2
 
 dev_dependencies:

@@ -31,6 +31,8 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static const Field<Config, String> _f$url = Field('url', _$url);
   static String _$locale(Config v) => v.locale;
   static const Field<Config, String> _f$locale = Field('locale', _$locale);
+  static String _$name(Config v) => v.name;
+  static const Field<Config, String> _f$name = Field('name', _$name);
   static List<Github> _$github(Config v) => v.github;
   static const Field<Config, List<Github>> _f$github =
       Field('github', _$github);
@@ -55,6 +57,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
     #description: _f$description,
     #url: _f$url,
     #locale: _f$locale,
+    #name: _f$name,
     #github: _f$github,
     #birth: _f$birth,
     #location: _f$location,
@@ -70,6 +73,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
         description: data.dec(_f$description),
         url: data.dec(_f$url),
         locale: data.dec(_f$locale),
+        name: data.dec(_f$name),
         github: data.dec(_f$github),
         birth: data.dec(_f$birth),
         location: data.dec(_f$location),
@@ -135,6 +139,7 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
       String? description,
       String? url,
       String? locale,
+      String? name,
       List<Github>? github,
       String? birth,
       String? location,
@@ -173,6 +178,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
           String? description,
           String? url,
           String? locale,
+          String? name,
           List<Github>? github,
           String? birth,
           String? location,
@@ -185,6 +191,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
         if (description != null) #description: description,
         if (url != null) #url: url,
         if (locale != null) #locale: locale,
+        if (name != null) #name: name,
         if (github != null) #github: github,
         if (birth != null) #birth: birth,
         if (location != null) #location: location,
@@ -199,6 +206,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       description: data.get(#description, or: $value.description),
       url: data.get(#url, or: $value.url),
       locale: data.get(#locale, or: $value.locale),
+      name: data.get(#name, or: $value.name),
       github: data.get(#github, or: $value.github),
       birth: data.get(#birth, or: $value.birth),
       location: data.get(#location, or: $value.location),

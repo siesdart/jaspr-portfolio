@@ -7,7 +7,6 @@ import 'package:portfolio/components/sections/project.dart';
 import 'package:portfolio/components/sections/skill.dart';
 import 'package:portfolio/providers/config.dart';
 
-@client
 class HomePage extends StatelessComponent {
   const HomePage({super.key});
 
