@@ -79,7 +79,10 @@ class Skill extends StatelessComponent {
         classes:
             'absolute top-28 left-[calc(10%+0.25rem)] lg:top-44 lg:left-[calc(5%+1.75rem)]',
         [
-          _buildIcon('tailwindcss/tailwindcss-original.svg', 'tailwindcss icon')
+          _buildIcon(
+            'tailwindcss/tailwindcss-original.svg',
+            'tailwindcss icon',
+          ),
         ],
       ),
     ];

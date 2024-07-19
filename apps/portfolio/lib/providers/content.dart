@@ -27,8 +27,11 @@ final projectsProvider = SyncProvider<List<Project>>(
     return Directory(p.join('content', 'projects'))
         .list()
         .where((e) => e is File)
-        .asyncMap((e) async => ProjectMapper.fromJson(
-            json.encode(loadYaml(await (e as File).readAsString()))))
+        .asyncMap(
+          (e) async => ProjectMapper.fromJson(
+            json.encode(loadYaml(await (e as File).readAsString())),
+          ),
+        )
         .toList();
   },
   id: 'projects',
