@@ -8,9 +8,6 @@ jobs:
     name: Deploy app
     runs-on: ubuntu-latest
     concurrency: deploy-group
-    defaults:
-      run:
-        working-directory: ./apps/portfolio
     steps:
       - name: 📚 Git Checkout
         uses: actions/checkout@v4

@@ -29,12 +29,12 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# dotenv environment variable files.
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
+# Files and directories related to git.
+.git/
+.github/
+.gitignore
+
+fly.toml
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line

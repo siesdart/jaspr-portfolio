@@ -9,12 +9,14 @@ WORKDIR /app
 COPY . .
 
 # Install Dependencies
-RUN dart pub get
+RUN dart pub global activate melos
 RUN dart pub global activate jaspr_cli
+RUN melos bootstrap
 
 # Build Jaspr
+WORKDIR /app/apps/portfolio
 RUN jaspr build
 
 FROM pierrezemb/gostatic
 
-COPY --from=build /app/build/jaspr/ /srv/http/
+COPY --from=build /app/apps/portfolio/build/jaspr/ /srv/http/

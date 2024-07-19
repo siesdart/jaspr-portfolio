@@ -1,42 +1,6 @@
 # Files and directories created by pub.
-**/doc/api/
 .dart_tool/
 .packages
-pubspec_overrides.yaml
 
-# Dependency directories
-node_modules/
-
-# Conventional directory for build output.
-/build/
-
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.cache/
-.history
-.svn/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# Files and directories related to git.
-.git/
-.github/
-.gitignore
-
-fly.toml
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Conventional directory for build outputs.
+build/
