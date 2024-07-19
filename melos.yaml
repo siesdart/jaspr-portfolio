@@ -1,0 +1,10 @@
+name: portfolio_workspace
+repository: https://github.com/siesdart/jaspr-portfolio
+
+packages:
+  - apps/**
+  - packages/**
+
+scripts:
+  analyze:
+    exec: dart analyze .
