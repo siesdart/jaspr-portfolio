@@ -1,36 +1,35 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:portfolio/components/elements/button.dart';
 import 'package:portfolio/models/config.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/utils/pdf.dart';
 
 @Import.onWeb('dart:html', show: [#Blob, #Url, #window])
 // ignore: always_use_package_imports
-import 'resume_button.imports.dart';
+import 'resume.imports.dart';
 
 @client
-class ResumeButton extends StatelessComponent {
+class Resume extends StatelessComponent {
   final Config config;
   final String introduction;
   final String skill;
   final List<Project> projects;
   final bool disabled;
 
-  const ResumeButton({
+  const Resume({
     required this.config,
     required this.introduction,
     required this.skill,
     required this.projects,
-    this.disabled = false,
+    required this.disabled,
   });
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield button(
-      classes:
-          'self-center bg-[#1967D2] font-semibold w-28 px-4 py-2 rounded-xl text-center text-white lg:w-32',
-      [text('이력서')],
-      attributes: {if (disabled) 'disabled': ''},
+    yield Button(
+      label: '이력서',
       onClick: downloadResume,
+      disabled: disabled,
     );
   }
 

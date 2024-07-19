@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/resume_button.dart';
+import 'package:portfolio/components/resume.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 
@@ -13,8 +13,13 @@ class Aside extends StatelessComponent {
     final projects = context.watch(projectsProvider);
 
     yield aside(
-      classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-64',
+      classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60',
       [
+        h4(
+          classes:
+              'self-center font-semibold text-base tracking-wide lg:text-l lg:tracking-wider',
+          [text(config.name)],
+        ),
         ...config.github.map(
           (github) => _buildItem(
             svg(
@@ -73,14 +78,16 @@ class Aside extends StatelessComponent {
           config.mail,
           'mailto:${config.mail}',
         ),
-        div(classes: 'my-1', []),
-        ResumeButton(
-          config: config,
-          introduction: introduction.value ?? '',
-          skill: skill.value ?? '',
-          projects: projects.value ?? [],
-          disabled: [introduction, skill, projects].any((e) => e is! AsyncData),
-        ),
+        div(classes: 'self-center mt-1 lg:mt-2', [
+          Resume(
+            config: config,
+            introduction: introduction.value ?? '',
+            skill: skill.value ?? '',
+            projects: projects.value ?? [],
+            disabled:
+                [introduction, skill, projects].any((e) => e is! AsyncData),
+          ),
+        ]),
       ],
     );
   }

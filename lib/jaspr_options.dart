@@ -3,7 +3,7 @@
 
 import 'package:jaspr/jaspr.dart';
 
-import 'components/elements/resume_button.dart' as c0;
+import 'components/resume.dart' as c0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -23,11 +23,11 @@ import 'components/elements/resume_button.dart' as c0;
 /// ```
 const defaultJasprOptions = JasprOptions(
   targets: {
-    c0.ResumeButton: ClientTarget<c0.ResumeButton>('components/elements/resume_button', params: _params0ResumeButton),
+    c0.Resume: ClientTarget<c0.Resume>('components/resume', params: _params0Resume),
   },
 );
 
-Map<String, dynamic> _params0ResumeButton(c0.ResumeButton c) => {
+Map<String, dynamic> _params0Resume(c0.Resume c) => {
       'config': c.config.toJson(),
       'introduction': c.introduction,
       'skill': c.skill,

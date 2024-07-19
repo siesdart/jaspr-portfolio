@@ -68,7 +68,6 @@
   }
 
   a {
-    @apply hover:bg-[#B8EAFE];
-    @apply hover:lg:bg-inherit;
+    @apply hover:max-lg:bg-[#B8EAFE];
   }
 }

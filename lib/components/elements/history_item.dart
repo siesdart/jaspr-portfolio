@@ -20,7 +20,7 @@ class HistoryItem extends StatelessComponent {
         loading: MediaLoading.lazy,
       ),
       div(classes: 'flex-1 flex flex-col justify-center ml-1', [
-        span(classes: 'font-medium', [text(history.title)]),
+        h5(classes: 'font-medium', [text(history.title)]),
         p(classes: 'font-light', [text(history.content)]),
       ]),
     ]);
