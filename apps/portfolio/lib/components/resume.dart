@@ -9,12 +9,6 @@ import 'resume.imports.dart';
 
 @client
 class Resume extends StatelessComponent {
-  final Config config;
-  final String introduction;
-  final String skill;
-  final List<Project> projects;
-  final bool disabled;
-
   const Resume({
     required this.config,
     required this.introduction,
@@ -22,6 +16,12 @@ class Resume extends StatelessComponent {
     required this.projects,
     required this.disabled,
   });
+
+  final Config config;
+  final String introduction;
+  final String skill;
+  final List<Project> projects;
+  final bool disabled;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

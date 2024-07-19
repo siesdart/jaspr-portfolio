@@ -2,9 +2,9 @@ import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 
 class ProjectItem extends StatelessComponent {
-  final Project project;
-
   const ProjectItem(this.project);
+
+  final Project project;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

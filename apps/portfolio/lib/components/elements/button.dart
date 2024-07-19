@@ -1,15 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 
 class Button extends StatelessComponent {
-  final String label;
-  final VoidCallback onClick;
-  final bool disabled;
-
   const Button({
     required this.label,
     required this.onClick,
     this.disabled = false,
   });
+
+  final String label;
+  final VoidCallback onClick;
+  final bool disabled;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

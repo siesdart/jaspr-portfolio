@@ -4,9 +4,9 @@ import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/providers/config.dart';
 
 class ProjectDetailPage extends StatelessComponent {
-  final Project project;
-
   const ProjectDetailPage(this.project, {super.key});
+
+  final Project project;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

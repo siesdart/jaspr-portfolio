@@ -2,9 +2,9 @@ import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 
 class HistoryItem extends StatelessComponent {
-  final History history;
-
   const HistoryItem(this.history);
+
+  final History history;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

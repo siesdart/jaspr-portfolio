@@ -1,10 +1,10 @@
 import 'package:jaspr/jaspr.dart';
 
 class NavButton extends StatelessComponent {
+  const NavButton({required this.name, required this.path});
+
   final String name;
   final String path;
-
-  const NavButton({required this.name, required this.path});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

@@ -1,17 +1,17 @@
 import 'package:jaspr/jaspr.dart';
 
 class Section extends StatelessComponent {
-  final String? id;
-  final String title;
-  final bool border;
-  final List<Component> children;
-
   const Section({
     required this.title,
     required this.children,
     this.id,
     this.border = false,
   });
+
+  final String? id;
+  final String title;
+  final bool border;
+  final List<Component> children;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
