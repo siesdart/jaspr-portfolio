@@ -1,16 +1,11 @@
-@MappableLib(generateInitializerForScope: InitializerScope.package)
-library main;
-
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:dart_mappable/dart_mappable.dart';
+import 'package:common/common.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/app.dart';
 import 'package:portfolio/jaspr_options.dart';
-import 'package:portfolio/main.init.dart';
-import 'package:portfolio/models/config.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:yaml/yaml.dart';
 

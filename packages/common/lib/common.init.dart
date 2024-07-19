@@ -3,10 +3,10 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element
 
-import 'models/config.dart' as p0;
-import 'models/github.dart' as p1;
-import 'models/history.dart' as p2;
-import 'models/project.dart' as p3;
+import 'src/models/config.dart' as p0;
+import 'src/models/github.dart' as p1;
+import 'src/models/history.dart' as p2;
+import 'src/models/project.dart' as p3;
 
 void initializeMappers() {
   p0.ConfigMapper.ensureInitialized();

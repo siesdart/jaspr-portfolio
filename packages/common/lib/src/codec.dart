@@ -1,8 +1,8 @@
 import 'dart:convert';
 
+import 'package:common/common.init.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/main.init.dart';
 
 class MapperCodec<T> extends Codec<T, String> {
   MapperCodec() {

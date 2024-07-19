@@ -6,17 +6,6 @@ part 'project.mapper.dart';
 
 @MappableClass()
 class Project with ProjectMappable {
-  final String id;
-  final String title;
-  final String introduction;
-  final String description;
-  final int year;
-  final int order;
-  final String? repo;
-  final String color;
-  final String? image;
-  final List<String> tags;
-
   Project({
     required this.id,
     required this.title,
@@ -29,6 +18,17 @@ class Project with ProjectMappable {
     required this.image,
     required this.tags,
   });
+
+  final String id;
+  final String title;
+  final String introduction;
+  final String description;
+  final int year;
+  final int order;
+  final String? repo;
+  final String color;
+  final String? image;
+  final List<String> tags;
 
   @decoder
   static Project fromJson(String json) => ProjectMapper.fromJson(json);

@@ -1,8 +1,7 @@
+import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/components/elements/button.dart';
-import 'package:portfolio/models/config.dart';
-import 'package:portfolio/models/project.dart';
-import 'package:portfolio/utils/pdf.dart';
+import 'package:resume/resume.dart';
 
 @Import.onWeb('dart:html', show: [#Blob, #Url, #window])
 // ignore: always_use_package_imports
@@ -34,12 +33,12 @@ class Resume extends StatelessComponent {
   }
 
   Future<void> downloadResume() async {
-    final pdfData = await buildResumePdfData(
+    final pdfData = await ResumePdf(
       config: config,
       introduction: introduction,
       skill: skill,
       projects: projects,
-    );
+    ).buildData();
     final url = Url.createObjectUrl(Blob([pdfData], 'application/pdf'));
     window.open(url, '_blank');
   }

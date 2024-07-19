@@ -1,7 +1,7 @@
+import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/elements/project_list_item.dart';
-import 'package:portfolio/models/project.dart';
 import 'package:portfolio/providers/content.dart';
 
 class ProjectListPage extends StatelessComponent {

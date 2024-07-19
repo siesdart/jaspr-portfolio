@@ -1,5 +1,5 @@
+import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/models/history.dart';
 
 class HistoryItem extends StatelessComponent {
   final History history;
