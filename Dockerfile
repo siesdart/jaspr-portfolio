@@ -14,8 +14,7 @@ RUN dart pub global activate jaspr_cli
 RUN melos bootstrap
 
 # Build Jaspr
-WORKDIR /app/apps/portfolio
-RUN jaspr build
+RUN melos build
 
 FROM pierrezemb/gostatic
 
