@@ -14,7 +14,7 @@ class Header extends StatelessComponent {
       [
         nav(
           classes:
-              'flex justify-end gap-x-4 mb-2 uppercase text-base w-full lg:col-start-2 lg:text-lg',
+              'flex justify-end gap-x-4 mb-3 uppercase text-base w-full lg:col-start-2 lg:text-lg',
           const [
             NavButton(name: 'About', path: '/'),
             NavButton(name: 'Projects', path: 'projects'),
