@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:common/common.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
+import 'package:resume/src/html.dart';
 import 'package:resume/src/theme.dart';
 import 'package:resume/src/widgets.dart';
 
@@ -79,10 +80,10 @@ class ResumePdf {
           ],
         ),
         Padding(padding: const EdgeInsets.only(top: 24)),
-        RParagraph(content: introduction),
+        RParagraph(content: removeHtml(introduction)),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '1. 기술 스택'),
-        RParagraph(content: skill),
+        RParagraph(content: removeHtml(skill)),
         RCategory(title: '2. 프로젝트'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         for (final MapEntry(:key, :value) in projects.groupByYear())
