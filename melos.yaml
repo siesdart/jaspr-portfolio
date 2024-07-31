@@ -12,8 +12,6 @@ packages:
   - packages/**
 
 scripts:
-  analyze:
-    exec: dart analyze .
   build:
     packageFilters:
       scope: [portfolio]
@@ -28,7 +26,7 @@ scripts:
       scope: [portfolio]
     exec: jaspr clean
   outdated:
-    exec: dart pub outdated --show-all
+    exec: dart pub outdated --no-dev-dependencies --up-to-date --no-dependency-overrides
   upgrade:
     exec: dart pub upgrade --major-versions
   serve:
