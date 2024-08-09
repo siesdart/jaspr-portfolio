@@ -7,6 +7,9 @@ environment:
 
 dependencies:
   common: ^1.0.0
+  dotenv: ^4.2.0
+  get_it: ^7.7.0
+  github: ^9.24.0
   jaspr: ^0.13.3
   jaspr_markdown: ^0.1.0
   jaspr_riverpod: ^0.3.12

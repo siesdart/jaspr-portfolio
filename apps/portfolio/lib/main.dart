@@ -1,21 +1,15 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:common/common.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/app.dart';
+import 'package:portfolio/config.dart';
 import 'package:portfolio/jaspr_options.dart';
 import 'package:portfolio/providers/config.dart';
-import 'package:yaml/yaml.dart';
-
-Future<Config> loadConfigFile() async {
-  final doc = await File('config.yaml').readAsString();
-  return ConfigMapper.fromJson(json.encode(loadYaml(doc)));
-}
+import 'package:portfolio/service_locator.dart';
 
 void main() async {
   Jaspr.initializeApp(options: defaultJasprOptions);
+  setupLocator();
   initializeMappers();
 
   final config = await loadConfigFile();

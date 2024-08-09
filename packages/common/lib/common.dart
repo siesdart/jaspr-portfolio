@@ -10,4 +10,5 @@ export 'src/codec.dart';
 export 'src/models/config.dart';
 export 'src/models/github.dart';
 export 'src/models/history.dart';
+export 'src/models/opensource.dart';
 export 'src/models/project.dart';
