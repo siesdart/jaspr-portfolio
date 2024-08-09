@@ -101,7 +101,55 @@ class ResumePdf {
                 ),
               ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '3. 학력'),
+        RCategory(title: '3. 오픈소스'),
+        ...config.opensource.map(
+          (opensource) => Padding(
+            padding: const EdgeInsets.only(top: 6),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  opensource.repo.split('/')[1],
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text(opensource.description),
+                Text('Role: ${opensource.role}'),
+                if (opensource.contribution != null)
+                  ...opensource.contribution!.map(
+                    (contribution) => Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          width: 2 * PdfPageFormat.mm,
+                          height: 2 * PdfPageFormat.mm,
+                          margin: const EdgeInsets.only(
+                            left: 1 * PdfPageFormat.mm,
+                            top: 2 * PdfPageFormat.mm,
+                            right: 2 * PdfPageFormat.mm,
+                          ),
+                          decoration: const BoxDecoration(
+                            color: PdfColors.black,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('${contribution.title} #${contribution.id}'),
+                              Text(contribution.description),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ),
+        Padding(padding: const EdgeInsets.only(top: 16)),
+        RCategory(title: '4. 학력'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.education.map(
           (education) => RHistory(
@@ -111,7 +159,7 @@ class ResumePdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '4. 수상 내역'),
+        RCategory(title: '5. 수상 내역'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.award.map(
           (award) => RHistory(
@@ -121,7 +169,7 @@ class ResumePdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '5. 기타'),
+        RCategory(title: '6. 기타'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.etc.map(
           (etc) => RHistory(
