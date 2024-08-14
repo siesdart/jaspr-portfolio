@@ -19,20 +19,19 @@ scripts:
   build:dart:
     packageFilters:
       dependsOn: build_runner
-    run: |
-      melos exec --depends-on=build_runner -- "dart run build_runner build --delete-conflicting-outputs"
+    exec: dart run build_runner build --delete-conflicting-outputs
   clean:jaspr:
     packageFilters:
       scope: [portfolio]
     exec: jaspr clean
   outdated:
-    exec: dart pub outdated --no-dev-dependencies --up-to-date --no-dependency-overrides
+    exec: dart pub outdated --up-to-date --no-dependency-overrides
   upgrade:
     exec: dart pub upgrade --major-versions
   serve:
     packageFilters:
       scope: [portfolio]
-    exec: jaspr serve
+    exec: jaspr serve --verbose
   start:
     packageFilters:
       scope: [portfolio]
