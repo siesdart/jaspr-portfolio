@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 class NavButton extends StatelessComponent {
-  const NavButton({required this.name, required this.path});
+  const NavButton({required this.name, required this.path, super.key});
 
   final String name;
   final String path;

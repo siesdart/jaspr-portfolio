@@ -25,11 +25,12 @@ void setupLocator() {
       dispose: (github) => github.dispose(),
     );
     getIt.isReady<GitHub>().then((_) {
-      if (getIt<GitHub>().auth.isAnonymous) {
+      final auth = getIt<GitHub>().auth;
+      if (auth.isAnonymous) {
         stdout.writeln('GitHub is initialized with Anonymous mode.');
       } else {
         stdout.writeln(
-          'GitHub is initialized with Bearer token ${getIt<GitHub>().auth.bearerToken}.',
+          'GitHub is initialized with Bearer token ${auth.bearerToken}.',
         );
       }
     });

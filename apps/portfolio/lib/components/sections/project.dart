@@ -4,14 +4,19 @@ import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/elements/project_item.dart';
 import 'package:portfolio/providers/content.dart';
 
-class Project extends StatelessComponent {
+class Project extends StatelessComponent with SyncProviderDependencies {
+  const Project({super.key});
+
+  @override
+  // ignore: strict_raw_type
+  Iterable<SyncProvider> get preloadDependencies => [projectsProvider];
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
     switch (context.watch(projectsProvider)) {
-      case AsyncData(:final value):
-        final projects = value.groupByYear();
-        for (final MapEntry(:key, :value) in projects) {
-          yield div(classes: 'flex flex-col gap-2', [
+      case AsyncData(value: final projects):
+        for (final MapEntry(:key, :value) in projects.groupByYear()) {
+          yield li(classes: 'flex flex-col gap-2', [
             span(classes: 'text-gray-400', [text(key.toString())]),
             ul(
               classes: 'list-disc ml-8 space-y-2',

@@ -5,15 +5,23 @@ import 'package:portfolio/components/elements/icon.dart';
 import 'package:portfolio/components/elements/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
 
-class Skill extends StatelessComponent {
+class Skill extends StatelessComponent with SyncProviderDependencies {
+  const Skill({super.key});
+
+  @override
+  // ignore: strict_raw_type
+  Iterable<SyncProvider> get preloadDependencies => [skillProvider];
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    final markdown = context.watch(skillProvider);
-    yield MarkdownArticle(
-      markdown: markdown.valueOrNull ?? '',
-      blockSyntaxes: [
-        ComponentBlockSyntax(importComponents: const [Icon]),
-      ],
-    );
+    switch (context.watch(skillProvider)) {
+      case AsyncData(value: final skill):
+        yield MarkdownArticle(
+          markdown: skill,
+          blockSyntaxes: [
+            ComponentBlockSyntax(importComponents: const [Icon]),
+          ],
+        );
+    }
   }
 }

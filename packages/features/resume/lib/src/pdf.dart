@@ -113,7 +113,10 @@ class ResumePdf {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(opensource.description),
-                Text('Role: ${opensource.role}'),
+                Text(
+                  'Role: ${opensource.role}',
+                  style: const TextStyle(color: PdfColors.grey),
+                ),
                 if (opensource.contribution != null)
                   ...opensource.contribution!.map(
                     (contribution) => Row(

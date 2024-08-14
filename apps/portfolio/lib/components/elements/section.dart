@@ -3,15 +3,16 @@ import 'package:jaspr/jaspr.dart';
 class Section extends StatelessComponent {
   const Section({
     required this.title,
-    required this.children,
+    this.child,
+    this.children,
     this.id,
-    this.border = false,
+    super.key,
   });
 
   final String? id;
   final String title;
-  final bool border;
-  final List<Component> children;
+  final Component? child;
+  final List<Component>? children;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
@@ -26,10 +27,12 @@ class Section extends StatelessComponent {
         ],
         href: '#$id',
       ),
-      div(
-        classes: '${border ? 'border-l-2 mx-5 px-3' : 'px-6'} space-y-4',
-        children,
-      ),
+      if (child != null) div(classes: 'px-6', [child!]),
+      if (children != null)
+        ul(
+          classes: 'border-l-2 mx-5 px-3 space-y-4',
+          children!,
+        ),
     ]);
   }
 }

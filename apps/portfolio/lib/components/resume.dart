@@ -15,6 +15,7 @@ class Resume extends StatelessComponent {
     required this.skill,
     required this.projects,
     required this.disabled,
+    super.key,
   });
 
   final Config config;

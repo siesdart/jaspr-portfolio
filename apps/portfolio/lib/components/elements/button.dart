@@ -5,6 +5,7 @@ class Button extends StatelessComponent {
     required this.label,
     required this.onClick,
     this.disabled = false,
+    super.key,
   });
 
   final String label;

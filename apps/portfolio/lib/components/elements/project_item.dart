@@ -2,7 +2,7 @@ import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 
 class ProjectItem extends StatelessComponent {
-  const ProjectItem(this.project);
+  const ProjectItem(this.project, {super.key});
 
   final Project project;
 
@@ -19,7 +19,7 @@ class ProjectItem extends StatelessComponent {
       p(classes: 'font-light', [text(project.introduction)]),
       span(
         classes: 'font-extralight',
-        [text(project.tags.map((tag) => '#$tag').join(' '))],
+        project.tags.map((tag) => text('#$tag ')).toList(),
       ),
     ]);
   }

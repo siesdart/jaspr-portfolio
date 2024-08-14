@@ -4,16 +4,20 @@ import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/elements/project_list_item.dart';
 import 'package:portfolio/providers/content.dart';
 
-class ProjectListPage extends StatelessComponent {
+class ProjectListPage extends StatelessComponent with SyncProviderDependencies {
   const ProjectListPage({super.key});
+
+  @override
+  // ignore: strict_raw_type
+  Iterable<SyncProvider> get preloadDependencies => [projectsProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     switch (context.watch(projectsProvider)) {
-      case AsyncData(:final value):
+      case AsyncData(value: final projects):
         yield ul(
           classes: 'divide-y',
-          value.sortedByYearAndOrder().map(ProjectListItem.new).toList(),
+          projects.sortedByYearAndOrder().map(ProjectListItem.new).toList(),
         );
     }
   }

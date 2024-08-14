@@ -2,7 +2,11 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_markdown/jaspr_markdown.dart';
 
 class MarkdownArticle extends StatelessComponent {
-  const MarkdownArticle({required this.markdown, this.blockSyntaxes});
+  const MarkdownArticle({
+    required this.markdown,
+    this.blockSyntaxes,
+    super.key,
+  });
 
   final String markdown;
   final Iterable<BlockSyntax>? blockSyntaxes;

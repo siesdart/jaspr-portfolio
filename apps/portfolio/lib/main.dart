@@ -32,7 +32,7 @@ void main() async {
       body: Builder.single(
         builder: (context) => ProviderScope(
           overrides: [configProvider.overrideWith((ref) => config)],
-          child: App(),
+          child: const App(),
         ),
       ),
     ),

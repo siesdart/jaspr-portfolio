@@ -8,3 +8,7 @@ dynamic Url;
 dynamic window;
 typedef BlobOrStubbed = dynamic;
 typedef UrlOrStubbed = dynamic;
+dynamic Directory;
+dynamic File;
+typedef DirectoryOrStubbed = dynamic;
+typedef FileOrStubbed = dynamic;

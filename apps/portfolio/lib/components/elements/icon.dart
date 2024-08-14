@@ -1,12 +1,13 @@
 import 'package:jaspr/jaspr.dart';
 
 class Icon extends StatelessComponent {
-  const Icon({required this.src, this.alt});
+  const Icon({required this.src, this.alt, super.key});
 
-  const Icon.dev({required String icon, String? alt})
+  const Icon.dev({required String icon, String? alt, Key? key})
       : this(
           src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/$icon',
           alt: alt,
+          key: key,
         );
 
   final String src;

@@ -1,10 +1,14 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:common/common.dart';
+import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
+
+@Import.onServer('dart:io', show: [#Directory, #File])
+// ignore: always_use_package_imports
+import 'content.imports.dart';
 
 final introductionProvider = SyncProvider<String>(
   (ref) async {

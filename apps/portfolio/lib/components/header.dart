@@ -4,6 +4,8 @@ import 'package:portfolio/components/elements/nav_button.dart';
 import 'package:portfolio/providers/config.dart';
 
 class Header extends StatelessComponent {
+  const Header({super.key});
+
   @override
   Iterable<Component> build(BuildContext context) sync* {
     final config = context.watch(configProvider).value!;
@@ -24,7 +26,7 @@ class Header extends StatelessComponent {
           img(
             classes: 'size-32 mx-auto object-cover rounded-full lg:size-48',
             src: 'profile.png',
-            alt: '프로필 사진',
+            alt: 'profile image',
             loading: MediaLoading.lazy,
           ),
         ]),

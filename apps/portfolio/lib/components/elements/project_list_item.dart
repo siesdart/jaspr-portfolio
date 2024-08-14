@@ -2,7 +2,7 @@ import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 
 class ProjectListItem extends StatelessComponent {
-  const ProjectListItem(this.project);
+  const ProjectListItem(this.project, {super.key});
 
   final Project project;
 
@@ -26,7 +26,7 @@ class ProjectListItem extends StatelessComponent {
           p(classes: 'font-light', [text(project.introduction)]),
           span(
             classes: 'font-extralight',
-            [text(project.tags.map((tag) => '#$tag').join(' '))],
+            project.tags.map((tag) => text('#$tag ')).toList(),
           ),
         ],
         href: 'projects/${project.id}',

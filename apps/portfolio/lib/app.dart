@@ -11,23 +11,24 @@ import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 
 class App extends StatelessComponent with SyncProviderDependencies {
+  const App({super.key});
+
   @override
   // ignore: strict_raw_type
-  Iterable<SyncProvider> get preloadDependencies =>
-      [configProvider, introductionProvider, skillProvider, projectsProvider];
+  Iterable<SyncProvider> get preloadDependencies => [projectsProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
     final config = context.watch(configProvider).value!;
 
     yield h1(classes: 'sr-only', [text(config.title)]);
-    yield Header();
+    yield const Header();
     yield DomComponent(
       tag: 'main',
       classes:
           'grid grid-cols-1 place-items-center min-h-72 mt-1 mb-4 px-6 lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:my-8 lg:px-8',
       children: [
-        Aside(),
+        const Aside(),
         div(
           classes:
               'max-w-screen-sm w-full flex flex-col gap-6 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
@@ -40,8 +41,8 @@ class App extends StatelessComponent with SyncProviderDependencies {
                   builder: (context, state) => const ProjectListPage(),
                 ),
                 if (context.watch(projectsProvider)
-                    case AsyncData(:final value))
-                  for (final project in value)
+                    case AsyncData(value: final projects))
+                  for (final project in projects)
                     Route(
                       path: '/projects/${project.id}',
                       builder: (context, state) => ProjectDetailPage(project),
@@ -52,6 +53,6 @@ class App extends StatelessComponent with SyncProviderDependencies {
         ),
       ],
     );
-    yield Footer();
+    yield const Footer();
   }
 }
