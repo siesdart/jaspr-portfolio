@@ -22,6 +22,8 @@ opensource:
         description: 본래는 serve든 build든 상관없이 Tailwind CSS가 minify 없이 빌드되었는데, build에서는 minify가 적용되도록 추가함
       - id: 250
         description: Hydration 중 서버에서 클라이언트로 데이터가 직렬화되어 보내질 때 html escape를 거치는데, 클라이언트에서 데이터를 역직렬화할 때 unescape가 누락되어있어 이를 추가함
+      - id: 256
+        description: Tailwind CSS 설정에서 content 부분이 씹히고 dart 파일만 감지하도록 되어있어서 content 설정이 적용되도록 수정함
   - repo: siesdart/jaspr_markdown
     description: MDX와 유사하게 마크다운에 Jaspr 컴포넌트를 삽입할 수 있게 하여 화면에 렌더링해주는 라이브러리
     role: Owner
