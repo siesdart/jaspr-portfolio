@@ -1,6 +1,7 @@
 import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 import 'package:portfolio/components/elements/svg.dart';
 import 'package:portfolio/providers/config.dart';
 
@@ -78,10 +79,10 @@ class ProjectDetailPage extends StatelessComponent {
         ),
       ],
     );
-    yield a(
+    yield Link(
       classes: 'mx-auto text-gray-600',
-      [text('목록 보기')],
-      href: '/projects',
+      to: '/projects',
+      child: text('목록 보기'),
     );
   }
 }

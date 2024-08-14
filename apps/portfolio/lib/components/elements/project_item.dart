@@ -1,5 +1,6 @@
 import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
 class ProjectItem extends StatelessComponent {
   const ProjectItem(this.project, {super.key});
@@ -9,12 +10,10 @@ class ProjectItem extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield li(classes: 'flex flex-col items-start', [
-      a(
+      Link(
         classes: 'font-medium',
-        [
-          h5([text(project.title)]),
-        ],
-        href: 'projects/${project.id}',
+        to: 'projects/${project.id}',
+        child: h5([text(project.title)]),
       ),
       p(classes: 'font-light', [text(project.introduction)]),
       span(

@@ -1,5 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 import 'package:portfolio/components/elements/nav_button.dart';
 import 'package:portfolio/providers/config.dart';
 
@@ -31,17 +32,19 @@ class Header extends StatelessComponent {
           ),
         ]),
         div(classes: 'mx-auto lg:row-start-2 lg:col-start-2', [
-          a(
-            [
-              h2(classes: 'font-semibold text-4xl text-[#1967D2] lg:text-7xl', [
+          Link(
+            to: '/',
+            replace: true,
+            child: h2(
+              classes: 'font-semibold text-4xl text-[#1967D2] lg:text-7xl',
+              [
                 text('(${config.title.substring(0, index)}'),
                 span(
                   classes: 'text-[#13B9FD]',
                   [text('${config.title.substring(index)})')],
                 ),
-              ]),
-            ],
-            href: '/',
+              ],
+            ),
           ),
           h3(
             classes:
