@@ -1,7 +1,7 @@
 import 'package:common/common.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/components/elements/button.dart';
-import 'package:resume/resume.dart';
+import 'package:resume/resume.dart' deferred as resume;
 
 @Import.onWeb('dart:html', show: [#Blob, #Url, #window])
 // ignore: always_use_package_imports
@@ -34,7 +34,8 @@ class Resume extends StatelessComponent {
   }
 
   Future<void> downloadResume() async {
-    final pdfData = await ResumePdf(
+    await resume.loadLibrary();
+    final pdfData = await resume.ResumePdf(
       config: config,
       introduction: introduction,
       skill: skill,
