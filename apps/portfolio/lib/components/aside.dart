@@ -1,6 +1,6 @@
+import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/svg.dart';
 import 'package:portfolio/components/resume.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';

@@ -1,7 +1,6 @@
+import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/history_item.dart';
-import 'package:portfolio/components/elements/opensource_item.dart';
 import 'package:portfolio/components/elements/section.dart';
 import 'package:portfolio/components/sections/introduction.dart';
 import 'package:portfolio/components/sections/project.dart';

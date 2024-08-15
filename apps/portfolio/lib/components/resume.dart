@@ -1,6 +1,6 @@
 import 'package:common/common.dart';
+import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/components/elements/button.dart';
 import 'package:resume/resume.dart' deferred as resume;
 
 @Import.onWeb('dart:html', show: [#Blob, #Url, #window])

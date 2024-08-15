@@ -1,6 +1,6 @@
 import 'package:common/common.dart';
+import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/components/elements/svg.dart';
 
 class OpensourceItem extends StatelessComponent {
   const OpensourceItem(this.opensource, {super.key});

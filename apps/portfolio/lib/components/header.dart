@@ -1,7 +1,7 @@
+import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
-import 'package:portfolio/components/elements/nav_button.dart';
 import 'package:portfolio/providers/config.dart';
 
 class Header extends StatelessComponent {
