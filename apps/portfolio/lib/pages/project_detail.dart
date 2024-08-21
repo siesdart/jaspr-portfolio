@@ -13,7 +13,7 @@ class ProjectDetailPage extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     final config = context.watch(configProvider).value!;
-    yield Head(
+    yield Document.head(
       title: '${project.title} - ${config.title}',
       meta: {
         'description': project.introduction,

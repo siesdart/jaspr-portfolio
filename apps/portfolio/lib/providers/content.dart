@@ -39,5 +39,4 @@ final projectsProvider = SyncProvider<List<Project>>(
         .toList();
   },
   id: 'projects',
-  codec: MapperCodec(),
 );

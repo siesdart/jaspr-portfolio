@@ -2,8 +2,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/jaspr.dart';
-
-import 'components/resume.dart' as c0;
+import 'package:portfolio/components/resume.dart' as prefix0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -21,13 +20,13 @@ import 'components/resume.dart' as c0;
 ///   runApp(...);
 /// }
 /// ```
-const defaultJasprOptions = JasprOptions(
-  targets: {
-    c0.Resume: ClientTarget<c0.Resume>('components/resume', params: _params0Resume),
+final defaultJasprOptions = JasprOptions(
+  clients: {
+    prefix0.Resume: ClientTarget<prefix0.Resume>('components/resume', params: _prefix0Resume),
   },
 );
 
-Map<String, dynamic> _params0Resume(c0.Resume c) => {
+Map<String, dynamic> _prefix0Resume(prefix0.Resume c) => {
       'config': c.config.toJson(),
       'introduction': c.introduction,
       'skill': c.skill,
