@@ -1,5 +1,25 @@
+import 'package:common/common.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
+
+class RBullet extends StatelessWidget {
+  @override
+  Widget build(Context context) {
+    return Container(
+      width: 2 * PdfPageFormat.mm,
+      height: 2 * PdfPageFormat.mm,
+      margin: const EdgeInsets.only(
+        left: 1 * PdfPageFormat.mm,
+        top: 2 * PdfPageFormat.mm,
+        right: 2 * PdfPageFormat.mm,
+      ),
+      decoration: const BoxDecoration(
+        color: PdfColors.black,
+        shape: BoxShape.circle,
+      ),
+    );
+  }
+}
 
 class RCategory extends StatelessWidget {
   RCategory({required this.title});
@@ -69,6 +89,7 @@ class RParagraph extends StatelessWidget {
   Widget build(Context context) {
     return Paragraph(
       text: content,
+      margin: EdgeInsets.zero,
       style: Theme.of(context).defaultTextStyle.copyWith(lineSpacing: 1.2),
     );
   }
@@ -92,6 +113,61 @@ class RUrlLink extends StatelessWidget {
           color: PdfColors.grey,
         ),
       ),
+    );
+  }
+}
+
+class RTitle extends StatelessWidget {
+  RTitle({required this.config});
+
+  final Config config;
+
+  @override
+  Widget build(Context context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: config.name,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const TextSpan(text: '  '),
+                  TextSpan(text: config.github.first.title),
+                ],
+              ),
+            ),
+            Padding(padding: const EdgeInsets.only(top: 2)),
+            Text(
+              config.description,
+              style: const TextStyle(color: PdfColors.grey800),
+            ),
+            Padding(padding: const EdgeInsets.only(top: 2)),
+            RUrlLink(
+              text: config.mail,
+              url: 'mailto:${config.mail}',
+            ),
+          ],
+        ),
+        Spacer(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            RUrlLink(url: config.url),
+            RUrlLink(
+              url: 'https://github.com/${config.github.first.user}',
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -68,7 +68,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
           config.mail,
           'mailto:${config.mail}',
         ),
-        div(classes: 'self-center mt-1 lg:mt-2', [
+        div(classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2', [
           Resume(
             config: config,
             introduction: introduction.value ?? '',
