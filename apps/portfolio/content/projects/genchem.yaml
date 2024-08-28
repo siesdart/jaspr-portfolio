@@ -6,7 +6,7 @@ description: >
   홈페이지의 HTML을 파싱해 공지사항, 실라버스 등의 정보를 가져와 모바일 화면에 띄워주도록 구현하였다.
 year: 2019
 order: 1
-repo: Winrobrine-zz/KAIST_GenChem
+repo: siesdart/KAIST_GenChem
 color: 00B4AB
 image: projects/genchem.png
-tags: [Dart, Flutter, Provider]
+tags: [Dart, Flutter, Riverpod]
