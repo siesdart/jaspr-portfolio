@@ -6,12 +6,12 @@ class RBullet extends StatelessWidget {
   @override
   Widget build(Context context) {
     return Container(
-      width: 2 * PdfPageFormat.mm,
-      height: 2 * PdfPageFormat.mm,
+      width: 1.5 * PdfPageFormat.mm,
+      height: 1.5 * PdfPageFormat.mm,
       margin: const EdgeInsets.only(
-        left: 1 * PdfPageFormat.mm,
-        top: 2 * PdfPageFormat.mm,
-        right: 2 * PdfPageFormat.mm,
+        left: 1.5 * PdfPageFormat.mm,
+        top: 2.5 * PdfPageFormat.mm,
+        right: 2.5 * PdfPageFormat.mm,
       ),
       decoration: const BoxDecoration(
         color: PdfColors.black,

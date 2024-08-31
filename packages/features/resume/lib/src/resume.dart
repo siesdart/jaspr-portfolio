@@ -83,11 +83,10 @@ class ResumePdf extends Pdf {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(opensource.description),
-                Text(
-                  'Role: ${opensource.role}',
-                  style: const TextStyle(color: PdfColors.grey),
-                ),
-                if (opensource.contribution != null)
+                Text('Role: ${opensource.role}'),
+                RUrlLink(url: 'https://github.com/${opensource.repo}'),
+                if (opensource.contribution != null) ...[
+                  Padding(padding: const EdgeInsets.only(top: 4)),
                   ...opensource.contribution!.map(
                     (contribution) => Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,6 +104,7 @@ class ResumePdf extends Pdf {
                       ],
                     ),
                   ),
+                ],
               ],
             ),
           ),
