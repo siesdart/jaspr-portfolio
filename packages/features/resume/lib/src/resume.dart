@@ -51,7 +51,27 @@ class ResumePdf extends Pdf {
                 ),
               ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '3. 오픈소스'),
+        RCategory(title: '3. 경력'),
+        Padding(padding: const EdgeInsets.only(top: 6)),
+        ...config.experience.map(
+          (experience) => RHistory(
+            title: experience.company,
+            period: experience.period,
+            children: [
+              Text(experience.role),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Text(experience.description),
+              ),
+              Text(
+                experience.tags.map((e) => '#$e').join(' '),
+                style: const TextStyle(color: PdfColors.grey),
+              ),
+            ],
+          ),
+        ),
+        Padding(padding: const EdgeInsets.only(top: 16)),
+        RCategory(title: '4. 오픈소스'),
         ...config.opensource.map(
           (opensource) => Padding(
             padding: const EdgeInsets.only(top: 6),
@@ -90,7 +110,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '4. 학력'),
+        RCategory(title: '5. 학력'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.education.map(
           (education) => RHistory(
@@ -100,7 +120,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '5. 수상 내역'),
+        RCategory(title: '6. 수상 및 자격증'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.award.map(
           (award) => RHistory(
@@ -110,7 +130,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '6. 기타'),
+        RCategory(title: '7. 기타'),
         Padding(padding: const EdgeInsets.only(top: 6)),
         ...config.etc.map(
           (etc) => RHistory(
