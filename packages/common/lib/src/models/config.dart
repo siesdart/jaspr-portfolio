@@ -1,6 +1,4 @@
-import 'package:common/src/models/github.dart';
-import 'package:common/src/models/history.dart';
-import 'package:common/src/models/opensource.dart';
+import 'package:common/common.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -18,6 +16,7 @@ class Config with ConfigMappable {
     required this.birth,
     required this.location,
     required this.mail,
+    required this.experience,
     required this.opensource,
     required this.education,
     required this.award,
@@ -33,6 +32,7 @@ class Config with ConfigMappable {
   final String birth;
   final String location;
   final String mail;
+  final List<Experience> experience;
   final List<Opensource> opensource;
   final List<History> education;
   final List<History> award;

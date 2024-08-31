@@ -11,6 +11,18 @@ github:
 birth: 2000. 03. 20
 location: 충청북도 영동군
 mail: ghwhsbsb123@naver.com
+experience:
+  - period: 2021.10 ~ 2023.05
+    imageUrl: icons/rokaf.png
+    company: 공군군수사령부
+    role: 융합체계과 인트라넷운용체계개발병
+    description: |
+      컴퓨터자산관리체계 사용자 지원 및 개발
+
+      1. Tibero 기반 컴퓨터자산 데이터베이스 유지보수 및 관리
+      2. Spring 기반 서비스 백엔드 유지보수 및 관리
+      3. 각종 성능 개선 및 신규 기능 구현
+    tags: [HTML, CSS, JavaScript, jQuery, Java, Spring, Tibero]
 opensource:
   - repo: schultek/jaspr
     description: Flutter와 유사한 구조를 지닌 Dart 기반의 모던 웹 프레임워크
@@ -33,6 +45,10 @@ education:
     title: 한국과학기술원(KAIST)
     content: 전산학부 · 기술경영학부 학사
 award:
+  - period: '2019.05'
+    imageUrl: icons/topcit.svg
+    title: TOPCIT
+    content: 255점 수준 2
   - period: '2017.09'
     imageUrl: icons/koi.webp
     title: 제34회 한국정보올림피아드 공모대회
@@ -46,15 +62,7 @@ etc:
     imageUrl: icons/madcamp.png
     title: '몰입캠프: 프로그래밍과 스타트업'
     content: 2023년 겨울학기
-  - period: 2021.08 ~ 2023.05
-    imageUrl: icons/rokaf.png
-    title: 컴퓨터자산관리체계 유지보수 및 개발
-    content: 대한민국 공군 군수사령부
   - period: '2019.11'
     imageUrl: icons/devfest.webp
     title: DevFest on Campus 2019
     content: Flutter 코드랩 튜터
-  - period: '2019.05'
-    imageUrl: icons/topcit.svg
-    title: TOPCIT
-    content: 255점 수준 2

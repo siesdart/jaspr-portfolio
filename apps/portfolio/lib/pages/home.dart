@@ -24,29 +24,34 @@ class HomePage extends StatelessComponent {
       title: '2. 기술 스택',
       child: Skill(),
     );
+    yield Section(
+      id: 'experience',
+      title: '3. 경력',
+      children: config.experience.map(ExperienceItem.new).toList(),
+    );
     yield const Section(
       id: 'project',
-      title: '3. 프로젝트',
+      title: '4. 프로젝트',
       children: [Project()],
     );
     yield Section(
       id: 'opensource',
-      title: '4. 오픈소스',
+      title: '5. 오픈소스',
       children: config.opensource.map(OpensourceItem.new).toList(),
     );
     yield Section(
       id: 'edu',
-      title: '5. 학력',
+      title: '6. 학력',
       children: config.education.map(HistoryItem.new).toList(),
     );
     yield Section(
       id: 'award',
-      title: '6. 수상 내역',
+      title: '7. 수상 및 자격증',
       children: config.award.map(HistoryItem.new).toList(),
     );
     yield Section(
       id: 'etc',
-      title: '7. 기타',
+      title: '8. 기타',
       children: config.etc.map(HistoryItem.new).toList(),
     );
   }

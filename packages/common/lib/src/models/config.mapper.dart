@@ -14,6 +14,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
     if (_instance == null) {
       MapperContainer.globals.use(_instance = ConfigMapper._());
       GithubMapper.ensureInitialized();
+      ExperienceMapper.ensureInitialized();
       OpensourceMapper.ensureInitialized();
       HistoryMapper.ensureInitialized();
     }
@@ -44,6 +45,9 @@ class ConfigMapper extends ClassMapperBase<Config> {
       Field('location', _$location);
   static String _$mail(Config v) => v.mail;
   static const Field<Config, String> _f$mail = Field('mail', _$mail);
+  static List<Experience> _$experience(Config v) => v.experience;
+  static const Field<Config, List<Experience>> _f$experience =
+      Field('experience', _$experience);
   static List<Opensource> _$opensource(Config v) => v.opensource;
   static const Field<Config, List<Opensource>> _f$opensource =
       Field('opensource', _$opensource);
@@ -66,6 +70,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
     #birth: _f$birth,
     #location: _f$location,
     #mail: _f$mail,
+    #experience: _f$experience,
     #opensource: _f$opensource,
     #education: _f$education,
     #award: _f$award,
@@ -83,6 +88,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
         birth: data.dec(_f$birth),
         location: data.dec(_f$location),
         mail: data.dec(_f$mail),
+        experience: data.dec(_f$experience),
         opensource: data.dec(_f$opensource),
         education: data.dec(_f$education),
         award: data.dec(_f$award),
@@ -136,6 +142,8 @@ extension ConfigValueCopy<$R, $Out> on ObjectCopyWith<$R, Config, $Out> {
 abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github;
+  ListCopyWith<$R, Experience, ExperienceCopyWith<$R, Experience, Experience>>
+      get experience;
   ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
       get opensource;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
@@ -152,6 +160,7 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
       String? birth,
       String? location,
       String? mail,
+      List<Experience>? experience,
       List<Opensource>? opensource,
       List<History>? education,
       List<History>? award,
@@ -169,6 +178,10 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github =>
       ListCopyWith($value.github, (v, t) => v.copyWith.$chain(t),
           (v) => call(github: v));
+  @override
+  ListCopyWith<$R, Experience, ExperienceCopyWith<$R, Experience, Experience>>
+      get experience => ListCopyWith($value.experience,
+          (v, t) => v.copyWith.$chain(t), (v) => call(experience: v));
   @override
   ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
       get opensource => ListCopyWith($value.opensource,
@@ -196,6 +209,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
           String? birth,
           String? location,
           String? mail,
+          List<Experience>? experience,
           List<Opensource>? opensource,
           List<History>? education,
           List<History>? award,
@@ -210,6 +224,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
         if (birth != null) #birth: birth,
         if (location != null) #location: location,
         if (mail != null) #mail: mail,
+        if (experience != null) #experience: experience,
         if (opensource != null) #opensource: opensource,
         if (education != null) #education: education,
         if (award != null) #award: award,
@@ -226,6 +241,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       birth: data.get(#birth, or: $value.birth),
       location: data.get(#location, or: $value.location),
       mail: data.get(#mail, or: $value.mail),
+      experience: data.get(#experience, or: $value.experience),
       opensource: data.get(#opensource, or: $value.opensource),
       education: data.get(#education, or: $value.education),
       award: data.get(#award, or: $value.award),
