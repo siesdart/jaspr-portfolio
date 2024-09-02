@@ -1,10 +1,12 @@
 name: Fly Deploy
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths-ignore:
       - '*.md'
+      - '.github/**'
 jobs:
   deploy:
     name: Deploy app
