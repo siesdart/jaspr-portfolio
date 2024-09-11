@@ -9,4 +9,4 @@ order: 1
 repo: siesdart/KAIST_GenChem
 color: 00B4AB
 image: projects/genchem.png
-tags: [Dart, Flutter, Riverpod]
+tags: [Dart, Flutter, Riverpod, Firebase]

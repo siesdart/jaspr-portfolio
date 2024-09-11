@@ -66,3 +66,7 @@ etc:
     imageUrl: icons/devfest.webp
     title: DevFest on Campus 2019
     content: Flutter 코드랩 튜터
+  - period: 2019.03 ~ 2021.06
+    imageUrl: icons/sparcs.svg
+    title: SPARCS
+    content: KAIST 서비스 개발 자치단체
