@@ -34,7 +34,7 @@ class ProjectDetailPage extends StatelessComponent {
               classes: 'size-2 lg:size-3',
               styles: Styles.raw({'fill': '#${project.color}'}),
               viewBox: '0 0 16 16',
-              [circle([], cx: '8', cy: '8', r: '8')],
+              [circle(cx: '8', cy: '8', r: '8', [])],
             ),
             h4(
               classes: 'font-medium text-lg lg:text-xl',
@@ -42,6 +42,8 @@ class ProjectDetailPage extends StatelessComponent {
             ),
             a(
               classes: project.repo == null ? 'pointer-events-none' : '',
+              href: 'https://github.com/${project.repo}',
+              target: Target.blank,
               [
                 svg(
                   classes:
@@ -50,8 +52,6 @@ class ProjectDetailPage extends StatelessComponent {
                   SvgIcons.github,
                 ),
               ],
-              href: 'https://github.com/${project.repo}',
-              target: Target.blank,
             ),
             if (project.repo != null)
               img(

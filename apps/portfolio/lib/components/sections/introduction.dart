@@ -7,8 +7,8 @@ class Introduction extends StatelessComponent with SyncProviderDependencies {
   const Introduction({super.key});
 
   @override
-  // ignore: strict_raw_type
-  Iterable<SyncProvider> get preloadDependencies => [introductionProvider];
+  Iterable<SyncProvider<dynamic>> get preloadDependencies =>
+      [introductionProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

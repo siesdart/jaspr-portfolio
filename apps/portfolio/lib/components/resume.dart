@@ -2,10 +2,8 @@ import 'package:common/common.dart';
 import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:resume/resume.dart';
-
-@Import.onWeb('dart:html', show: [#Blob, #Url, #window])
-// ignore: always_use_package_imports
-import 'resume.imports.dart';
+import 'package:universal_web/js_interop.dart';
+import 'package:universal_web/web.dart';
 
 @client
 class Resume extends StatelessComponent {
@@ -52,7 +50,12 @@ class Resume extends StatelessComponent {
 
   Future<void> _downloadPdf(Pdf pdf) async {
     final pdfData = await pdf.buildData();
-    final url = Url.createObjectUrl(Blob([pdfData], 'application/pdf'));
+    final url = URL.createObjectURL(
+      Blob(
+        [pdfData.buffer.toJS].toJS,
+        BlobPropertyBag(type: 'application/pdf'),
+      ),
+    );
     window.open(url, '_blank');
   }
 }

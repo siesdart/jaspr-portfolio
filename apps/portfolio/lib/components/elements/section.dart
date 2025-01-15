@@ -17,16 +17,13 @@ class Section extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield section(id: id, [
-      a(
-        [
-          h4(
-            classes:
-                'bg-[#13B9FD] font-medium text-lg text-white mb-4 px-4 py-2 rounded-2xl shadow-md lg:text-xl',
-            [text(title)],
-          ),
-        ],
-        href: '#$id',
-      ),
+      a(href: '#$id', [
+        h4(
+          classes:
+              'bg-[#13B9FD] font-medium text-lg text-white mb-4 px-4 py-2 rounded-2xl shadow-md lg:text-xl',
+          [text(title)],
+        ),
+      ]),
       if (child != null) div(classes: 'px-6', [child!]),
       if (children != null)
         ul(

@@ -9,8 +9,7 @@ class Skill extends StatelessComponent with SyncProviderDependencies {
   const Skill({super.key});
 
   @override
-  // ignore: strict_raw_type
-  Iterable<SyncProvider> get preloadDependencies => [skillProvider];
+  Iterable<SyncProvider<dynamic>> get preloadDependencies => [skillProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

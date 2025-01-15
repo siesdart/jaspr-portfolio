@@ -1,5 +1,5 @@
 @MappableLib(generateInitializerForScope: InitializerScope.package)
-library common;
+library;
 
 import 'package:dart_mappable/dart_mappable.dart';
 

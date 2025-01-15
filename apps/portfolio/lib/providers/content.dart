@@ -7,7 +7,6 @@ import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 
 @Import.onServer('dart:io', show: [#Directory, #File])
-// ignore: always_use_package_imports
 import 'content.imports.dart';
 
 final introductionProvider = SyncProvider<String>(

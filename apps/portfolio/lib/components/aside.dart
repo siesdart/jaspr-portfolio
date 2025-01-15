@@ -9,8 +9,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
   const Aside({super.key});
 
   @override
-  // ignore: strict_raw_type
-  Iterable<SyncProvider> get preloadDependencies => [
+  Iterable<SyncProvider<dynamic>> get preloadDependencies => [
         introductionProvider,
         skillProvider,
         projectsProvider,
@@ -85,11 +84,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
     return div(classes: 'flex items-center gap-1 lg:gap-2', [
       svg,
       if (href != null)
-        a(
-          [text(title)],
-          href: href,
-          target: Target.blank,
-        )
+        a(href: href, target: Target.blank, [text(title)])
       else
         span([text(title)]),
     ]);

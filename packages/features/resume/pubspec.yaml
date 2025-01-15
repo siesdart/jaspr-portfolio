@@ -6,11 +6,11 @@ environment:
   sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
-  collection: ^1.19.0
+  collection: ^1.19.1
   common: ^1.0.0
-  html: ^0.15.4
+  html: ^0.15.5
   http: ^1.2.2
   pdf: ^3.11.1
 
 dev_dependencies:
-  very_good_analysis: ^6.0.0
+  very_good_analysis: ^7.0.0

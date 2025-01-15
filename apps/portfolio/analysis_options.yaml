@@ -9,8 +9,11 @@ analyzer:
     - lib/**.imports.dart
     - lib/**.mapper.dart
     - lib/jaspr_options.dart
+  plugins:
+    - custom_lint
 
 linter:
   rules:
+    always_use_package_imports: false
     lines_longer_than_80_chars: false
     public_member_api_docs: false

@@ -8,8 +8,7 @@ class Project extends StatelessComponent with SyncProviderDependencies {
   const Project({super.key});
 
   @override
-  // ignore: strict_raw_type
-  Iterable<SyncProvider> get preloadDependencies => [projectsProvider];
+  Iterable<SyncProvider<dynamic>> get preloadDependencies => [projectsProvider];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
