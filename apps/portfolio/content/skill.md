@@ -12,7 +12,7 @@
     <Icon-dev icon="typescript/typescript-original.svg" alt="typescript icon"/>
   </div>
   <div class="absolute top-[11.8rem] left-[calc(50%-6.09rem)]  lg:top-[19rem] lg:left-[calc(50%-10.6rem)]">
-    <Icon-dev icon="svelte/svelte-original.svg" alt="svelte icon"/>
+    <Icon-dev icon="react/react-original.svg" alt="react icon"/>
   </div>
   <div class="absolute top-[13.6rem] left-[calc(50%-9.2rem)] lg:top-[22rem] lg:left-[calc(50%-15.8rem)]">
     <Icon-dev icon="express/express-original.svg" alt="express icon"/>
@@ -51,6 +51,6 @@
 - 데스크톱: WPF, Flutter
 - 인공지능: ML.NET
 - 웹
-  - 프론트엔드: Svelte, Jaspr, Tailwind CSS
+  - 프론트엔드: React, Jaspr, Tailwind CSS
   - 백엔드: Express, Firebase, Microsoft Azure
   - 데이터베이스: PostgreSQL, MongoDB, Drizzle ORM
