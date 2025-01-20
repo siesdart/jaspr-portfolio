@@ -5,7 +5,8 @@ class Icon extends StatelessComponent {
 
   const Icon.dev({required String icon, String? alt, Key? key})
       : this(
-          src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/$icon',
+          src:
+              'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/$icon',
           alt: alt,
           key: key,
         );

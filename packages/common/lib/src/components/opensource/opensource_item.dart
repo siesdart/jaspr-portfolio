@@ -51,7 +51,7 @@ class OpensourceItem extends StatelessComponent {
       span([
         text(contribution.title!),
         a(
-          classes: 'text-[#13B9FD]',
+          classes: 'text-[#13B9FD] ml-1',
           [text('#'), text(contribution.id.toString())],
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: Target.blank,
