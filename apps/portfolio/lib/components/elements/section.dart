@@ -27,7 +27,7 @@ class Section extends StatelessComponent {
       if (child != null) div(classes: 'px-6', [child!]),
       if (children != null)
         ul(
-          classes: 'border-l-2 mx-5 px-3 space-y-4',
+          classes: 'border-l-2 border-gray-200 mx-5 px-3 space-y-4',
           children!,
         ),
     ]);

@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' source('../../..');
+
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-ibmPlexSansKR: 'IBM Plex Sans KR', 'sans-serif';
+}
+
+@utility list-dash {
+  list-style-type: '- ';
+}
 
 @layer base {
   @font-face {
@@ -61,6 +69,7 @@
 
   html {
     @apply font-ibmPlexSansKR;
+    @apply antialiased;
     @apply text-gray-700;
     @apply text-sm;
     @apply lg:text-base;

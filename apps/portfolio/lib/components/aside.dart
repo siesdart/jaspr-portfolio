@@ -41,7 +41,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
             'https://github.com/${github.user}',
           ),
         ),
-        hr(classes: 'my-1 lg:my-2'),
+        hr(classes: 'border-gray-200 my-1 lg:my-2'),
         _buildItem(
           svg(
             classes: 'size-5 lg:size-6 fill-none stroke-slate-900',

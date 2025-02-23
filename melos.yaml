@@ -2,6 +2,10 @@ name: portfolio_workspace
 repository: https://github.com/siesdart/jaspr-portfolio
 
 command:
+  bootstrap:
+    hooks:
+      pre: |
+        melos install:node
   clean:
     hooks:
       pre: |
@@ -15,7 +19,7 @@ scripts:
   build:
     packageFilters:
       scope: [portfolio]
-    exec: jaspr build
+    exec: jaspr build && npm run build
   build:dart:
     packageFilters:
       dependsOn: build_runner
@@ -24,16 +28,23 @@ scripts:
     packageFilters:
       scope: [portfolio]
     exec: jaspr clean
+  install:node:
+    packageFilters:
+      scope: [portfolio]
+    exec: npm install
   outdated:
-    exec: dart pub outdated --up-to-date --no-dependency-overrides
+    exec: dart pub outdated --up-to-date --no-dependency-overrides --no-transitive
   upgrade:
-    exec: dart pub upgrade --major-versions
+    exec: dart pub upgrade --major-versions && melos upgrade:node
+  upgrade:node:
+    packageFilters:
+      scope: [portfolio]
+    exec: npm update --save
   serve:
     packageFilters:
       scope: [portfolio]
-    exec: jaspr serve --verbose
+    exec: npx concurrently "npm run watch" "jaspr serve --verbose"; npm run clean
   start:
     packageFilters:
       scope: [portfolio]
-    run: |
-      serve apps/portfolio/build/jaspr
+    exec: npm run start

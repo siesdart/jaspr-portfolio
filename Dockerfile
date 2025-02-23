@@ -1,9 +1,8 @@
-FROM dart:stable as build
+FROM dart:stable AS build
 
-# Setup Tailwind CSS
-RUN curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
-RUN chmod +x tailwindcss-linux-x64
-RUN mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
+# Setup Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash
+RUN apt-get install -y nodejs
 
 WORKDIR /app
 COPY . .

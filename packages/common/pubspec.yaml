@@ -7,11 +7,11 @@ environment:
 
 dependencies:
   collection: ^1.19.1
-  dart_mappable: ^4.3.0
-  jaspr: ^0.17.0
-  jaspr_router: ^0.6.1
+  dart_mappable: ^4.4.0
+  jaspr: ^0.17.1
+  jaspr_router: ^0.6.2
 
 dev_dependencies:
-  build_runner: ^2.4.14
-  dart_mappable_builder: ^4.3.0
+  build_runner: ^2.4.15
+  dart_mappable_builder: ^4.4.0
   very_good_analysis: ^7.0.0
