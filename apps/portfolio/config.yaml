@@ -45,6 +45,10 @@ education:
     title: 한국과학기술원(KAIST)
     content: 전산학부 · 기술경영학부 학사
 award:
+  - period: '2025.01'
+    imageUrl: icons/toeic.svg
+    title: TOEIC
+    content: 830(LC 415, RC 415)
   - period: '2019.05'
     imageUrl: icons/topcit.svg
     title: TOPCIT
