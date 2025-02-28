@@ -12,10 +12,16 @@ birth: 2000. 03. 20
 location: 충청북도 영동군
 mail: ghwhsbsb123@naver.com
 experience:
+  - period: 2025.02 ~ 현재
+    imageUrl: icons/bagelcode.png
+    company: 베이글코드
+    role: Platform / Web Frontend Engineering Intern
+    description: ''
+    tags: [React, Next.js]
   - period: 2021.10 ~ 2023.05
     imageUrl: icons/rokaf.png
     company: 공군군수사령부
-    role: 융합체계과 인트라넷운용체계개발병
+    role: 융합체계과 / 인트라넷운용체계개발병
     description: |
       컴퓨터자산관리체계 사용자 지원 및 개발
 
