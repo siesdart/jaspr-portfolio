@@ -20,7 +20,7 @@ class ProjectDetailPage extends StatelessComponent {
         'keywords': project.tags.join(', '),
         'og:title': '${project.title} - ${config.title}',
         'og:description': project.introduction,
-        'og:url': '${config.url}${context.binding.currentUri}',
+        'og:url': '${config.url}${context.url}',
       },
     );
 
@@ -32,7 +32,7 @@ class ProjectDetailPage extends StatelessComponent {
           [
             svg(
               classes: 'size-2 lg:size-3',
-              styles: Styles.raw({'fill': '#${project.color}'}),
+              styles: Styles(raw: {'fill': '#${project.color}'}),
               viewBox: '0 0 16 16',
               [circle(cx: '8', cy: '8', r: '8', [])],
             ),

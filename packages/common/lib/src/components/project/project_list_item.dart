@@ -17,7 +17,7 @@ class ProjectListItem extends StatelessComponent {
           div(classes: 'flex items-center gap-2', [
             svg(
               classes: 'size-2',
-              styles: Styles.raw({'fill': '#${project.color}'}),
+              styles: Styles(raw: {'fill': '#${project.color}'}),
               viewBox: '0 0 16 16',
               [circle([], cx: '8', cy: '8', r: '8')],
             ),

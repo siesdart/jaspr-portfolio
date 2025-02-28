@@ -5,31 +5,26 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: "16e298750b6d0af7ce8a3ba7c18c69c3785d11b15ec83f6dcd0ad2a0009b3cab"
+      sha256: dc27559385e905ad30838356c5f5d574014ba39872d732111cd07ac0beff4c57
       url: "https://pub.dev"
     source: hosted
-    version: "76.0.0"
-  _macros:
-    dependency: transitive
-    description: dart
-    source: sdk
-    version: "0.3.3"
+    version: "80.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "1f14db053a8c23e260789e9b0980fa27f2680dd640932cae5e1137cce0e46e1e"
+      sha256: "192d1c5b944e7e53b24b5586db760db934b177d4147c42fbca8c8c5f1eb8d11e"
       url: "https://pub.dev"
     source: hosted
-    version: "6.11.0"
+    version: "7.3.0"
   analyzer_plugin:
     dependency: transitive
     description:
       name: analyzer_plugin
-      sha256: "9661b30b13a685efaee9f02e5d01ed9f2b423bd889d28a304d02d704aee69161"
+      sha256: "1d460d14e3c2ae36dc2b32cef847c4479198cf87704f63c3c3c8150ee50c3916"
       url: "https://pub.dev"
     source: hosted
-    version: "0.11.3"
+    version: "0.12.0"
   archive:
     dependency: transitive
     description:
@@ -249,34 +244,34 @@ packages:
     dependency: transitive
     description:
       name: custom_lint
-      sha256: "3486c470bb93313a9417f926c7dd694a2e349220992d7b9d14534dc49c15bba9"
+      sha256: "021897cce2b6c783b2521543e362e7fe1a2eaab17bf80514d8de37f99942ed9e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.7.3"
   custom_lint_builder:
     dependency: transitive
     description:
       name: custom_lint_builder
-      sha256: "42cdc41994eeeddab0d7a722c7093ec52bd0761921eeb2cbdbf33d192a234759"
+      sha256: e4235b9d8cef59afe621eba086d245205c8a0a6c70cd470be7cb17494d6df32d
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.7.3"
   custom_lint_core:
     dependency: transitive
     description:
       name: custom_lint_core
-      sha256: "02450c3e45e2a6e8b26c4d16687596ab3c4644dd5792e3313aa9ceba5a49b7f5"
+      sha256: "6dcee8a017181941c51a110da7e267c1d104dc74bec8862eeb8c85b5c8759a9e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.0"
+    version: "0.7.1"
   custom_lint_visitor:
     dependency: transitive
     description:
       name: custom_lint_visitor
-      sha256: bfe9b7a09c4775a587b58d10ebb871d4fe618237639b1e84d5ec62d7dfef25f9
+      sha256: "36282d85714af494ee2d7da8c8913630aa6694da99f104fb2ed4afcf8fc857d8"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0+6.11.0"
+    version: "1.0.0+7.3.0"
   dart_mappable:
     dependency: transitive
     description:
@@ -289,10 +284,10 @@ packages:
     dependency: transitive
     description:
       name: dart_style
-      sha256: "7306ab8a2359a48d22310ad823521d723acfed60ee1f7e37388e8986853b6820"
+      sha256: "27eb0ae77836989a3bc541ce55595e8ceee0992807f14511552a898ddd0d88ac"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.8"
+    version: "3.0.1"
   dotenv:
     dependency: "direct main"
     description:
@@ -433,50 +428,50 @@ packages:
     dependency: "direct main"
     description:
       name: jaspr
-      sha256: "53b426645e9ffc92f1a0ffe726243ae2c42ecec7c74cebe2ff0d93da57d79023"
+      sha256: "17cdba41ce47d401e8b34aa01ef2707211429d83f0a4281574fe313f0b0a8a94"
       url: "https://pub.dev"
     source: hosted
-    version: "0.17.1"
+    version: "0.18.0"
   jaspr_builder:
     dependency: "direct dev"
     description:
       name: jaspr_builder
-      sha256: "3df29a10f223060bdd8e3362b49dcccf8490fe587c052ce86c2e34e1b302bae1"
+      sha256: "66b6aa705624717abc9c03438d892086030db083beac80ba78bd975cfa2ed7ea"
       url: "https://pub.dev"
     source: hosted
-    version: "0.17.1"
+    version: "0.18.0"
   jaspr_lints:
     dependency: "direct dev"
     description:
       name: jaspr_lints
-      sha256: dff1efa8e84d4ccd5e9ff4e68bf0aa4fd384a382f7e2bf8c740feb7c52225faf
+      sha256: "17e73c818c409454ea150e0641928bf1d340c2704016aba5efd223302bee72f7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.3.1"
   jaspr_markdown:
     dependency: "direct main"
     description:
       name: jaspr_markdown
-      sha256: "5ae99197d61b88aa96431cb9d699a3c642ff8dee08cb9da08ce37c2e7359a99f"
+      sha256: "1a3f5ec52861ca8e5ef2a7f88e78ed3f9b49ccc1d9b74eef5fc064ae7ae636e3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.3"
+    version: "0.1.4"
   jaspr_riverpod:
     dependency: "direct main"
     description:
       name: jaspr_riverpod
-      sha256: "71c2de7590aea5ac5122501a1df5414483217309c307b672e30cbb16c307502f"
+      sha256: db01b097fe0e5d76eeb90c31190fefd9eae8d48d9f0bc677a66da5d216739716
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.18"
+    version: "0.3.19"
   jaspr_router:
     dependency: "direct main"
     description:
       name: jaspr_router
-      sha256: "55c553645ddcd2eb37ffd9e1d721f54ceb9665908209f797b85b2185ef0df659"
+      sha256: "5d6a22d0e66d10d916e5e0f6540a2b4ff6184385f864b525c3a39884122e8359"
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.2"
+    version: "0.6.3"
   js:
     dependency: transitive
     description:
@@ -501,14 +496,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
-  macros:
-    dependency: transitive
-    description:
-      name: macros
-      sha256: "1d9e801cd66f7ea3663c45fc708450db1fa57f988142c64289142c9b7ee80656"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.3-main.0"
   markdown:
     dependency: transitive
     description:
@@ -704,10 +691,10 @@ packages:
     dependency: transitive
     description:
       name: source_gen
-      sha256: "14658ba5f669685cd3d63701d01b31ea748310f7ab854e471962670abcf57832"
+      sha256: "35c8150ece9e8c8d263337a265153c3329667640850b9304861faea59fc98f6b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.0"
+    version: "2.0.0"
   source_maps:
     dependency: transitive
     description:
