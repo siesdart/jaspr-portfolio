@@ -8,5 +8,5 @@ year: 2018
 order: 3
 repo: null
 color: 178600
-image: null
+image: projects/enoz.png
 tags: [C#, WPF, MVVM, CSCore]
