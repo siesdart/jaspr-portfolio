@@ -12,7 +12,7 @@ class ExperienceItem extends StatelessComponent {
     yield li(classes: 'flex flex-col', [
       div(classes: 'flex gap-2 lg:gap-4', [
         span(
-          classes: 'flex-none w-[4.5rem] text-gray-400 lg:w-20',
+          classes: 'flex-none w-20 text-gray-400 lg:w-20',
           [text(experience.period)],
         ),
         img(

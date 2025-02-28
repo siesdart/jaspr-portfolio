@@ -15,7 +15,7 @@ class ProjectListPage extends StatelessComponent with SyncProviderDependencies {
     switch (context.watch(projectsProvider)) {
       case AsyncData(value: final projects):
         yield ul(
-          classes: 'divide-y',
+          classes: 'divide-y divide-gray-200',
           projects.sortedByYearAndOrder().map(ProjectListItem.new).toList(),
         );
     }
