@@ -8,8 +8,8 @@ environment:
 dependencies:
   collection: ^1.19.1
   dart_mappable: ^4.4.0
-  jaspr: ^0.18.0
-  jaspr_router: ^0.6.3
+  jaspr: ">=0.18.0 <0.20.0"
+  jaspr_router: ">=0.6.3 <0.8.0"
 
 dev_dependencies:
   build_runner: ^2.4.15
