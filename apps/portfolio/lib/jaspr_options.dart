@@ -1,3 +1,6 @@
+// dart format off
+// ignore_for_file: type=lint
+
 // GENERATED FILE, DO NOT MODIFY
 // Generated with jaspr_builder
 
@@ -20,16 +23,19 @@ import 'package:portfolio/components/resume.dart' as prefix0;
 ///   runApp(...);
 /// }
 /// ```
-final defaultJasprOptions = JasprOptions(
+JasprOptions get defaultJasprOptions => JasprOptions(
   clients: {
-    prefix0.Resume: ClientTarget<prefix0.Resume>('components/resume', params: _prefix0Resume),
+    prefix0.Resume: ClientTarget<prefix0.Resume>(
+      'components/resume',
+      params: _prefix0Resume,
+    ),
   },
 );
 
 Map<String, dynamic> _prefix0Resume(prefix0.Resume c) => {
-      'config': c.config.toJson(),
-      'introduction': c.introduction,
-      'skill': c.skill,
-      'projects': c.projects.map((i) => i.toJson()).toList(),
-      'disabled': c.disabled
-    };
+  'config': c.config.toJson(),
+  'introduction': c.introduction,
+  'skill': c.skill,
+  'projects': c.projects.map((i) => i.toJson()).toList(),
+  'disabled': c.disabled,
+};

@@ -8,9 +8,9 @@ environment:
 dependencies:
   collection: ^1.19.1
   common: ^1.0.0
-  html: ^0.15.5
-  http: ^1.3.0
+  html: ^0.15.6
+  http: ^1.4.0
   pdf: ^3.11.3
 
 dev_dependencies:
-  very_good_analysis: ^7.0.0
+  very_good_analysis: ^9.0.0

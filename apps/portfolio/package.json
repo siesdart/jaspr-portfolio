@@ -6,9 +6,9 @@
     "start": "serve build/jaspr"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.9",
+    "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/typography": "^0.5.16",
-    "concurrently": "^9.1.2",
+    "concurrently": "^9.2.0",
     "rimraf": "^6.0.1",
     "serve": "^14.2.4",
     "tailwindcss": "^4.0.7"
