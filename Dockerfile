@@ -15,6 +15,6 @@ RUN melos bootstrap
 # Build Jaspr
 RUN melos build
 
-FROM pierrezemb/gostatic
+FROM nginx:alpine
 
-COPY --from=build /app/apps/portfolio/build/jaspr/ /srv/http/
+COPY --from=build /app/apps/portfolio/build/jaspr/ /usr/share/nginx/html
