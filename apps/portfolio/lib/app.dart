@@ -22,11 +22,10 @@ class App extends StatelessComponent with SyncProviderDependencies {
 
     yield h1(classes: 'sr-only', [text(config.title)]);
     yield const Header();
-    yield DomComponent(
-      tag: 'main',
+    yield main_(
       classes:
           'grid grid-cols-1 place-items-center min-h-80 mt-1 mb-4 px-6 lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:my-8 lg:px-8',
-      children: [
+      [
         const Aside(),
         div(
           classes:
