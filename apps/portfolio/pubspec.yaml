@@ -8,7 +8,7 @@ environment:
 dependencies:
   common: ^1.0.0
   dotenv: ^4.2.0
-  get_it: ^8.0.3
+  get_it: ^8.2.0
   github: ^9.25.0
   jaspr: ^0.20.0
   jaspr_markdown: ^0.1.5
