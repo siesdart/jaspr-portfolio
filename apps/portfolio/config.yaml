@@ -16,8 +16,14 @@ experience:
     imageUrl: icons/bagelcode.png
     company: 베이글코드
     role: Platform / Web Frontend Engineering Intern
-    description: ''
-    tags: [React, Next.js]
+    description: |
+      사내 백오피스 웹 서비스의 프론트엔드 개발 및 유지보수
+
+      1. 게임 개발 팀의 서포트를 위한 Next.js 기반 Gaia Console 웹 FE 개발
+      2. 게임의 KPI 등 데이터를 시각화하여 보여주는 Next.js 기반 데이터 플랫폼 Nebula 웹 FE 개발
+      3. Tailwind CSS와 Storybook을 이용한 사내 공통 React UI 컴포넌트 패키지 개발 및 적용
+    tags:
+      [HTML, CSS, TypeScript, React, Next.js, Tailwind CSS, Zustand, Storybook]
   - period: 2021.10 ~ 2023.05
     imageUrl: icons/rokaf.png
     company: 공군군수사령부
