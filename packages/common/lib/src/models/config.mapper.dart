@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unnecessary_cast, override_on_non_overriding_member
 // ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
@@ -27,8 +28,10 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static String _$title(Config v) => v.title;
   static const Field<Config, String> _f$title = Field('title', _$title);
   static String _$description(Config v) => v.description;
-  static const Field<Config, String> _f$description =
-      Field('description', _$description);
+  static const Field<Config, String> _f$description = Field(
+    'description',
+    _$description,
+  );
   static String _$url(Config v) => v.url;
   static const Field<Config, String> _f$url = Field('url', _$url);
   static String _$locale(Config v) => v.locale;
@@ -36,24 +39,34 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static String _$name(Config v) => v.name;
   static const Field<Config, String> _f$name = Field('name', _$name);
   static List<Github> _$github(Config v) => v.github;
-  static const Field<Config, List<Github>> _f$github =
-      Field('github', _$github);
+  static const Field<Config, List<Github>> _f$github = Field(
+    'github',
+    _$github,
+  );
   static String _$birth(Config v) => v.birth;
   static const Field<Config, String> _f$birth = Field('birth', _$birth);
   static String _$location(Config v) => v.location;
-  static const Field<Config, String> _f$location =
-      Field('location', _$location);
+  static const Field<Config, String> _f$location = Field(
+    'location',
+    _$location,
+  );
   static String _$mail(Config v) => v.mail;
   static const Field<Config, String> _f$mail = Field('mail', _$mail);
   static List<Experience> _$experience(Config v) => v.experience;
-  static const Field<Config, List<Experience>> _f$experience =
-      Field('experience', _$experience);
+  static const Field<Config, List<Experience>> _f$experience = Field(
+    'experience',
+    _$experience,
+  );
   static List<Opensource> _$opensource(Config v) => v.opensource;
-  static const Field<Config, List<Opensource>> _f$opensource =
-      Field('opensource', _$opensource);
+  static const Field<Config, List<Opensource>> _f$opensource = Field(
+    'opensource',
+    _$opensource,
+  );
   static List<History> _$education(Config v) => v.education;
-  static const Field<Config, List<History>> _f$education =
-      Field('education', _$education);
+  static const Field<Config, List<History>> _f$education = Field(
+    'education',
+    _$education,
+  );
   static List<History> _$award(Config v) => v.award;
   static const Field<Config, List<History>> _f$award = Field('award', _$award);
   static List<History> _$etc(Config v) => v.etc;
@@ -79,20 +92,21 @@ class ConfigMapper extends ClassMapperBase<Config> {
 
   static Config _instantiate(DecodingData data) {
     return Config(
-        title: data.dec(_f$title),
-        description: data.dec(_f$description),
-        url: data.dec(_f$url),
-        locale: data.dec(_f$locale),
-        name: data.dec(_f$name),
-        github: data.dec(_f$github),
-        birth: data.dec(_f$birth),
-        location: data.dec(_f$location),
-        mail: data.dec(_f$mail),
-        experience: data.dec(_f$experience),
-        opensource: data.dec(_f$opensource),
-        education: data.dec(_f$education),
-        award: data.dec(_f$award),
-        etc: data.dec(_f$etc));
+      title: data.dec(_f$title),
+      description: data.dec(_f$description),
+      url: data.dec(_f$url),
+      locale: data.dec(_f$locale),
+      name: data.dec(_f$name),
+      github: data.dec(_f$github),
+      birth: data.dec(_f$birth),
+      location: data.dec(_f$location),
+      mail: data.dec(_f$mail),
+      experience: data.dec(_f$experience),
+      opensource: data.dec(_f$opensource),
+      education: data.dec(_f$education),
+      award: data.dec(_f$award),
+      etc: data.dec(_f$etc),
+    );
   }
 
   @override
@@ -117,7 +131,7 @@ mixin ConfigMappable {
   }
 
   ConfigCopyWith<Config, Config, Config> get copyWith =>
-      _ConfigCopyWithImpl(this as Config, $identity, $identity);
+      _ConfigCopyWithImpl<Config, Config>(this as Config, $identity, $identity);
   @override
   String toString() {
     return ConfigMapper.ensureInitialized().stringifyValue(this as Config);
@@ -136,35 +150,36 @@ mixin ConfigMappable {
 
 extension ConfigValueCopy<$R, $Out> on ObjectCopyWith<$R, Config, $Out> {
   ConfigCopyWith<$R, Config, $Out> get $asConfig =>
-      $base.as((v, t, t2) => _ConfigCopyWithImpl(v, t, t2));
+      $base.as((v, t, t2) => _ConfigCopyWithImpl<$R, $Out>(v, t, t2));
 }
 
 abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github;
   ListCopyWith<$R, Experience, ExperienceCopyWith<$R, Experience, Experience>>
-      get experience;
+  get experience;
   ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
-      get opensource;
+  get opensource;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
-      get education;
+  get education;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get award;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get etc;
-  $R call(
-      {String? title,
-      String? description,
-      String? url,
-      String? locale,
-      String? name,
-      List<Github>? github,
-      String? birth,
-      String? location,
-      String? mail,
-      List<Experience>? experience,
-      List<Opensource>? opensource,
-      List<History>? education,
-      List<History>? award,
-      List<History>? etc});
+  $R call({
+    String? title,
+    String? description,
+    String? url,
+    String? locale,
+    String? name,
+    List<Github>? github,
+    String? birth,
+    String? location,
+    String? mail,
+    List<Experience>? experience,
+    List<Opensource>? opensource,
+    List<History>? education,
+    List<History>? award,
+    List<History>? etc,
+  });
   ConfigCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -176,78 +191,100 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
   late final ClassMapperBase<Config> $mapper = ConfigMapper.ensureInitialized();
   @override
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github =>
-      ListCopyWith($value.github, (v, t) => v.copyWith.$chain(t),
-          (v) => call(github: v));
+      ListCopyWith(
+        $value.github,
+        (v, t) => v.copyWith.$chain(t),
+        (v) => call(github: v),
+      );
   @override
   ListCopyWith<$R, Experience, ExperienceCopyWith<$R, Experience, Experience>>
-      get experience => ListCopyWith($value.experience,
-          (v, t) => v.copyWith.$chain(t), (v) => call(experience: v));
+  get experience => ListCopyWith(
+    $value.experience,
+    (v, t) => v.copyWith.$chain(t),
+    (v) => call(experience: v),
+  );
   @override
   ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
-      get opensource => ListCopyWith($value.opensource,
-          (v, t) => v.copyWith.$chain(t), (v) => call(opensource: v));
+  get opensource => ListCopyWith(
+    $value.opensource,
+    (v, t) => v.copyWith.$chain(t),
+    (v) => call(opensource: v),
+  );
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
-      get education => ListCopyWith($value.education,
-          (v, t) => v.copyWith.$chain(t), (v) => call(education: v));
+  get education => ListCopyWith(
+    $value.education,
+    (v, t) => v.copyWith.$chain(t),
+    (v) => call(education: v),
+  );
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get award =>
       ListCopyWith(
-          $value.award, (v, t) => v.copyWith.$chain(t), (v) => call(award: v));
+        $value.award,
+        (v, t) => v.copyWith.$chain(t),
+        (v) => call(award: v),
+      );
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get etc =>
       ListCopyWith(
-          $value.etc, (v, t) => v.copyWith.$chain(t), (v) => call(etc: v));
+        $value.etc,
+        (v, t) => v.copyWith.$chain(t),
+        (v) => call(etc: v),
+      );
   @override
-  $R call(
-          {String? title,
-          String? description,
-          String? url,
-          String? locale,
-          String? name,
-          List<Github>? github,
-          String? birth,
-          String? location,
-          String? mail,
-          List<Experience>? experience,
-          List<Opensource>? opensource,
-          List<History>? education,
-          List<History>? award,
-          List<History>? etc}) =>
-      $apply(FieldCopyWithData({
-        if (title != null) #title: title,
-        if (description != null) #description: description,
-        if (url != null) #url: url,
-        if (locale != null) #locale: locale,
-        if (name != null) #name: name,
-        if (github != null) #github: github,
-        if (birth != null) #birth: birth,
-        if (location != null) #location: location,
-        if (mail != null) #mail: mail,
-        if (experience != null) #experience: experience,
-        if (opensource != null) #opensource: opensource,
-        if (education != null) #education: education,
-        if (award != null) #award: award,
-        if (etc != null) #etc: etc
-      }));
+  $R call({
+    String? title,
+    String? description,
+    String? url,
+    String? locale,
+    String? name,
+    List<Github>? github,
+    String? birth,
+    String? location,
+    String? mail,
+    List<Experience>? experience,
+    List<Opensource>? opensource,
+    List<History>? education,
+    List<History>? award,
+    List<History>? etc,
+  }) => $apply(
+    FieldCopyWithData({
+      if (title != null) #title: title,
+      if (description != null) #description: description,
+      if (url != null) #url: url,
+      if (locale != null) #locale: locale,
+      if (name != null) #name: name,
+      if (github != null) #github: github,
+      if (birth != null) #birth: birth,
+      if (location != null) #location: location,
+      if (mail != null) #mail: mail,
+      if (experience != null) #experience: experience,
+      if (opensource != null) #opensource: opensource,
+      if (education != null) #education: education,
+      if (award != null) #award: award,
+      if (etc != null) #etc: etc,
+    }),
+  );
   @override
   Config $make(CopyWithData data) => Config(
-      title: data.get(#title, or: $value.title),
-      description: data.get(#description, or: $value.description),
-      url: data.get(#url, or: $value.url),
-      locale: data.get(#locale, or: $value.locale),
-      name: data.get(#name, or: $value.name),
-      github: data.get(#github, or: $value.github),
-      birth: data.get(#birth, or: $value.birth),
-      location: data.get(#location, or: $value.location),
-      mail: data.get(#mail, or: $value.mail),
-      experience: data.get(#experience, or: $value.experience),
-      opensource: data.get(#opensource, or: $value.opensource),
-      education: data.get(#education, or: $value.education),
-      award: data.get(#award, or: $value.award),
-      etc: data.get(#etc, or: $value.etc));
+    title: data.get(#title, or: $value.title),
+    description: data.get(#description, or: $value.description),
+    url: data.get(#url, or: $value.url),
+    locale: data.get(#locale, or: $value.locale),
+    name: data.get(#name, or: $value.name),
+    github: data.get(#github, or: $value.github),
+    birth: data.get(#birth, or: $value.birth),
+    location: data.get(#location, or: $value.location),
+    mail: data.get(#mail, or: $value.mail),
+    experience: data.get(#experience, or: $value.experience),
+    opensource: data.get(#opensource, or: $value.opensource),
+    education: data.get(#education, or: $value.education),
+    award: data.get(#award, or: $value.award),
+    etc: data.get(#etc, or: $value.etc),
+  );
 
   @override
   ConfigCopyWith<$R2, Config, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
-      _ConfigCopyWithImpl($value, $cast, t);
+      _ConfigCopyWithImpl<$R2, $Out2>($value, $cast, t);
 }
+

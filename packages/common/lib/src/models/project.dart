@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:common/src/models/file.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -17,6 +18,7 @@ class Project with ProjectMappable {
     required this.color,
     required this.image,
     required this.tags,
+    required this.files,
   });
 
   final String id;
@@ -29,6 +31,7 @@ class Project with ProjectMappable {
   final String color;
   final String? image;
   final List<String> tags;
+  final List<File>? files;
 
   @decoder
   static Project fromJson(String json) => ProjectMapper.fromJson(json);

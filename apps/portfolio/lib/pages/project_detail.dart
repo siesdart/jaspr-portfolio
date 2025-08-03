@@ -65,6 +65,26 @@ class ProjectDetailPage extends StatelessComponent {
           ],
         ),
         h5(classes: 'font-light', [text(project.introduction)]),
+        if (project.files != null && project.files!.isNotEmpty)
+          div(
+            classes: 'not-prose flex flex-row-reverse gap-2',
+            project.files!.reversed
+                .map((file) => a(
+                      classes: 'flex items-center gap-1 text-sm',
+                      href: file.src,
+                      target: Target.blank,
+                      [
+                        svg(
+                          classes:
+                              'size-4 lg:size-5 fill-none stroke-slate-900',
+                          viewBox: '0 0 24 24',
+                          SvgIcons.paperclip,
+                        ),
+                        text(file.name),
+                      ],
+                    ))
+                .toList(),
+          ),
         if (project.image != null)
           img(
             classes: 'max-h-96 mx-auto',

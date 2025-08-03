@@ -10,3 +10,6 @@ repo: Winrobrine-zz/OpticalSimulator
 color: 178600
 image: projects/optical.png
 tags: [C#, WPF, MVVM, Skia]
+files:
+  - name: Report
+    src: projects/optical_report.pdf

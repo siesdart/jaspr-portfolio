@@ -14,3 +14,6 @@ repo: Winrobrine-zz/AlphaGu2
 color: 178600
 image: projects/alphagu.png
 tags: [C#, WPF, MVVM]
+files:
+  - name: Report
+    src: projects/alphagu_report.pdf

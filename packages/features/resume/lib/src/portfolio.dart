@@ -39,6 +39,10 @@ class PortfolioPdf extends Pdf {
                 Text(project.introduction),
                 if (project.repo != null)
                   RUrlLink(url: 'https://github.com/${project.repo}'),
+                if (project.files != null)
+                  ...project.files!.map(
+                    (file) => RUrlLink(url: '${config.url}/${file.src}'),
+                  ),
                 Padding(padding: const EdgeInsets.only(top: 6)),
                 /*
                 if (images.containsKey(project.id))

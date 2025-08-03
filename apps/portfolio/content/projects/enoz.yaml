@@ -10,3 +10,6 @@ repo: null
 color: 178600
 image: projects/enoz.png
 tags: [C#, WPF, MVVM, CSCore]
+files:
+  - name: PPT
+    src: projects/enoz_ppt.pdf

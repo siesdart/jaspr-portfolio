@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, unnecessary_cast, override_on_non_overriding_member
 // ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
@@ -57,7 +58,7 @@ mixin GithubMappable {
   }
 
   GithubCopyWith<Github, Github, Github> get copyWith =>
-      _GithubCopyWithImpl(this as Github, $identity, $identity);
+      _GithubCopyWithImpl<Github, Github>(this as Github, $identity, $identity);
   @override
   String toString() {
     return GithubMapper.ensureInitialized().stringifyValue(this as Github);
@@ -76,7 +77,7 @@ mixin GithubMappable {
 
 extension GithubValueCopy<$R, $Out> on ObjectCopyWith<$R, Github, $Out> {
   GithubCopyWith<$R, Github, $Out> get $asGithub =>
-      $base.as((v, t, t2) => _GithubCopyWithImpl(v, t, t2));
+      $base.as((v, t, t2) => _GithubCopyWithImpl<$R, $Out>(v, t, t2));
 }
 
 abstract class GithubCopyWith<$R, $In extends Github, $Out>
@@ -92,14 +93,20 @@ class _GithubCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Github, $Out>
   @override
   late final ClassMapperBase<Github> $mapper = GithubMapper.ensureInitialized();
   @override
-  $R call({String? title, String? user}) => $apply(FieldCopyWithData(
-      {if (title != null) #title: title, if (user != null) #user: user}));
+  $R call({String? title, String? user}) => $apply(
+    FieldCopyWithData({
+      if (title != null) #title: title,
+      if (user != null) #user: user,
+    }),
+  );
   @override
   Github $make(CopyWithData data) => Github(
-      title: data.get(#title, or: $value.title),
-      user: data.get(#user, or: $value.user));
+    title: data.get(#title, or: $value.title),
+    user: data.get(#user, or: $value.user),
+  );
 
   @override
   GithubCopyWith<$R2, Github, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
-      _GithubCopyWithImpl($value, $cast, t);
+      _GithubCopyWithImpl<$R2, $Out2>($value, $cast, t);
 }
+
