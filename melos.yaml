@@ -19,7 +19,7 @@ scripts:
   build:
     packageFilters:
       scope: [portfolio]
-    exec: jaspr build && npm run build
+    exec: jaspr build --sitemap-domain https://siesdart.fly.dev && npm run build
   build:dart:
     packageFilters:
       dependsOn: build_runner

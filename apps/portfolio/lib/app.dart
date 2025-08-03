@@ -34,9 +34,14 @@ class App extends StatelessComponent with SyncProviderDependencies {
           [
             Router(
               routes: [
-                Route(path: '/', builder: (context, state) => const HomePage()),
+                Route(
+                  path: '/',
+                  settings: const RouteSettings(priority: 1),
+                  builder: (context, state) => const HomePage(),
+                ),
                 Route(
                   path: '/projects',
+                  settings: const RouteSettings(priority: 0.7),
                   builder: (context, state) => const ProjectListPage(),
                 ),
                 if (context.watch(projectsProvider)
