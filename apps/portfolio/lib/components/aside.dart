@@ -62,7 +62,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
           svg(
             classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
             viewBox: '0 0 24 24',
-            SvgIcons.envelope,
+            SvgIcons.mail,
           ),
           config.mail,
           'mailto:${config.mail}',
