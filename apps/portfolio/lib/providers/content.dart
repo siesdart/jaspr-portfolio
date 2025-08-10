@@ -1,6 +1,7 @@
 import 'dart:convert';
 
-import 'package:core/core.dart' show Project, ProjectMapper;
+import 'package:core/core.dart'
+    show Experience, ExperienceMapper, Project, ProjectMapper;
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:path/path.dart' as p;
@@ -23,6 +24,21 @@ final skillProvider = SyncProvider<String>(
     return file.readAsString();
   },
   id: 'skill',
+);
+
+final experiencesProvider = SyncProvider<List<Experience>>(
+  (ref) async {
+    return Directory(p.join('content', 'experiences'))
+        .list()
+        .where((e) => e is File)
+        .asyncMap(
+          (e) async => ExperienceMapper.fromJson(
+            json.encode(loadYaml(await (e as File).readAsString())),
+          ),
+        )
+        .toList();
+  },
+  id: 'experiences',
 );
 
 final projectsProvider = SyncProvider<List<Project>>(

@@ -12,6 +12,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
   Iterable<SyncProvider<dynamic>> get preloadDependencies => [
     introductionProvider,
     skillProvider,
+    experiencesProvider,
     projectsProvider,
   ];
 
@@ -20,6 +21,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
     final config = context.watch(configProvider).value!;
     final introduction = context.watch(introductionProvider);
     final skill = context.watch(skillProvider);
+    final experiences = context.watch(experiencesProvider).value;
     final projects = context.watch(projectsProvider);
 
     yield aside(
@@ -72,6 +74,7 @@ class Aside extends StatelessComponent with SyncProviderDependencies {
             config: config,
             introduction: introduction.value ?? '',
             skill: skill.value ?? '',
+            experiences: experiences ?? [],
             projects: projects.value ?? [],
             disabled: [introduction, skill, projects].any((e) => !e.hasValue),
           ),

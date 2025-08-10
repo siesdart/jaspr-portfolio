@@ -11,6 +11,7 @@ class ResumePdf extends Pdf {
     required this.config,
     required this.introduction,
     required this.skill,
+    required this.experiences,
     required this.projects,
   }) : super(
          title: '${config.name}의 이력서',
@@ -20,6 +21,7 @@ class ResumePdf extends Pdf {
   final Config config;
   final String introduction;
   final String skill;
+  final List<Experience> experiences;
   final List<Project> projects;
 
   @override
@@ -53,7 +55,7 @@ class ResumePdf extends Pdf {
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '3. 경력'),
         Padding(padding: const EdgeInsets.only(top: 6)),
-        ...config.experience.map(
+        ...experiences.map(
           (experience) => RHistory(
             title: experience.company,
             period: experience.period,

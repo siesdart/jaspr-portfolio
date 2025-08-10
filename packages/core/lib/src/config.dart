@@ -16,7 +16,6 @@ class Config with ConfigMappable {
     required this.birth,
     required this.location,
     required this.mail,
-    required this.experience,
     required this.opensource,
     required this.education,
     required this.award,
@@ -32,7 +31,6 @@ class Config with ConfigMappable {
   final String birth;
   final String location;
   final String mail;
-  final List<Experience> experience;
   final List<Opensource> opensource;
   final List<History> education;
   final List<History> award;

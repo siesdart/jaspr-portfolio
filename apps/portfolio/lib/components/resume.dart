@@ -11,6 +11,7 @@ class Resume extends StatelessComponent {
     required this.config,
     required this.introduction,
     required this.skill,
+    required this.experiences,
     required this.projects,
     required this.disabled,
     super.key,
@@ -19,6 +20,7 @@ class Resume extends StatelessComponent {
   final Config config;
   final String introduction;
   final String skill;
+  final List<Experience> experiences;
   final List<Project> projects;
   final bool disabled;
 
@@ -31,6 +33,7 @@ class Resume extends StatelessComponent {
           config: config,
           introduction: introduction,
           skill: skill,
+          experiences: experiences,
           projects: projects,
         ),
       ),

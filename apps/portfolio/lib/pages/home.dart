@@ -1,9 +1,9 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/experience/experience_item.dart';
 import 'package:portfolio/components/history/history_item.dart';
 import 'package:portfolio/components/opensource/opensource_item.dart';
 import 'package:portfolio/components/section.dart';
+import 'package:portfolio/components/sections/experience.dart';
 import 'package:portfolio/components/sections/introduction.dart';
 import 'package:portfolio/components/sections/project.dart';
 import 'package:portfolio/components/sections/skill.dart';
@@ -26,10 +26,10 @@ class HomePage extends StatelessComponent {
       title: '2. 기술 스택',
       child: Skill(),
     );
-    yield Section(
+    yield const Section(
       id: 'experience',
       title: '3. 경력',
-      children: config.experience.map(ExperienceItem.new).toList(),
+      children: [Experience()],
     );
     yield const Section(
       id: 'project',

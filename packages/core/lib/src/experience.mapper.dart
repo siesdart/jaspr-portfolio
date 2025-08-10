@@ -21,13 +21,8 @@ class ExperienceMapper extends ClassMapperBase<Experience> {
   @override
   final String id = 'Experience';
 
-  static String _$period(Experience v) => v.period;
-  static const Field<Experience, String> _f$period = Field('period', _$period);
-  static String _$imageUrl(Experience v) => v.imageUrl;
-  static const Field<Experience, String> _f$imageUrl = Field(
-    'imageUrl',
-    _$imageUrl,
-  );
+  static String _$id(Experience v) => v.id;
+  static const Field<Experience, String> _f$id = Field('id', _$id);
   static String _$company(Experience v) => v.company;
   static const Field<Experience, String> _f$company = Field(
     'company',
@@ -35,31 +30,37 @@ class ExperienceMapper extends ClassMapperBase<Experience> {
   );
   static String _$role(Experience v) => v.role;
   static const Field<Experience, String> _f$role = Field('role', _$role);
+  static String _$period(Experience v) => v.period;
+  static const Field<Experience, String> _f$period = Field('period', _$period);
   static String _$description(Experience v) => v.description;
   static const Field<Experience, String> _f$description = Field(
     'description',
     _$description,
   );
+  static String _$image(Experience v) => v.image;
+  static const Field<Experience, String> _f$image = Field('image', _$image);
   static List<String> _$tags(Experience v) => v.tags;
   static const Field<Experience, List<String>> _f$tags = Field('tags', _$tags);
 
   @override
   final MappableFields<Experience> fields = const {
-    #period: _f$period,
-    #imageUrl: _f$imageUrl,
+    #id: _f$id,
     #company: _f$company,
     #role: _f$role,
+    #period: _f$period,
     #description: _f$description,
+    #image: _f$image,
     #tags: _f$tags,
   };
 
   static Experience _instantiate(DecodingData data) {
     return Experience(
-      period: data.dec(_f$period),
-      imageUrl: data.dec(_f$imageUrl),
+      id: data.dec(_f$id),
       company: data.dec(_f$company),
       role: data.dec(_f$role),
+      period: data.dec(_f$period),
       description: data.dec(_f$description),
+      image: data.dec(_f$image),
       tags: data.dec(_f$tags),
     );
   }
@@ -126,11 +127,12 @@ abstract class ExperienceCopyWith<$R, $In extends Experience, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, String, ObjectCopyWith<$R, String, String>> get tags;
   $R call({
-    String? period,
-    String? imageUrl,
+    String? id,
     String? company,
     String? role,
+    String? period,
     String? description,
+    String? image,
     List<String>? tags,
   });
   ExperienceCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
@@ -153,29 +155,32 @@ class _ExperienceCopyWithImpl<$R, $Out>
       );
   @override
   $R call({
-    String? period,
-    String? imageUrl,
+    String? id,
     String? company,
     String? role,
+    String? period,
     String? description,
+    String? image,
     List<String>? tags,
   }) => $apply(
     FieldCopyWithData({
-      if (period != null) #period: period,
-      if (imageUrl != null) #imageUrl: imageUrl,
+      if (id != null) #id: id,
       if (company != null) #company: company,
       if (role != null) #role: role,
+      if (period != null) #period: period,
       if (description != null) #description: description,
+      if (image != null) #image: image,
       if (tags != null) #tags: tags,
     }),
   );
   @override
   Experience $make(CopyWithData data) => Experience(
-    period: data.get(#period, or: $value.period),
-    imageUrl: data.get(#imageUrl, or: $value.imageUrl),
+    id: data.get(#id, or: $value.id),
     company: data.get(#company, or: $value.company),
     role: data.get(#role, or: $value.role),
+    period: data.get(#period, or: $value.period),
     description: data.get(#description, or: $value.description),
+    image: data.get(#image, or: $value.image),
     tags: data.get(#tags, or: $value.tags),
   );
 

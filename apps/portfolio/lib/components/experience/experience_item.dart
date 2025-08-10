@@ -17,7 +17,7 @@ class ExperienceItem extends StatelessComponent {
         ),
         img(
           classes: 'flex-none size-12',
-          src: experience.imageUrl,
+          src: experience.image,
           alt: '${experience.company} image',
           loading: MediaLoading.lazy,
         ),
