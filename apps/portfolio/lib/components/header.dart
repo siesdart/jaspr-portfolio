@@ -1,8 +1,8 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
+import 'package:portfolio/components/nav_link.dart';
 import 'package:portfolio/providers/config.dart';
-import 'package:ui/ui.dart';
 
 class Header extends StatelessComponent {
   const Header({super.key});
@@ -19,8 +19,8 @@ class Header extends StatelessComponent {
           classes:
               'flex justify-end gap-x-4 mb-3 uppercase text-base w-full lg:col-start-2 lg:text-lg',
           const [
-            NavButton(name: 'About', path: '/'),
-            NavButton(name: 'Projects', path: 'projects'),
+            NavLink(name: 'About', path: '/'),
+            NavLink(name: 'Projects', path: 'projects'),
           ],
         ),
         div(classes: 'w-56 lg:fixed lg:row-start-2', [

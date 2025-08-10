@@ -1,6 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_markdown/jaspr_markdown.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:portfolio/components/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
 import 'package:ui/ui.dart';
 
