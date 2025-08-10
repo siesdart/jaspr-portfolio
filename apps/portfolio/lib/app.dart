@@ -43,8 +43,9 @@ class App extends StatelessComponent with SyncProviderDependencies {
                   settings: const RouteSettings(priority: 0.7),
                   builder: (context, state) => const ProjectListPage(),
                 ),
-                if (context.watch(projectsProvider)
-                    case AsyncData(value: final projects))
+                if (context.watch(projectsProvider) case AsyncData(
+                  value: final projects,
+                ))
                   for (final project in projects)
                     Route(
                       path: '/projects/${project.id}',

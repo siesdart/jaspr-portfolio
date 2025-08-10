@@ -1,9 +1,8 @@
-import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_markdown/jaspr_markdown.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
+import 'package:ui/ui.dart';
 
 class Skill extends StatelessComponent with SyncProviderDependencies {
   const Skill({super.key});

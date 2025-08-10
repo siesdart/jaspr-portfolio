@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:common/common.dart';
+import 'package:core/core.dart' show Project, ProjectMapper;
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:path/path.dart' as p;

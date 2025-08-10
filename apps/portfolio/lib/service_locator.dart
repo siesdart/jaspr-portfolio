@@ -4,7 +4,7 @@ import 'package:dotenv/dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:github/github.dart';
 
-final getIt = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
 void setupLocator() {
   if (!getIt.isRegistered<DotEnv>()) {

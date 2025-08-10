@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:common/common.dart';
+import 'package:core/core.dart' show Config, ConfigMapper;
 import 'package:github/github.dart';
 import 'package:portfolio/service_locator.dart';
 import 'package:yaml/yaml.dart';

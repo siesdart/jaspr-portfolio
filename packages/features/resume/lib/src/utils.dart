@@ -13,9 +13,6 @@ Future<ImageProvider> networkImage(String url) async {
   return MemoryImage(response.bodyBytes);
 }
 
-String removeHtml(String str) => parseFragment(str)
-    .nodes
-    .whereType<dom.Text>()
-    .map((e) => e.text)
-    .join('\n\n')
-    .trim();
+String removeHtml(String str) => parseFragment(
+  str,
+).nodes.whereType<dom.Text>().map((e) => e.text).join('\n\n').trim();

@@ -1,6 +1,6 @@
-import 'package:common/common.dart';
-import 'package:common/src/components/multiline_text.dart';
+import 'package:core/core.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:ui/ui.dart';
 
 class ExperienceItem extends StatelessComponent {
   const ExperienceItem(this.experience, {super.key});

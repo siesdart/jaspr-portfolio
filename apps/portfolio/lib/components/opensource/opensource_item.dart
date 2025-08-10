@@ -1,6 +1,6 @@
-import 'package:common/common.dart';
-import 'package:common/component.dart';
+import 'package:core/core.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:ui/ui.dart';
 
 class OpensourceItem extends StatelessComponent {
   const OpensourceItem(this.opensource, {super.key});
@@ -16,6 +16,8 @@ class OpensourceItem extends StatelessComponent {
           [text(opensource.repo.split('/')[1])],
         ),
         a(
+          href: 'https://github.com/${opensource.repo}',
+          target: Target.blank,
           [
             svg(
               classes: 'size-5 lg:size-6 fill-slate-900',
@@ -23,8 +25,6 @@ class OpensourceItem extends StatelessComponent {
               SvgIcons.github,
             ),
           ],
-          href: 'https://github.com/${opensource.repo}',
-          target: Target.blank,
         ),
         img(
           src:
@@ -52,9 +52,9 @@ class OpensourceItem extends StatelessComponent {
         text(contribution.title!),
         a(
           classes: 'text-[#13B9FD] ml-1',
-          [text('#'), text(contribution.id.toString())],
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: Target.blank,
+          [text('#'), text(contribution.id.toString())],
         ),
       ]),
       br(),

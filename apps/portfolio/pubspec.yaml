@@ -3,10 +3,10 @@ description: A portfolio website made with Jaspr.
 version: 1.0.0
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: ^3.8.0
 
 dependencies:
-  common: ^1.0.0
+  core: ^1.0.0
   dotenv: ^4.2.0
   get_it: ^8.2.0
   github: ^9.25.0
@@ -16,6 +16,7 @@ dependencies:
   jaspr_router: ^0.7.1
   path: ^1.9.1
   resume: ^1.0.0
+  ui: ^1.0.0
   universal_web: ^1.1.1
   yaml: ^3.1.3
 

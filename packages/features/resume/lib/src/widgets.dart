@@ -1,4 +1,4 @@
-import 'package:common/common.dart';
+import 'package:core/core.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 

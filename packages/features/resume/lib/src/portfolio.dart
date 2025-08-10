@@ -1,4 +1,4 @@
-import 'package:common/common.dart';
+import 'package:core/core.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 import 'package:resume/src/pdf.dart';
@@ -10,9 +10,9 @@ class PortfolioPdf extends Pdf {
     required this.config,
     required this.projects,
   }) : super(
-          title: '${config.name}의 포트폴리오',
-          author: config.name,
-        );
+         title: '${config.name}의 포트폴리오',
+         author: config.name,
+       );
 
   final Config config;
   final List<Project> projects;

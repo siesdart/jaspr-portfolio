@@ -1,7 +1,7 @@
-import 'package:common/common.dart';
-import 'package:common/component.dart';
+import 'package:core/core.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:resume/resume.dart';
+import 'package:ui/ui.dart';
 import 'package:universal_web/js_interop.dart';
 import 'package:universal_web/web.dart';
 

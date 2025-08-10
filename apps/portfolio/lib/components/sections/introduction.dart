@@ -1,14 +1,15 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/elements/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
+import 'package:ui/ui.dart';
 
 class Introduction extends StatelessComponent with SyncProviderDependencies {
   const Introduction({super.key});
 
   @override
-  Iterable<SyncProvider<dynamic>> get preloadDependencies =>
-      [introductionProvider];
+  Iterable<SyncProvider<dynamic>> get preloadDependencies => [
+    introductionProvider,
+  ];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

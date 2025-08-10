@@ -1,9 +1,9 @@
-import 'package:common/common.dart';
-import 'package:common/component.dart';
+import 'package:core/core.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:portfolio/providers/config.dart';
+import 'package:ui/ui.dart';
 
 class ProjectDetailPage extends StatelessComponent {
   const ProjectDetailPage(this.project, {super.key});
@@ -69,20 +69,21 @@ class ProjectDetailPage extends StatelessComponent {
           div(
             classes: 'not-prose flex flex-row-reverse gap-2',
             project.files!.reversed
-                .map((file) => a(
-                      classes: 'flex items-center gap-1 text-sm',
-                      href: file.src,
-                      target: Target.blank,
-                      [
-                        svg(
-                          classes:
-                              'size-4 lg:size-5 fill-none stroke-slate-900',
-                          viewBox: '0 0 24 24',
-                          SvgIcons.paperclip,
-                        ),
-                        text(file.name),
-                      ],
-                    ))
+                .map(
+                  (file) => a(
+                    classes: 'flex items-center gap-1 text-sm',
+                    href: file.src,
+                    target: Target.blank,
+                    [
+                      svg(
+                        classes: 'size-4 lg:size-5 fill-none stroke-slate-900',
+                        viewBox: '0 0 24 24',
+                        SvgIcons.paperclip,
+                      ),
+                      text(file.name),
+                    ],
+                  ),
+                )
                 .toList(),
           ),
         if (project.image != null)

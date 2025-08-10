@@ -1,19 +1,19 @@
-import 'package:common/component.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/resume.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
+import 'package:ui/ui.dart';
 
 class Aside extends StatelessComponent with SyncProviderDependencies {
   const Aside({super.key});
 
   @override
   Iterable<SyncProvider<dynamic>> get preloadDependencies => [
-        introductionProvider,
-        skillProvider,
-        projectsProvider,
-      ];
+    introductionProvider,
+    skillProvider,
+    projectsProvider,
+  ];
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

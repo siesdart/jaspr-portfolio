@@ -1,4 +1,4 @@
-import 'package:common/common.dart';
+import 'package:core/core.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 

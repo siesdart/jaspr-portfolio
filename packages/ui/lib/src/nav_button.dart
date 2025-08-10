@@ -10,8 +10,8 @@ class NavButton extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield Link(
-      classes: (path.replaceAll('/', '').isNotEmpty &&
-                  context.url.contains(path)) ||
+      classes:
+          (path.replaceAll('/', '').isNotEmpty && context.url.contains(path)) ||
               context.url == path
           ? 'decoration-2 decoration-[#1967D2] font-semibold underline underline-offset-4'
           : null,

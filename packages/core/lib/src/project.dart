@@ -1,5 +1,5 @@
 import 'package:collection/collection.dart';
-import 'package:common/src/models/file.dart';
+import 'package:core/core.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -43,9 +43,10 @@ class Project with ProjectMappable {
 
 extension ProjectCollection on List<Project> {
   List<MapEntry<int, List<Project>>> groupByYear() {
-    return groupBy(this, (project) => project.year)
-        .entries
-        .sorted((a, b) => b.key.compareTo(a.key));
+    return groupBy(
+      this,
+      (project) => project.year,
+    ).entries.sorted((a, b) => b.key.compareTo(a.key));
   }
 
   List<Project> sortedByOrder() {
