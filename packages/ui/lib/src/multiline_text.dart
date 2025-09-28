@@ -6,9 +6,13 @@ class MultilineText extends StatelessComponent {
   final String text;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    for (final line in text.trim().split('\n')) {
-      yield span([Text(line), br()]);
-    }
+  Component build(BuildContext context) {
+    return fragment(
+      text
+          .trim()
+          .split('\n')
+          .map((line) => span([Component.text(line), br()]))
+          .toList(),
+    );
   }
 }

@@ -5,26 +5,18 @@ import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 import 'package:ui/ui.dart';
 
-class Aside extends StatelessComponent with SyncProviderDependencies {
+class Aside extends StatelessComponent {
   const Aside({super.key});
 
   @override
-  Iterable<SyncProvider<dynamic>> get preloadDependencies => [
-    introductionProvider,
-    skillProvider,
-    experiencesProvider,
-    projectsProvider,
-  ];
-
-  @override
-  Iterable<Component> build(BuildContext context) sync* {
-    final config = context.watch(configProvider).value!;
+  Component build(BuildContext context) {
+    final config = context.watch(configProvider);
     final introduction = context.watch(introductionProvider);
     final skill = context.watch(skillProvider);
     final experiences = context.watch(experiencesProvider).value;
     final projects = context.watch(projectsProvider);
 
-    yield aside(
+    return aside(
       classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60',
       [
         h4(

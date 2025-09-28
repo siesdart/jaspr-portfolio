@@ -14,8 +14,8 @@ class Icon extends StatelessComponent {
   final String? alt;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield div(
+  Component build(BuildContext context) {
+    return div(
       classes:
           'inline-block bg-gray-100 p-2 rounded-full hover:bg-gray-200 lg:p-4',
       [

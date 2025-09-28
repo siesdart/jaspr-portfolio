@@ -8,8 +8,8 @@ class ProjectItem extends StatelessComponent {
   final Project project;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'flex flex-col items-start', [
+  Component build(BuildContext context) {
+    return li(classes: 'flex flex-col items-start', [
       Link(
         classes: 'font-medium',
         to: 'projects/${project.id}',

@@ -15,8 +15,8 @@ class Section extends StatelessComponent {
   final List<Component>? children;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield section(id: id, [
+  Component build(BuildContext context) {
+    return section(id: id, [
       a(href: '#$id', [
         h4(
           classes:

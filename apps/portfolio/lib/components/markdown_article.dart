@@ -12,8 +12,8 @@ class MarkdownArticle extends StatelessComponent {
   final Iterable<BlockSyntax>? blockSyntaxes;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield article(
+  Component build(BuildContext context) {
+    return article(
       classes:
           'prose prose-li:marker:text-inherit prose-li:prose-li:list-dash leading-5 max-w-full lg:leading-6',
       [

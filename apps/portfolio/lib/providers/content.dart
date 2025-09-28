@@ -10,23 +10,21 @@ import 'package:yaml/yaml.dart';
 @Import.onServer('dart:io', show: [#Directory, #File])
 import 'content.imports.dart';
 
-final introductionProvider = SyncProvider<String>(
+final introductionProvider = FutureProvider<String>(
   (ref) async {
     final file = File(p.join('content', 'introduction.md'));
     return file.readAsString();
   },
-  id: 'introduction',
 );
 
-final skillProvider = SyncProvider<String>(
+final skillProvider = FutureProvider<String>(
   (ref) async {
     final file = File(p.join('content', 'skill.md'));
     return file.readAsString();
   },
-  id: 'skill',
 );
 
-final experiencesProvider = SyncProvider<List<Experience>>(
+final experiencesProvider = FutureProvider<List<Experience>>(
   (ref) async {
     return Directory(p.join('content', 'experiences'))
         .list()
@@ -38,10 +36,9 @@ final experiencesProvider = SyncProvider<List<Experience>>(
         )
         .toList();
   },
-  id: 'experiences',
 );
 
-final projectsProvider = SyncProvider<List<Project>>(
+final projectsProvider = FutureProvider<List<Project>>(
   (ref) async {
     return Directory(p.join('content', 'projects'))
         .list()
@@ -53,5 +50,4 @@ final projectsProvider = SyncProvider<List<Project>>(
         )
         .toList();
   },
-  id: 'projects',
 );

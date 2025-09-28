@@ -25,30 +25,32 @@ class Resume extends StatelessComponent {
   final bool disabled;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield Button(
-      label: '이력서',
-      onClick: () => _downloadPdf(
-        ResumePdf(
-          config: config,
-          introduction: introduction,
-          skill: skill,
-          experiences: experiences,
-          projects: projects,
+  Component build(BuildContext context) {
+    return Component.fragment([
+      Button(
+        label: '이력서',
+        onClick: () => _downloadPdf(
+          ResumePdf(
+            config: config,
+            introduction: introduction,
+            skill: skill,
+            experiences: experiences,
+            projects: projects,
+          ),
         ),
+        disabled: disabled,
       ),
-      disabled: disabled,
-    );
-    yield Button(
-      label: '포트폴리오',
-      onClick: () => _downloadPdf(
-        PortfolioPdf(
-          config: config,
-          projects: projects,
+      Button(
+        label: '포트폴리오',
+        onClick: () => _downloadPdf(
+          PortfolioPdf(
+            config: config,
+            projects: projects,
+          ),
         ),
+        disabled: disabled,
       ),
-      disabled: disabled,
-    );
+    ]);
   }
 
   Future<void> _downloadPdf(Pdf pdf) async {

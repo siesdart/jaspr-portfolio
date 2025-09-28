@@ -8,8 +8,8 @@ class ExperienceItem extends StatelessComponent {
   final Experience experience;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'flex flex-col', [
+  Component build(BuildContext context) {
+    return li(classes: 'flex flex-col', [
       div(classes: 'flex gap-2 lg:gap-4', [
         span(
           classes: 'flex-none w-20 text-gray-400 lg:w-20',

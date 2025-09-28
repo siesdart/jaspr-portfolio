@@ -8,8 +8,8 @@ class OpensourceItem extends StatelessComponent {
   final Opensource opensource;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'flex flex-col items-start', [
+  Component build(BuildContext context) {
+    return li(classes: 'flex flex-col items-start', [
       div(classes: 'flex items-center gap-1', [
         h5(
           classes: 'font-medium',

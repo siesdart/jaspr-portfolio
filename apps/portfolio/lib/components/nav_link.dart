@@ -8,8 +8,8 @@ class NavLink extends StatelessComponent {
   final String path;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield Link(
+  Component build(BuildContext context) {
+    return Link(
       classes:
           (path.replaceAll('/', '').isNotEmpty && context.url.contains(path)) ||
               context.url == path

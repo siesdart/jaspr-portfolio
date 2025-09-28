@@ -13,48 +13,50 @@ class HomePage extends StatelessComponent {
   const HomePage({super.key});
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    final config = context.watch(configProvider).value!;
+  Component build(BuildContext context) {
+    final config = context.watch(configProvider);
 
-    yield const Section(
-      id: 'intro',
-      title: '1. 소개',
-      child: Introduction(),
-    );
-    yield const Section(
-      id: 'skill',
-      title: '2. 기술 스택',
-      child: Skill(),
-    );
-    yield const Section(
-      id: 'experience',
-      title: '3. 경력',
-      children: [Experience()],
-    );
-    yield const Section(
-      id: 'project',
-      title: '4. 프로젝트',
-      children: [Project()],
-    );
-    yield Section(
-      id: 'opensource',
-      title: '5. 오픈소스',
-      children: config.opensource.map(OpensourceItem.new).toList(),
-    );
-    yield Section(
-      id: 'edu',
-      title: '6. 학력',
-      children: config.education.map(HistoryItem.new).toList(),
-    );
-    yield Section(
-      id: 'award',
-      title: '7. 수상 및 자격증',
-      children: config.award.map(HistoryItem.new).toList(),
-    );
-    yield Section(
-      id: 'etc',
-      title: '8. 기타',
-      children: config.etc.map(HistoryItem.new).toList(),
-    );
+    return fragment([
+      const Section(
+        id: 'intro',
+        title: '1. 소개',
+        child: Introduction(),
+      ),
+      const Section(
+        id: 'skill',
+        title: '2. 기술 스택',
+        child: Skill(),
+      ),
+      const Section(
+        id: 'experience',
+        title: '3. 경력',
+        children: [Experience()],
+      ),
+      const Section(
+        id: 'project',
+        title: '4. 프로젝트',
+        children: [Project()],
+      ),
+      Section(
+        id: 'opensource',
+        title: '5. 오픈소스',
+        children: config.opensource.map(OpensourceItem.new).toList(),
+      ),
+      Section(
+        id: 'edu',
+        title: '6. 학력',
+        children: config.education.map(HistoryItem.new).toList(),
+      ),
+      Section(
+        id: 'award',
+        title: '7. 수상 및 자격증',
+        children: config.award.map(HistoryItem.new).toList(),
+      ),
+      Section(
+        id: 'etc',
+        title: '8. 기타',
+        children: config.etc.map(HistoryItem.new).toList(),
+      ),
+    ]);
   }
 }

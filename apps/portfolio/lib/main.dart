@@ -5,6 +5,7 @@ import 'package:portfolio/app.dart';
 import 'package:portfolio/config.dart';
 import 'package:portfolio/jaspr_options.dart';
 import 'package:portfolio/providers/config.dart';
+import 'package:portfolio/providers/content.dart';
 import 'package:portfolio/service_locator.dart';
 
 void main() async {
@@ -80,9 +81,15 @@ void main() async {
         'og:type': 'website',
         'og:url': config.url,
       },
-      body: Builder.single(
+      body: Builder(
         builder: (context) => ProviderScope(
           overrides: [configProvider.overrideWith((ref) => config)],
+          sync: [
+            introductionProvider.syncWith('introduction'),
+            skillProvider.syncWith('skill'),
+            experiencesProvider.syncWith('experiences'),
+            projectsProvider.syncWith('projects'),
+          ],
           child: const App(),
         ),
       ),

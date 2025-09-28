@@ -7,8 +7,8 @@ class HistoryItem extends StatelessComponent {
   final History history;
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield li(classes: 'flex gap-2 lg:gap-4', [
+  Component build(BuildContext context) {
+    return li(classes: 'flex gap-2 lg:gap-4', [
       span(
         classes: 'flex-none w-20 text-gray-400 lg:w-20',
         [text(history.period)],

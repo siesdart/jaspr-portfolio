@@ -4,8 +4,8 @@ class Footer extends StatelessComponent {
   const Footer({super.key});
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield footer(
+  Component build(BuildContext context) {
+    return footer(
       classes: 'border-t border-gray-200 text-center mx-2 py-6 lg:py-8',
       [
         a(
