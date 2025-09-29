@@ -26,7 +26,7 @@ class ProjectDetailPage extends StatelessComponent {
       ),
 
       article(
-        classes: 'prose leading-5 max-w-full lg:leading-6',
+        classes: 'prose max-w-full',
         [
           div(
             classes: 'not-prose flex items-center gap-1',

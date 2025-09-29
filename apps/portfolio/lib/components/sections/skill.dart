@@ -1,7 +1,5 @@
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_markdown/jaspr_markdown.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
 import 'package:ui/ui.dart';
 
@@ -13,9 +11,22 @@ class Skill extends StatelessComponent {
     switch (context.watch(skillProvider)) {
       case AsyncData(value: final skill):
         return MarkdownArticle(
-          markdown: skill,
-          blockSyntaxes: [
-            ComponentBlockSyntax(importComponents: const [Icon]),
+          content: skill,
+          components: [
+            CustomComponent(
+              pattern: 'Icon-dev',
+              builder: (name, attributes, child) => Icon.dev(
+                icon: attributes['icon'] ?? '',
+                alt: attributes['alt'],
+              ),
+            ),
+            CustomComponent(
+              pattern: 'Icon',
+              builder: (name, attributes, child) => Icon(
+                src: attributes['src'] ?? '',
+                alt: attributes['alt'],
+              ),
+            ),
           ],
         );
       default:

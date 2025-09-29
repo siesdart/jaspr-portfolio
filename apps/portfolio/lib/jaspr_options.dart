@@ -30,6 +30,7 @@ JasprOptions get defaultJasprOptions => JasprOptions(
       params: _prefix0Resume,
     ),
   },
+  styles: () => [],
 );
 
 Map<String, dynamic> _prefix0Resume(prefix0.Resume c) => {

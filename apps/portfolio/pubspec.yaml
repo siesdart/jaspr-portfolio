@@ -11,7 +11,6 @@ dependencies:
   get_it: ^8.2.0
   github: ^9.25.0
   jaspr: ^0.21.3
-  jaspr_markdown: ^0.1.6
   jaspr_riverpod: ^0.4.0
   jaspr_router: ^0.7.3
   path: ^1.9.1
