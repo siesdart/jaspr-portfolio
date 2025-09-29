@@ -26,7 +26,7 @@ class Resume extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return Component.fragment([
+    return fragment([
       Button(
         label: '이력서',
         onClick: () => _downloadPdf(

@@ -1,4 +1,5 @@
 name: resume
+resolution: workspace
 description: resume
 version: 1.0.0
 

@@ -4,5 +4,56 @@ publish_to: none
 environment:
   sdk: ^3.8.0
 
+workspace:
+  - apps/portfolio
+  - packages/core
+  - packages/ui
+  - packages/features/resume
+
 dev_dependencies:
-  melos: ^6.3.3
+  melos: ^7.1.1
+
+melos:
+  repository: https://github.com/siesdart/jaspr-portfolio
+  command:
+    bootstrap:
+      hooks:
+        pre: |
+          melos install:node
+    clean:
+      hooks:
+        pre: |
+          melos clean:jaspr
+  scripts:
+    build:
+      packageFilters:
+        scope: [portfolio]
+      exec: jaspr build --sitemap-domain https://siesdart.fly.dev && npm run build
+    build:dart:
+      packageFilters:
+        dependsOn: build_runner
+      exec: dart run build_runner build --delete-conflicting-outputs
+    clean:jaspr:
+      packageFilters:
+        scope: [portfolio]
+      exec: jaspr clean
+    install:node:
+      packageFilters:
+        scope: [portfolio]
+      exec: npm install
+    outdated:
+      exec: dart pub outdated --up-to-date --no-dependency-overrides --no-transitive
+    upgrade:
+      exec: dart pub upgrade --major-versions && melos upgrade:node
+    upgrade:node:
+      packageFilters:
+        scope: [portfolio]
+      exec: npm update --save
+    serve:
+      packageFilters:
+        scope: [portfolio]
+      exec: npx concurrently "npm run watch" "jaspr serve --verbose"; npm run clean
+    start:
+      packageFilters:
+        scope: [portfolio]
+      exec: npm run start

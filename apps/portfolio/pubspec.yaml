@@ -1,4 +1,5 @@
 name: portfolio
+resolution: workspace
 description: A portfolio website made with Jaspr.
 version: 1.0.0
 
