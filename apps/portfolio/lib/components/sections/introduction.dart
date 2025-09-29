@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
+import 'package:portfolio/components/markdown_article.dart';
 import 'package:portfolio/providers/content.dart';
-import 'package:ui/ui.dart';
 
 class Introduction extends StatelessComponent {
   const Introduction({super.key});
