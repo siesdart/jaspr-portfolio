@@ -11,7 +11,7 @@ workspace:
   - packages/features/resume
 
 dev_dependencies:
-  melos: ^7.1.1
+  melos: ^7.3.0
 
 melos:
   repository: https://github.com/siesdart/jaspr-portfolio
