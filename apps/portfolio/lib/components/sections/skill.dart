@@ -32,7 +32,7 @@ class Skill extends StatelessComponent {
           ],
         );
       default:
-        return div(classes: 'text-center text-gray-500', [text('Loading...')]);
+        return const Component.empty();
     }
   }
 }

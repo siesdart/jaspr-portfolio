@@ -12,11 +12,10 @@ class ProjectListPage extends StatelessComponent {
     switch (context.watch(projectsProvider)) {
       case AsyncData(value: final projects):
         return ul(
-          classes: 'divide-y divide-gray-200',
           projects.sortedByYearAndOrder().map(ProjectListItem.new).toList(),
         );
       default:
-        return div(classes: 'text-center text-gray-500', [text('Loading...')]);
+        return const Component.empty();
     }
   }
 }

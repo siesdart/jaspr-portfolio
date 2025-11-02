@@ -24,31 +24,37 @@ class ProjectDetailPage extends StatelessComponent {
           'og:url': '${config.url}${context.url}',
         },
       ),
-
       article(
-        classes: 'prose max-w-full',
+        classes: 'prose flex flex-col gap-1 max-w-full',
         [
           div(
-            classes: 'not-prose flex items-center gap-1',
+            classes: 'not-prose flex items-center gap-2',
             [
               svg(
-                classes: 'size-2 lg:size-3',
+                classes: 'size-3',
                 styles: Styles(raw: {'fill': '#${project.color}'}),
                 viewBox: '0 0 16 16',
                 [circle(cx: '8', cy: '8', r: '8', [])],
               ),
               h4(
-                classes: 'font-medium text-lg lg:text-xl',
+                classes: 'font-medium text-lg',
                 [text(project.title)],
               ),
               a(
-                classes: project.repo == null ? 'pointer-events-none' : '',
+                classes: clsx([
+                  {'pointer-events-none': project.repo == null},
+                ]),
                 href: 'https://github.com/${project.repo}',
                 target: Target.blank,
                 [
                   svg(
-                    classes:
-                        'size-5 lg:size-6 ${project.repo == null ? 'fill-gray-400' : 'fill-slate-900'}',
+                    classes: clsx([
+                      'size-6',
+                      if (project.repo == null)
+                        'fill-gray-400'
+                      else
+                        'fill-slate-900',
+                    ]),
                     viewBox: '0 0 24 24',
                     SvgIcons.github,
                   ),
@@ -62,10 +68,12 @@ class ProjectDetailPage extends StatelessComponent {
                   loading: MediaLoading.lazy,
                 ),
               div(classes: 'flex-1', []),
-              small([text(project.year.toString())]),
+              span(classes: 'font-light text-sm', [
+                text(project.year.toString()),
+              ]),
             ],
           ),
-          h5(classes: 'font-light', [text(project.introduction)]),
+          h5(classes: 'font-light text-sm', [text(project.introduction)]),
           if (project.files != null && project.files!.isNotEmpty)
             div(
               classes: 'not-prose flex flex-row-reverse gap-2',
@@ -77,8 +85,7 @@ class ProjectDetailPage extends StatelessComponent {
                       target: Target.blank,
                       [
                         svg(
-                          classes:
-                              'size-4 lg:size-5 fill-none stroke-slate-900',
+                          classes: 'size-5 fill-none stroke-slate-900',
                           viewBox: '0 0 24 24',
                           SvgIcons.paperclip,
                         ),
@@ -97,15 +104,15 @@ class ProjectDetailPage extends StatelessComponent {
             ),
           p([text(project.description)]),
           span(
-            classes: 'font-extralight',
+            classes: 'font-extralight text-gray-600',
             project.tags.map((tag) => text('#$tag ')).toList(),
           ),
         ],
       ),
       Link(
-        classes: 'mx-auto text-gray-600',
+        classes: buttonVariants(variant: ButtonVariant.ghost),
         to: '/projects',
-        child: text('목록 보기'),
+        child: text('목록으로'),
       ),
     ]);
   }

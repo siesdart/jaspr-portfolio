@@ -37,7 +37,6 @@ Map<String, dynamic> _prefix0Resume(prefix0.Resume c) => {
   'config': c.config.toJson(),
   'introduction': c.introduction,
   'skill': c.skill,
-  'experiences': c.experiences.map((i) => i.toJson()).toList(),
-  'projects': c.projects.map((i) => i.toJson()).toList(),
-  'disabled': c.disabled,
+  'experiences': c.experiences?.map((i) => i.toJson()).toList(),
+  'projects': c.projects?.map((i) => i.toJson()).toList(),
 };

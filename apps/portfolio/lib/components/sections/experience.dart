@@ -15,7 +15,7 @@ class Experience extends StatelessComponent {
           experiences.sortedByPeriod().map(ExperienceItem.new).toList(),
         );
       default:
-        return div(classes: 'text-center text-gray-500', [text('Loading...')]);
+        return const Component.empty();
     }
   }
 }

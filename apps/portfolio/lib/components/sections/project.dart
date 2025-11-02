@@ -12,18 +12,20 @@ class Project extends StatelessComponent {
     switch (context.watch(projectsProvider)) {
       case AsyncData(value: final projects):
         return fragment(
-          projects.groupByYear().map((entry) {
-            return li(classes: 'flex flex-col gap-2', [
-              span(classes: 'text-gray-400', [text(entry.key.toString())]),
-              ul(
-                classes: 'list-disc ml-8 space-y-2',
-                entry.value.sortedByOrder().map(ProjectItem.new).toList(),
-              ),
-            ]);
-          }).toList(),
+          projects
+              .groupByYear()
+              .map(
+                (entry) => li(classes: 'flex flex-col gap-2', [
+                  span(classes: 'text-gray-400', [text(entry.key.toString())]),
+                  ul(
+                    entry.value.sortedByOrder().map(ProjectItem.new).toList(),
+                  ),
+                ]),
+              )
+              .toList(),
         );
       default:
-        return div(classes: 'text-center text-gray-500', [text('Loading...')]);
+        return const Component.empty();
     }
   }
 }

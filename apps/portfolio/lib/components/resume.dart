@@ -13,42 +13,45 @@ class Resume extends StatelessComponent {
     required this.skill,
     required this.experiences,
     required this.projects,
-    required this.disabled,
     super.key,
   });
 
   final Config config;
-  final String introduction;
-  final String skill;
-  final List<Experience> experiences;
-  final List<Project> projects;
-  final bool disabled;
+  final String? introduction;
+  final String? skill;
+  final List<Experience>? experiences;
+  final List<Project>? projects;
 
   @override
   Component build(BuildContext context) {
     return fragment([
       Button(
-        label: '이력서',
         onClick: () => _downloadPdf(
           ResumePdf(
             config: config,
-            introduction: introduction,
-            skill: skill,
-            experiences: experiences,
-            projects: projects,
+            introduction: introduction!,
+            skill: skill!,
+            experiences: experiences!,
+            projects: projects!,
           ),
         ),
-        disabled: disabled,
+        disabled: [
+          introduction,
+          skill,
+          experiences,
+          projects,
+        ].any((e) => e == null),
+        children: [text('이력서')],
       ),
       Button(
-        label: '포트폴리오',
         onClick: () => _downloadPdf(
           PortfolioPdf(
             config: config,
-            projects: projects,
+            projects: projects!,
           ),
         ),
-        disabled: disabled,
+        disabled: projects == null,
+        children: [text('포트폴리오')],
       ),
     ]);
   }

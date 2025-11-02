@@ -19,54 +19,14 @@ void main() async {
     Document(
       title: config.title,
       head: [
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-100.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-200.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-300.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-regular.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-500.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-600.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
-        ),
-        link(
-          rel: 'preload',
-          href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-700.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          attributes: {'crossorigin': ''},
+        ...['100', '200', '300', 'regular', '500', '600', '700'].map(
+          (weight) => link(
+            rel: 'preload',
+            href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-$weight.woff2',
+            as: 'font',
+            type: 'font/woff2',
+            attributes: {'crossorigin': ''},
+          ),
         ),
         link(href: 'styles.css', rel: 'stylesheet'),
       ],

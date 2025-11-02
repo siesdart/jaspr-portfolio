@@ -9,12 +9,12 @@ class ExperienceItem extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return li(classes: 'flex flex-col', [
+    return li(classes: 'flex flex-col gap-4', [
+      span(
+        classes: 'text-gray-400',
+        [text(experience.period)],
+      ),
       div(classes: 'flex gap-2 lg:gap-4', [
-        span(
-          classes: 'flex-none w-20 text-gray-400 lg:w-20',
-          [text(experience.period)],
-        ),
         img(
           classes: 'flex-none size-12',
           src: experience.image,
@@ -25,18 +25,20 @@ class ExperienceItem extends StatelessComponent {
           h5(classes: 'font-medium', [text(experience.company)]),
           span(classes: 'font-light', [text(experience.role)]),
           p(
-            classes: 'hidden py-4 lg:block',
+            classes: 'hidden py-4 leading-7 lg:block',
             [MultilineText(experience.description)],
           ),
           span(
-            classes: 'hidden font-extralight lg:block',
+            classes: 'hidden font-extralight lg:block text-gray-600',
             experience.tags.map((tag) => text('#$tag ')).toList(),
           ),
         ]),
       ]),
-      p(classes: 'py-4 lg:hidden', [MultilineText(experience.description)]),
+      p(classes: 'leading-7 lg:hidden', [
+        MultilineText(experience.description),
+      ]),
       span(
-        classes: 'font-extralight lg:hidden',
+        classes: 'font-extralight lg:hidden text-gray-600',
         experience.tags.map((tag) => text('#$tag ')).toList(),
       ),
     ]);

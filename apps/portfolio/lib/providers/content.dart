@@ -1,53 +1,49 @@
 import 'dart:convert';
+import 'dart:io';
 
-import 'package:core/core.dart'
-    show Experience, ExperienceMapper, Project, ProjectMapper;
-import 'package:jaspr/jaspr.dart';
+import 'package:core/core.dart' hide File;
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:yaml/yaml.dart';
 
-@Import.onServer('dart:io', show: [#Directory, #File])
-import 'content.imports.dart';
-
-final introductionProvider = FutureProvider<String>(
-  (ref) async {
-    final file = File(p.join('content', 'introduction.md'));
-    return file.readAsString();
-  },
+final FutureProvider<String> introductionProvider = createFileProvider(
+  'introduction.md',
+);
+final FutureProvider<String> skillProvider = createFileProvider('skill.md');
+final FutureProvider<List<Experience>> experiencesProvider =
+    createDirectoryProvider(
+      'experiences',
+      ExperienceMapper.fromJson,
+    );
+final FutureProvider<List<Project>> projectsProvider = createDirectoryProvider(
+  'projects',
+  ProjectMapper.fromJson,
 );
 
-final skillProvider = FutureProvider<String>(
-  (ref) async {
-    final file = File(p.join('content', 'skill.md'));
-    return file.readAsString();
-  },
-);
+FutureProvider<String> createFileProvider(String filename) {
+  return FutureProvider<String>(
+    (ref) async {
+      final file = File(p.join('content', filename));
+      return file.readAsString();
+    },
+  );
+}
 
-final experiencesProvider = FutureProvider<List<Experience>>(
-  (ref) async {
-    return Directory(p.join('content', 'experiences'))
-        .list()
-        .where((e) => e is File)
-        .asyncMap(
-          (e) async => ExperienceMapper.fromJson(
-            json.encode(loadYaml(await (e as File).readAsString())),
-          ),
-        )
-        .toList();
-  },
-);
-
-final projectsProvider = FutureProvider<List<Project>>(
-  (ref) async {
-    return Directory(p.join('content', 'projects'))
-        .list()
-        .where((e) => e is File)
-        .asyncMap(
-          (e) async => ProjectMapper.fromJson(
-            json.encode(loadYaml(await (e as File).readAsString())),
-          ),
-        )
-        .toList();
-  },
-);
+FutureProvider<List<T>> createDirectoryProvider<T>(
+  String directoryPath,
+  T Function(String) fromJson,
+) {
+  return FutureProvider<List<T>>(
+    (ref) async {
+      return Directory(p.join('content', directoryPath))
+          .list()
+          .where((e) => e is File)
+          .asyncMap(
+            (e) async => fromJson(
+              json.encode(loadYaml(await (e as File).readAsString())),
+            ),
+          )
+          .toList();
+    },
+  );
+}

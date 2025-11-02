@@ -4,6 +4,7 @@ import 'package:jaspr_router/jaspr_router.dart';
 import 'package:portfolio/components/aside.dart';
 import 'package:portfolio/components/footer.dart';
 import 'package:portfolio/components/header.dart';
+import 'package:portfolio/components/navbar.dart';
 import 'package:portfolio/pages/home.dart';
 import 'package:portfolio/pages/project_detail.dart';
 import 'package:portfolio/pages/project_list.dart';
@@ -19,6 +20,7 @@ class App extends StatelessComponent {
 
     return fragment([
       h1(classes: 'sr-only', [text(config.title)]),
+      const Navbar(),
       const Header(),
       main_(
         classes:
@@ -27,7 +29,7 @@ class App extends StatelessComponent {
           const Aside(),
           div(
             classes:
-                'max-w-screen-sm w-full flex flex-col gap-6 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
+                'max-w-screen-sm w-full flex flex-col gap-8 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
             [
               Router(
                 routes: [

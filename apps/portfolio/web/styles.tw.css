@@ -77,13 +77,11 @@
 
   html {
     @apply antialiased;
-    @apply text-gray-700;
-    @apply text-sm;
-    @apply lg:text-base;
+    @apply bg-white text-gray-800;
     @apply scroll-smooth;
   }
 
-  a {
-    @apply hover:max-lg:bg-[#B8EAFE];
+  .prose {
+    @apply dark:prose-invert;
   }
 }

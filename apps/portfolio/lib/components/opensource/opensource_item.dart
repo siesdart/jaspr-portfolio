@@ -9,8 +9,8 @@ class OpensourceItem extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return li(classes: 'flex flex-col items-start', [
-      div(classes: 'flex items-center gap-1', [
+    return li(classes: 'flex flex-col items-start gap-1', [
+      div(classes: 'flex items-center gap-2', [
         h5(
           classes: 'font-medium',
           [text(opensource.repo.split('/')[1])],
@@ -20,7 +20,7 @@ class OpensourceItem extends StatelessComponent {
           target: Target.blank,
           [
             svg(
-              classes: 'size-5 lg:size-6 fill-slate-900',
+              classes: 'size-6 fill-slate-900',
               viewBox: '0 0 24 24',
               SvgIcons.github,
             ),
@@ -51,7 +51,7 @@ class OpensourceItem extends StatelessComponent {
       span([
         text(contribution.title!),
         a(
-          classes: 'text-[#13B9FD] ml-1',
+          classes: 'ml-1 transition-colors text-blue-400 hover:text-blue-500',
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: Target.blank,
           [text('#'), text(contribution.id.toString())],

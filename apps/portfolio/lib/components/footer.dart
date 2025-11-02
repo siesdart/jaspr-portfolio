@@ -10,7 +10,7 @@ class Footer extends StatelessComponent {
       [
         a(
           classes:
-              'text-xs decoration-2 decoration-[#00BCD4] underline underline-offset-8 mx-auto lg:text-sm',
+              'decoration-2 decoration-sky-500 underline underline-offset-8 mx-auto text-sm',
           href: 'https://github.com/schultek/jaspr',
           target: Target.blank,
           [

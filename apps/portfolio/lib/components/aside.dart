@@ -13,7 +13,7 @@ class Aside extends StatelessComponent {
     final config = context.watch(configProvider);
     final introduction = context.watch(introductionProvider);
     final skill = context.watch(skillProvider);
-    final experiences = context.watch(experiencesProvider).value;
+    final experiences = context.watch(experiencesProvider);
     final projects = context.watch(projectsProvider);
 
     return aside(
@@ -21,13 +21,13 @@ class Aside extends StatelessComponent {
       [
         h4(
           classes:
-              'self-center font-semibold text-base tracking-wide lg:text-l lg:tracking-wider',
+              'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
           [text(config.name)],
         ),
         ...config.github.map(
           (github) => _buildItem(
             svg(
-              classes: 'size-5 lg:size-6 fill-slate-900',
+              classes: 'size-6 fill-slate-700',
               viewBox: '0 0 24 24',
               SvgIcons.github,
             ),
@@ -38,7 +38,7 @@ class Aside extends StatelessComponent {
         hr(classes: 'border-gray-200 my-1 lg:my-2'),
         _buildItem(
           svg(
-            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
+            classes: 'size-6 fill-none stroke-slate-700',
             viewBox: '0 0 24 24',
             SvgIcons.cake,
           ),
@@ -46,7 +46,7 @@ class Aside extends StatelessComponent {
         ),
         _buildItem(
           svg(
-            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
+            classes: 'size-6 fill-none stroke-slate-700',
             viewBox: '0 0 24 24',
             SvgIcons.mapPin,
           ),
@@ -54,7 +54,7 @@ class Aside extends StatelessComponent {
         ),
         _buildItem(
           svg(
-            classes: 'size-5 lg:size-6 fill-none stroke-slate-900',
+            classes: 'size-6 fill-none stroke-slate-700',
             viewBox: '0 0 24 24',
             SvgIcons.mail,
           ),
@@ -64,11 +64,10 @@ class Aside extends StatelessComponent {
         div(classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2', [
           Resume(
             config: config,
-            introduction: introduction.value ?? '',
-            skill: skill.value ?? '',
-            experiences: experiences ?? [],
-            projects: projects.value ?? [],
-            disabled: [introduction, skill, projects].any((e) => !e.hasValue),
+            introduction: introduction.value,
+            skill: skill.value,
+            experiences: experiences.value,
+            projects: projects.value,
           ),
         ]),
       ],
@@ -76,10 +75,15 @@ class Aside extends StatelessComponent {
   }
 
   Component _buildItem(Component svg, String title, [String? href]) {
-    return div(classes: 'flex items-center gap-1 lg:gap-2', [
+    return div(classes: 'flex items-center gap-2', [
       svg,
       if (href != null)
-        a(href: href, target: Target.blank, [text(title)])
+        a(
+          classes: 'underline-offset-4 hover:underline',
+          href: href,
+          target: Target.blank,
+          [text(title)],
+        )
       else
         span([text(title)]),
     ]);
