@@ -5,9 +5,11 @@ period: 2025.02 ~ 현재
 description: |
   사내 백오피스 웹 서비스의 프론트엔드 개발 및 유지보수
 
-  1. 게임 개발 팀의 서포트를 위한 Next.js 기반 Gaia Console 웹 FE 개발
-  2. 게임의 KPI 등 데이터를 시각화하여 보여주는 Next.js 기반 데이터 플랫폼 Nebula 웹 FE 개발
-  3. Tailwind CSS와 Storybook을 이용한 사내 공통 React UI 컴포넌트 패키지 개발 및 적용
+  1. 게임 개발 팀의 서포트를 위한 Next.js 기반 Gaia Console 개발
+  2. 게임의 KPI 등 데이터를 시각화하여 보여주는 Next.js 기반 데이터 플랫폼 Nebula 개발
+  3. Tailwind CSS와 Storybook을 이용한 사내 공통 React UI 컴포넌트 패키지 개발
   4. LLM 통합을 통한 사내 패키지의 효율적 사용을 위한 MCP 웹 허브 구축
+  5. 웹 게임의 효율적인 사내 배포를 위한 Next.js 기반 정적 사이트 배포 플랫폼 개발
+  6. 사내 영상 제작을 위한 Next.js 기반 AI 영상 생성 플랫폼 개발
 image: icons/bagelcode.png
 tags: [HTML, CSS, TypeScript, React, Next.js, Tailwind CSS, Zustand, Storybook]
