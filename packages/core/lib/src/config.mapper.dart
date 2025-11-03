@@ -15,7 +15,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
     if (_instance == null) {
       MapperContainer.globals.use(_instance = ConfigMapper._());
       GithubMapper.ensureInitialized();
-      OpensourceMapper.ensureInitialized();
       HistoryMapper.ensureInitialized();
     }
     return _instance!;
@@ -51,11 +50,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
   );
   static String _$mail(Config v) => v.mail;
   static const Field<Config, String> _f$mail = Field('mail', _$mail);
-  static List<Opensource> _$opensource(Config v) => v.opensource;
-  static const Field<Config, List<Opensource>> _f$opensource = Field(
-    'opensource',
-    _$opensource,
-  );
   static List<History> _$education(Config v) => v.education;
   static const Field<Config, List<History>> _f$education = Field(
     'education',
@@ -77,7 +71,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
     #birth: _f$birth,
     #location: _f$location,
     #mail: _f$mail,
-    #opensource: _f$opensource,
     #education: _f$education,
     #award: _f$award,
     #etc: _f$etc,
@@ -94,7 +87,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
       birth: data.dec(_f$birth),
       location: data.dec(_f$location),
       mail: data.dec(_f$mail),
-      opensource: data.dec(_f$opensource),
       education: data.dec(_f$education),
       award: data.dec(_f$award),
       etc: data.dec(_f$etc),
@@ -148,8 +140,6 @@ extension ConfigValueCopy<$R, $Out> on ObjectCopyWith<$R, Config, $Out> {
 abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github;
-  ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
-  get opensource;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
   get education;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get award;
@@ -164,7 +154,6 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     String? birth,
     String? location,
     String? mail,
-    List<Opensource>? opensource,
     List<History>? education,
     List<History>? award,
     List<History>? etc,
@@ -185,13 +174,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
         (v, t) => v.copyWith.$chain(t),
         (v) => call(github: v),
       );
-  @override
-  ListCopyWith<$R, Opensource, OpensourceCopyWith<$R, Opensource, Opensource>>
-  get opensource => ListCopyWith(
-    $value.opensource,
-    (v, t) => v.copyWith.$chain(t),
-    (v) => call(opensource: v),
-  );
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
   get education => ListCopyWith(
@@ -224,7 +206,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     String? birth,
     String? location,
     String? mail,
-    List<Opensource>? opensource,
     List<History>? education,
     List<History>? award,
     List<History>? etc,
@@ -239,7 +220,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       if (birth != null) #birth: birth,
       if (location != null) #location: location,
       if (mail != null) #mail: mail,
-      if (opensource != null) #opensource: opensource,
       if (education != null) #education: education,
       if (award != null) #award: award,
       if (etc != null) #etc: etc,
@@ -256,7 +236,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     birth: data.get(#birth, or: $value.birth),
     location: data.get(#location, or: $value.location),
     mail: data.get(#mail, or: $value.mail),
-    opensource: data.get(#opensource, or: $value.opensource),
     education: data.get(#education, or: $value.education),
     award: data.get(#award, or: $value.award),
     etc: data.get(#etc, or: $value.etc),

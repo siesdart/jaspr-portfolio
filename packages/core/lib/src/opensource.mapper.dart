@@ -22,6 +22,8 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
   @override
   final String id = 'Opensource';
 
+  static String _$id(Opensource v) => v.id;
+  static const Field<Opensource, String> _f$id = Field('id', _$id);
   static String _$repo(Opensource v) => v.repo;
   static const Field<Opensource, String> _f$repo = Field('repo', _$repo);
   static String _$description(Opensource v) => v.description;
@@ -40,6 +42,7 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
 
   @override
   final MappableFields<Opensource> fields = const {
+    #id: _f$id,
     #repo: _f$repo,
     #description: _f$description,
     #role: _f$role,
@@ -48,6 +51,7 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
 
   static Opensource _instantiate(DecodingData data) {
     return Opensource(
+      id: data.dec(_f$id),
       repo: data.dec(_f$repo),
       description: data.dec(_f$description),
       role: data.dec(_f$role),
@@ -122,6 +126,7 @@ abstract class OpensourceCopyWith<$R, $In extends Opensource, $Out>
   >?
   get contribution;
   $R call({
+    String? id,
     String? repo,
     String? description,
     String? role,
@@ -153,12 +158,14 @@ class _OpensourceCopyWithImpl<$R, $Out>
       : null;
   @override
   $R call({
+    String? id,
     String? repo,
     String? description,
     String? role,
     Object? contribution = $none,
   }) => $apply(
     FieldCopyWithData({
+      if (id != null) #id: id,
       if (repo != null) #repo: repo,
       if (description != null) #description: description,
       if (role != null) #role: role,
@@ -167,6 +174,7 @@ class _OpensourceCopyWithImpl<$R, $Out>
   );
   @override
   Opensource $make(CopyWithData data) => Opensource(
+    id: data.get(#id, or: $value.id),
     repo: data.get(#repo, or: $value.repo),
     description: data.get(#description, or: $value.description),
     role: data.get(#role, or: $value.role),

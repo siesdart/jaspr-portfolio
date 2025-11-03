@@ -1,10 +1,10 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/history/history_item.dart';
-import 'package:portfolio/components/opensource/opensource_item.dart';
 import 'package:portfolio/components/section.dart';
 import 'package:portfolio/components/sections/experience.dart';
 import 'package:portfolio/components/sections/introduction.dart';
+import 'package:portfolio/components/sections/opensource.dart';
 import 'package:portfolio/components/sections/project.dart';
 import 'package:portfolio/components/sections/skill.dart';
 import 'package:portfolio/providers/config.dart';
@@ -37,10 +37,10 @@ class HomePage extends StatelessComponent {
         title: '4. 프로젝트',
         children: [Project()],
       ),
-      Section(
+      const Section(
         id: 'opensource',
         title: '5. 오픈소스',
-        children: config.opensource.map(OpensourceItem.new).toList(),
+        children: [Opensource()],
       ),
       Section(
         id: 'edu',

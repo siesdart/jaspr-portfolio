@@ -13,6 +13,7 @@ class Resume extends StatelessComponent {
     required this.skill,
     required this.experiences,
     required this.projects,
+    required this.opensources,
     super.key,
   });
 
@@ -21,6 +22,7 @@ class Resume extends StatelessComponent {
   final String? skill;
   final List<Experience>? experiences;
   final List<Project>? projects;
+  final List<Opensource>? opensources;
 
   @override
   Component build(BuildContext context) {
@@ -33,6 +35,7 @@ class Resume extends StatelessComponent {
             skill: skill!,
             experiences: experiences!,
             projects: projects!,
+            opensources: opensources!,
           ),
         ),
         disabled: [
@@ -40,6 +43,7 @@ class Resume extends StatelessComponent {
           skill,
           experiences,
           projects,
+          opensources,
         ].any((e) => e == null),
         children: [text('이력서')],
       ),

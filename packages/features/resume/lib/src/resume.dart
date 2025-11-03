@@ -13,6 +13,7 @@ class ResumePdf extends Pdf {
     required this.skill,
     required this.experiences,
     required this.projects,
+    required this.opensources,
   }) : super(
          title: '${config.name}의 이력서',
          author: config.name,
@@ -23,6 +24,7 @@ class ResumePdf extends Pdf {
   final String skill;
   final List<Experience> experiences;
   final List<Project> projects;
+  final List<Opensource> opensources;
 
   @override
   Iterable<Widget> buildPages(Map<String, ImageProvider> images) sync* {
@@ -74,7 +76,7 @@ class ResumePdf extends Pdf {
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '4. 오픈소스'),
-        ...config.opensource.map(
+        ...opensources.map(
           (opensource) => Padding(
             padding: const EdgeInsets.only(top: 6),
             child: Column(

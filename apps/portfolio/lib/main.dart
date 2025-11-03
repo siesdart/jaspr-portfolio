@@ -49,6 +49,7 @@ void main() async {
             skillProvider.syncWith('skill'),
             experiencesProvider.syncWith('experiences'),
             projectsProvider.syncWith('projects'),
+            opensourceProvider.syncWith('opensources'),
           ],
           child: const App(),
         ),
