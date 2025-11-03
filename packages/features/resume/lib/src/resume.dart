@@ -76,7 +76,7 @@ class ResumePdf extends Pdf {
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '4. 오픈소스'),
-        ...opensources.map(
+        ...opensources.sortedByOrder().map(
           (opensource) => Padding(
             padding: const EdgeInsets.only(top: 6),
             child: Column(

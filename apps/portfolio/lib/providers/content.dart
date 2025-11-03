@@ -22,7 +22,7 @@ final FutureProvider<List<Project>> projectsProvider = createDirectoryProvider(
   'projects',
   ProjectMapper.fromJson,
 );
-final FutureProvider<List<Opensource>> opensourceProvider =
+final FutureProvider<List<Opensource>> opensourcesProvider =
     createDirectoryProvider('opensources', (json) async {
       final opensource = OpensourceMapper.fromJson(json);
       if (opensource.contribution != null) {

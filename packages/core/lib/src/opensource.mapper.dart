@@ -33,6 +33,8 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
   );
   static String _$role(Opensource v) => v.role;
   static const Field<Opensource, String> _f$role = Field('role', _$role);
+  static int _$order(Opensource v) => v.order;
+  static const Field<Opensource, int> _f$order = Field('order', _$order);
   static List<Contribution>? _$contribution(Opensource v) => v.contribution;
   static const Field<Opensource, List<Contribution>> _f$contribution = Field(
     'contribution',
@@ -46,6 +48,7 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
     #repo: _f$repo,
     #description: _f$description,
     #role: _f$role,
+    #order: _f$order,
     #contribution: _f$contribution,
   };
 
@@ -55,6 +58,7 @@ class OpensourceMapper extends ClassMapperBase<Opensource> {
       repo: data.dec(_f$repo),
       description: data.dec(_f$description),
       role: data.dec(_f$role),
+      order: data.dec(_f$order),
       contribution: data.dec(_f$contribution),
     );
   }
@@ -130,6 +134,7 @@ abstract class OpensourceCopyWith<$R, $In extends Opensource, $Out>
     String? repo,
     String? description,
     String? role,
+    int? order,
     List<Contribution>? contribution,
   });
   OpensourceCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
@@ -162,6 +167,7 @@ class _OpensourceCopyWithImpl<$R, $Out>
     String? repo,
     String? description,
     String? role,
+    int? order,
     Object? contribution = $none,
   }) => $apply(
     FieldCopyWithData({
@@ -169,6 +175,7 @@ class _OpensourceCopyWithImpl<$R, $Out>
       if (repo != null) #repo: repo,
       if (description != null) #description: description,
       if (role != null) #role: role,
+      if (order != null) #order: order,
       if (contribution != $none) #contribution: contribution,
     }),
   );
@@ -178,6 +185,7 @@ class _OpensourceCopyWithImpl<$R, $Out>
     repo: data.get(#repo, or: $value.repo),
     description: data.get(#description, or: $value.description),
     role: data.get(#role, or: $value.role),
+    order: data.get(#order, or: $value.order),
     contribution: data.get(#contribution, or: $value.contribution),
   );
 

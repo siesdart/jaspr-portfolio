@@ -2,6 +2,7 @@ id: jaspr
 repo: schultek/jaspr
 description: Flutter와 유사한 구조를 지닌 Dart 기반의 모던 웹 프레임워크
 role: Contributor
+order: 1
 contribution:
   - id: 169
     description: HTML 속성명에 대문자가 포함될 경우 invalid한 속성으로 판단되는 오류 수정

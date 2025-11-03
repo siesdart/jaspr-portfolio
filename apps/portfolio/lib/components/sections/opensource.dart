@@ -1,3 +1,4 @@
+import 'package:core/core.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/opensource/opensource_item.dart';
@@ -8,10 +9,10 @@ class Opensource extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    switch (context.watch(opensourceProvider)) {
-      case AsyncData(value: final opensource):
+    switch (context.watch(opensourcesProvider)) {
+      case AsyncData(value: final opensources):
         return fragment(
-          opensource.map(OpensourceItem.new).toList(),
+          opensources.sortedByOrder().map(OpensourceItem.new).toList(),
         );
       default:
         return const Component.empty();

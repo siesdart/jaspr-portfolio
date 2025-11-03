@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -10,6 +11,7 @@ class Opensource with OpensourceMappable {
     required this.repo,
     required this.description,
     required this.role,
+    required this.order,
     this.contribution,
   });
 
@@ -17,6 +19,7 @@ class Opensource with OpensourceMappable {
   final String repo;
   final String description;
   final String role;
+  final int order;
   final List<Contribution>? contribution;
 
   @decoder
@@ -38,4 +41,10 @@ class Contribution with ContributionMappable {
   final int id;
   final String? title;
   final String description;
+}
+
+extension OpensourceCollection on List<Opensource> {
+  List<Opensource> sortedByOrder() {
+    return sorted((a, b) => a.order.compareTo(b.order));
+  }
 }

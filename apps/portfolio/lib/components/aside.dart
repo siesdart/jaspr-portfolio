@@ -15,7 +15,7 @@ class Aside extends StatelessComponent {
     final skill = context.watch(skillProvider);
     final experiences = context.watch(experiencesProvider);
     final projects = context.watch(projectsProvider);
-    final opensources = context.watch(opensourceProvider);
+    final opensources = context.watch(opensourcesProvider);
 
     return aside(
       classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60',

@@ -2,3 +2,4 @@ id: jaspr_markdown
 repo: siesdart/jaspr_markdown
 description: MDX와 유사하게 마크다운에 Jaspr 컴포넌트를 삽입할 수 있게 하여 화면에 렌더링해주는 라이브러리 (deprecated)
 role: Owner
+order: 2
