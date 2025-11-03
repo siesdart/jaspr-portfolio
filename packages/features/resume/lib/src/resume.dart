@@ -38,25 +38,8 @@ class ResumePdf extends Pdf {
         RCategory(title: '1. 기술 스택'),
         RParagraph(content: removeHtml(skill)),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '2. 프로젝트'),
-        Padding(padding: const EdgeInsets.only(top: 6)),
-        for (final MapEntry(:key, :value) in projects.groupByYear())
-          ...value.sortedByOrder().mapIndexed(
-            (i, project) => RHistory(
-              title: project.title,
-              period: i == 0 ? key.toString() : '',
-              children: [
-                Text(project.introduction),
-                Text(
-                  project.tags.map((e) => '#$e').join(' '),
-                  style: const TextStyle(color: PdfColors.grey),
-                ),
-              ],
-            ),
-          ),
-        Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '3. 경력'),
-        Padding(padding: const EdgeInsets.only(top: 6)),
+        RCategory(title: '2. 경력'),
+        Padding(padding: const EdgeInsets.only(top: 8)),
         ...experiences.map(
           (experience) => RHistory(
             title: experience.company,
@@ -75,10 +58,27 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
+        RCategory(title: '3. 프로젝트'),
+        Padding(padding: const EdgeInsets.only(top: 8)),
+        for (final MapEntry(:key, :value) in projects.groupByYear())
+          ...value.sortedByOrder().mapIndexed(
+            (i, project) => RHistory(
+              title: project.title,
+              period: i == 0 ? key.toString() : '',
+              children: [
+                Text(project.introduction),
+                Text(
+                  project.tags.map((e) => '#$e').join(' '),
+                  style: const TextStyle(color: PdfColors.grey),
+                ),
+              ],
+            ),
+          ),
+        Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '4. 오픈소스'),
         ...opensources.sortedByOrder().map(
           (opensource) => Padding(
-            padding: const EdgeInsets.only(top: 6),
+            padding: const EdgeInsets.only(top: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -115,7 +115,7 @@ class ResumePdf extends Pdf {
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '5. 학력'),
-        Padding(padding: const EdgeInsets.only(top: 6)),
+        Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.education.map(
           (education) => RHistory(
             title: education.title,
@@ -125,7 +125,7 @@ class ResumePdf extends Pdf {
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '6. 수상 및 자격증'),
-        Padding(padding: const EdgeInsets.only(top: 6)),
+        Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.award.map(
           (award) => RHistory(
             title: award.title,
@@ -135,7 +135,7 @@ class ResumePdf extends Pdf {
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '7. 기타'),
-        Padding(padding: const EdgeInsets.only(top: 6)),
+        Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.etc.map(
           (etc) => RHistory(
             title: etc.title,
