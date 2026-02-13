@@ -10,8 +10,8 @@ dependencies:
   collection: ^1.19.1
   core: ^1.0.0
   html: ^0.15.6
-  http: ^1.5.0
+  http: ^1.6.0
   pdf: ^3.11.3
 
 dev_dependencies:
-  very_good_analysis: ^10.0.0
+  very_good_analysis: ^10.1.0

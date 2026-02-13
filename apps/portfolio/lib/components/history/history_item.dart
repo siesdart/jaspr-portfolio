@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class HistoryItem extends StatelessComponent {
@@ -11,7 +12,7 @@ class HistoryItem extends StatelessComponent {
     return li(classes: 'flex gap-2 lg:gap-4', [
       span(
         classes: 'flex-none w-20 text-gray-400 lg:w-20',
-        [text(history.period)],
+        [Component.text(history.period)],
       ),
       img(
         classes: 'flex-none size-12',
@@ -20,8 +21,8 @@ class HistoryItem extends StatelessComponent {
         loading: MediaLoading.lazy,
       ),
       div(classes: 'flex-1 flex flex-col justify-center ml-1', [
-        h5(classes: 'font-medium', [text(history.title)]),
-        p(classes: 'font-light', [text(history.content)]),
+        h5(classes: 'font-medium', [Component.text(history.title)]),
+        p(classes: 'font-light', [Component.text(history.content)]),
       ]),
     ]);
   }

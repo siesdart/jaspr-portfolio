@@ -26,7 +26,7 @@ class Resume extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return fragment([
+    return Component.fragment([
       Button(
         onClick: () => _downloadPdf(
           ResumePdf(
@@ -45,7 +45,7 @@ class Resume extends StatelessComponent {
           projects,
           opensources,
         ].any((e) => e == null),
-        children: [text('이력서')],
+        children: const [Component.text('이력서')],
       ),
       Button(
         onClick: () => _downloadPdf(
@@ -55,7 +55,7 @@ class Resume extends StatelessComponent {
           ),
         ),
         disabled: projects == null,
-        children: [text('포트폴리오')],
+        children: const [Component.text('포트폴리오')],
       ),
     ]);
   }

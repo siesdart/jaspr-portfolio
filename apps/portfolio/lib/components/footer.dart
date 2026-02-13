@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Footer extends StatelessComponent {
@@ -5,10 +6,10 @@ class Footer extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return footer(
+    return const footer(
       classes: 'flex justify-center border-t border-gray-200 mx-2 py-6 lg:py-8',
       [
-        const JasprBadge.darkTwoTone(),
+        JasprBadge.darkTwoTone(),
       ],
     );
   }

@@ -4,36 +4,36 @@
 // GENERATED FILE, DO NOT MODIFY
 // Generated with jaspr_builder
 
-import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/components/resume.dart' as prefix0;
+import 'package:jaspr/server.dart';
+import 'package:portfolio/components/resume.dart' as _resume;
 
-/// Default [JasprOptions] for use with your jaspr project.
+/// Default [ServerOptions] for use with your Jaspr project.
 ///
-/// Use this to initialize jaspr **before** calling [runApp].
+/// Use this to initialize Jaspr **before** calling [runApp].
 ///
 /// Example:
 /// ```dart
-/// import 'jaspr_options.dart';
+/// import 'main.server.options.dart';
 ///
 /// void main() {
 ///   Jaspr.initializeApp(
-///     options: defaultJasprOptions,
+///     options: defaultServerOptions,
 ///   );
 ///
 ///   runApp(...);
 /// }
 /// ```
-JasprOptions get defaultJasprOptions => JasprOptions(
+ServerOptions get defaultServerOptions => ServerOptions(
+  clientId: 'main.client.dart.js',
   clients: {
-    prefix0.Resume: ClientTarget<prefix0.Resume>(
-      'components/resume',
-      params: _prefix0Resume,
+    _resume.Resume: ClientTarget<_resume.Resume>(
+      'resume',
+      params: __resumeResume,
     ),
   },
-  styles: () => [],
 );
 
-Map<String, dynamic> _prefix0Resume(prefix0.Resume c) => {
+Map<String, Object?> __resumeResume(_resume.Resume c) => {
   'config': c.config.toJson(),
   'introduction': c.introduction,
   'skill': c.skill,

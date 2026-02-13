@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
@@ -18,8 +19,8 @@ class App extends StatelessComponent {
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
 
-    return fragment([
-      h1(classes: 'sr-only', [text(config.title)]),
+    return Component.fragment([
+      h1(classes: 'sr-only', [Component.text(config.title)]),
       const Navbar(),
       const Header(),
       main_(
@@ -29,7 +30,7 @@ class App extends StatelessComponent {
           const Aside(),
           div(
             classes:
-                'max-w-screen-sm w-full flex flex-col gap-8 mt-4 lg:max-w-screen-md lg:col-start-2 lg:mt-0 lg:mx-auto',
+                'max-w-screen-sm w-full flex flex-col gap-8 mt-4 lg:max-w-3xl lg:col-start-2 lg:mt-0 lg:mx-auto',
             [
               Router(
                 routes: [

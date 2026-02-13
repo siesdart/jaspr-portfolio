@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/components/title.dart';
 
@@ -6,7 +7,7 @@ class Header extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return header(
+    return const header(
       classes:
           'grid grid-cols-1 place-items-center gap-y-1 px-6 lg:grid-rows-[auto] lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:px-8',
       [
@@ -19,7 +20,7 @@ class Header extends StatelessComponent {
             loading: MediaLoading.lazy,
           ),
         ]),
-        const Title(classes: 'mx-auto lg:hidden', size: TitleSize.small),
+        Title(classes: 'mx-auto lg:hidden', size: TitleSize.small),
       ],
     );
   }

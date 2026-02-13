@@ -11,7 +11,7 @@ class Opensource extends StatelessComponent {
   Component build(BuildContext context) {
     switch (context.watch(opensourcesProvider)) {
       case AsyncData(value: final opensources):
-        return fragment(
+        return Component.fragment(
           opensources.sortedByOrder().map(OpensourceItem.new).toList(),
         );
       default:

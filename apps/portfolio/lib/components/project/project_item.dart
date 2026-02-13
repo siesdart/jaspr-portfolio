@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:ui/ui.dart';
@@ -17,12 +18,12 @@ class ProjectItem extends StatelessComponent {
           children: [
             h5(
               classes: 'font-medium',
-              [text(project.title)],
+              [Component.text(project.title)],
             ),
-            p(classes: 'font-light', [text(project.introduction)]),
+            p(classes: 'font-light', [Component.text(project.introduction)]),
             span(
               classes: 'font-extralight text-gray-600',
-              project.tags.map((tag) => text('#$tag ')).toList(),
+              project.tags.map((tag) => Component.text('#$tag ')).toList(),
             ),
           ],
         ),

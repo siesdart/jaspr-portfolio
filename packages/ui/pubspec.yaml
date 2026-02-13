@@ -7,8 +7,8 @@ environment:
   sdk: ^3.8.0
 
 dependencies:
-  jaspr: ^0.21.6
-  jaspr_router: ^0.7.3
+  jaspr: ^0.22.2
+  jaspr_router: ^0.8.1
 
 dev_dependencies:
-  very_good_analysis: ^10.0.0
+  very_good_analysis: ^10.1.0

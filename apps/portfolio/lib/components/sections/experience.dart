@@ -11,7 +11,7 @@ class Experience extends StatelessComponent {
   Component build(BuildContext context) {
     switch (context.watch(experiencesProvider)) {
       case AsyncData(value: final experiences):
-        return fragment(
+        return Component.fragment(
           experiences.sortedByPeriod().map(ExperienceItem.new).toList(),
         );
       default:

@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
@@ -13,7 +14,7 @@ class ProjectDetailPage extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
-    return fragment([
+    return Component.fragment([
       Document.head(
         title: '${project.title} - ${config.title}',
         meta: {
@@ -34,11 +35,11 @@ class ProjectDetailPage extends StatelessComponent {
                 classes: 'size-3',
                 styles: Styles(raw: {'fill': '#${project.color}'}),
                 viewBox: '0 0 16 16',
-                [circle(cx: '8', cy: '8', r: '8', [])],
+                const [circle(cx: '8', cy: '8', r: '8', [])],
               ),
               h4(
                 classes: 'font-medium text-lg',
-                [text(project.title)],
+                [Component.text(project.title)],
               ),
               a(
                 classes: clsx([
@@ -67,13 +68,15 @@ class ProjectDetailPage extends StatelessComponent {
                   alt: 'github stars',
                   loading: MediaLoading.lazy,
                 ),
-              div(classes: 'flex-1', []),
+              const div(classes: 'flex-1', []),
               span(classes: 'font-light text-sm', [
-                text(project.year.toString()),
+                Component.text(project.year.toString()),
               ]),
             ],
           ),
-          h5(classes: 'font-light text-sm', [text(project.introduction)]),
+          h5(classes: 'font-light text-sm', [
+            Component.text(project.introduction),
+          ]),
           if (project.files != null && project.files!.isNotEmpty)
             div(
               classes: 'not-prose flex flex-row-reverse gap-2',
@@ -89,7 +92,7 @@ class ProjectDetailPage extends StatelessComponent {
                           viewBox: '0 0 24 24',
                           SvgIcons.paperclip,
                         ),
-                        text(file.name),
+                        Component.text(file.name),
                       ],
                     ),
                   )
@@ -102,17 +105,17 @@ class ProjectDetailPage extends StatelessComponent {
               alt: '${project.title} image',
               loading: MediaLoading.lazy,
             ),
-          p([text(project.description)]),
+          p([Component.text(project.description)]),
           span(
             classes: 'font-extralight text-gray-600',
-            project.tags.map((tag) => text('#$tag ')).toList(),
+            project.tags.map((tag) => Component.text('#$tag ')).toList(),
           ),
         ],
       ),
       Link(
         classes: buttonVariants(variant: ButtonVariant.ghost),
         to: '/projects',
-        child: text('목록으로'),
+        child: const Component.text('목록으로'),
       ),
     ]);
   }

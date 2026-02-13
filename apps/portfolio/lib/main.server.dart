@@ -1,15 +1,17 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/app.dart';
 import 'package:portfolio/config.dart';
-import 'package:portfolio/jaspr_options.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 import 'package:portfolio/service_locator.dart';
 
+import 'main.server.options.dart';
+
 void main() async {
-  Jaspr.initializeApp(options: defaultJasprOptions);
+  Jaspr.initializeApp(options: defaultServerOptions);
   setupLocator();
   initializeMappers();
 
@@ -25,10 +27,10 @@ void main() async {
             href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-$weight.woff2',
             as: 'font',
             type: 'font/woff2',
-            attributes: {'crossorigin': ''},
+            attributes: const {'crossorigin': ''},
           ),
         ),
-        link(href: 'styles.css', rel: 'stylesheet'),
+        const link(href: 'styles.css', rel: 'stylesheet'),
       ],
       lang: config.locale.split('_')[0],
       meta: {

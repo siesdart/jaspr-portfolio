@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Section extends StatelessComponent {
@@ -24,7 +25,7 @@ class Section extends StatelessComponent {
           h2(
             classes:
                 'text-xl font-bold border-b-2 border-sky-500 pb-2 mb-6 lg:text-2xl',
-            [text(title)],
+            [Component.text(title)],
           ),
         ]),
         if (child != null) div(classes: 'px-2', [child!]),

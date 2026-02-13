@@ -31,12 +31,8 @@ final FutureProvider<List<Opensource>> opensourcesProvider =
         for (var i = 0; i < opensource.contribution!.length; i++) {
           final contribution = opensource.contribution![i];
           if (contribution.title == null) {
-            final pr = await github.pullRequests.get(
-              RepositorySlug.full(opensource.repo),
-              contribution.id,
-            );
             opensource.contribution![i] = contribution.copyWith(
-              title: pr.title,
+              title: '',
             );
           }
         }

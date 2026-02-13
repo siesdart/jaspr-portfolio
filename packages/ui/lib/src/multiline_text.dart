@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class MultilineText extends StatelessComponent {
@@ -7,11 +8,11 @@ class MultilineText extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return fragment(
+    return Component.fragment(
       text
           .trim()
           .split('\n')
-          .map((line) => span([Component.text(line), br()]))
+          .map((text) => span([Component.text(text), const br()]))
           .toList(),
     );
   }

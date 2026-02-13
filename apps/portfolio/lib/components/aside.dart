@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/resume.dart';
@@ -23,7 +24,7 @@ class Aside extends StatelessComponent {
         h4(
           classes:
               'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
-          [text(config.name)],
+          [Component.text(config.name)],
         ),
         ...config.github.map(
           (github) => _buildItem(
@@ -36,7 +37,7 @@ class Aside extends StatelessComponent {
             'https://github.com/${github.user}',
           ),
         ),
-        hr(classes: 'border-gray-200 my-1 lg:my-2'),
+        const hr(classes: 'border-gray-200 my-1 lg:my-2'),
         _buildItem(
           svg(
             classes: 'size-6 fill-none stroke-slate-700',
@@ -84,10 +85,10 @@ class Aside extends StatelessComponent {
           classes: 'underline-offset-4 hover:underline',
           href: href,
           target: Target.blank,
-          [text(title)],
+          [Component.text(title)],
         )
       else
-        span([text(title)]),
+        span([Component.text(title)]),
     ]);
   }
 }

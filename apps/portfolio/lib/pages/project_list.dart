@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/components/project/project_list_item.dart';

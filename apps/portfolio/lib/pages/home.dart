@@ -16,7 +16,7 @@ class HomePage extends StatelessComponent {
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
 
-    return fragment([
+    return Component.fragment([
       const Section(
         id: 'intro',
         title: '1. 소개',

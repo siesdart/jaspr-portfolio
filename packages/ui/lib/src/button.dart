@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:ui/src/clsx.dart';
 
@@ -39,7 +40,7 @@ class Button extends StatelessComponent {
     this.variant = ButtonVariant.primary,
     this.size = ButtonSize.medium,
     this.onClick,
-    this.disabled,
+    this.disabled = false,
     this.children,
     super.key,
   });
@@ -48,7 +49,7 @@ class Button extends StatelessComponent {
   final ButtonVariant variant;
   final ButtonSize size;
   final VoidCallback? onClick;
-  final bool? disabled;
+  final bool disabled;
   final List<Component>? children;
 
   @override

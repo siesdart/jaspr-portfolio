@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:ui/ui.dart';
 
@@ -13,7 +14,7 @@ class OpensourceItem extends StatelessComponent {
       div(classes: 'flex items-center gap-2', [
         h5(
           classes: 'font-medium',
-          [text(opensource.repo.split('/')[1])],
+          [Component.text(opensource.repo.split('/')[1])],
         ),
         a(
           href: 'https://github.com/${opensource.repo}',
@@ -33,10 +34,10 @@ class OpensourceItem extends StatelessComponent {
           loading: MediaLoading.lazy,
         ),
       ]),
-      span(classes: 'font-light', [text(opensource.description)]),
+      span(classes: 'font-light', [Component.text(opensource.description)]),
       span(
         classes: 'font-extralight',
-        [text('Role: '), text(opensource.role)],
+        [const Component.text('Role: '), Component.text(opensource.role)],
       ),
       if (opensource.contribution != null)
         ul(
@@ -49,18 +50,21 @@ class OpensourceItem extends StatelessComponent {
   Component _buildContributionItem(Contribution contribution) {
     return li([
       span([
-        text(contribution.title!),
+        Component.text(contribution.title!),
         a(
           classes: 'ml-1 transition-colors text-blue-400 hover:text-blue-500',
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: Target.blank,
-          [text('#'), text(contribution.id.toString())],
+          [
+            const Component.text('#'),
+            Component.text(contribution.id.toString()),
+          ],
         ),
       ]),
-      br(),
+      const br(),
       span(
         classes: 'font-light',
-        [text(contribution.description)],
+        [Component.text(contribution.description)],
       ),
     ]);
   }
