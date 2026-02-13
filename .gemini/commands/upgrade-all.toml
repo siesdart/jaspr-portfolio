@@ -1,0 +1,16 @@
+description = "Updates all packages in the monorepo to their latest resolvable versions."
+prompt = """
+Analyze the following `melos outdated` output:
+
+!{melos outdated}
+
+Based on this output, update all `pubspec.yaml` files in the monorepo (including the root, `apps/`, and `packages/` directories) to use the 'Resolvable' version for any dependency where 'Current' and 'Resolvable' differ.
+
+**Instructions:**
+1. **Identify Changes**: For each package listed in the output, find dependencies where the version in the 'Current' column is different from the 'Resolvable' column.
+2. **Update Files**: Locate the corresponding `pubspec.yaml` for each package and update the version constraints.
+   - **Crucial**: Preserve version prefixes (e.g., `^`, `~`) if they exist. For example, if the current entry is `jaspr: ^0.22.0` and the resolvable version is `0.22.2`, update it to `jaspr: ^0.22.2`.
+3. **Execute Upgrade**: Once all files are updated, run `melos upgrade`.
+4. **Verify**: Run `melos outdated` again to ensure everything is up to date.
+5. **Summarize**: Provide a concise summary of the updated dependencies.
+"""
