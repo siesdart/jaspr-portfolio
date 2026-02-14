@@ -5,6 +5,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
+import 'package:portfolio/components/skill/skill_icon.dart' as _skill_icon;
 import 'package:portfolio/components/resume.dart' as _resume;
 
 /// Default [ServerOptions] for use with your Jaspr project.
@@ -31,6 +32,7 @@ ServerOptions get defaultServerOptions => ServerOptions(
       params: __resumeResume,
     ),
   },
+  styles: () => [..._skill_icon.SkillIcon.styles],
 );
 
 Map<String, Object?> __resumeResume(_resume.Resume c) => {

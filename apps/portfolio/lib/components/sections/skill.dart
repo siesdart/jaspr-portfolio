@@ -20,6 +20,7 @@ class Skill extends StatelessComponent {
               builder: (name, attributes, child) => SkillIcon.dev(
                 icon: attributes['icon'] ?? '',
                 alt: attributes['alt'],
+                delay: attributes['delay'],
               ),
             ),
             CustomComponent(
@@ -27,6 +28,7 @@ class Skill extends StatelessComponent {
               builder: (name, attributes, child) => SkillIcon(
                 src: attributes['src'] ?? '',
                 alt: attributes['alt'],
+                delay: attributes['delay'],
               ),
             ),
           ],

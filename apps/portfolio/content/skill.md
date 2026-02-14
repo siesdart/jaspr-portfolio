@@ -1,56 +1,52 @@
-<div class="not-prose relative h-72 lg:h-[30rem]">
-  <div class="absolute top-28 left-[calc(50%-1.25rem)] lg:top-44 lg:left-[calc(50%-2.5rem)]">
-    <SkillIcon-dev icon="csharp/csharp-original.svg" alt="csharp icon"/>
+<div class="not-prose relative w-full flex flex-col items-center gap-12 md:block md:h-[750px]">
+  <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
+    <span class="text-[11px] font-black text-gray-400 uppercase tracking-[0.3em] bg-white px-2">Language</span>
+    <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
+      <SkillIcon-dev icon="csharp/csharp-original.svg" alt="csharp icon" delay="-1s"/>
+      <SkillIcon-dev icon="dart/dart-original.svg" alt="dart icon" delay="-3.5s"/>
+      <SkillIcon-dev icon="typescript/typescript-original.svg" alt="typescript icon" delay="-0.5s"/>
+    </div>
   </div>
-  <div class="absolute top-14 left-[calc(50%-1.25rem)] lg:top-[5.5rem] lg:left-[calc(50%-2.5rem)]">
-    <SkillIcon src="icons/wpf.png" alt="wpf icon"/>
+
+  <div class="flex flex-col items-center gap-4 md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
+    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Desktop / Mobile</span>
+    <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
+      <SkillIcon src="icons/wpf.png" alt="wpf icon" delay="-4.5s"/>
+      <SkillIcon-dev icon="flutter/flutter-original.svg" alt="flutter icon" delay="-2.3s"/>
+    </div>
   </div>
-  <div class="absolute left-[calc(50%-1.25rem)] lg:left-[calc(50%-2.5rem)]">
-    <SkillIcon src="icons/mldotnet.png" alt="ml.net icon"/>
+
+  <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:left-0 md:-translate-y-1/2">
+    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Web Frontend</span>
+    <div class="flex flex-col items-center gap-1.5">
+      <div class="flex gap-3">
+        <SkillIcon-dev icon="react/react-original.svg" alt="react icon" delay="-2s"/>
+        <SkillIcon-dev icon="nextjs/nextjs-original.svg" alt="nextjs icon" delay="-4s"/>
+      </div>
+      <div class="flex gap-3 md:gap-18 lg:gap-30">
+        <SkillIcon src="icons/jaspr.png" alt="jaspr icon" delay="-0.8s"/>
+        <SkillIcon-dev icon="tailwindcss/tailwindcss-original.svg" alt="tailwindcss icon" delay="-5.2s"/>
+      </div>
+      <div class="flex gap-3">
+        <SkillIcon-dev icon="zustand/zustand-original.svg" alt="zustand icon" delay="-1.5s"/>
+        <SkillIcon-dev icon="storybook/storybook-original.svg" alt="storybook icon" delay="-3s"/>
+      </div>
+    </div>
   </div>
-  <div class="absolute top-40 left-[calc(50%-2.98rem)] lg:top-64 lg:left-[calc(50%-5.4rem)]">
-    <SkillIcon-dev icon="typescript/typescript-original.svg" alt="typescript icon"/>
+
+  <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2">
+    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Web Backend</span>
+    <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
+      <SkillIcon-dev icon="express/express-original.svg" alt="express icon" delay="-1.2s"/>
+      <SkillIcon-dev icon="firebase/firebase-plain.svg" alt="firebase icon" delay="-3.8s"/>
+      <SkillIcon src="icons/drizzle.svg" alt="drizzle icon" delay="-0.2s"/>
+    </div>
   </div>
-  <div class="absolute top-[11.8rem] left-[calc(50%-6.09rem)]  lg:top-[19rem] lg:left-[calc(50%-10.6rem)]">
-    <SkillIcon-dev icon="react/react-original.svg" alt="react icon"/>
-  </div>
-  <div class="absolute top-[13.6rem] left-[calc(50%-9.2rem)] lg:top-[22rem] lg:left-[calc(50%-15.8rem)]">
-    <SkillIcon-dev icon="express/express-original.svg" alt="express icon"/>
-  </div>
-  <div class="absolute top-40 left-[calc(50%+0.48rem)] lg:top-64 lg:left-[calc(50%+0.4rem)]">
-    <SkillIcon-dev icon="dart/dart-original.svg" alt="dart icon"/>
-  </div>
-  <div class="absolute top-[11.8rem] left-[calc(50%+3.59rem)] lg:top-[19rem] lg:left-[calc(50%+5.6rem)]">
-    <SkillIcon-dev icon="flutter/flutter-original.svg" alt="flutter icon"/>
-  </div>
-  <div class="absolute top-[13.6rem] left-[calc(50%+6.7rem)] lg:top-[22rem] lg:left-[calc(50%+10.8rem)]">
-    <SkillIcon src="icons/jaspr.png" alt="jaspr icon"/>
-  </div>
-  <div class="absolute top-16 left-[calc(10%-1.45rem)] lg:top-24 lg:left-[calc(5%-1.25rem)]">
-    <SkillIcon-dev icon="firebase/firebase-plain.svg" alt="firebase icon"/>
-  </div>
-  <div class="absolute top-16 left-[calc(10%+1.95rem)] lg:top-24 lg:left-[calc(5%+4.75rem)]">
-    <SkillIcon-dev icon="azure/azure-original.svg" alt="azure icon"/>
-  </div>
-  <div class="absolute top-28 left-[calc(10%+0.25rem)] lg:top-44 lg:left-[calc(5%+1.75rem)]">
-    <SkillIcon-dev icon="tailwindcss/tailwindcss-original.svg" alt="tailwindcss icon"/>
-  </div>
-  <div class="absolute top-16 right-[calc(10%+1.95rem)] lg:top-24 lg:right-[calc(5%+4.75rem)]">
-    <SkillIcon-dev icon="postgresql/postgresql-original.svg" alt="postgresql icon"/>
-  </div>
-  <div class="absolute top-16 right-[calc(10%-1.45rem)] lg:top-24 lg:right-[calc(5%-1.25rem)]">
-    <SkillIcon-dev icon="mongodb/mongodb-original.svg" alt="mongodb icon"/>
-  </div>
-  <div class="absolute top-28 right-[calc(10%+0.25rem)] lg:top-44 lg:right-[calc(5%+1.75rem)]">
-    <SkillIcon src="icons/drizzle.svg" alt="drizzle icon"/>
+
+  <div class="flex flex-col items-center gap-4 md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2">
+    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">AI</span>
+    <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
+      <SkillIcon src="icons/mldotnet.png" alt="ml.net icon" delay="-5s"/>
+    </div>
   </div>
 </div>
-
-- 언어: C#, Dart, TypeScript 등
-- 모바일: Flutter
-- 데스크톱: WPF, Flutter
-- 인공지능: ML.NET
-- 웹
-  - 프론트엔드: React, Jaspr, Tailwind CSS
-  - 백엔드: Express, Firebase, Microsoft Azure
-  - 데이터베이스: PostgreSQL, MongoDB, Drizzle ORM

@@ -30,7 +30,7 @@ class App extends StatelessComponent {
           const Aside(),
           div(
             classes:
-                'max-w-screen-sm w-full flex flex-col gap-8 mt-4 lg:max-w-3xl lg:col-start-2 lg:mt-0 lg:mx-auto',
+                'max-w-3xl w-full flex flex-col gap-8 mt-4 lg:max-w-4xl lg:col-start-2 lg:mt-0 lg:mx-auto',
             [
               Router(
                 routes: [
