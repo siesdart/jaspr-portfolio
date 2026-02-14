@@ -27,7 +27,7 @@ class ExperienceItem extends StatelessComponent {
           span(classes: 'font-light', [Component.text(experience.role)]),
           MarkdownArticle(
             classes: 'hidden leading-7 lg:block',
-            content: experience.description,
+            content: experience.content,
           ),
           span(
             classes: 'hidden font-extralight lg:block text-gray-600',
@@ -37,7 +37,7 @@ class ExperienceItem extends StatelessComponent {
       ]),
       MarkdownArticle(
         classes: 'leading-7 lg:hidden',
-        content: experience.description,
+        content: experience.content,
       ),
       span(
         classes: 'font-extralight lg:hidden text-gray-600',

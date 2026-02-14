@@ -48,7 +48,7 @@ class ResumePdf extends Pdf {
               Text(experience.role),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
-                child: Text(experience.description),
+                child: Text(experience.content),
               ),
               Text(
                 experience.tags.map((e) => '#$e').join(' '),

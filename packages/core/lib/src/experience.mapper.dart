@@ -2,6 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 // ignore_for_file: type=lint
+// ignore_for_file: invalid_use_of_protected_member
 // ignore_for_file: unused_element, unnecessary_cast, override_on_non_overriding_member
 // ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
@@ -32,15 +33,15 @@ class ExperienceMapper extends ClassMapperBase<Experience> {
   static const Field<Experience, String> _f$role = Field('role', _$role);
   static String _$period(Experience v) => v.period;
   static const Field<Experience, String> _f$period = Field('period', _$period);
-  static String _$description(Experience v) => v.description;
-  static const Field<Experience, String> _f$description = Field(
-    'description',
-    _$description,
-  );
   static String _$image(Experience v) => v.image;
   static const Field<Experience, String> _f$image = Field('image', _$image);
   static List<String> _$tags(Experience v) => v.tags;
   static const Field<Experience, List<String>> _f$tags = Field('tags', _$tags);
+  static String _$content(Experience v) => v.content;
+  static const Field<Experience, String> _f$content = Field(
+    'content',
+    _$content,
+  );
 
   @override
   final MappableFields<Experience> fields = const {
@@ -48,9 +49,9 @@ class ExperienceMapper extends ClassMapperBase<Experience> {
     #company: _f$company,
     #role: _f$role,
     #period: _f$period,
-    #description: _f$description,
     #image: _f$image,
     #tags: _f$tags,
+    #content: _f$content,
   };
 
   static Experience _instantiate(DecodingData data) {
@@ -59,9 +60,9 @@ class ExperienceMapper extends ClassMapperBase<Experience> {
       company: data.dec(_f$company),
       role: data.dec(_f$role),
       period: data.dec(_f$period),
-      description: data.dec(_f$description),
       image: data.dec(_f$image),
       tags: data.dec(_f$tags),
+      content: data.dec(_f$content),
     );
   }
 
@@ -131,9 +132,9 @@ abstract class ExperienceCopyWith<$R, $In extends Experience, $Out>
     String? company,
     String? role,
     String? period,
-    String? description,
     String? image,
     List<String>? tags,
+    String? content,
   });
   ExperienceCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
@@ -159,18 +160,18 @@ class _ExperienceCopyWithImpl<$R, $Out>
     String? company,
     String? role,
     String? period,
-    String? description,
     String? image,
     List<String>? tags,
+    String? content,
   }) => $apply(
     FieldCopyWithData({
       if (id != null) #id: id,
       if (company != null) #company: company,
       if (role != null) #role: role,
       if (period != null) #period: period,
-      if (description != null) #description: description,
       if (image != null) #image: image,
       if (tags != null) #tags: tags,
+      if (content != null) #content: content,
     }),
   );
   @override
@@ -179,9 +180,9 @@ class _ExperienceCopyWithImpl<$R, $Out>
     company: data.get(#company, or: $value.company),
     role: data.get(#role, or: $value.role),
     period: data.get(#period, or: $value.period),
-    description: data.get(#description, or: $value.description),
     image: data.get(#image, or: $value.image),
     tags: data.get(#tags, or: $value.tags),
+    content: data.get(#content, or: $value.content),
   );
 
   @override

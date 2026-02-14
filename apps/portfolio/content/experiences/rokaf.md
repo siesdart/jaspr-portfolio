@@ -1,0 +1,14 @@
+---
+id: rokaf
+company: 공군군수사령부
+role: 융합체계과 / 인트라넷운용체계개발병
+period: 2021.10 ~ 2023.05
+image: icons/rokaf.png
+tags: [HTML, CSS, JavaScript, jQuery, Java, Spring, Tibero]
+---
+
+컴퓨터자산관리체계 사용자 지원 및 개발
+
+1. Tibero 기반 컴퓨터자산 데이터베이스 유지보수 및 관리
+2. Spring 기반 서비스 백엔드 유지보수 및 관리
+3. 각종 성능 개선 및 신규 기능 구현

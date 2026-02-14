@@ -1,0 +1,19 @@
+---
+id: bagelcode
+company: 베이글코드
+role: Platform / Web Frontend Engineering Intern
+period: 2025.02 ~ 현재
+image: icons/bagelcode.png
+tags: [HTML, CSS, TypeScript, React, Next.js, Tailwind CSS, Zustand, Storybook]
+---
+
+사내 백오피스 웹 서비스의 프론트엔드 개발 및 유지보수
+
+1. 게임 개발 팀의 효율적인 게임 개발 및 관리를 위한 Next.js 기반 게임 콘솔 개발
+2. KPI 등 게임 데이터를 시각화하여 보여주는 Next.js 기반 데이터 플랫폼 개발
+3. Tailwind CSS와 Storybook을 사용한 사내 공통 React UI 컴포넌트 패키지 개발
+4. 사내 백오피스 서비스의 통합과 효율적 개발을 위한 공통 GNB 패키지 개발
+5. 에이전트 통합을 통한 사내 패키지의 효율적 사용을 위한 MCP 웹 허브 및 에이전트 스킬 구축
+6. 웹 게임의 간편한 사내 배포를 위한 Next.js 기반 정적 사이트 배포 플랫폼 개발
+7. 사내 영상 제작을 위한 Next.js 기반 AI 영상 생성 플랫폼 개발
+8. 에이전트를 활용한 자동화된 백오피스 서비스 개발을 위한 커스텀 커맨드 기반 워크플로우 구축

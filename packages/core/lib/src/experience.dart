@@ -11,18 +11,18 @@ class Experience with ExperienceMappable {
     required this.company,
     required this.role,
     required this.period,
-    required this.description,
     required this.image,
     required this.tags,
+    required this.content,
   });
 
   final String id;
   final String company;
   final String role;
   final String period;
-  final String description;
   final String image;
   final List<String> tags;
+  final String content;
 
   @decoder
   static Experience fromJson(String json) => ExperienceMapper.fromJson(json);
