@@ -31,6 +31,7 @@ void main() async {
           ),
         ),
         const link(href: 'styles.css', rel: 'stylesheet'),
+        const script(src: 'https://unpkg.com/lucide@latest'),
       ],
       lang: config.locale.split('_')[0],
       meta: {

@@ -19,11 +19,10 @@ class OpensourceItem extends StatelessComponent {
         a(
           href: 'https://github.com/${opensource.repo}',
           target: Target.blank,
-          [
-            svg(
+          const [
+            Icon(
+              'github',
               classes: 'size-6 fill-slate-900',
-              viewBox: '0 0 24 24',
-              SvgIcons.github,
             ),
           ],
         ),

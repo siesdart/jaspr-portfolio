@@ -28,10 +28,9 @@ class Aside extends StatelessComponent {
         ),
         ...config.github.map(
           (github) => _buildItem(
-            svg(
-              classes: 'size-6 fill-slate-700',
-              viewBox: '0 0 24 24',
-              SvgIcons.github,
+            const Icon(
+              'github',
+              classes: 'size-6 fill-slate-900',
             ),
             github.title,
             'https://github.com/${github.user}',
@@ -39,26 +38,23 @@ class Aside extends StatelessComponent {
         ),
         const hr(classes: 'border-gray-200 my-1 lg:my-2'),
         _buildItem(
-          svg(
-            classes: 'size-6 fill-none stroke-slate-700',
-            viewBox: '0 0 24 24',
-            SvgIcons.cake,
+          const Icon(
+            'cake',
+            classes: 'size-6 fill-none stroke-slate-900',
           ),
           config.birth,
         ),
         _buildItem(
-          svg(
-            classes: 'size-6 fill-none stroke-slate-700',
-            viewBox: '0 0 24 24',
-            SvgIcons.mapPin,
+          const Icon(
+            'map-pin',
+            classes: 'size-6 fill-none stroke-slate-900',
           ),
           config.location,
         ),
         _buildItem(
-          svg(
-            classes: 'size-6 fill-none stroke-slate-700',
-            viewBox: '0 0 24 24',
-            SvgIcons.mail,
+          const Icon(
+            'mail',
+            classes: 'size-6 fill-none stroke-slate-900',
           ),
           config.mail,
           'mailto:${config.mail}',

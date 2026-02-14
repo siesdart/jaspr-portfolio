@@ -48,7 +48,8 @@ class ProjectDetailPage extends StatelessComponent {
                 href: 'https://github.com/${project.repo}',
                 target: Target.blank,
                 [
-                  svg(
+                  Icon(
+                    'github',
                     classes: clsx([
                       'size-6',
                       if (project.repo == null)
@@ -56,8 +57,6 @@ class ProjectDetailPage extends StatelessComponent {
                       else
                         'fill-slate-900',
                     ]),
-                    viewBox: '0 0 24 24',
-                    SvgIcons.github,
                   ),
                 ],
               ),
@@ -87,10 +86,9 @@ class ProjectDetailPage extends StatelessComponent {
                       href: file.src,
                       target: Target.blank,
                       [
-                        svg(
+                        const Icon(
+                          'paperclip',
                           classes: 'size-5 fill-none stroke-slate-900',
-                          viewBox: '0 0 24 24',
-                          SvgIcons.paperclip,
                         ),
                         Component.text(file.name),
                       ],
