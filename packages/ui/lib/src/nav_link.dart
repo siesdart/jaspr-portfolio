@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:ui/src/button.dart';
-import 'package:ui/src/clsx.dart';
+import 'package:ui/src/cn.dart';
 
 class NavLink extends StatelessComponent {
   const NavLink({
@@ -21,7 +21,7 @@ class NavLink extends StatelessComponent {
         (path.replaceAll('/', '').isNotEmpty && context.url.contains(path)) ||
         context.url == path;
     return Link(
-      classes: clsx([
+      classes: cn([
         buttonVariants(variant: ButtonVariant.link),
         {
           'decoration-2 decoration-blue-500 font-semibold underline underline-offset-[5px]':

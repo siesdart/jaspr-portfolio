@@ -42,7 +42,7 @@ class ProjectDetailPage extends StatelessComponent {
                 [Component.text(project.title)],
               ),
               a(
-                classes: clsx([
+                classes: cn([
                   {'pointer-events-none': project.repo == null},
                 ]),
                 href: 'https://github.com/${project.repo}',
@@ -50,7 +50,7 @@ class ProjectDetailPage extends StatelessComponent {
                 [
                   Icon(
                     'github',
-                    classes: clsx([
+                    classes: cn([
                       'size-6',
                       if (project.repo == null)
                         'fill-gray-400'

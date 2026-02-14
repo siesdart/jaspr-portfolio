@@ -32,7 +32,7 @@ class Title extends StatelessComponent {
           to: '/',
           replace: true,
           child: h2(
-            classes: clsx([
+            classes: cn([
               'font-semibold text-blue-500',
               if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
             ]),
@@ -46,7 +46,7 @@ class Title extends StatelessComponent {
           ),
         ),
         h3(
-          classes: clsx([
+          classes: cn([
             'font-light text-gray-400',
             if (size == TitleSize.large)
               'mt-2 text-end text-xl'
