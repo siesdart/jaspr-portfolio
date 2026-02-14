@@ -1,7 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:ui/ui.dart';
+import 'package:portfolio/components/markdown_article.dart';
 
 class ExperienceItem extends StatelessComponent {
   const ExperienceItem(this.experience, {super.key});
@@ -25,9 +25,9 @@ class ExperienceItem extends StatelessComponent {
         div(classes: 'flex-1 flex flex-col justify-center ml-1', [
           h5(classes: 'font-medium', [Component.text(experience.company)]),
           span(classes: 'font-light', [Component.text(experience.role)]),
-          p(
-            classes: 'hidden py-4 leading-7 lg:block',
-            [MultilineText(experience.description)],
+          MarkdownArticle(
+            classes: 'hidden leading-7 lg:block',
+            content: experience.description,
           ),
           span(
             classes: 'hidden font-extralight lg:block text-gray-600',
@@ -35,9 +35,10 @@ class ExperienceItem extends StatelessComponent {
           ),
         ]),
       ]),
-      p(classes: 'leading-7 lg:hidden', [
-        MultilineText(experience.description),
-      ]),
+      MarkdownArticle(
+        classes: 'leading-7 lg:hidden',
+        content: experience.description,
+      ),
       span(
         classes: 'font-extralight lg:hidden text-gray-600',
         experience.tags.map((tag) => Component.text('#$tag ')).toList(),
