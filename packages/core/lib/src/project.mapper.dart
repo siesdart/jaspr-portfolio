@@ -32,11 +32,6 @@ class ProjectMapper extends ClassMapperBase<Project> {
     'introduction',
     _$introduction,
   );
-  static String _$description(Project v) => v.description;
-  static const Field<Project, String> _f$description = Field(
-    'description',
-    _$description,
-  );
   static int _$year(Project v) => v.year;
   static const Field<Project, int> _f$year = Field('year', _$year);
   static int _$order(Project v) => v.order;
@@ -51,13 +46,14 @@ class ProjectMapper extends ClassMapperBase<Project> {
   static const Field<Project, List<String>> _f$tags = Field('tags', _$tags);
   static List<File>? _$files(Project v) => v.files;
   static const Field<Project, List<File>> _f$files = Field('files', _$files);
+  static String _$content(Project v) => v.content;
+  static const Field<Project, String> _f$content = Field('content', _$content);
 
   @override
   final MappableFields<Project> fields = const {
     #id: _f$id,
     #title: _f$title,
     #introduction: _f$introduction,
-    #description: _f$description,
     #year: _f$year,
     #order: _f$order,
     #repo: _f$repo,
@@ -65,6 +61,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
     #image: _f$image,
     #tags: _f$tags,
     #files: _f$files,
+    #content: _f$content,
   };
 
   static Project _instantiate(DecodingData data) {
@@ -72,7 +69,6 @@ class ProjectMapper extends ClassMapperBase<Project> {
       id: data.dec(_f$id),
       title: data.dec(_f$title),
       introduction: data.dec(_f$introduction),
-      description: data.dec(_f$description),
       year: data.dec(_f$year),
       order: data.dec(_f$order),
       repo: data.dec(_f$repo),
@@ -80,6 +76,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
       image: data.dec(_f$image),
       tags: data.dec(_f$tags),
       files: data.dec(_f$files),
+      content: data.dec(_f$content),
     );
   }
 
@@ -146,7 +143,6 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
     String? id,
     String? title,
     String? introduction,
-    String? description,
     int? year,
     int? order,
     String? repo,
@@ -154,6 +150,7 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
     String? image,
     List<String>? tags,
     List<File>? files,
+    String? content,
   });
   ProjectCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
@@ -187,7 +184,6 @@ class _ProjectCopyWithImpl<$R, $Out>
     String? id,
     String? title,
     String? introduction,
-    String? description,
     int? year,
     int? order,
     Object? repo = $none,
@@ -195,12 +191,12 @@ class _ProjectCopyWithImpl<$R, $Out>
     Object? image = $none,
     List<String>? tags,
     Object? files = $none,
+    String? content,
   }) => $apply(
     FieldCopyWithData({
       if (id != null) #id: id,
       if (title != null) #title: title,
       if (introduction != null) #introduction: introduction,
-      if (description != null) #description: description,
       if (year != null) #year: year,
       if (order != null) #order: order,
       if (repo != $none) #repo: repo,
@@ -208,6 +204,7 @@ class _ProjectCopyWithImpl<$R, $Out>
       if (image != $none) #image: image,
       if (tags != null) #tags: tags,
       if (files != $none) #files: files,
+      if (content != null) #content: content,
     }),
   );
   @override
@@ -215,7 +212,6 @@ class _ProjectCopyWithImpl<$R, $Out>
     id: data.get(#id, or: $value.id),
     title: data.get(#title, or: $value.title),
     introduction: data.get(#introduction, or: $value.introduction),
-    description: data.get(#description, or: $value.description),
     year: data.get(#year, or: $value.year),
     order: data.get(#order, or: $value.order),
     repo: data.get(#repo, or: $value.repo),
@@ -223,6 +219,7 @@ class _ProjectCopyWithImpl<$R, $Out>
     image: data.get(#image, or: $value.image),
     tags: data.get(#tags, or: $value.tags),
     files: data.get(#files, or: $value.files),
+    content: data.get(#content, or: $value.content),
   );
 
   @override

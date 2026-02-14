@@ -1,11 +1,13 @@
+---
 id: fps
 title: CurtainFPS @ 몰입캠프
 introduction: 탄막 슈팅 요소를 접목한 싱글 FPS 게임
-description: >
-  KAIST 몰입캠프에서 만든 FPS 게임. 2인 1조의 팀으로 진행하였으며 레벨 디자인, 모델링 등을 제외한 순수 프로그래밍만을 담당하였다.
 year: 2024
 order: 1
 repo: systil3/madcamp_week3
 color: 178600
 image: projects/fps.png
 tags: [C#, Unity]
+---
+
+KAIST 몰입캠프에서 만든 FPS 게임. 2인 1조의 팀으로 진행하였으며 레벨 디자인, 모델링 등을 제외한 순수 프로그래밍만을 담당하였다.

@@ -3,6 +3,7 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
+import 'package:portfolio/components/markdown_article.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:ui/ui.dart';
 
@@ -103,7 +104,7 @@ class ProjectDetailPage extends StatelessComponent {
               alt: '${project.title} image',
               loading: MediaLoading.lazy,
             ),
-          p([Component.text(project.description)]),
+          MarkdownArticle(content: project.content),
           span(
             classes: 'font-extralight text-gray-600',
             project.tags.map((tag) => Component.text('#$tag ')).toList(),

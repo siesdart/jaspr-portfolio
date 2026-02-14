@@ -52,7 +52,7 @@ class PortfolioPdf extends Pdf {
                     child: Image(images[project.id]!),
                   ),
                 */
-                RParagraph(content: project.description),
+                RParagraph(content: project.content),
                 Text(
                   project.tags.map((e) => '#$e').join(' '),
                   style: const TextStyle(color: PdfColors.grey),

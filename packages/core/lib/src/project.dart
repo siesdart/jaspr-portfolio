@@ -11,7 +11,6 @@ class Project with ProjectMappable {
     required this.id,
     required this.title,
     required this.introduction,
-    required this.description,
     required this.year,
     required this.order,
     required this.repo,
@@ -19,12 +18,12 @@ class Project with ProjectMappable {
     required this.image,
     required this.tags,
     required this.files,
+    required this.content,
   });
 
   final String id;
   final String title;
   final String introduction;
-  final String description;
   final int year;
   final int order;
   final String? repo;
@@ -32,6 +31,7 @@ class Project with ProjectMappable {
   final String? image;
   final List<String> tags;
   final List<File>? files;
+  final String content;
 
   @decoder
   static Project fromJson(String json) => ProjectMapper.fromJson(json);
