@@ -50,3 +50,10 @@
     </div>
   </div>
 </div>
+
+- 언어: C#, Dart, TypeScript 등
+- 데스크톱 / 모바일: WPF, Flutter
+- 인공지능: ML.NET
+- 웹
+  - 프론트엔드: React, Next.js, Jaspr, Tailwind CSS, Zustand, Storybook
+  - 백엔드: Express, Firebase, Drizzle ORM
