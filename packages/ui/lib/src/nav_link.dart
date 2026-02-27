@@ -22,7 +22,7 @@ class NavLink extends StatelessComponent {
         context.url == path;
     return Link(
       classes: cn([
-        buttonVariants(variant: ButtonVariant.link),
+        buttonVariants(variant: ButtonVariant.link, size: ButtonSize.large),
         'text-foreground',
         {
           'decoration-2 decoration-blue-500 font-semibold underline underline-offset-[5px]':

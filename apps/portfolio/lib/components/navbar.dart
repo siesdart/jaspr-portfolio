@@ -9,7 +9,7 @@ class Navbar extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return const nav(
-      classes: 'sticky top-0 z-10 flex flex-col py-2 bg-white',
+      classes: 'sticky top-0 z-10 flex flex-col px-4 py-2 bg-background',
       [
         div(
           classes: 'flex justify-end text-lg uppercase',
