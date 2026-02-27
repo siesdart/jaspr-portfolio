@@ -12,11 +12,23 @@ void main() {
     });
 
     test('handles maps', () {
-      expect(clsx(['a', {'b': true, 'c': false}]), 'a b');
+      expect(
+        clsx([
+          'a',
+          {'b': true, 'c': false},
+        ]),
+        'a b',
+      );
     });
 
     test('handles nested lists', () {
-      expect(clsx(['a', ['b', 'c']]), 'a b c');
+      expect(
+        clsx([
+          'a',
+          ['b', 'c'],
+        ]),
+        'a b c',
+      );
     });
   });
 
@@ -45,11 +57,23 @@ void main() {
       expect(twMerge('relative absolute'), 'absolute');
       expect(twMerge('flex grid'), 'grid');
     });
+
+    test('handles border properties', () {
+      expect(twMerge('border border-2'), 'border-2');
+      expect(twMerge('border-solid border-dashed'), 'border-dashed');
+      expect(twMerge('border-red-500 border-blue-500'), 'border-blue-500');
+    });
   });
 
   group('cn', () {
     test('combines and merges', () {
-      expect(cn(['p-2', {'p-4': true, 'm-2': true}]), 'p-4 m-2');
+      expect(
+        cn([
+          'p-2',
+          {'p-4': true, 'm-2': true},
+        ]),
+        'p-4 m-2',
+      );
     });
   });
 }

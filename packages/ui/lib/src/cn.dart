@@ -68,6 +68,40 @@ String _getConflictKey(String className) {
     return '${modifier}position';
   }
 
+  // Border properties
+  if (baseClass == 'border') {
+    return '${modifier}border-width';
+  }
+  if (segments.first == 'border' && segments.length > 1) {
+    final val = segments[1];
+    if (int.tryParse(val) != null ||
+        const [
+          'x',
+          'y',
+          's',
+          'e',
+          'bs',
+          'be',
+          't',
+          'r',
+          'b',
+          'l',
+        ].contains(val)) {
+      return '${modifier}border-width';
+    }
+    if (const [
+      'solid',
+      'dashed',
+      'dotted',
+      'double',
+      'hidden',
+      'none',
+    ].contains(val)) {
+      return '${modifier}border-style';
+    }
+    return '${modifier}border-color';
+  }
+
   // Text properties (Size and Weight)
   if (prefix == 'text' && segments.length > 1) {
     final val = segments[1];
