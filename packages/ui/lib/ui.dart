@@ -1,3 +1,4 @@
+export 'src/badge.dart';
 export 'src/button.dart';
 export 'src/cn.dart';
 export 'src/icon.dart';

@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
+import 'package:portfolio/components/tags.dart';
 import 'package:ui/ui.dart';
 
 class ProjectItem extends StatelessComponent {
@@ -21,10 +22,7 @@ class ProjectItem extends StatelessComponent {
               [Component.text(project.title)],
             ),
             p(classes: 'font-light', [Component.text(project.introduction)]),
-            span(
-              classes: 'font-extralight text-gray-600',
-              project.tags.map((tag) => Component.text('#$tag ')).toList(),
-            ),
+            Tags(classes: 'mt-1', project.tags),
           ],
         ),
       ],

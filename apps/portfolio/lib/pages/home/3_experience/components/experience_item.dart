@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/components/markdown_article.dart';
+import 'package:portfolio/components/tags.dart';
 
 class ExperienceItem extends StatelessComponent {
   const ExperienceItem(this.experience, {super.key});
@@ -29,9 +30,9 @@ class ExperienceItem extends StatelessComponent {
             classes: 'hidden leading-7 lg:block',
             content: experience.content,
           ),
-          span(
-            classes: 'hidden font-extralight lg:block text-gray-600',
-            experience.tags.map((tag) => Component.text('#$tag ')).toList(),
+          Tags(
+            classes: 'hidden lg:flex',
+            experience.tags,
           ),
         ]),
       ]),
@@ -39,10 +40,7 @@ class ExperienceItem extends StatelessComponent {
         classes: 'leading-7 lg:hidden',
         content: experience.content,
       ),
-      span(
-        classes: 'font-extralight lg:hidden text-gray-600',
-        experience.tags.map((tag) => Component.text('#$tag ')).toList(),
-      ),
+      Tags(classes: 'lg:hidden', experience.tags),
     ]);
   }
 }
