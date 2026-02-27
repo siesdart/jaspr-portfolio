@@ -137,6 +137,16 @@ String _getConflictKey(String className) {
     ].contains(val)) {
       return '${modifier}text-weight';
     }
+    if (const [
+      'left',
+      'center',
+      'right',
+      'justify',
+      'start',
+      'end',
+    ].contains(val)) {
+      return '${modifier}text-align';
+    }
     return '${modifier}text-color';
   }
 
