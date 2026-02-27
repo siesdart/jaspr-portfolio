@@ -33,13 +33,13 @@ class Title extends StatelessComponent {
           replace: true,
           child: h2(
             classes: cn([
-              'font-semibold text-blue-500',
+              'font-semibold text-primary',
               if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
             ]),
             [
               Component.text('(${config.title.substring(0, index)}'),
               span(
-                classes: 'text-sky-500',
+                classes: 'text-primary/80',
                 [Component.text('${config.title.substring(index)})')],
               ),
             ],
@@ -47,7 +47,7 @@ class Title extends StatelessComponent {
         ),
         h3(
           classes: cn([
-            'font-light text-gray-400',
+            'font-light text-muted-foreground',
             if (size == TitleSize.large)
               'mt-2 text-end text-xl'
             else

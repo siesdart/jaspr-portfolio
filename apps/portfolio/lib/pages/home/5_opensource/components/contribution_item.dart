@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:ui/ui.dart';
 
 class ContributionItem extends StatelessComponent {
   const ContributionItem(
@@ -18,7 +19,7 @@ class ContributionItem extends StatelessComponent {
       span([
         Component.text(contribution.title!),
         a(
-          classes: 'ml-1 transition-colors text-blue-400 hover:text-blue-500',
+          classes: cn([buttonVariants(variant: ButtonVariant.link)]),
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: Target.blank,
           [

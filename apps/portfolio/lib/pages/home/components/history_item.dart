@@ -11,7 +11,7 @@ class HistoryItem extends StatelessComponent {
   Component build(BuildContext context) {
     return li(classes: 'flex gap-2 lg:gap-4', [
       span(
-        classes: 'flex-none w-20 text-gray-400 lg:w-20',
+        classes: 'flex-none w-20 text-muted-foreground lg:w-20',
         [Component.text(history.period)],
       ),
       img(

@@ -17,7 +17,7 @@ class Project extends StatelessComponent {
               .groupByYear()
               .map(
                 (entry) => li(classes: 'flex flex-col gap-2', [
-                  span(classes: 'text-gray-400', [
+                  span(classes: 'text-muted-foreground', [
                     Component.text(entry.key.toString()),
                   ]),
                   ul(

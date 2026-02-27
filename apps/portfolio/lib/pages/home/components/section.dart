@@ -24,7 +24,7 @@ class Section extends StatelessComponent {
         a(href: '#$id', [
           h2(
             classes:
-                'text-xl font-bold border-b-2 border-sky-500 pb-2 mb-6 lg:text-2xl',
+                'text-xl font-bold border-b-2 border-primary pb-2 mb-6 lg:text-2xl',
             [Component.text(title)],
           ),
         ]),

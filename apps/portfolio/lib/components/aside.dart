@@ -30,31 +30,31 @@ class Aside extends StatelessComponent {
           (github) => _buildItem(
             const Icon(
               'github',
-              classes: 'size-6 fill-slate-900',
+              classes: 'size-6 fill-foreground',
             ),
             github.title,
             'https://github.com/${github.user}',
           ),
         ),
-        const hr(classes: 'border-gray-200 my-1 lg:my-2'),
+        const hr(classes: 'border-border my-1 lg:my-2'),
         _buildItem(
           const Icon(
             'cake',
-            classes: 'size-6 stroke-slate-900',
+            classes: 'size-6 stroke-foreground',
           ),
           config.birth,
         ),
         _buildItem(
           const Icon(
             'map-pin',
-            classes: 'size-6 stroke-slate-900',
+            classes: 'size-6 stroke-foreground',
           ),
           config.location,
         ),
         _buildItem(
           const Icon(
             'mail',
-            classes: 'size-6 stroke-slate-900',
+            classes: 'size-6 stroke-foreground',
           ),
           config.mail,
           'mailto:${config.mail}',

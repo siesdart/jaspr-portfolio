@@ -13,7 +13,7 @@ class ExperienceItem extends StatelessComponent {
   Component build(BuildContext context) {
     return li(classes: 'flex flex-col gap-4', [
       span(
-        classes: 'text-gray-400',
+        classes: 'text-muted-foreground',
         [Component.text(experience.period)],
       ),
       div(classes: 'flex gap-2 lg:gap-4', [
@@ -37,7 +37,7 @@ class ExperienceItem extends StatelessComponent {
         ]),
       ]),
       MarkdownArticle(
-        classes: 'leading-7 lg:hidden',
+        classes: 'leading-7 lg:hidden -my-4',
         content: experience.content,
       ),
       Tags(classes: 'lg:hidden', experience.tags),

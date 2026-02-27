@@ -23,7 +23,7 @@ class OpensourceItem extends StatelessComponent {
           const [
             Icon(
               'github',
-              classes: 'size-6 fill-slate-900',
+              classes: 'size-6 fill-foreground',
             ),
           ],
         ),

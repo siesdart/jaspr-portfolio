@@ -24,7 +24,7 @@ class SkillIcon extends StatelessComponent {
   Component build(BuildContext context) {
     return div(
       classes:
-          'inline-block bg-gray-100 p-2 rounded-full hover:bg-gray-200 lg:p-4 md:animate-[float_6s_ease-in-out_infinite]',
+          'inline-block bg-secondary p-2 rounded-full hover:bg-secondary/80 lg:p-4 md:animate-[float_6s_ease-in-out_infinite]',
       styles: delay != null ? Styles(raw: {'animation-delay': delay!}) : null,
       [
         img(
