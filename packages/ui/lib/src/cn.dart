@@ -75,6 +75,7 @@ String _getConflictKey(String className) {
   if (segments.first == 'border' && segments.length > 1) {
     final val = segments[1];
     if (int.tryParse(val) != null ||
+        RegExp(r'\[.*?\]').hasMatch(val) ||
         const [
           'x',
           'y',
@@ -103,23 +104,24 @@ String _getConflictKey(String className) {
   }
 
   // Text properties (Size and Weight)
-  if (prefix == 'text' && segments.length > 1) {
+  if (segments.first == 'text' && segments.length > 1) {
     final val = segments[1];
-    if (const [
-      'xs',
-      'sm',
-      'base',
-      'lg',
-      'xl',
-      '2xl',
-      '3xl',
-      '4xl',
-      '5xl',
-      '6xl',
-      '7xl',
-      '8xl',
-      '9xl',
-    ].contains(val)) {
+    if (RegExp(r'\[.*?\]').hasMatch(val) ||
+        const [
+          'xs',
+          'sm',
+          'base',
+          'lg',
+          'xl',
+          '2xl',
+          '3xl',
+          '4xl',
+          '5xl',
+          '6xl',
+          '7xl',
+          '8xl',
+          '9xl',
+        ].contains(val)) {
       return '${modifier}text-size';
     }
     if (const [
@@ -135,6 +137,7 @@ String _getConflictKey(String className) {
     ].contains(val)) {
       return '${modifier}text-weight';
     }
+    return '${modifier}text-color';
   }
 
   return '$modifier$prefix';
