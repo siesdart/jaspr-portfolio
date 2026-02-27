@@ -28,6 +28,7 @@ class Resume extends StatelessComponent {
   Component build(BuildContext context) {
     return Component.fragment([
       Button(
+        size: ButtonSize.large,
         onClick: () => _downloadPdf(
           ResumePdf(
             config: config,
@@ -48,6 +49,7 @@ class Resume extends StatelessComponent {
         children: const [Component.text('이력서')],
       ),
       Button(
+        size: ButtonSize.large,
         onClick: () => _downloadPdf(
           PortfolioPdf(
             config: config,

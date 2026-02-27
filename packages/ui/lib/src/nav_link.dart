@@ -23,6 +23,7 @@ class NavLink extends StatelessComponent {
     return Link(
       classes: cn([
         buttonVariants(variant: ButtonVariant.link),
+        'text-foreground',
         {
           'decoration-2 decoration-blue-500 font-semibold underline underline-offset-[5px]':
               isActive,
