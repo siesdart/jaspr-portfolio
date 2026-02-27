@@ -4,8 +4,8 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 import 'package:ui/ui.dart';
 
-class ProjectListItem extends StatelessComponent {
-  const ProjectListItem(this.project, {super.key});
+class ProjectItem extends StatelessComponent {
+  const ProjectItem(this.project, {super.key});
 
   final Project project;
 

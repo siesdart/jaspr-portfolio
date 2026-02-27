@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:portfolio/pages/home/5_opensource/components/contribution_item.dart';
 import 'package:ui/ui.dart';
 
 class OpensourceItem extends StatelessComponent {
@@ -41,30 +42,15 @@ class OpensourceItem extends StatelessComponent {
       if (opensource.contribution != null)
         ul(
           classes: 'list-disc ml-5 mt-1 space-y-2',
-          opensource.contribution!.map(_buildContributionItem).toList(),
+          opensource.contribution!
+              .map(
+                (contribution) => ContributionItem(
+                  contribution,
+                  opensource: opensource,
+                ),
+              )
+              .toList(),
         ),
-    ]);
-  }
-
-  Component _buildContributionItem(Contribution contribution) {
-    return li([
-      span([
-        Component.text(contribution.title!),
-        a(
-          classes: 'ml-1 transition-colors text-blue-400 hover:text-blue-500',
-          href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
-          target: Target.blank,
-          [
-            const Component.text('#'),
-            Component.text(contribution.id.toString()),
-          ],
-        ),
-      ]),
-      const br(),
-      span(
-        classes: 'font-light',
-        [Component.text(contribution.description)],
-      ),
     ]);
   }
 }

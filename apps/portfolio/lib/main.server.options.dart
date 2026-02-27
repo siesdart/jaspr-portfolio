@@ -5,8 +5,9 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
-import 'package:portfolio/components/skill/skill_icon.dart' as _skill_icon;
 import 'package:portfolio/components/resume.dart' as _resume;
+import 'package:portfolio/pages/home/2_skill/components/skill_icon.dart'
+    as _skill_icon;
 
 /// Default [ServerOptions] for use with your Jaspr project.
 ///

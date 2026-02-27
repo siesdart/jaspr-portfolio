@@ -1,12 +1,12 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/components/history/history_item.dart';
-import 'package:portfolio/components/section.dart';
-import 'package:portfolio/components/sections/experience.dart';
-import 'package:portfolio/components/sections/introduction.dart';
-import 'package:portfolio/components/sections/opensource.dart';
-import 'package:portfolio/components/sections/project.dart';
-import 'package:portfolio/components/sections/skill.dart';
+import 'package:portfolio/pages/home/1_introduction/introduction.dart';
+import 'package:portfolio/pages/home/2_skill/skill.dart';
+import 'package:portfolio/pages/home/3_experience/experience.dart';
+import 'package:portfolio/pages/home/4_project/project.dart';
+import 'package:portfolio/pages/home/5_opensource/opensource.dart';
+import 'package:portfolio/pages/home/components/history_item.dart';
+import 'package:portfolio/pages/home/components/section.dart';
 import 'package:portfolio/providers/config.dart';
 
 class HomePage extends StatelessComponent {

@@ -6,9 +6,9 @@ import 'package:portfolio/components/aside.dart';
 import 'package:portfolio/components/footer.dart';
 import 'package:portfolio/components/header.dart';
 import 'package:portfolio/components/navbar.dart';
-import 'package:portfolio/pages/home.dart';
-import 'package:portfolio/pages/project_detail.dart';
-import 'package:portfolio/pages/project_list.dart';
+import 'package:portfolio/pages/home/home.dart';
+import 'package:portfolio/pages/projects/detail/project_detail.dart';
+import 'package:portfolio/pages/projects/projects.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 
@@ -42,7 +42,7 @@ class App extends StatelessComponent {
                   Route(
                     path: '/projects',
                     settings: const RouteSettings(priority: 0.7),
-                    builder: (context, state) => const ProjectListPage(),
+                    builder: (context, state) => const ProjectsPage(),
                   ),
                   if (context.watch(projectsProvider) case AsyncData(
                     value: final projects,
