@@ -40,21 +40,21 @@ class Aside extends StatelessComponent {
         _buildItem(
           const Icon(
             'cake',
-            classes: 'size-6 fill-none stroke-slate-900',
+            classes: 'size-6 stroke-slate-900',
           ),
           config.birth,
         ),
         _buildItem(
           const Icon(
             'map-pin',
-            classes: 'size-6 fill-none stroke-slate-900',
+            classes: 'size-6 stroke-slate-900',
           ),
           config.location,
         ),
         _buildItem(
           const Icon(
             'mail',
-            classes: 'size-6 fill-none stroke-slate-900',
+            classes: 'size-6 stroke-slate-900',
           ),
           config.mail,
           'mailto:${config.mail}',
