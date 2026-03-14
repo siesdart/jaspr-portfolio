@@ -31,7 +31,7 @@ The project is a monorepo with the following structure:
 │   ├── features
 │   │   └── resume/     # Logic for PDF resume generation
 │   └── ui/             # Reusable UI components
-└── melos.yaml          # Melos workspace configuration
+└── pubspec.yaml        # Workspace configuration (Melos)
 ```
 
 ## 🛠️ Technologies Used
@@ -77,7 +77,7 @@ dart pub global activate jaspr_cli
 
 ### Build
 
-To build the application for production (generates a static site in `apps/portfolio/build/web`), run:
+To build the application for production (generates a static site in `apps/portfolio/build/jaspr`), run:
 
 ```bash
 melos build

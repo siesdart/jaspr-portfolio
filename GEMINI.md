@@ -12,7 +12,7 @@ The main application, `portfolio`, is located in the `apps` directory. It consum
 - **features/resume**: Contains the logic for generating a PDF resume.
 - **ui**: Contains reusable UI components.
 
-The portfolio content is stored in the `apps/portfolio/content` directory. This includes information about projects, careers, skills, and an introduction.
+The portfolio content is stored in the `apps/portfolio/content` directory. This includes information about projects, careers, skills, opensources, and an introduction.
 
 ## Technologies Used
 
@@ -20,11 +20,11 @@ The portfolio content is stored in the `apps/portfolio/content` directory. This 
 - **[Melos](https://melos.invertase.dev/):** A tool for managing Dart projects with multiple packages, optimizing workflows for monorepos.
 - **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapidly building custom user interfaces.
 - **[dart_mappable](https://pub.dev/packages/dart_mappable):** A package for improved JSON serialization and data classes with full support for generics, inheritance, customization, and more.
-- **very_good_analysis:** A linting package for Dart and Flutter projects that enforces a strict set of coding standards. (Note: This information could not be verified using the available tools).
+- **very_good_analysis:** A linting package for Dart and Flutter projects that enforces a strict set of coding standards.
 
 ## Building and Running
 
-The following commands are used to build and run the project. These are defined in the `melos.yaml` file.
+The following commands are used to build and run the project. These are defined in the `pubspec.yaml` file (via Melos).
 
 - **Install dependencies:**
 
