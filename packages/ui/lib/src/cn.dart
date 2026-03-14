@@ -1,28 +1,7 @@
+import 'package:clsx/clsx.dart';
+
 /// Combines classes using [clsx] and then merges them using [twMerge].
 String cn(List<dynamic> args) => twMerge(clsx(args));
-
-/// Combines class names from various inputs (strings, lists, maps) into a single string.
-String clsx(List<dynamic> args) {
-  final classes = <String>[];
-  for (final arg in args) {
-    if (arg == null) continue;
-    if (arg is String && arg.isNotEmpty) {
-      classes.add(arg);
-    } else if (arg is List) {
-      final nested = clsx(arg);
-      if (nested.isNotEmpty) {
-        classes.add(nested);
-      }
-    } else if (arg is Map<String, bool>) {
-      for (final entry in arg.entries) {
-        if (entry.value) {
-          classes.add(entry.key);
-        }
-      }
-    }
-  }
-  return classes.join(' ');
-}
 
 /// A simplified version of tailwind-merge that resolves basic Tailwind CSS class conflicts.
 String twMerge(String classes) {

@@ -2,36 +2,6 @@ import 'package:test/test.dart';
 import 'package:ui/ui.dart';
 
 void main() {
-  group('clsx', () {
-    test('combines strings', () {
-      expect(clsx(['a', 'b']), 'a b');
-    });
-
-    test('ignores nulls', () {
-      expect(clsx(['a', null, 'b']), 'a b');
-    });
-
-    test('handles maps', () {
-      expect(
-        clsx([
-          'a',
-          {'b': true, 'c': false},
-        ]),
-        'a b',
-      );
-    });
-
-    test('handles nested lists', () {
-      expect(
-        clsx([
-          'a',
-          ['b', 'c'],
-        ]),
-        'a b c',
-      );
-    });
-  });
-
   group('twMerge', () {
     test('merges simple conflicts', () {
       expect(twMerge('p-2 p-4'), 'p-4');

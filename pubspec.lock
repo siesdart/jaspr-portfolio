@@ -225,6 +225,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.2"
+  clsx:
+    dependency: transitive
+    description:
+      name: clsx
+      sha256: "97b0f6baa03528be4029747060daf7102322259b0f3ffb18c3f7ace5452c5538"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
   code_builder:
     dependency: transitive
     description:
