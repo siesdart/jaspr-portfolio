@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'package:dotenv/dotenv.dart';
@@ -7,15 +6,19 @@ import 'package:github/github.dart';
 
 final GetIt getIt = GetIt.instance;
 
-void setupLocator() {
+void configureDependencies() {
   if (!getIt.isRegistered<DotEnv>()) {
-    getIt.registerSingletonAsync<DotEnv>(() async => DotEnv()..load());
-    unawaited(
-      getIt.isReady<DotEnv>().then((_) => stdout.writeln('DotEnv is loaded.')),
+    getIt.registerLazySingleton<DotEnv>(
+      DotEnv.new,
+      onCreated: (dotEnv) {
+        dotEnv.load();
+        stdout.writeln('DotEnv is initialized.');
+      },
     );
   }
+
   if (!getIt.isRegistered<GitHub>()) {
-    getIt.registerSingletonWithDependencies<GitHub>(
+    getIt.registerLazySingleton<GitHub>(
       () {
         final dotEnv = getIt<DotEnv>();
         return GitHub(
@@ -24,20 +27,16 @@ void setupLocator() {
               : const Authentication.anonymous(),
         );
       },
-      dependsOn: const [DotEnv],
       dispose: (github) => github.dispose(),
-    );
-    unawaited(
-      getIt.isReady<GitHub>().then((_) {
-        final auth = getIt<GitHub>().auth;
-        if (auth.isAnonymous) {
-          stdout.writeln('GitHub is initialized with Anonymous mode.');
+      onCreated: (gitHub) {
+        if (gitHub.auth.isAnonymous) {
+          stdout.writeln('GitHub is initialized anonymously.');
         } else {
           stdout.writeln(
-            'GitHub is initialized with Bearer token ${auth.bearerToken}.',
+            'GitHub is initialized with token: ${gitHub.auth.bearerToken!.substring(0, 4)}...${gitHub.auth.bearerToken!.substring(gitHub.auth.bearerToken!.length - 4)}',
           );
         }
-      }),
+      },
     );
   }
 }

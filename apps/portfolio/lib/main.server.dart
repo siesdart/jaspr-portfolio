@@ -12,7 +12,7 @@ import 'main.server.options.dart';
 
 void main() async {
   Jaspr.initializeApp(options: defaultServerOptions);
-  setupLocator();
+  configureDependencies();
   initializeMappers();
 
   final config = await loadConfigFile();
