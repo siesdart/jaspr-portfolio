@@ -15,11 +15,11 @@ class OpensourceItem extends StatelessComponent {
       div(classes: 'flex items-center gap-2', [
         h5(
           classes: 'font-medium',
-          [Component.text(opensource.repo.split('/')[1])],
+          [.text(opensource.repo.split('/')[1])],
         ),
         a(
           href: 'https://github.com/${opensource.repo}',
-          target: Target.blank,
+          target: .blank,
           const [
             Icon(
               'github',
@@ -34,10 +34,13 @@ class OpensourceItem extends StatelessComponent {
           loading: MediaLoading.lazy,
         ),
       ]),
-      span(classes: 'font-light', [Component.text(opensource.description)]),
+      span(
+        classes: 'font-light',
+        [.text(opensource.description)],
+      ),
       span(
         classes: 'font-extralight',
-        [const Component.text('Role: '), Component.text(opensource.role)],
+        [const .text('Role: '), .text(opensource.role)],
       ),
       if (opensource.contribution != null)
         ul(

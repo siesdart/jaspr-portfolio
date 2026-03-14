@@ -19,8 +19,8 @@ class App extends StatelessComponent {
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
 
-    return Component.fragment([
-      h1(classes: 'sr-only', [Component.text(config.title)]),
+    return .fragment([
+      h1(classes: 'sr-only', [.text(config.title)]),
       const Navbar(),
       const Header(),
       main_(

@@ -16,7 +16,7 @@ class ProjectsPage extends StatelessComponent {
           projects.sortedByYearAndOrder().map(ProjectItem.new).toList(),
         );
       default:
-        return const Component.empty();
+        return const .empty();
     }
   }
 }

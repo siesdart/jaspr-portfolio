@@ -20,7 +20,7 @@ class PortfolioPdf extends Pdf {
   @override
   Iterable<Widget> buildPages(Map<String, ImageProvider> images) sync* {
     yield Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: .start,
       children: [
         RTitle(config: config),
         ...projects
@@ -30,7 +30,7 @@ class PortfolioPdf extends Pdf {
               (project) => [
                 Padding(padding: const EdgeInsets.only(top: 16)),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: .spaceBetween,
                   children: [
                     RCategory(title: project.title),
                     Text(project.year.toString(), textScaleFactor: 0.8),

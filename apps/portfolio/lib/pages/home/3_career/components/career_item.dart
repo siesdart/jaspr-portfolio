@@ -14,7 +14,7 @@ class CareerItem extends StatelessComponent {
     return li(classes: 'flex flex-col gap-4', [
       span(
         classes: 'text-muted-foreground',
-        [Component.text(career.period)],
+        [.text(career.period)],
       ),
       div(classes: 'flex gap-2 lg:gap-4', [
         img(
@@ -24,8 +24,8 @@ class CareerItem extends StatelessComponent {
           loading: MediaLoading.lazy,
         ),
         div(classes: 'flex-1 flex flex-col justify-center ml-1', [
-          h5(classes: 'font-medium', [Component.text(career.company)]),
-          span(classes: 'font-light', [Component.text(career.role)]),
+          h5(classes: 'font-medium', [.text(career.company)]),
+          span(classes: 'font-light', [.text(career.role)]),
           MarkdownArticle(
             classes: 'hidden leading-7 lg:block',
             content: career.content,

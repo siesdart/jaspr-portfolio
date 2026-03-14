@@ -24,13 +24,20 @@ class ProjectItem extends StatelessComponent {
                 viewBox: '0 0 16 16',
                 const [circle(cx: '8', cy: '8', r: '8', [])],
               ),
-              h5(classes: 'font-medium', [Component.text(project.title)]),
+              h5(
+                classes: 'font-medium',
+                [.text(project.title)],
+              ),
               const div(classes: 'flex-1', []),
-              span(classes: 'font-light text-sm', [
-                Component.text(project.year.toString()),
-              ]),
+              span(
+                classes: 'font-light text-sm',
+                [.text(project.year.toString())],
+              ),
             ]),
-            p(classes: 'font-light', [Component.text(project.introduction)]),
+            p(
+              classes: 'font-light',
+              [.text(project.introduction)],
+            ),
             Tags(classes: 'mt-1', project.tags),
           ],
         ),

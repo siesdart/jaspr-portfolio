@@ -24,7 +24,7 @@ class ProjectHeader extends StatelessComponent {
             ),
             h4(
               classes: 'font-medium text-lg',
-              [Component.text(project.title)],
+              [.text(project.title)],
             ),
             a(
               classes: cn([
@@ -32,7 +32,7 @@ class ProjectHeader extends StatelessComponent {
                 {'pointer-events-none': project.repo == null},
               ]),
               href: 'https://github.com/${project.repo}',
-              target: Target.blank,
+              target: .blank,
               [
                 Icon(
                   'github',
@@ -54,14 +54,16 @@ class ProjectHeader extends StatelessComponent {
                 loading: MediaLoading.lazy,
               ),
             const div(classes: 'flex-1', []),
-            span(classes: 'font-light text-sm', [
-              Component.text(project.year.toString()),
-            ]),
+            span(
+              classes: 'font-light text-sm',
+              [.text(project.year.toString())],
+            ),
           ],
         ),
-        h5(classes: 'font-light text-sm', [
-          Component.text(project.introduction),
-        ]),
+        h5(
+          classes: 'font-light text-sm',
+          [.text(project.introduction)],
+        ),
       ],
     );
   }

@@ -31,7 +31,7 @@ class NavLink extends StatelessComponent {
         classes,
       ]),
       to: path,
-      child: Component.text(name),
+      child: .text(name),
     );
   }
 }

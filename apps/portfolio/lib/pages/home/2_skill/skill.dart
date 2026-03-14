@@ -34,7 +34,7 @@ class Skill extends StatelessComponent {
           ],
         );
       default:
-        return const Component.empty();
+        return const .empty();
     }
   }
 }

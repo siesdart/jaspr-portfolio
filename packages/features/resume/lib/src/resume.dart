@@ -29,7 +29,7 @@ class ResumePdf extends Pdf {
   @override
   Iterable<Widget> buildPages(Map<String, ImageProvider> images) sync* {
     yield Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: .start,
       children: [
         RTitle(config: config),
         Padding(padding: const EdgeInsets.only(top: 16)),
@@ -80,11 +80,11 @@ class ResumePdf extends Pdf {
           (opensource) => Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: .start,
               children: [
                 Text(
                   opensource.repo.split('/')[1],
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: .bold),
                 ),
                 Text(opensource.description),
                 Text('Role: ${opensource.role}'),
@@ -93,12 +93,12 @@ class ResumePdf extends Pdf {
                   Padding(padding: const EdgeInsets.only(top: 4)),
                   ...opensource.contribution!.map(
                     (contribution) => Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: .start,
                       children: <Widget>[
                         RBullet(),
                         Expanded(
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: .start,
                             children: [
                               Text('${contribution.title} #${contribution.id}'),
                               Text(contribution.description),

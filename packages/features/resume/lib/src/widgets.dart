@@ -31,7 +31,7 @@ class RCategory extends StatelessWidget {
     return Text(
       title,
       textScaleFactor: 1.2,
-      style: TextStyle(fontWeight: FontWeight.bold),
+      style: TextStyle(fontWeight: .bold),
     );
   }
 }
@@ -52,7 +52,7 @@ class RHistory extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8, bottom: 6),
       margin: const EdgeInsets.only(left: 2),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: .start,
         children: [
           Container(
             width: 64,
@@ -64,11 +64,11 @@ class RHistory extends StatelessWidget {
           ),
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: .start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: .bold),
                 ),
                 ...children,
               ],
@@ -125,10 +125,10 @@ class RTitle extends StatelessWidget {
   @override
   Widget build(Context context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
+      crossAxisAlignment: .end,
       children: [
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: .start,
           children: [
             RichText(
               text: TextSpan(
@@ -137,7 +137,7 @@ class RTitle extends StatelessWidget {
                     text: config.name,
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: .bold,
                     ),
                   ),
                   const TextSpan(text: '  '),
@@ -159,7 +159,7 @@ class RTitle extends StatelessWidget {
         ),
         Spacer(),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: .end,
           children: [
             RUrlLink(url: config.url),
             RUrlLink(

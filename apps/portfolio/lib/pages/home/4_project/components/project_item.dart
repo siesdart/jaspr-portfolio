@@ -17,11 +17,8 @@ class ProjectItem extends StatelessComponent {
       children: [
         ListItem(
           children: [
-            h5(
-              classes: 'font-medium',
-              [Component.text(project.title)],
-            ),
-            p(classes: 'font-light', [Component.text(project.introduction)]),
+            h5(classes: 'font-medium', [.text(project.title)]),
+            p(classes: 'font-light', [.text(project.introduction)]),
             Tags(classes: 'mt-1', project.tags),
           ],
         ),

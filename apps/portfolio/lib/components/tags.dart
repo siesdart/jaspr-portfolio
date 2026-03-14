@@ -10,7 +10,7 @@ class Tags extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    if (tags.isEmpty) return const Component.fragment([]);
+    if (tags.isEmpty) return const .fragment([]);
 
     return ul(
       classes: cn(['flex flex-wrap gap-x-2 list-none', classes]),
@@ -19,7 +19,7 @@ class Tags extends StatelessComponent {
             (tag) => li([
               Badge(
                 classes: 'text-primary bg-primary/10',
-                children: [Component.text('#$tag')],
+                children: [.text('#$tag')],
               ),
             ]),
           )

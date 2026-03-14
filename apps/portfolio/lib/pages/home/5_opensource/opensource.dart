@@ -11,11 +11,11 @@ class Opensource extends StatelessComponent {
   Component build(BuildContext context) {
     switch (context.watch(opensourcesProvider)) {
       case AsyncData(value: final opensources):
-        return Component.fragment(
+        return .fragment(
           opensources.sortedByOrder().map(OpensourceItem.new).toList(),
         );
       default:
-        return const Component.empty();
+        return const .empty();
     }
   }
 }

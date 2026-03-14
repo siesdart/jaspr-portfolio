@@ -25,15 +25,11 @@ class Section extends StatelessComponent {
           h2(
             classes:
                 'text-xl font-bold border-b-2 border-primary pb-2 mb-6 lg:text-2xl',
-            [Component.text(title)],
+            [.text(title)],
           ),
         ]),
         if (child != null) div(classes: 'px-2', [child!]),
-        if (children != null)
-          ul(
-            classes: 'space-y-6',
-            children!,
-          ),
+        if (children != null) ul(classes: 'space-y-6', children!),
       ],
     );
   }

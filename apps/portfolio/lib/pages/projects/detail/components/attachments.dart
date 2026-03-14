@@ -10,7 +10,7 @@ class ProjectAttachments extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    if (files.isEmpty) return const Component.fragment([]);
+    if (files.isEmpty) return const .fragment([]);
 
     return ul(
       classes: 'not-prose flex flex-wrap gap-3 list-none',
@@ -25,13 +25,13 @@ class ProjectAttachments extends StatelessComponent {
                   ),
                 ]),
                 href: file.src,
-                target: Target.blank,
+                target: .blank,
                 [
                   const Icon(
                     'paperclip',
                     classes: 'stroke-secondary-foreground',
                   ),
-                  span([Component.text(file.name)]),
+                  span([.text(file.name)]),
                 ],
               ),
             ]),

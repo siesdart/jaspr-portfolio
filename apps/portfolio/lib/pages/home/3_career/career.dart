@@ -11,11 +11,11 @@ class Career extends StatelessComponent {
   Component build(BuildContext context) {
     switch (context.watch(careersProvider)) {
       case AsyncData(value: final careers):
-        return Component.fragment(
+        return .fragment(
           careers.sortedByPeriod().map(CareerItem.new).toList(),
         );
       default:
-        return const Component.empty();
+        return const .empty();
     }
   }
 }

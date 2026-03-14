@@ -37,10 +37,10 @@ class Title extends StatelessComponent {
               if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
             ]),
             [
-              Component.text('(${config.title.substring(0, index)}'),
+              .text('(${config.title.substring(0, index)}'),
               span(
                 classes: 'text-primary/80',
-                [Component.text('${config.title.substring(index)})')],
+                [.text('${config.title.substring(index)})')],
               ),
             ],
           ),
@@ -53,7 +53,7 @@ class Title extends StatelessComponent {
             else
               'mt-1 text-center',
           ]),
-          [Component.text(config.description)],
+          [.text(config.description)],
         ),
       ],
     );

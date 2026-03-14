@@ -12,7 +12,7 @@ class Introduction extends StatelessComponent {
       case AsyncData(value: final introduction):
         return MarkdownArticle(content: introduction);
       default:
-        return const Component.empty();
+        return const .empty();
     }
   }
 }

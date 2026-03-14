@@ -24,7 +24,7 @@ class Aside extends StatelessComponent {
         h4(
           classes:
               'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
-          [Component.text(config.name)],
+          [.text(config.name)],
         ),
         ...config.github.map(
           (github) => _buildItem(
@@ -80,11 +80,11 @@ class Aside extends StatelessComponent {
         a(
           classes: 'underline-offset-4 hover:underline',
           href: href,
-          target: Target.blank,
-          [Component.text(title)],
+          target: .blank,
+          [.text(title)],
         )
       else
-        span([Component.text(title)]),
+        span([.text(title)]),
     ]);
   }
 }

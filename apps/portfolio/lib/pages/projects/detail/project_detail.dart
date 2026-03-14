@@ -20,7 +20,7 @@ class ProjectDetailPage extends StatelessComponent {
     final config = context.watch(configProvider);
     final title = '${project.title} - ${config.title}';
 
-    return Component.fragment([
+    return .fragment([
       Document.head(
         title: title,
         meta: {
@@ -61,7 +61,7 @@ class ProjectDetailPage extends StatelessComponent {
               size: ButtonSize.large,
             ),
             to: '/projects',
-            children: const [Icon('chevron-left'), Component.text('목록으로')],
+            children: const [Icon('chevron-left'), .text('목록으로')],
           ),
         ],
       ),
