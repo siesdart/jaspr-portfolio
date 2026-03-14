@@ -2,11 +2,11 @@ import 'package:collection/collection.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:jaspr/jaspr.dart';
 
-part 'experience.mapper.dart';
+part 'career.mapper.dart';
 
 @MappableClass()
-class Experience with ExperienceMappable {
-  Experience({
+class Career with CareerMappable {
+  Career({
     required this.id,
     required this.company,
     required this.role,
@@ -25,15 +25,15 @@ class Experience with ExperienceMappable {
   final String content;
 
   @decoder
-  static Experience fromJson(String json) => ExperienceMapper.fromJson(json);
+  static Career fromJson(String json) => CareerMapper.fromJson(json);
 
   @encoder
   @override
   String toJson() => super.toJson();
 }
 
-extension ExperienceCollection on List<Experience> {
-  List<Experience> sortedByPeriod() {
+extension CareerCollection on List<Career> {
+  List<Career> sortedByPeriod() {
     return sorted((a, b) => b.period.compareTo(a.period));
   }
 }

@@ -13,7 +13,7 @@ This project is a personal portfolio website designed to be clean, scalable, and
 ## ✨ Features
 
 - **Monorepo Architecture**: The project is organized as a monorepo using [Melos](https://melos.invertase.dev/), which simplifies dependency management and script execution across multiple packages.
-- **Content-Driven**: Portfolio content such as projects, experiences, and skills are managed through simple Markdown and YAML files, allowing for easy updates without touching the Dart source code.
+- **Content-Driven**: Portfolio content such as projects, careers, and skills are managed through simple Markdown and YAML files, allowing for easy updates without touching the Dart source code.
 - **PDF Resume Generation**: Includes a feature to dynamically generate a downloadable PDF version of the resume from the same content source.
 - **Reusable UI Components**: A dedicated `ui` package provides a library of reusable components, ensuring a consistent design system across the application.
 - **Clean Architecture**: Follows a clean architecture with a clear separation of concerns between data models (`core`), features (`features/*`), UI components (`ui`), and the main application (`apps/portfolio`).
@@ -62,6 +62,7 @@ dart pub global activate jaspr_cli
 
 1.  **Bootstrap the workspace:**
     This command installs all dependencies for the root project and all packages.
+
     ```bash
     melos bootstrap
     ```

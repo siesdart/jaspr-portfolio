@@ -50,7 +50,7 @@ void main() async {
           sync: [
             introductionProvider.syncWith('introduction'),
             skillProvider.syncWith('skill'),
-            experiencesProvider.syncWith('experiences'),
+            careersProvider.syncWith('careers'),
             projectsProvider.syncWith('projects'),
             opensourcesProvider.syncWith('opensources'),
           ],

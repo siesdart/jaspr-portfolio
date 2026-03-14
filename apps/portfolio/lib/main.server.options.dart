@@ -40,7 +40,7 @@ Map<String, Object?> __resumeResume(_resume.Resume c) => {
   'config': c.config.toJson(),
   'introduction': c.introduction,
   'skill': c.skill,
-  'experiences': c.experiences?.map((i) => i.toJson()).toList(),
+  'careers': c.careers?.map((i) => i.toJson()).toList(),
   'projects': c.projects?.map((i) => i.toJson()).toList(),
   'opensources': c.opensources?.map((i) => i.toJson()).toList(),
 };

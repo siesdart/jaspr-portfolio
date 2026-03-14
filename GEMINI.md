@@ -12,7 +12,7 @@ The main application, `portfolio`, is located in the `apps` directory. It consum
 - **features/resume**: Contains the logic for generating a PDF resume.
 - **ui**: Contains reusable UI components.
 
-The portfolio content is stored in the `apps/portfolio/content` directory. This includes information about projects, experiences, skills, and an introduction.
+The portfolio content is stored in the `apps/portfolio/content` directory. This includes information about projects, careers, skills, and an introduction.
 
 ## Technologies Used
 

@@ -6,8 +6,8 @@
 
 import 'package:jaspr/client.dart';
 
+import 'package:core/src/career.dart' as _career;
 import 'package:core/src/config.dart' as _config;
-import 'package:core/src/experience.dart' as _experience;
 import 'package:core/src/opensource.dart' as _opensource;
 import 'package:core/src/project.dart' as _project;
 import 'package:portfolio/components/resume.dart' deferred as _resume;
@@ -35,8 +35,8 @@ ClientOptions get defaultClientOptions => ClientOptions(
         config: _config.Config.fromJson(p['config'] as String),
         introduction: p['introduction'] as String?,
         skill: p['skill'] as String?,
-        experiences: (p['experiences'] as List<Object?>?)
-            ?.map((i) => _experience.Experience.fromJson(i as String))
+        careers: (p['careers'] as List<Object?>?)
+            ?.map((i) => _career.Career.fromJson(i as String))
             .toList(),
         projects: (p['projects'] as List<Object?>?)
             ?.map((i) => _project.Project.fromJson(i as String))

@@ -14,11 +14,10 @@ final FutureProvider<String> introductionProvider = createFileProvider(
   'introduction.md',
 );
 final FutureProvider<String> skillProvider = createFileProvider('skill.md');
-final FutureProvider<List<Experience>> experiencesProvider =
-    createDirectoryProvider(
-      'experiences',
-      ExperienceMapper.fromJson,
-    );
+final FutureProvider<List<Career>> careersProvider = createDirectoryProvider(
+  'careers',
+  CareerMapper.fromJson,
+);
 final FutureProvider<List<Project>> projectsProvider = createDirectoryProvider(
   'projects',
   ProjectMapper.fromJson,

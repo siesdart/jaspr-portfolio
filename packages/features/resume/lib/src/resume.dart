@@ -11,7 +11,7 @@ class ResumePdf extends Pdf {
     required this.config,
     required this.introduction,
     required this.skill,
-    required this.experiences,
+    required this.careers,
     required this.projects,
     required this.opensources,
   }) : super(
@@ -22,7 +22,7 @@ class ResumePdf extends Pdf {
   final Config config;
   final String introduction;
   final String skill;
-  final List<Experience> experiences;
+  final List<Career> careers;
   final List<Project> projects;
   final List<Opensource> opensources;
 
@@ -40,18 +40,18 @@ class ResumePdf extends Pdf {
         Padding(padding: const EdgeInsets.only(top: 16)),
         RCategory(title: '2. 경력'),
         Padding(padding: const EdgeInsets.only(top: 8)),
-        ...experiences.map(
-          (experience) => RHistory(
-            title: experience.company,
-            period: experience.period,
+        ...careers.map(
+          (career) => RHistory(
+            title: career.company,
+            period: career.period,
             children: [
-              Text(experience.role),
+              Text(career.role),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16),
-                child: Text(experience.content),
+                child: Text(career.content),
               ),
               Text(
-                experience.tags.map((e) => '#$e').join(' '),
+                career.tags.map((e) => '#$e').join(' '),
                 style: const TextStyle(color: PdfColors.grey),
               ),
             ],

@@ -2,7 +2,7 @@ import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/pages/home/1_introduction/introduction.dart';
 import 'package:portfolio/pages/home/2_skill/skill.dart';
-import 'package:portfolio/pages/home/3_experience/experience.dart';
+import 'package:portfolio/pages/home/3_career/career.dart';
 import 'package:portfolio/pages/home/4_project/project.dart';
 import 'package:portfolio/pages/home/5_opensource/opensource.dart';
 import 'package:portfolio/pages/home/components/history_item.dart';
@@ -28,9 +28,9 @@ class HomePage extends StatelessComponent {
         child: Skill(),
       ),
       const Section(
-        id: 'experience',
+        id: 'career',
         title: '3. 경력',
-        children: [Experience()],
+        children: [Career()],
       ),
       const Section(
         id: 'project',

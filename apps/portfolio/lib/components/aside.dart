@@ -14,7 +14,7 @@ class Aside extends StatelessComponent {
     final config = context.watch(configProvider);
     final introduction = context.watch(introductionProvider);
     final skill = context.watch(skillProvider);
-    final experiences = context.watch(experiencesProvider);
+    final careers = context.watch(careersProvider);
     final projects = context.watch(projectsProvider);
     final opensources = context.watch(opensourcesProvider);
 
@@ -64,7 +64,7 @@ class Aside extends StatelessComponent {
             config: config,
             introduction: introduction.value,
             skill: skill.value,
-            experiences: experiences.value,
+            careers: careers.value,
             projects: projects.value,
             opensources: opensources.value,
           ),
