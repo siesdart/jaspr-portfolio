@@ -1,0 +1,5 @@
+id: clsx
+repo: siesdart/clsx-dart
+description: JavaScript의 인기 유틸리티 라이브러리인 clsx를 Dart로 포팅한, 조건부로 클래스 이름을 조합할 수 있게 해주는 라이브러리
+role: Owner
+order: 3
