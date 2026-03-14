@@ -6,11 +6,11 @@
     "start": "serve build/jaspr"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/cli": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
     "concurrently": "^9.2.1",
-    "rimraf": "^6.1.2",
-    "serve": "^14.2.5",
+    "rimraf": "^6.1.3",
+    "serve": "^14.2.6",
     "tailwindcss": "^4.0.7"
   }
 }
