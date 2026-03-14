@@ -188,10 +188,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply antialiased;
     @apply bg-background text-foreground;
-    @apply scroll-smooth;
   }
 
   .prose {

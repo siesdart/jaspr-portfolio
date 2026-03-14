@@ -56,7 +56,10 @@ class ProjectDetailPage extends StatelessComponent {
         classes: 'flex justify-center',
         [
           Link(
-            classes: buttonVariants(variant: ButtonVariant.ghost),
+            classes: buttonVariants(
+              variant: ButtonVariant.ghost,
+              size: ButtonSize.large,
+            ),
             to: '/projects',
             children: const [Icon('chevron-left'), Component.text('목록으로')],
           ),

@@ -13,7 +13,7 @@ class Tags extends StatelessComponent {
     if (tags.isEmpty) return const Component.fragment([]);
 
     return ul(
-      classes: cn(['flex flex-wrap gap-2 list-none', classes]),
+      classes: cn(['flex flex-wrap gap-x-2 list-none', classes]),
       tags
           .map(
             (tag) => li([
