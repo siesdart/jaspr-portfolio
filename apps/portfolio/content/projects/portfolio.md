@@ -6,7 +6,7 @@ year: 2024
 order: 3
 repo: siesdart/jaspr-portfolio
 color: 00B4AB
-image: null
+image: projects/portfolio.png
 tags: [Dart, Jaspr, Riverpod, Monorepo, Tailwind CSS, Docker]
 ---
 
