@@ -12,7 +12,7 @@ class Config with ConfigMappable {
     required this.url,
     required this.locale,
     required this.name,
-    required this.github,
+    required this.site,
     required this.birth,
     required this.location,
     required this.mail,
@@ -26,7 +26,7 @@ class Config with ConfigMappable {
   final String url;
   final String locale;
   final String name;
-  final List<Github> github;
+  final List<Site> site;
   final String birth;
   final String location;
   final String mail;

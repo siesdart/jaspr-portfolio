@@ -15,7 +15,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static ConfigMapper ensureInitialized() {
     if (_instance == null) {
       MapperContainer.globals.use(_instance = ConfigMapper._());
-      GithubMapper.ensureInitialized();
+      SiteMapper.ensureInitialized();
       HistoryMapper.ensureInitialized();
     }
     return _instance!;
@@ -37,11 +37,8 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static const Field<Config, String> _f$locale = Field('locale', _$locale);
   static String _$name(Config v) => v.name;
   static const Field<Config, String> _f$name = Field('name', _$name);
-  static List<Github> _$github(Config v) => v.github;
-  static const Field<Config, List<Github>> _f$github = Field(
-    'github',
-    _$github,
-  );
+  static List<Site> _$site(Config v) => v.site;
+  static const Field<Config, List<Site>> _f$site = Field('site', _$site);
   static String _$birth(Config v) => v.birth;
   static const Field<Config, String> _f$birth = Field('birth', _$birth);
   static String _$location(Config v) => v.location;
@@ -68,7 +65,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
     #url: _f$url,
     #locale: _f$locale,
     #name: _f$name,
-    #github: _f$github,
+    #site: _f$site,
     #birth: _f$birth,
     #location: _f$location,
     #mail: _f$mail,
@@ -84,7 +81,7 @@ class ConfigMapper extends ClassMapperBase<Config> {
       url: data.dec(_f$url),
       locale: data.dec(_f$locale),
       name: data.dec(_f$name),
-      github: data.dec(_f$github),
+      site: data.dec(_f$site),
       birth: data.dec(_f$birth),
       location: data.dec(_f$location),
       mail: data.dec(_f$mail),
@@ -140,7 +137,7 @@ extension ConfigValueCopy<$R, $Out> on ObjectCopyWith<$R, Config, $Out> {
 
 abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
-  ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github;
+  ListCopyWith<$R, Site, SiteCopyWith<$R, Site, Site>> get site;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
   get education;
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>> get award;
@@ -151,7 +148,7 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     String? url,
     String? locale,
     String? name,
-    List<Github>? github,
+    List<Site>? site,
     String? birth,
     String? location,
     String? mail,
@@ -169,12 +166,11 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
   @override
   late final ClassMapperBase<Config> $mapper = ConfigMapper.ensureInitialized();
   @override
-  ListCopyWith<$R, Github, GithubCopyWith<$R, Github, Github>> get github =>
-      ListCopyWith(
-        $value.github,
-        (v, t) => v.copyWith.$chain(t),
-        (v) => call(github: v),
-      );
+  ListCopyWith<$R, Site, SiteCopyWith<$R, Site, Site>> get site => ListCopyWith(
+    $value.site,
+    (v, t) => v.copyWith.$chain(t),
+    (v) => call(site: v),
+  );
   @override
   ListCopyWith<$R, History, HistoryCopyWith<$R, History, History>>
   get education => ListCopyWith(
@@ -203,7 +199,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     String? url,
     String? locale,
     String? name,
-    List<Github>? github,
+    List<Site>? site,
     String? birth,
     String? location,
     String? mail,
@@ -217,7 +213,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       if (url != null) #url: url,
       if (locale != null) #locale: locale,
       if (name != null) #name: name,
-      if (github != null) #github: github,
+      if (site != null) #site: site,
       if (birth != null) #birth: birth,
       if (location != null) #location: location,
       if (mail != null) #mail: mail,
@@ -233,7 +229,7 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     url: data.get(#url, or: $value.url),
     locale: data.get(#locale, or: $value.locale),
     name: data.get(#name, or: $value.name),
-    github: data.get(#github, or: $value.github),
+    site: data.get(#site, or: $value.site),
     birth: data.get(#birth, or: $value.birth),
     location: data.get(#location, or: $value.location),
     mail: data.get(#mail, or: $value.mail),

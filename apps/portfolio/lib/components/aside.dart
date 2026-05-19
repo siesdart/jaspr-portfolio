@@ -26,14 +26,14 @@ class Aside extends StatelessComponent {
               'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
           [.text(config.name)],
         ),
-        ...config.github.map(
-          (github) => _buildItem(
-            const Icon(
-              'github',
+        ...config.site.map(
+          (site) => _buildItem(
+            Icon(
+              site.icon ?? 'link',
               classes: 'size-6 fill-foreground',
             ),
-            github.title,
-            'https://github.com/${github.user}',
+            site.title,
+            site.url,
           ),
         ),
         const hr(classes: 'border-border my-1 lg:my-2'),

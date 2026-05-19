@@ -141,7 +141,7 @@ class RTitle extends StatelessWidget {
                     ),
                   ),
                   const TextSpan(text: '  '),
-                  TextSpan(text: config.github.first.title),
+                  TextSpan(text: config.site.first.title),
                 ],
               ),
             ),
@@ -162,9 +162,7 @@ class RTitle extends StatelessWidget {
           crossAxisAlignment: .end,
           children: [
             RUrlLink(url: config.url),
-            RUrlLink(
-              url: 'https://github.com/${config.github.first.user}',
-            ),
+            RUrlLink(url: config.site.first.url),
           ],
         ),
       ],

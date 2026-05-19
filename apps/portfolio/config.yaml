@@ -3,11 +3,19 @@ description: 자신만의 철학을 바탕으로 길을 걷는 개발자
 url: https://siesdart.fly.dev
 locale: ko_KR
 name: 박현우
-github:
+site:
   - title: siesdart
-    user: siesdart
+    url: https://github.com/siesdart
+    icon: github
   - title: (구) Winrobrine
-    user: Winrobrine-zz
+    url: https://github.com/Winrobrine-zz
+    icon: github
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/현우-박-3380b4342
+    icon: linkedin
+  - title: Othello
+    url: https://othelloclub.com/player/player.php?name=%EB%B0%95%ED%98%84%EC%9A%B0
+    icon: othello
 birth: 2000. 03. 20
 location: 충청북도 영동군
 mail: ghwhsbsb123@naver.com
