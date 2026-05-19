@@ -15,7 +15,7 @@ class Header extends StatelessComponent {
           img(
             classes:
                 'size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
-            src: 'profile.png',
+            src: 'profile.jpg',
             alt: 'profile image',
             loading: MediaLoading.lazy,
           ),

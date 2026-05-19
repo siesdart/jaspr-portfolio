@@ -17,28 +17,36 @@ education:
     title: 한국과학기술원(KAIST)
     content: 전산학부 · 기술경영학부 학사
 award:
-  - period: '2025.01'
+  - period: "2026.05"
+    imageUrl: icons/othello.png
+    title: 제9회 전국 오델로 명인전
+    content: 3위
+  - period: "2025.01"
     imageUrl: icons/toeic.svg
     title: TOEIC
     content: 830(LC 415, RC 415)
-  - period: '2019.05'
+  - period: "2019.05"
     imageUrl: icons/topcit.svg
     title: TOPCIT
     content: 255점 수준 2
-  - period: '2017.09'
+  - period: "2017.09"
     imageUrl: icons/koi.webp
     title: 제34회 한국정보올림피아드 공모대회
     content: 고등부 동상
-  - period: '2015.07'
+  - period: "2015.07"
     imageUrl: icons/koi.webp
     title: 제32회 한국정보올림피아드 경시대회
     content: 중등부 동상
 etc:
-  - period: '2024.01'
+  - period: "2026.05 ~ 현재"
+    imageUrl: icons/othello.png
+    title: 한국오델로협회
+    content: 기사 初단
+  - period: "2024.01"
     imageUrl: icons/madcamp.png
-    title: '몰입캠프: 프로그래밍과 스타트업'
+    title: "몰입캠프: 프로그래밍과 스타트업"
     content: 2023년 겨울학기
-  - period: '2019.11'
+  - period: "2019.11"
     imageUrl: icons/devfest.webp
     title: DevFest on Campus 2019
     content: Flutter 코드랩 튜터
