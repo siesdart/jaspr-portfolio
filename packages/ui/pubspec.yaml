@@ -7,11 +7,11 @@ environment:
   sdk: ^3.11.0
 
 dependencies:
-  clsx: ^0.1.0
-  jaspr: ^0.22.3
-  jaspr_router: ^0.8.1
+  clsx: ^0.1.1
+  jaspr: ^0.23.1
+  jaspr_router: ^0.8.2
   universal_web: ^1.1.1+1
 
 dev_dependencies:
-  test: ^1.30.0
+  test: ^1.31.1
   very_good_analysis: ^10.2.0

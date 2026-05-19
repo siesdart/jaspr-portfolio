@@ -9,7 +9,7 @@ COPY . .
 
 # Install Dependencies
 RUN dart pub global activate melos
-RUN dart pub global activate jaspr_cli
+RUN dart install jaspr_cli
 RUN melos bootstrap
 
 # Build Jaspr
