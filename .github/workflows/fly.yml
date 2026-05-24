@@ -16,7 +16,7 @@ jobs:
       - name: 📚 Git Checkout
         uses: actions/checkout@v6
       - name: 🚀 Deploy Production
-        uses: superfly/flyctl-actions@1.5
+        uses: superfly/flyctl-actions@1.6
         with:
           args: deploy --remote-only
         env:
