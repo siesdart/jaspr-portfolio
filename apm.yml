@@ -1,0 +1,13 @@
+name: portfolio
+version: 1.0.0
+description: APM project for portfolio
+author: 박현우
+target:
+- agent-skills
+dependencies:
+  apm:
+  - dart-lang/skills
+  - schultek/jaspr/packages/jaspr
+  mcp: []
+includes: auto
+scripts: {}

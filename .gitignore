@@ -43,3 +43,6 @@ migrate_working_dir/
 
 # Antigravity CLI related
 .antigravitycli/
+
+# APM dependencies
+apm_modules/

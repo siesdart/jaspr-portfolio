@@ -1,0 +1,32 @@
+lockfile_version: '1'
+generated_at: '2026-05-30T23:13:42.231362+00:00'
+apm_version: 0.16.0
+dependencies:
+- repo_url: dart-lang/skills
+  host: github.com
+  resolved_commit: 198f7a7129052f3c914f091c3d044c4df6fe5680
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/dart-add-unit-test
+  - .agents/skills/dart-build-cli-app
+  - .agents/skills/dart-collect-coverage
+  - .agents/skills/dart-fix-runtime-errors
+  - .agents/skills/dart-generate-test-mocks
+  - .agents/skills/dart-migrate-to-checks-package
+  - .agents/skills/dart-resolve-package-conflicts
+  - .agents/skills/dart-run-static-analysis
+  - .agents/skills/dart-use-pattern-matching
+  content_hash: sha256:6c88d7cf8adf58fa57ab291c98d92d44c31f770655294dd51543901361c1c0f0
+- repo_url: schultek/jaspr
+  host: github.com
+  resolved_commit: 33a3466003a50442907865bb7c17a0fc7601d26a
+  virtual_path: packages/jaspr
+  is_virtual: true
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/jaspr-convert-html
+  - .agents/skills/jaspr-fundamentals
+  - .agents/skills/jaspr-js-interop
+  - .agents/skills/jaspr-pre-rendering-and-hydration
+  - .agents/skills/jaspr-styling
+  content_hash: sha256:b82e497b21468de56acb11d170caf793c2ece1fea7b57afa5cb76ecf17e77539
