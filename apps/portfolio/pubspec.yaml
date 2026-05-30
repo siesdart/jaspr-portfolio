@@ -11,7 +11,7 @@ dependencies:
   dotenv: ^4.2.0
   fbh_front_matter: ^0.0.1
   get_it: ^9.2.1
-  github: ^9.25.0
+  github: ^9.25.1
   jaspr: ^0.23.1
   jaspr_content: ^0.5.2
   jaspr_riverpod: ^0.4.5
