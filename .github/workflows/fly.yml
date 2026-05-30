@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - '*.md'
-      - '.github/**'
+      - "*.md"
+      - ".agents/**"
+      - ".github/**"
 jobs:
   deploy:
     name: Deploy app
