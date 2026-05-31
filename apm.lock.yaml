@@ -17,6 +17,15 @@ dependencies:
   - .agents/skills/dart-run-static-analysis
   - .agents/skills/dart-use-pattern-matching
   content_hash: sha256:6c88d7cf8adf58fa57ab291c98d92d44c31f770655294dd51543901361c1c0f0
+- repo_url: flutter-it/get_it
+  host: github.com
+  resolved_commit: f4396cc0f23d84ddb4b07f656a10d661862f7349
+  package_type: skill_bundle
+  deployed_files:
+  - .agents/skills/get-it-expert
+  content_hash: sha256:9949684cc4808063f1fcb210ef9dfd0a9d01874e493028599fc7dda459b1117f
+  skill_subset:
+  - get-it-expert
 - repo_url: schultek/jaspr
   host: github.com
   resolved_commit: 33a3466003a50442907865bb7c17a0fc7601d26a

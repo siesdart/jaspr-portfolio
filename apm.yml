@@ -8,6 +8,9 @@ dependencies:
   apm:
   - dart-lang/skills
   - schultek/jaspr/packages/jaspr
+  - git: flutter-it/get_it
+    skills:
+    - get-it-expert
   mcp: []
 includes: auto
 scripts: {}
