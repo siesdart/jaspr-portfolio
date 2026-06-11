@@ -1,28 +1,56 @@
 lockfile_version: '1'
-generated_at: '2026-05-30T23:13:42.231362+00:00'
-apm_version: 0.16.0
+generated_at: '2026-06-11T07:34:58.921433+00:00'
+apm_version: 0.19.0
 dependencies:
 - repo_url: dart-lang/skills
   host: github.com
-  resolved_commit: 198f7a7129052f3c914f091c3d044c4df6fe5680
+  resolved_commit: 7bb318496210357dc1d83b0700b73dfa7487240b
   package_type: skill_bundle
   deployed_files:
   - .agents/skills/dart-add-unit-test
+  - .agents/skills/dart-add-unit-test/SKILL.md
   - .agents/skills/dart-build-cli-app
+  - .agents/skills/dart-build-cli-app/SKILL.md
   - .agents/skills/dart-collect-coverage
+  - .agents/skills/dart-collect-coverage/SKILL.md
   - .agents/skills/dart-fix-runtime-errors
+  - .agents/skills/dart-fix-runtime-errors/SKILL.md
   - .agents/skills/dart-generate-test-mocks
+  - .agents/skills/dart-generate-test-mocks/SKILL.md
   - .agents/skills/dart-migrate-to-checks-package
+  - .agents/skills/dart-migrate-to-checks-package/SKILL.md
   - .agents/skills/dart-resolve-package-conflicts
+  - .agents/skills/dart-resolve-package-conflicts/SKILL.md
   - .agents/skills/dart-run-static-analysis
+  - .agents/skills/dart-run-static-analysis/SKILL.md
+  - .agents/skills/dart-setup-ffi-assets
+  - .agents/skills/dart-setup-ffi-assets/SKILL.md
+  - .agents/skills/dart-use-ffigen
+  - .agents/skills/dart-use-ffigen/SKILL.md
   - .agents/skills/dart-use-pattern-matching
-  content_hash: sha256:6c88d7cf8adf58fa57ab291c98d92d44c31f770655294dd51543901361c1c0f0
+  - .agents/skills/dart-use-pattern-matching/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/dart-add-unit-test/SKILL.md: sha256:1f52a9c88c35ba01d12c1a65cbe5c6034e9dde3799b49fe931d08baadf79be53
+    .agents/skills/dart-build-cli-app/SKILL.md: sha256:39c82e4ca39fadc8d065bad8c39a08cd719a3fc481b6a74ed6175f33ee3fb412
+    .agents/skills/dart-collect-coverage/SKILL.md: sha256:229035193bfd785368c48e3dd8ee059df43fcbdfe227dfd8a9a0178b995ee6c6
+    .agents/skills/dart-fix-runtime-errors/SKILL.md: sha256:0c18be0cbda925cb1322c2c47a52c288cce1dc34218705a20c4c071eed1b066d
+    .agents/skills/dart-generate-test-mocks/SKILL.md: sha256:ca58b0e0d045595aa99990715bbf48fc75b1c5dca4053bc1940ef289cbcf2f00
+    .agents/skills/dart-migrate-to-checks-package/SKILL.md: sha256:0e5d7f3a75168d41eb75b0c757939f9d4733f6097cb8da2efe88eefbb4461243
+    .agents/skills/dart-resolve-package-conflicts/SKILL.md: sha256:967093ae2bca2784ba6a104dba3821ad809b399ca22071e9afc512915f60fa0a
+    .agents/skills/dart-run-static-analysis/SKILL.md: sha256:5e41a03011647bcaee182ddc5d4471122f45f93fec6570480c237077e7f9438c
+    .agents/skills/dart-setup-ffi-assets/SKILL.md: sha256:361b38a74d11abe5ba95aa9a6f0ad51e4850e5daf03acd7e1ab419bf0dfae0a8
+    .agents/skills/dart-use-ffigen/SKILL.md: sha256:732c486118f3d5207270fe99abf4cc443e2b2e55b20e07b5836bfb3e8e57b97e
+    .agents/skills/dart-use-pattern-matching/SKILL.md: sha256:39d71b585417a2cca7958d41e19916303053c654a4de5aade8564addfaba1968
+  content_hash: sha256:08bc27ad1a665e0eea6ac5377135b172973528e7da99c13c049e7a3ad0cd1efc
 - repo_url: flutter-it/get_it
   host: github.com
   resolved_commit: f4396cc0f23d84ddb4b07f656a10d661862f7349
   package_type: skill_bundle
   deployed_files:
   - .agents/skills/get-it-expert
+  - .agents/skills/get-it-expert/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/get-it-expert/SKILL.md: sha256:e58cf12eafd2782cd33715dc41b22059ace953137aeb194cd415e5ff852f4a78
   content_hash: sha256:9949684cc4808063f1fcb210ef9dfd0a9d01874e493028599fc7dda459b1117f
   skill_subset:
   - get-it-expert
@@ -34,8 +62,203 @@ dependencies:
   package_type: skill_bundle
   deployed_files:
   - .agents/skills/jaspr-convert-html
+  - .agents/skills/jaspr-convert-html/SKILL.md
   - .agents/skills/jaspr-fundamentals
+  - .agents/skills/jaspr-fundamentals/SKILL.md
+  - .agents/skills/jaspr-fundamentals/references/html/a.md
+  - .agents/skills/jaspr-fundamentals/references/html/article.md
+  - .agents/skills/jaspr-fundamentals/references/html/aside.md
+  - .agents/skills/jaspr-fundamentals/references/html/audio.md
+  - .agents/skills/jaspr-fundamentals/references/html/b.md
+  - .agents/skills/jaspr-fundamentals/references/html/blockquote.md
+  - .agents/skills/jaspr-fundamentals/references/html/body.md
+  - .agents/skills/jaspr-fundamentals/references/html/br.md
+  - .agents/skills/jaspr-fundamentals/references/html/button.md
+  - .agents/skills/jaspr-fundamentals/references/html/caption.md
+  - .agents/skills/jaspr-fundamentals/references/html/circle.md
+  - .agents/skills/jaspr-fundamentals/references/html/code.md
+  - .agents/skills/jaspr-fundamentals/references/html/col.md
+  - .agents/skills/jaspr-fundamentals/references/html/colgroup.md
+  - .agents/skills/jaspr-fundamentals/references/html/datalist.md
+  - .agents/skills/jaspr-fundamentals/references/html/dd.md
+  - .agents/skills/jaspr-fundamentals/references/html/details.md
+  - .agents/skills/jaspr-fundamentals/references/html/dialog.md
+  - .agents/skills/jaspr-fundamentals/references/html/div.md
+  - .agents/skills/jaspr-fundamentals/references/html/dl.md
+  - .agents/skills/jaspr-fundamentals/references/html/dt.md
+  - .agents/skills/jaspr-fundamentals/references/html/ellipse.md
+  - .agents/skills/jaspr-fundamentals/references/html/em.md
+  - .agents/skills/jaspr-fundamentals/references/html/embed.md
+  - .agents/skills/jaspr-fundamentals/references/html/fieldset.md
+  - .agents/skills/jaspr-fundamentals/references/html/figcaption.md
+  - .agents/skills/jaspr-fundamentals/references/html/figure.md
+  - .agents/skills/jaspr-fundamentals/references/html/footer.md
+  - .agents/skills/jaspr-fundamentals/references/html/form.md
+  - .agents/skills/jaspr-fundamentals/references/html/h1.md
+  - .agents/skills/jaspr-fundamentals/references/html/h2.md
+  - .agents/skills/jaspr-fundamentals/references/html/h3.md
+  - .agents/skills/jaspr-fundamentals/references/html/h4.md
+  - .agents/skills/jaspr-fundamentals/references/html/h5.md
+  - .agents/skills/jaspr-fundamentals/references/html/h6.md
+  - .agents/skills/jaspr-fundamentals/references/html/head.md
+  - .agents/skills/jaspr-fundamentals/references/html/header.md
+  - .agents/skills/jaspr-fundamentals/references/html/hr.md
+  - .agents/skills/jaspr-fundamentals/references/html/html.md
+  - .agents/skills/jaspr-fundamentals/references/html/i.md
+  - .agents/skills/jaspr-fundamentals/references/html/iframe.md
+  - .agents/skills/jaspr-fundamentals/references/html/img.md
+  - .agents/skills/jaspr-fundamentals/references/html/input.md
+  - .agents/skills/jaspr-fundamentals/references/html/label.md
+  - .agents/skills/jaspr-fundamentals/references/html/legend.md
+  - .agents/skills/jaspr-fundamentals/references/html/li.md
+  - .agents/skills/jaspr-fundamentals/references/html/line.md
+  - .agents/skills/jaspr-fundamentals/references/html/link.md
+  - .agents/skills/jaspr-fundamentals/references/html/main.md
+  - .agents/skills/jaspr-fundamentals/references/html/meta.md
+  - .agents/skills/jaspr-fundamentals/references/html/meter.md
+  - .agents/skills/jaspr-fundamentals/references/html/nav.md
+  - .agents/skills/jaspr-fundamentals/references/html/object.md
+  - .agents/skills/jaspr-fundamentals/references/html/ol.md
+  - .agents/skills/jaspr-fundamentals/references/html/optgroup.md
+  - .agents/skills/jaspr-fundamentals/references/html/option.md
+  - .agents/skills/jaspr-fundamentals/references/html/p.md
+  - .agents/skills/jaspr-fundamentals/references/html/path.md
+  - .agents/skills/jaspr-fundamentals/references/html/polygon.md
+  - .agents/skills/jaspr-fundamentals/references/html/polyline.md
+  - .agents/skills/jaspr-fundamentals/references/html/pre.md
+  - .agents/skills/jaspr-fundamentals/references/html/progress.md
+  - .agents/skills/jaspr-fundamentals/references/html/rect.md
+  - .agents/skills/jaspr-fundamentals/references/html/s.md
+  - .agents/skills/jaspr-fundamentals/references/html/script.md
+  - .agents/skills/jaspr-fundamentals/references/html/section.md
+  - .agents/skills/jaspr-fundamentals/references/html/select.md
+  - .agents/skills/jaspr-fundamentals/references/html/small.md
+  - .agents/skills/jaspr-fundamentals/references/html/source.md
+  - .agents/skills/jaspr-fundamentals/references/html/span.md
+  - .agents/skills/jaspr-fundamentals/references/html/strong.md
+  - .agents/skills/jaspr-fundamentals/references/html/summary.md
+  - .agents/skills/jaspr-fundamentals/references/html/svg.md
+  - .agents/skills/jaspr-fundamentals/references/html/table.md
+  - .agents/skills/jaspr-fundamentals/references/html/tbody.md
+  - .agents/skills/jaspr-fundamentals/references/html/td.md
+  - .agents/skills/jaspr-fundamentals/references/html/textarea.md
+  - .agents/skills/jaspr-fundamentals/references/html/tfoot.md
+  - .agents/skills/jaspr-fundamentals/references/html/th.md
+  - .agents/skills/jaspr-fundamentals/references/html/thead.md
+  - .agents/skills/jaspr-fundamentals/references/html/tr.md
+  - .agents/skills/jaspr-fundamentals/references/html/u.md
+  - .agents/skills/jaspr-fundamentals/references/html/ul.md
+  - .agents/skills/jaspr-fundamentals/references/html/video.md
+  - .agents/skills/jaspr-fundamentals/references/html/wbr.md
   - .agents/skills/jaspr-js-interop
+  - .agents/skills/jaspr-js-interop/SKILL.md
   - .agents/skills/jaspr-pre-rendering-and-hydration
+  - .agents/skills/jaspr-pre-rendering-and-hydration/SKILL.md
   - .agents/skills/jaspr-styling
+  - .agents/skills/jaspr-styling/SKILL.md
+  - .agents/skills/jaspr-styling/references/animation.md
+  - .agents/skills/jaspr-styling/references/box.md
+  - .agents/skills/jaspr-styling/references/color.md
+  - .agents/skills/jaspr-styling/references/flexbox.md
+  - .agents/skills/jaspr-styling/references/grid.md
+  - .agents/skills/jaspr-styling/references/sizing.md
+  - .agents/skills/jaspr-styling/references/typography.md
+  deployed_file_hashes:
+    .agents/skills/jaspr-convert-html/SKILL.md: sha256:7bca1217dfc882bb88e0ef854bbe6060164e41b4468a9b09744b647e2134795c
+    .agents/skills/jaspr-fundamentals/SKILL.md: sha256:5703641b52331a8ece74af812a6e470f998aa3070a1a9b75f088fe376f6e7f10
+    .agents/skills/jaspr-fundamentals/references/html/a.md: sha256:55a8c5da1a6c321f18cce93d6f6b23c317e88a97145a826cefe69b268f8a239d
+    .agents/skills/jaspr-fundamentals/references/html/article.md: sha256:e56993d80d3e639063e46a88535cc3b8b5d3da61779818c87a77f44ebd56f974
+    .agents/skills/jaspr-fundamentals/references/html/aside.md: sha256:30bf0faeff48f130c679e04e7b72627cd2968b1becd15a07fd807355f6af35f5
+    .agents/skills/jaspr-fundamentals/references/html/audio.md: sha256:7a12f5fb75bb64e4044fe314848418d45af327902e0e97d9406fd30bb6757d3c
+    .agents/skills/jaspr-fundamentals/references/html/b.md: sha256:a78f30207160d709ac9eeb7cccfbbe6af490f4126cfd7fccc00c1da997f8128f
+    .agents/skills/jaspr-fundamentals/references/html/blockquote.md: sha256:f94117bc1c8f6fcce080f3fb7ffa930dda2afdad80d64c2b9c2084f3318f8880
+    .agents/skills/jaspr-fundamentals/references/html/body.md: sha256:824e2d8d5448b19c6491fe9ac4c4de4d88474581ca217ce0aa95ac2fcc58b128
+    .agents/skills/jaspr-fundamentals/references/html/br.md: sha256:379c6b1e2f195401a881e3038eac3eae3b3eaf7d42eed7bb988b4dad37ccaa83
+    .agents/skills/jaspr-fundamentals/references/html/button.md: sha256:4861eea60e66b8b67dce80ed647e2cfde584c8fd2163c034ef3c082bc985ee0b
+    .agents/skills/jaspr-fundamentals/references/html/caption.md: sha256:cb2e370cc0b5489f35be996a65034b0fd692956219708f7a6289352d3087ff4e
+    .agents/skills/jaspr-fundamentals/references/html/circle.md: sha256:fe74ab7e3faea2ea05d6429705138ac4f20f5f99bb127b24f224a892be7666e7
+    .agents/skills/jaspr-fundamentals/references/html/code.md: sha256:90c2a55a9a624575bd4d47f03dffce34a591e3c4ce9e6d5eabcccbd056e1ee6c
+    .agents/skills/jaspr-fundamentals/references/html/col.md: sha256:b77796910d09e8c44a22fc1c297a760958b4f882f4dffb16f39247e9c1ce3508
+    .agents/skills/jaspr-fundamentals/references/html/colgroup.md: sha256:065fbe2a6e02454bf9502dca428b3069d3183520b45fc3b88ebd3cf2f31897d1
+    .agents/skills/jaspr-fundamentals/references/html/datalist.md: sha256:b23e8208e2d0e10cc0c2824a9375d12f0d9cc34f376f6ab4470c182992382727
+    .agents/skills/jaspr-fundamentals/references/html/dd.md: sha256:ace650e32d667bcdf56bcb72e53728d4e9eb7a6e5a6d60d865794964caf98fe4
+    .agents/skills/jaspr-fundamentals/references/html/details.md: sha256:1e66270c8e9dddf7d357327d24278c32bc6fe55e6bfb728c70001e7c11c784c3
+    .agents/skills/jaspr-fundamentals/references/html/dialog.md: sha256:d2b46ef20e9235770ce339982786697a4ca412fb1593eeab0ac55d5d94790e13
+    .agents/skills/jaspr-fundamentals/references/html/div.md: sha256:8f1d39c040874744c7da43d425d88f1dd876bd52cf6c635cd94201e42a24f1b7
+    .agents/skills/jaspr-fundamentals/references/html/dl.md: sha256:4604ea44584edbe826f1e4bd66aa8e03ce925b2479363e7601c75e4f4a0c8aff
+    .agents/skills/jaspr-fundamentals/references/html/dt.md: sha256:93542c55c36347298885969357a582855fa938b29301f832e955707488bcc5a6
+    .agents/skills/jaspr-fundamentals/references/html/ellipse.md: sha256:f1f419e3568187de2b727687baeda8de92dde5e14acf07a7e7cade8011ed05ed
+    .agents/skills/jaspr-fundamentals/references/html/em.md: sha256:9d02cb6b83c685953144b6d36c148b21efc02292bffed423e9383b70023d4a19
+    .agents/skills/jaspr-fundamentals/references/html/embed.md: sha256:84b31ad158c513424113f583335c4dcc6bd3a2ca63264e6cd12f57b99e46ef16
+    .agents/skills/jaspr-fundamentals/references/html/fieldset.md: sha256:e20bb3458bde8dc6f365ebd1bf773d9044b0834239ddd0beaee3d4c0779e2f2c
+    .agents/skills/jaspr-fundamentals/references/html/figcaption.md: sha256:cb7c60e7f50dcdd9f67fedacef510ef521e72a6817d7afa7c80d8d238a8be81a
+    .agents/skills/jaspr-fundamentals/references/html/figure.md: sha256:8699101835ca2f67e2abb15116f1c1ce565c98c30b4555d7b6311c385a793e76
+    .agents/skills/jaspr-fundamentals/references/html/footer.md: sha256:ae657206f9d12b1d7c44c534a08f2d273166c91c0aa63c25b502fdff7061d046
+    .agents/skills/jaspr-fundamentals/references/html/form.md: sha256:4616f14dcbb0647d84994e65eea278a20df93abecf288dd4ad91a2e9d1e4057c
+    .agents/skills/jaspr-fundamentals/references/html/h1.md: sha256:791230dfe17f7a2d04930cefaa4625cf15829ebec1e1a8a28265ddb2e092644b
+    .agents/skills/jaspr-fundamentals/references/html/h2.md: sha256:482f8e39996d7f50bcc3651591502b85a3797a95c488a9ddabceb17dea4d8301
+    .agents/skills/jaspr-fundamentals/references/html/h3.md: sha256:e5ae0e0a0c60d8f80d8c2cd783dfc1cfff6dcd2a7a6614e6f0b5827a70b96ba8
+    .agents/skills/jaspr-fundamentals/references/html/h4.md: sha256:50eef358b4dd13a20a2eb0f4f6cf2f921ad3a1aee1c173e3db5dc48089dcb559
+    .agents/skills/jaspr-fundamentals/references/html/h5.md: sha256:087972542f06fa2e1d14d9dbe32bb2d50ec6c8c49f60789619b748ff8be23056
+    .agents/skills/jaspr-fundamentals/references/html/h6.md: sha256:210dab77127d9105f8b60b8d24ad9cd8084f736fb1e6c3fac8b01c3ccd6be4e6
+    .agents/skills/jaspr-fundamentals/references/html/head.md: sha256:eaa1683de5dc09074dd7220832b1a4443844eb5426afe458848c0aa9d4f4eed8
+    .agents/skills/jaspr-fundamentals/references/html/header.md: sha256:c760bdfa41afd529d4323ecc2f422cd8e6bdc8df8faea7e73efef81b7ae129c8
+    .agents/skills/jaspr-fundamentals/references/html/hr.md: sha256:5b3b9219266483c1f0789efc9e76988f4b3a6309f420874047416ccd53c22669
+    .agents/skills/jaspr-fundamentals/references/html/html.md: sha256:dbbfdb8038a6a1d9fafbe9917b9cba1bf5f0ebf7c1ef600046a2af654a205e16
+    .agents/skills/jaspr-fundamentals/references/html/i.md: sha256:428788104c3646275c4b1d91a80221995dd955f21d003dd60320f46298dfe736
+    .agents/skills/jaspr-fundamentals/references/html/iframe.md: sha256:8b639eaf9f35e6e80be967cb6753342db976d2c4f4623cabadcf5a50770da23d
+    .agents/skills/jaspr-fundamentals/references/html/img.md: sha256:88a34235c37eb0a3fc44e1c0d8ea50015b9715ee7ea8a5e2465315a3b8d4d77d
+    .agents/skills/jaspr-fundamentals/references/html/input.md: sha256:a512d290c8cd1a2f6ea07d286c91f4aaca2bba2b092157c5e1fbae568163be2c
+    .agents/skills/jaspr-fundamentals/references/html/label.md: sha256:ed0871e6b351a345bbf0b018182644b0688f2d911f49f1b4f31af0a2360ea691
+    .agents/skills/jaspr-fundamentals/references/html/legend.md: sha256:b7ee738dca7fabf875eaab60418784b8278d94be78fa0faf4a54f796e844c871
+    .agents/skills/jaspr-fundamentals/references/html/li.md: sha256:d12d50ae0f842681dfdd042d066ea1d46daa1e01ef5392fa2bf97806a2216184
+    .agents/skills/jaspr-fundamentals/references/html/line.md: sha256:c379ca331358cdacc4e8eeeefe78b984c6dfdf95b10313bbe2b8b908a003771c
+    .agents/skills/jaspr-fundamentals/references/html/link.md: sha256:c9ee34edaaa9493129d43febd950bb4e7a1cbde87ae343ac46ba442a4948b8b1
+    .agents/skills/jaspr-fundamentals/references/html/main.md: sha256:cd3408fb31701fc7905152c7aee924e5b9a06abba6b36d70be2c17cf7b9b90a4
+    .agents/skills/jaspr-fundamentals/references/html/meta.md: sha256:3dae2505bc34603796df8da2076ec79ca5e7b73d054cca7c69e3537dd54ca023
+    .agents/skills/jaspr-fundamentals/references/html/meter.md: sha256:32b84b008c618ab5424ccbe474e0e230e6b6081d2cd92c5971651ed0b6e8e44d
+    .agents/skills/jaspr-fundamentals/references/html/nav.md: sha256:7363bb27cc1125f57a062f0c525922dceaf47ac5e91df18971ffd88aa5d4f625
+    .agents/skills/jaspr-fundamentals/references/html/object.md: sha256:053052678ec442a38a5f4c57f9c79196c29326907d920931f1567551d6f6ff9b
+    .agents/skills/jaspr-fundamentals/references/html/ol.md: sha256:03633c20f78fc1e1e96862410f6ffdd65d4f1d2aee0aabd02ebb3f48ff9a1432
+    .agents/skills/jaspr-fundamentals/references/html/optgroup.md: sha256:ddd8fe57898e673ac4698731fb0453a5b40eed810ad3b5a8ab0baf14710f2f79
+    .agents/skills/jaspr-fundamentals/references/html/option.md: sha256:998a6f13a94cd96a8fc8aa1e611ccb4c591f665a69a88e73f460d49edf464721
+    .agents/skills/jaspr-fundamentals/references/html/p.md: sha256:ea22d52b33ad587383c579d381e9ab18d050efdd5114d799b060bdab2e607d86
+    .agents/skills/jaspr-fundamentals/references/html/path.md: sha256:850d545ce1a00e987e01ff59590a5d013a8c615bf757edcbcc611e87ed804eec
+    .agents/skills/jaspr-fundamentals/references/html/polygon.md: sha256:c3140421069092cd317bb4b99877a0960160accbfa33f6c47ec1dca6a84e7e15
+    .agents/skills/jaspr-fundamentals/references/html/polyline.md: sha256:9b2b43158401bf69cf98aac0bd5010a143f47e00ca412283572720fdf1e9a8b5
+    .agents/skills/jaspr-fundamentals/references/html/pre.md: sha256:1a9c5f1c58ec07cf58aced751e092787ccbd919264396e93b0fbed4de1ff46f7
+    .agents/skills/jaspr-fundamentals/references/html/progress.md: sha256:10c40880799fd8b6904fe765f2d1dab03fb8109d3896ffc100db2feabddad667
+    .agents/skills/jaspr-fundamentals/references/html/rect.md: sha256:3f8e0676cb7d41ce5feb55d188740d9e7b8743195dba5e3ce744ff23e3da7c1d
+    .agents/skills/jaspr-fundamentals/references/html/s.md: sha256:de883ef7a732a5592239903015c91f24bca4cd40856a67d3bec653fbc1a65dce
+    .agents/skills/jaspr-fundamentals/references/html/script.md: sha256:bb5a5f76bf971a73bad171762172149d2b053edf96b1e46fd4932cb4ed3fae53
+    .agents/skills/jaspr-fundamentals/references/html/section.md: sha256:e714fd87be2b094425cfd1e6f6fdf7d70d5e172c5cda11b29deb3fa4e7b86513
+    .agents/skills/jaspr-fundamentals/references/html/select.md: sha256:a843b4db2d8bf7ec4991695cf353ec01b9993c17bf0994aa91fb0bd89127a38f
+    .agents/skills/jaspr-fundamentals/references/html/small.md: sha256:93851c2243d90c7b789e9bc6d94b3930ec56c4e424060451dc325f862b79f1ef
+    .agents/skills/jaspr-fundamentals/references/html/source.md: sha256:8d6add7ee4892eebc10d61f4932f3bb6e94f28ab9ccb0c5f897a74c01d39a13c
+    .agents/skills/jaspr-fundamentals/references/html/span.md: sha256:6e81f18745c9dcdbfcd242a2f13eec1ab7677dc001bb3605ad70fd0e29e34ffb
+    .agents/skills/jaspr-fundamentals/references/html/strong.md: sha256:7df172f2e600032e8989c8eceab34a17eb488e3ee07d0092dbf2342d9da73341
+    .agents/skills/jaspr-fundamentals/references/html/summary.md: sha256:6d5a7834d8b7e5872c135a6825d81d75cf25b64c459bf2f72a2df7fce3b7a958
+    .agents/skills/jaspr-fundamentals/references/html/svg.md: sha256:eca336dbf49e9d4dfaeef4b00d73953b9366609151880af0c1d3b109fbb424b1
+    .agents/skills/jaspr-fundamentals/references/html/table.md: sha256:9a5edc003618191902f05a143bdc45d0bef321cf191c72f366816dd79b91549d
+    .agents/skills/jaspr-fundamentals/references/html/tbody.md: sha256:4ecf859733536c5f86533eaf26a1ff706dc62247523ece9f6004d17b8c5fbfe0
+    .agents/skills/jaspr-fundamentals/references/html/td.md: sha256:82285434b74db380d2e9f9bb21c5ec4af5cc4c20962e8b20e00da95d3ebf8d4c
+    .agents/skills/jaspr-fundamentals/references/html/textarea.md: sha256:4a9323bd484fd266cb0f38572f1adf42bf5ee526749869ba366ad431b4f0be65
+    .agents/skills/jaspr-fundamentals/references/html/tfoot.md: sha256:e78e76c9d6c064ce1c00af4cab3a0ffb239eca8fa275a543a5b6d7129427f919
+    .agents/skills/jaspr-fundamentals/references/html/th.md: sha256:5613fbfb4619fc0c8869b5cc55f2491854dd3421df8118b26714aef4b705ce8d
+    .agents/skills/jaspr-fundamentals/references/html/thead.md: sha256:a6e0db1319072c19519e6a286d8a76acfb4b2ed954eeb8d0fdbcbba4a7f7eb25
+    .agents/skills/jaspr-fundamentals/references/html/tr.md: sha256:2ed2ee1c0ca655632798b3f4485a6d7bbe2320270fd7edbe721554cac536ff9d
+    .agents/skills/jaspr-fundamentals/references/html/u.md: sha256:4aed95bc666b93814cd3a4fca68d0d76e5be9e4d9d1f30bd61cf497587f7547c
+    .agents/skills/jaspr-fundamentals/references/html/ul.md: sha256:e35a108063a55aae3f73479659f684c194b6713d565b170a65a0880a8bc40311
+    .agents/skills/jaspr-fundamentals/references/html/video.md: sha256:fd95b5f95b9a9eaa4244f9ff0cf567b390f792b4ce7b467fd9cc093ad3c410e8
+    .agents/skills/jaspr-fundamentals/references/html/wbr.md: sha256:0dc1406ed633e313aebb57ff3e4a094d8abea49856a394824e673790470e0e0d
+    .agents/skills/jaspr-js-interop/SKILL.md: sha256:6b6ec89124caea68c48d3331b5ce99686ca50c7fa662d6ef30d0525e6f352b44
+    .agents/skills/jaspr-pre-rendering-and-hydration/SKILL.md: sha256:202c9e248df6ab1fcba1e2fa945c508871b10c91a12a2811796c32d8654bf492
+    .agents/skills/jaspr-styling/SKILL.md: sha256:3a59a45ac6cb9e2cccacd6d32e364ff3e0770c111efeacf12aa8fe9045601f47
+    .agents/skills/jaspr-styling/references/animation.md: sha256:ad457fe2dfe1a9c491103de813cce918a60d08df0169f1b04c80fa9a5b7aa052
+    .agents/skills/jaspr-styling/references/box.md: sha256:ef8be15e69bd8d87952a0cf21751284edc4f8d02b1c10d9c730cda1426e7b4c7
+    .agents/skills/jaspr-styling/references/color.md: sha256:f827bf5c115310b44844655a2ed076adde653ae4054901246cc8639493a18a44
+    .agents/skills/jaspr-styling/references/flexbox.md: sha256:e4f82ebc5570cb1433c8ea4902f8d7493cba8fa7b13233ab7b66fa5ce0567dc2
+    .agents/skills/jaspr-styling/references/grid.md: sha256:484a25623da7dbe590ec943629b7df4959ef6501748f768ee7c75a5cc9105bb9
+    .agents/skills/jaspr-styling/references/sizing.md: sha256:8e6944f7926b472e73d4a13e0c012c6cd34c484fc23c6705aa04eb7113e811de
+    .agents/skills/jaspr-styling/references/typography.md: sha256:7b72f4959c64a1cdac29ec3cac27f7fe04327f1c24fbf92de36cf9b04f31bcb1
   content_hash: sha256:b82e497b21468de56acb11d170caf793c2ece1fea7b57afa5cb76ecf17e77539
