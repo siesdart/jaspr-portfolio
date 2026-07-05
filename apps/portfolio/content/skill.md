@@ -1,6 +1,6 @@
 <div class="not-prose relative w-full flex flex-col items-center gap-12 md:block md:h-[750px]">
   <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
-    <span class="text-[11px] font-black text-gray-400 uppercase tracking-[0.3em] bg-white px-2">Language</span>
+    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Language</span>
     <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
       <SkillIcon-dev icon="csharp/csharp-original.svg" alt="csharp icon" delay="-1s"/>
       <SkillIcon-dev icon="dart/dart-original.svg" alt="dart icon" delay="-3.5s"/>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="flex flex-col items-center gap-4 md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2">
-    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Desktop / Mobile</span>
+    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Desktop / Mobile</span>
     <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
       <SkillIcon src="icons/wpf.png" alt="wpf icon" delay="-4.5s"/>
       <SkillIcon-dev icon="flutter/flutter-original.svg" alt="flutter icon" delay="-2.3s"/>
@@ -17,7 +17,7 @@
   </div>
 
   <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:left-0 md:-translate-y-1/2">
-    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Web Frontend</span>
+    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Web Frontend</span>
     <div class="flex flex-col items-center gap-1.5">
       <div class="flex gap-3">
         <SkillIcon-dev icon="react/react-original.svg" alt="react icon" delay="-2s"/>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:right-0 md:-translate-y-1/2">
-    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Web Backend</span>
+    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Web Backend</span>
     <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
       <SkillIcon-dev icon="express/express-original.svg" alt="express icon" delay="-1.2s"/>
       <SkillIcon-dev icon="firebase/firebase-plain.svg" alt="firebase icon" delay="-3.8s"/>
@@ -44,7 +44,7 @@
   </div>
 
   <div class="flex flex-col items-center gap-4 md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2">
-    <span class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">AI</span>
+    <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">AI</span>
     <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
       <SkillIcon src="icons/mldotnet.png" alt="ml.net icon" delay="-5s"/>
     </div>

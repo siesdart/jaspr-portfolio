@@ -17,7 +17,7 @@ class ContributionItem extends StatelessComponent {
   Component build(BuildContext context) {
     return li([
       span([
-        .text(contribution.title!),
+        .text(contribution.title ?? ''),
         a(
           classes: cn([buttonVariants(variant: ButtonVariant.link)]),
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',

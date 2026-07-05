@@ -21,7 +21,7 @@ class HistoryItem extends StatelessComponent {
         alt: '${history.title} image',
       ),
       div(classes: 'flex-1 flex flex-col justify-center ml-1', [
-        h5(classes: 'font-medium', [.text(history.title)]),
+        h3(classes: 'font-medium', [.text(history.title)]),
         p(classes: 'font-light', [.text(history.content)]),
       ]),
     ]);

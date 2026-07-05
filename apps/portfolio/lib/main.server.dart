@@ -30,8 +30,9 @@ void main() async {
             attributes: const {'crossorigin': ''},
           ),
         ),
-        const link(href: 'styles.css', rel: 'stylesheet'),
-        const script(src: 'https://unpkg.com/lucide@latest'),
+        const link(rel: 'preload', href: 'styles.css', as: 'style'),
+        const link(rel: 'stylesheet', href: 'styles.css'),
+        const script(src: 'https://unpkg.com/lucide@latest', defer: true),
       ],
       lang: config.locale.split('_')[0],
       meta: {

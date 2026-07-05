@@ -24,7 +24,7 @@ class CareerItem extends StatelessComponent {
           alt: '${career.company} image',
         ),
         div(classes: 'flex-1 flex flex-col justify-center ml-1', [
-          h5(classes: 'font-medium', [.text(career.company)]),
+          h3(classes: 'font-medium', [.text(career.company)]),
           span(classes: 'font-light', [.text(career.role)]),
           MarkdownArticle(
             classes: 'hidden leading-7 lg:block',
