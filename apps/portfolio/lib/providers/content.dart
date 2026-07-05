@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:core/core.dart';
 import 'package:github/github.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
@@ -22,18 +24,39 @@ final FutureProvider<List<Opensource>> opensourcesProvider =
       if (opensource.contribution != null) {
         final github = getIt<GitHub>();
 
-        for (var i = 0; i < opensource.contribution!.length; i++) {
-          final contribution = opensource.contribution![i];
-          if (contribution.title == null) {
-            final pr = await github.pullRequests.get(
-              RepositorySlug.full(opensource.repo),
-              contribution.id,
-            );
-            opensource.contribution![i] = contribution.copyWith(
-              title: pr.title,
-            );
-          }
-        }
+        await Future.wait(
+          List.generate(
+            opensource.contribution!.length,
+            (i) async {
+              final contribution = opensource.contribution![i];
+              if (contribution.title == null) {
+                try {
+                  final pr = await github.pullRequests
+                      .get(
+                        RepositorySlug.full(opensource.repo),
+                        contribution.id,
+                      )
+                      .timeout(const Duration(seconds: 3));
+                  opensource.contribution![i] = contribution.copyWith(
+                    title: pr.title,
+                  );
+                } on TimeoutException catch (e) {
+                  opensource.contribution![i] = contribution.copyWith(
+                    title: 'TimeoutException: ${e.message}',
+                  );
+                } on GitHubError catch (e) {
+                  opensource.contribution![i] = contribution.copyWith(
+                    title: 'GitHubError: ${e.message}',
+                  );
+                } on Exception catch (e) {
+                  opensource.contribution![i] = contribution.copyWith(
+                    title: 'Unknown error: $e',
+                  );
+                }
+              }
+            },
+          ),
+        );
       }
       return opensource;
     });
