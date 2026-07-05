@@ -3,6 +3,7 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:portfolio/components/markdown_article.dart';
 import 'package:portfolio/components/tags.dart';
+import 'package:ui/ui.dart';
 
 class CareerItem extends StatelessComponent {
   const CareerItem(this.career, {super.key});
@@ -17,11 +18,10 @@ class CareerItem extends StatelessComponent {
         [.text(career.period)],
       ),
       div(classes: 'flex gap-2 lg:gap-4', [
-        img(
+        Image(
           classes: 'flex-none size-12',
           src: career.image,
           alt: '${career.company} image',
-          loading: MediaLoading.lazy,
         ),
         div(classes: 'flex-1 flex flex-col justify-center ml-1', [
           h5(classes: 'font-medium', [.text(career.company)]),

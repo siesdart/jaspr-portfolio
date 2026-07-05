@@ -1,5 +1,6 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:ui/ui.dart';
 
 class SkillIcon extends StatelessComponent {
   const SkillIcon({required this.src, this.alt, this.delay, super.key});
@@ -27,11 +28,10 @@ class SkillIcon extends StatelessComponent {
           'inline-block bg-secondary p-2 rounded-full hover:bg-secondary/80 lg:p-4 md:animate-[float_6s_ease-in-out_infinite]',
       styles: delay != null ? Styles(raw: {'animation-delay': delay!}) : null,
       [
-        img(
+        Image(
           classes: 'size-8 lg:size-12',
           src: src,
           alt: alt,
-          loading: MediaLoading.lazy,
         ),
       ],
     );

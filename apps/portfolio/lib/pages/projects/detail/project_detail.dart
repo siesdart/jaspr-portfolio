@@ -40,11 +40,10 @@ class ProjectDetailPage extends StatelessComponent {
           if (project.image != null)
             figure(
               [
-                img(
+                Image(
                   classes: 'max-h-96 w-full object-contain',
                   src: project.image!,
                   alt: '${project.title} image',
-                  loading: MediaLoading.lazy,
                 ),
               ],
             ),

@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:ui/ui.dart';
 
 class HistoryItem extends StatelessComponent {
   const HistoryItem(this.history, {super.key});
@@ -14,11 +15,10 @@ class HistoryItem extends StatelessComponent {
         classes: 'flex-none w-20 text-muted-foreground lg:w-20',
         [.text(history.period)],
       ),
-      img(
+      Image(
         classes: 'flex-none size-12',
         src: history.imageUrl,
         alt: '${history.title} image',
-        loading: MediaLoading.lazy,
       ),
       div(classes: 'flex-1 flex flex-col justify-center ml-1', [
         h5(classes: 'font-medium', [.text(history.title)]),
