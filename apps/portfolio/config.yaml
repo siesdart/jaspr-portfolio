@@ -25,6 +25,10 @@ education:
     title: 한국과학기술원(KAIST)
     content: 전산학부 · 기술경영학부 학사
 award:
+  - period: "2026.06"
+    imageUrl: icons/othello.png
+    title: 한국오델로협회
+    content: 공인 지도자(강사)
   - period: "2026.05"
     imageUrl: icons/othello.png
     title: 제9회 전국 오델로 명인전
@@ -33,7 +37,7 @@ award:
     imageUrl: icons/toeic.svg
     title: TOEIC
     content: 830(LC 415, RC 415)
-  - period: "2019.05"
+  - period: "2019.05 ~ 2021.05"
     imageUrl: icons/topcit.svg
     title: TOPCIT
     content: 255점 수준 2
