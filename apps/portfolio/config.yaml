@@ -27,8 +27,8 @@ education:
 award:
   - period: "2026.06"
     imageUrl: icons/othello.png
-    title: 한국오델로협회
-    content: 공인 지도자(강사)
+    title: 한국오델로협회 공인 지도자
+    content: 강사
   - period: "2026.05"
     imageUrl: icons/othello.png
     title: 제9회 전국 오델로 명인전

@@ -5,12 +5,12 @@ role: Contributor
 order: 1
 contribution:
   - id: 169
-    description: HTML 속성명에 대문자가 포함될 경우 invalid한 속성으로 판단되는 오류 수정
+    description: HTML 속성명 중 viewBox와 같이 중간에 대문자가 포함된 camelCase 속성을 유효하지 않은 속성으로 오판하는 오류 패치
   - id: 247
-    description: 본래는 serve든 build든 상관없이 Tailwind CSS가 minify 없이 빌드되었는데, build에서는 minify가 적용되도록 추가함
+    description: 프로덕션 빌드 파이프라인에 Tailwind CSS minify 옵션을 연동해 CSS 산출물 최적화 지원
   - id: 250
-    description: Hydration 중 서버에서 클라이언트로 데이터가 직렬화되어 보내질 때 html escape를 거치는데, 클라이언트에서 데이터를 역직렬화할 때 unescape가 누락되어있어 이를 추가함
+    description: 서버 사이드 렌더링(SSR) Hydration 직렬화/역직렬화 과정 중 HTML escape 처리된 데이터의 unescape 누락으로 인한 렌더링 오류 패치
   - id: 256
-    description: Tailwind CSS 설정에서 content 부분이 씹히고 dart 파일만 감지하도록 되어있어서 content 설정이 적용되도록 수정함
+    description: Tailwind CSS 사용자 content 경로 설정을 빌드 과정에 반영하도록 개선하고 관련 문서 업데이트
   - id: 512
-    description: sitemap.xml 생성에서 최상위 경로 (/)의 사이트맵 설정이 적용되지 않는 버그 수정
+    description: sitemap.xml 자동 생성 과정에서 루트 경로(/) 메타데이터가 누락되던 버그 수정
