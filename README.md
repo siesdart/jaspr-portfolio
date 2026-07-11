@@ -1,6 +1,6 @@
 # Jaspr Portfolio
 
-> A modern, content-driven portfolio website built with [Jaspr](https://jaspr.site/) and structured as a Dart monorepo.
+> A modern, content-driven portfolio website built with [Jaspr](https://jaspr.site/) and structured as a Dart monorepo — bundled with an AI agent harness for resume feedback and refinement.
 
 [![Build](https://img.shields.io/github/actions/workflow/status/siesdart/jaspr-portfolio/fly.yml)](https://github.com/siesdart/jaspr-portfolio/actions/workflows/fly.yml) [![License](https://img.shields.io/github/license/siesdart/jaspr-portfolio?color=blue)](https://github.com/siesdart/jaspr-portfolio/blob/main/LICENSE) ![GitHub stars](https://img.shields.io/github/stars/siesdart/jaspr-portfolio?style=flat&label=stars&labelColor=333940&color=8957e5&logo=github) [![melos](https://img.shields.io/badge/maintained%20with-melos-f700ff.svg)](https://github.com/invertase/melos) [![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
 
@@ -17,6 +17,7 @@ This project is a personal portfolio website designed to be clean, scalable, and
 - **PDF Resume Generation**: Includes a feature to dynamically generate a downloadable PDF version of the resume from the same content source.
 - **Reusable UI Components**: A dedicated `ui` package provides a library of reusable components, ensuring a consistent design system across the application.
 - **Clean Architecture**: Follows a clean architecture with a clear separation of concerns between data models (`core`), features (`features/*`), UI components (`ui`), and the main application (`apps/portfolio`).
+- **AI Agent Harness**: Ships with a multi-agent AI harness (powered by [Antigravity](https://antigravity.google)) for analyzing and refining the resume content — making this more than just a static portfolio site.
 
 ## 📂 Project Structure
 
@@ -33,6 +34,14 @@ The project is a monorepo with the following structure:
 │   └── ui/             # Reusable UI components
 └── pubspec.yaml        # Workspace configuration (Melos)
 ```
+
+---
+
+## 🤖 AI Agent Harness
+
+This project doubles as an agentic workspace. Alongside the portfolio website, it bundles a multi-agent resume feedback and refinement harness powered by [Antigravity](https://antigravity.google) (see `.agents/plugins/resume-feedback-plugin/`). The harness reads the resume content files, evaluates them against current IT recruitment standards, and interactively applies improvements through a conversation-driven interview loop.
+
+---
 
 ## 🛠️ Technologies Used
 

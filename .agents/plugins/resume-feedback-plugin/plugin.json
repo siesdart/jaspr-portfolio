@@ -1,0 +1,5 @@
+{
+  "name": "resume-feedback-plugin",
+  "description": "A plugin designed to provide actionable feedback on developer resumes, focusing on enhancing the representation of soft skills, collaboration, and teamwork. It evaluates resumes against specific criteria to ensure that soft skills are demonstrated through concrete examples rather than abstract claims.",
+  "version": "1.0.0"
+}
