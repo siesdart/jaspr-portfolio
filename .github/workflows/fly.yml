@@ -8,6 +8,7 @@ on:
       - "*.md"
       - ".agents/**"
       - ".github/**"
+permissions: read-all
 jobs:
   deploy:
     name: Deploy app
@@ -19,6 +20,6 @@ jobs:
       - name: 🚀 Deploy Production
         uses: superfly/flyctl-actions@1.6
         with:
-          args: deploy --remote-only
+          args: deploy --no-cache --remote-only --build-secret GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

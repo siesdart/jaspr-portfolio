@@ -9,7 +9,7 @@ final GetIt getIt = GetIt.instance;
 void configureDependencies() {
   if (!getIt.isRegistered<DotEnv>()) {
     getIt.registerLazySingleton<DotEnv>(
-      DotEnv.new,
+      () => DotEnv(includePlatformEnvironment: true),
       onCreated: (dotEnv) {
         dotEnv.load();
         stdout.writeln('DotEnv is initialized.');

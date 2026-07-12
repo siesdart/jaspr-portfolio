@@ -13,7 +13,9 @@ RUN dart pub global activate jaspr_cli
 RUN melos bootstrap
 
 # Build Jaspr
-RUN melos build
+RUN --mount=type=secret,id=GITHUB_TOKEN \
+    GITHUB_TOKEN="$(cat /run/secrets/GITHUB_TOKEN)" \
+    melos build
 
 FROM nginx:alpine
 
