@@ -3,14 +3,18 @@ version: 1.0.0
 description: APM project for portfolio
 author: 박현우
 target:
-- agent-skills
+  - agent-skills
 dependencies:
   apm:
-  - dart-lang/skills
-  - schultek/jaspr/packages/jaspr
-  - git: flutter-it/get_it
-    skills:
-    - get-it-expert
+    - dart-lang/skills
+    - schultek/jaspr/packages/jaspr
+    - git: anthropics/skills
+      skills:
+        - frontend-design
+    - git: flutter-it/get_it
+      skills:
+        - get-it-expert
+    - addyosmani/web-quality-skills
   mcp: []
 includes: auto
 scripts: {}

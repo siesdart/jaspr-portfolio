@@ -2,7 +2,7 @@
 name: jaspr-fundamentals
 description: Use when working in a Jaspr project, on Jaspr components, or other Jaspr-related tasks. Contains fundamentals of writing Jaspr components and using HTML components.
 metadata:
-  jaspr_version: 0.23.1
+  jaspr_version: 0.23.2
 ---
 
 ## Components
@@ -81,7 +81,7 @@ class MyHtmlComponent extends StatelessComponent {
 ## Styling Components
 
 Jaspr has built-in support for styling components using CSS-in-Dart. 
-See the [jaspr-styling](../jaspr-styling/SKILL.md) skill for more information.
+See the [jaspr-styling](../../../apm_modules/schultek/jaspr/packages/jaspr/skills/jaspr-styling/SKILL.md) skill for more information.
 
 ## Interactivity and Events
 
@@ -172,7 +172,7 @@ class _MyInputState extends State<MyInput> {
 
 ## Further Resources
 
-- For information on pre-rendering, async data fetching, hydration, and the `@client` annotation see the related skill: [jaspr-pre-rendering-and-hydration](../jaspr-pre-rendering-and-hydration/SKILL.md).
-- For information on styling components see the related skill: [jaspr-styling](../jaspr-styling/SKILL.md).
-- For information on how to convert HTML to Jaspr code, see the related skill: [jaspr-convert-html](../jaspr-convert-html/SKILL.md).
+- For information on pre-rendering, async data fetching, hydration, and the `@client` annotation see the related skill: [jaspr-pre-rendering-and-hydration](../../../apm_modules/schultek/jaspr/packages/jaspr/skills/jaspr-pre-rendering-and-hydration/SKILL.md).
+- For information on styling components see the related skill: [jaspr-styling](../../../apm_modules/schultek/jaspr/packages/jaspr/skills/jaspr-styling/SKILL.md).
+- For information on how to convert HTML to Jaspr code, see the related skill: [jaspr-convert-html](../../../apm_modules/schultek/jaspr/packages/jaspr/skills/jaspr-convert-html/SKILL.md).
 - An index of all available documentation can be found at [https://jaspr.site/llms.txt](https://jaspr.site/llms.txt).
