@@ -20,19 +20,15 @@ This skill orchestrates a multi-agent team (`resume_analyzer` and `soft_skill_tu
    - Identify career history (companies, roles, dates).
    - Identify projects (descriptions, tech stacks, outcomes).
    - Identify open-source or external links (GitHub, blogs).
-3. **GitHub CLI Analysis**: If GitHub profile or repository links are found, run `gh` CLI commands to gather additional insights:
-   - Use `gh repo view <owner>/<repo>` or `gh api /repos/<owner>/<repo>` to get project description, stars, primary language, and activity.
-   - Use `gh api /users/<username>/events` or `gh pr list --author <username>` to collect recent developer activity.
-   - Inject this collected GitHub intelligence into the analysis context.
-4. **Load 2026 Trends**: Read the rules file `rules/recruitment_trends.md` to establish the evaluation baseline for 2026 IT developer hiring criteria (on-demand hiring focus, technical reasoning, quantifiable metrics, and tool-based collaboration).
+3. **Load 2026 Trends**: Read the rules file `rules/recruitment_trends.md` to establish the evaluation baseline for 2026 IT developer hiring criteria (on-demand hiring focus, technical reasoning, quantifiable metrics, and tool-based collaboration).
 
 ### Phase 2: Multi-Agent Parallel Analysis
 
 Invoke the subagents in parallel to perform specialized reviews:
 
 1. **Invoke `resume_analyzer`**:
-   - **Task**: Evaluate tech stack grouping, STAR structure of projects, technical decision logic (the "Why"), optimization metrics, developer links, and GitHub activity collected via `gh` CLI.
-   - **Input**: Extracted resume content + collected GitHub insights + `rules/recruitment_trends.md` criteria.
+   - **Task**: Evaluate tech stack grouping, STAR structure of projects, technical decision logic (the "Why"), optimization metrics, and developer links.
+   - **Input**: Extracted resume content + `rules/recruitment_trends.md` criteria.
    - **Expected Output**: Technical audit pointing out gaps, tech stack inconsistencies, and missing STAR elements with Before/After code snippets.
 
 2. **Invoke `soft_skill_tuner`**:
