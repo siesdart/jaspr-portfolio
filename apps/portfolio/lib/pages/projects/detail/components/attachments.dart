@@ -26,6 +26,7 @@ class ProjectAttachments extends StatelessComponent {
                 ]),
                 href: file.src,
                 target: .blank,
+                attributes: const {'rel': 'noopener noreferrer'},
                 [
                   const Icon(
                     'paperclip',

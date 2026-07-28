@@ -18,7 +18,7 @@ class ProjectDetailPage extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
-    final title = '${project.title} - ${config.title}';
+    final title = '${project.title} | ${config.title}';
 
     return .fragment([
       Document.head(
@@ -26,10 +26,33 @@ class ProjectDetailPage extends StatelessComponent {
         meta: {
           'description': project.introduction,
           'keywords': project.tags.join(', '),
-          'og:title': title,
-          'og:description': project.introduction,
-          'og:url': '${config.url}${context.url}',
+          'robots': 'noindex, follow',
         },
+        children: [
+          link(
+            id: 'canonical',
+            rel: 'canonical',
+            href: '${config.url}${context.url}',
+          ),
+          meta(
+            id: 'og-title',
+            attributes: {'property': 'og:title', 'content': title},
+          ),
+          meta(
+            id: 'og-description',
+            attributes: {
+              'property': 'og:description',
+              'content': project.introduction,
+            },
+          ),
+          meta(
+            id: 'og-url',
+            attributes: {
+              'property': 'og:url',
+              'content': '${config.url}${context.url}',
+            },
+          ),
+        ],
       ),
       article(
         classes: 'prose flex flex-col gap-2 max-w-full',

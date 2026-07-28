@@ -16,7 +16,7 @@ class HistoryItem extends StatelessComponent {
         [.text(history.period)],
       ),
       Image(
-        classes: 'flex-none size-12',
+        classes: 'flex-none aspect-square size-12',
         src: history.imageUrl,
         alt: '${history.title} image',
       ),

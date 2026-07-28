@@ -33,7 +33,10 @@ class ProjectHeader extends StatelessComponent {
               ]),
               href: 'https://github.com/${project.repo}',
               target: .blank,
-              attributes: {'aria-label': '${project.repo} github repo'},
+              attributes: {
+                'aria-label': '${project.repo} github repo',
+                'rel': 'noopener noreferrer',
+              },
               [
                 Icon(
                   'github',

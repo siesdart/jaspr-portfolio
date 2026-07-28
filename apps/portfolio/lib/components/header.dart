@@ -15,9 +15,11 @@ class Header extends StatelessComponent {
         div(classes: 'w-56 lg:fixed lg:top-8 lg:row-start-2 lg:z-20', [
           Image(
             classes:
-                'size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
+                'aspect-square size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
             src: 'profile.jpg',
             alt: 'profile image',
+            loading: MediaLoading.eager,
+            attributes: {'fetchpriority': 'high'},
           ),
         ]),
         Title(classes: 'mx-auto lg:hidden', size: TitleSize.small),

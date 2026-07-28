@@ -20,7 +20,10 @@ class OpensourceItem extends StatelessComponent {
         a(
           href: 'https://github.com/${opensource.repo}',
           target: .blank,
-          attributes: {'aria-label': '${opensource.repo} github repo'},
+          attributes: {
+            'aria-label': '${opensource.repo} github repo',
+            'rel': 'noopener noreferrer',
+          },
           const [
             Icon(
               'github',

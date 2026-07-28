@@ -1,3 +1,4 @@
+import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/pages/home/1_introduction/introduction.dart';
@@ -17,6 +18,23 @@ class HomePage extends StatelessComponent {
     final config = context.watch(configProvider);
 
     return .fragment([
+      Document.head(
+        children: [
+          link(rel: 'canonical', href: config.url),
+          meta(
+            attributes: {'property': 'og:title', 'content': config.title},
+          ),
+          meta(
+            attributes: {
+              'property': 'og:description',
+              'content': config.description,
+            },
+          ),
+          meta(
+            attributes: {'property': 'og:url', 'content': config.url},
+          ),
+        ],
+      ),
       const Section(
         id: 'intro',
         title: '1. 소개',

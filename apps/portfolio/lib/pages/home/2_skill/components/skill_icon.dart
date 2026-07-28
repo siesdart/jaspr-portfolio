@@ -29,7 +29,7 @@ class SkillIcon extends StatelessComponent {
       styles: delay != null ? Styles(raw: {'animation-delay': delay!}) : null,
       [
         Image(
-          classes: 'size-8 lg:size-12',
+          classes: 'aspect-square size-8 lg:size-12',
           src: src,
           alt: alt,
         ),

@@ -81,6 +81,7 @@ class Aside extends StatelessComponent {
           classes: 'underline-offset-4 hover:underline',
           href: href,
           target: .blank,
+          attributes: const {'rel': 'noopener noreferrer'},
           [.text(title)],
         )
       else

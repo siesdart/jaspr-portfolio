@@ -22,6 +22,7 @@ class ContributionItem extends StatelessComponent {
           classes: cn([buttonVariants(variant: ButtonVariant.link)]),
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: .blank,
+          attributes: const {'rel': 'noopener noreferrer'},
           [
             const .text('#'),
             .text(contribution.id.toString()),

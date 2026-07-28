@@ -21,7 +21,7 @@ void main() async {
     Document(
       title: config.title,
       head: [
-        ...['100', '200', '300', 'regular', '500', '600', '700'].map(
+        ...['regular', '700'].map(
           (weight) => link(
             rel: 'preload',
             href: '/fonts/ibm-plex-sans-kr-v10-korean_latin-$weight.woff2',
@@ -33,17 +33,24 @@ void main() async {
         const link(rel: 'preload', href: 'styles.css', as: 'style'),
         const link(rel: 'stylesheet', href: 'styles.css'),
         const script(src: 'https://unpkg.com/lucide@latest', defer: true),
+        meta(
+          id: 'og-site-name',
+          attributes: {'property': 'og:site_name', 'content': config.title},
+        ),
+        meta(
+          id: 'og-locale',
+          attributes: {'property': 'og:locale', 'content': config.locale},
+        ),
+        const meta(
+          id: 'og-type',
+          attributes: {'property': 'og:type', 'content': 'website'},
+        ),
       ],
       lang: config.locale.split('_')[0],
       meta: {
         'description': config.description,
         'robots': 'index, follow',
-        'og:site_name': config.title,
-        'og:locale': config.locale,
-        'og:title': config.title,
-        'og:description': config.description,
-        'og:type': 'website',
-        'og:url': config.url,
+        'twitter:card': 'summary',
       },
       body: Builder(
         builder: (context) => ProviderScope(

@@ -19,7 +19,7 @@ class CareerItem extends StatelessComponent {
       ),
       div(classes: 'flex gap-2 lg:gap-4', [
         Image(
-          classes: 'flex-none size-12',
+          classes: 'flex-none aspect-square size-12',
           src: career.image,
           alt: '${career.company} image',
         ),

@@ -6,6 +6,8 @@ class Image extends StatelessComponent {
     required this.src,
     this.classes,
     this.alt,
+    this.width,
+    this.height,
     this.loading = MediaLoading.lazy,
     this.attributes,
     super.key,
@@ -14,6 +16,8 @@ class Image extends StatelessComponent {
   final String? classes;
   final String src;
   final String? alt;
+  final int? width;
+  final int? height;
   final MediaLoading? loading;
   final Map<String, String>? attributes;
 
@@ -26,6 +30,8 @@ class Image extends StatelessComponent {
         '.webp',
       ),
       alt: alt,
+      width: width,
+      height: height,
       loading: loading,
       attributes: {
         'onError': "this.src='$src'",
