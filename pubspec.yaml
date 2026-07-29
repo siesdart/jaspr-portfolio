@@ -11,7 +11,7 @@ workspace:
   - packages/features/resume
 
 dev_dependencies:
-  melos: ^7.8.0
+  melos: ^8.2.2
 
 melos:
   repository: https://github.com/siesdart/jaspr-portfolio
@@ -32,7 +32,7 @@ melos:
     build:dart:
       packageFilters:
         dependsOn: build_runner
-      exec: dart run build_runner build --delete-conflicting-outputs
+      exec: dart run build_runner build
     clean:jaspr:
       packageFilters:
         scope: [portfolio]
