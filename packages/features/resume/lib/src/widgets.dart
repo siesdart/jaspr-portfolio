@@ -33,7 +33,7 @@ class RCategory extends StatelessWidget {
     return Text(
       text,
       textScaleFactor: 1.2,
-      style: TextStyle(fontWeight: .bold),
+      style: const TextStyle(fontWeight: .bold),
     );
   }
 }
@@ -70,7 +70,7 @@ class RHistory extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontWeight: .bold),
+                  style: const TextStyle(fontWeight: .bold),
                 ),
                 ...children,
               ],
@@ -137,7 +137,7 @@ class RTitle extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: config.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: .bold,
                     ),

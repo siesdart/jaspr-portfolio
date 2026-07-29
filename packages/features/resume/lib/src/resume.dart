@@ -86,7 +86,7 @@ class ResumePdf extends Pdf {
               children: [
                 Text(
                   opensource.repo.split('/')[1],
-                  style: TextStyle(fontWeight: .bold),
+                  style: const TextStyle(fontWeight: .bold),
                 ),
                 Text(opensource.description),
                 Text('Role: ${opensource.role}'),
