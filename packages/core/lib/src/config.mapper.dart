@@ -41,11 +41,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
   static const Field<Config, List<Site>> _f$site = Field('site', _$site);
   static String _$birth(Config v) => v.birth;
   static const Field<Config, String> _f$birth = Field('birth', _$birth);
-  static String _$location(Config v) => v.location;
-  static const Field<Config, String> _f$location = Field(
-    'location',
-    _$location,
-  );
   static String _$mail(Config v) => v.mail;
   static const Field<Config, String> _f$mail = Field('mail', _$mail);
   static List<History> _$education(Config v) => v.education;
@@ -67,7 +62,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
     #name: _f$name,
     #site: _f$site,
     #birth: _f$birth,
-    #location: _f$location,
     #mail: _f$mail,
     #education: _f$education,
     #award: _f$award,
@@ -83,7 +77,6 @@ class ConfigMapper extends ClassMapperBase<Config> {
       name: data.dec(_f$name),
       site: data.dec(_f$site),
       birth: data.dec(_f$birth),
-      location: data.dec(_f$location),
       mail: data.dec(_f$mail),
       education: data.dec(_f$education),
       award: data.dec(_f$award),
@@ -150,7 +143,6 @@ abstract class ConfigCopyWith<$R, $In extends Config, $Out>
     String? name,
     List<Site>? site,
     String? birth,
-    String? location,
     String? mail,
     List<History>? education,
     List<History>? award,
@@ -201,7 +193,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     String? name,
     List<Site>? site,
     String? birth,
-    String? location,
     String? mail,
     List<History>? education,
     List<History>? award,
@@ -215,7 +206,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
       if (name != null) #name: name,
       if (site != null) #site: site,
       if (birth != null) #birth: birth,
-      if (location != null) #location: location,
       if (mail != null) #mail: mail,
       if (education != null) #education: education,
       if (award != null) #award: award,
@@ -231,7 +221,6 @@ class _ConfigCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Config, $Out>
     name: data.get(#name, or: $value.name),
     site: data.get(#site, or: $value.site),
     birth: data.get(#birth, or: $value.birth),
-    location: data.get(#location, or: $value.location),
     mail: data.get(#mail, or: $value.mail),
     education: data.get(#education, or: $value.education),
     award: data.get(#award, or: $value.award),

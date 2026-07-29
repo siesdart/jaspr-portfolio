@@ -35,7 +35,6 @@ class OpensourceItem extends StatelessComponent {
           src:
               'https://img.shields.io/github/stars/${opensource.repo}?style=flat',
           alt: 'github stars',
-          loading: MediaLoading.lazy,
         ),
       ]),
       span(

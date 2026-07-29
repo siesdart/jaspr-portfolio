@@ -10,7 +10,7 @@ class HistoryItem extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return li(classes: 'flex gap-2 lg:gap-4', [
+    return li(classes: 'flex gap-2 lg:gap-3', [
       span(
         classes: 'flex-none w-20 text-muted-foreground lg:w-20',
         [.text(history.period)],

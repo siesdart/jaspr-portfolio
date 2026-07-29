@@ -67,7 +67,6 @@ class ProjectDetailPage extends StatelessComponent {
                   classes: 'max-h-96 w-full object-contain',
                   src: project.image!,
                   alt: '${project.title} image',
-                  loading: MediaLoading.eager,
                   attributes: const {'fetchpriority': 'high'},
                 ),
               ],

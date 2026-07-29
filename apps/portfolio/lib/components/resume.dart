@@ -29,16 +29,33 @@ class Resume extends StatelessComponent {
     return .fragment([
       Button(
         size: ButtonSize.large,
-        onClick: () => _downloadPdf(
-          ResumePdf(
-            config: config,
-            introduction: introduction!,
-            skill: skill!,
-            careers: careers!,
-            projects: projects!,
-            opensources: opensources!,
-          ),
-        ),
+        onClick: () {
+          final iframe = document.createElement('iframe') as HTMLIFrameElement;
+          iframe.style.position = 'fixed';
+          iframe.style.right = '0';
+          iframe.style.bottom = '0';
+          iframe.style.width = '0';
+          iframe.style.height = '0';
+          iframe.style.border = '0';
+
+          iframe.src = window.location.origin;
+          iframe.onLoad.listen((_) {
+            if (iframe.contentWindow != null) {
+              iframe.contentWindow!.focus();
+              iframe.contentWindow!.print();
+
+              window.setTimeout(
+                () {
+                  document.body?.removeChild(iframe);
+                }.toJS,
+                null,
+                1000,
+              );
+            }
+          });
+
+          document.body?.appendChild(iframe);
+        },
         disabled: [
           introduction,
           skill,

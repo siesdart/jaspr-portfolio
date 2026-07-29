@@ -55,7 +55,6 @@ class ProjectHeader extends StatelessComponent {
                 src:
                     'https://img.shields.io/github/stars/${project.repo}?style=flat',
                 alt: 'github stars',
-                loading: MediaLoading.lazy,
               ),
             const div(classes: 'flex-1', []),
             span(

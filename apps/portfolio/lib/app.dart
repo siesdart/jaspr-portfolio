@@ -66,6 +66,8 @@ class App extends StatelessComponent {
         ],
       ),
       const Footer(),
+      const script(src: 'https://unpkg.com/lucide@latest'),
+      const script(content: 'lucide.createIcons();'),
     ]);
   }
 }

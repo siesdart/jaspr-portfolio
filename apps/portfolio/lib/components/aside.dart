@@ -46,29 +46,25 @@ class Aside extends StatelessComponent {
         ),
         _buildItem(
           const Icon(
-            'map-pin',
-            classes: 'size-6 stroke-foreground',
-          ),
-          config.location,
-        ),
-        _buildItem(
-          const Icon(
             'mail',
             classes: 'size-6 stroke-foreground',
           ),
           config.mail,
           'mailto:${config.mail}',
         ),
-        div(classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2', [
-          Resume(
-            config: config,
-            introduction: introduction.value,
-            skill: skill.value,
-            careers: careers.value,
-            projects: projects.value,
-            opensources: opensources.value,
-          ),
-        ]),
+        div(
+          classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2 print:hidden',
+          [
+            Resume(
+              config: config,
+              introduction: introduction.value,
+              skill: skill.value,
+              careers: careers.value,
+              projects: projects.value,
+              opensources: opensources.value,
+            ),
+          ],
+        ),
       ],
     );
   }

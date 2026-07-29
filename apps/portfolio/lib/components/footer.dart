@@ -7,7 +7,8 @@ class Footer extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return const footer(
-      classes: 'flex justify-center border-t border-border mx-2 py-6 lg:py-8',
+      classes:
+          'flex justify-center border-t border-border mx-2 py-6 lg:py-8 print:hidden',
       [
         JasprBadge.darkTwoTone(),
       ],

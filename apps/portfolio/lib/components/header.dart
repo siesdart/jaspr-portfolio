@@ -18,7 +18,6 @@ class Header extends StatelessComponent {
                 'aspect-square size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
             src: 'profile.jpg',
             alt: 'profile image',
-            loading: MediaLoading.eager,
             attributes: {'fetchpriority': 'high'},
           ),
         ]),

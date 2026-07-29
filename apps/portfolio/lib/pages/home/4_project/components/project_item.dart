@@ -12,6 +12,7 @@ class ProjectItem extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return ListItem(
+      classes: '-mx-4',
       to: 'projects/${project.id}',
       children: [
         h3(classes: 'font-medium', [.text(project.title)]),

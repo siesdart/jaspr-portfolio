@@ -28,8 +28,8 @@ class Section extends StatelessComponent {
             [.text(title)],
           ),
         ]),
-        if (child != null) div(classes: 'px-2', [child!]),
-        if (children != null) ul(classes: 'space-y-6', children!),
+        if (child != null) div([child!]),
+        if (children != null) ul(classes: 'space-y-8', children!),
       ],
     );
   }

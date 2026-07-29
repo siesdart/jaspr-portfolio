@@ -6,10 +6,11 @@ import 'package:universal_web/js_interop.dart';
 external void createIcons();
 
 class Icon extends StatelessComponent {
-  const Icon(this.name, {this.classes, super.key});
+  const Icon(this.name, {this.classes, this.attributes, super.key});
 
   final String name;
   final String? classes;
+  final Map<String, String>? attributes;
 
   @override
   Component build(BuildContext context) {
@@ -23,7 +24,7 @@ class Icon extends StatelessComponent {
 
     return i(
       classes: classes,
-      attributes: {'data-lucide': name},
+      attributes: {'data-lucide': name, ...?attributes},
       const [],
     );
   }

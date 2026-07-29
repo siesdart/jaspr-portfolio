@@ -8,7 +8,7 @@ class Image extends StatelessComponent {
     this.alt,
     this.width,
     this.height,
-    this.loading = MediaLoading.lazy,
+    this.loading,
     this.attributes,
     super.key,
   });

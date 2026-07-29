@@ -32,7 +32,6 @@ void main() async {
         ),
         const link(rel: 'preload', href: 'styles.css', as: 'style'),
         const link(rel: 'stylesheet', href: 'styles.css'),
-        const script(src: 'https://unpkg.com/lucide@latest', defer: true),
         meta(
           id: 'og-site-name',
           attributes: {'property': 'og:site_name', 'content': config.title},
