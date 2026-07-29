@@ -27,18 +27,18 @@ class ResumePdf extends Pdf {
   final List<Opensource> opensources;
 
   @override
-  Iterable<Widget> buildPages(Map<String, ImageProvider> images) sync* {
+  Stream<SpanningWidget> buildPages(Map<String, ImageProvider> images) async* {
     yield Column(
       crossAxisAlignment: .start,
       children: [
         RTitle(config: config),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RParagraph(content: removeHtml(introduction)),
+        RParagraph(removeHtml(introduction)),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '1. 기술 스택'),
-        RParagraph(content: removeHtml(skill)),
+        RCategory('1. 기술 스택'),
+        RParagraph(removeHtml(skill)),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '2. 경력'),
+        RCategory('2. 경력'),
         Padding(padding: const EdgeInsets.only(top: 8)),
         ...careers.map(
           (career) => RHistory(
@@ -46,9 +46,11 @@ class ResumePdf extends Pdf {
             period: career.period,
             children: [
               Text(career.role),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                child: Text(career.content),
+              Padding(padding: const EdgeInsets.only(top: 8)),
+              RParagraph(
+                career.content
+                    .split('\n')
+                    .firstWhere((e) => e.trim().isNotEmpty),
               ),
               Text(
                 career.tags.map((e) => '#$e').join(' '),
@@ -58,7 +60,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '3. 프로젝트'),
+        RCategory('3. 프로젝트'),
         Padding(padding: const EdgeInsets.only(top: 8)),
         for (final MapEntry(:key, :value) in projects.groupByYear())
           ...value.sortedByOrder().mapIndexed(
@@ -75,7 +77,7 @@ class ResumePdf extends Pdf {
             ),
           ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '4. 오픈소스'),
+        RCategory('4. 오픈소스'),
         ...opensources.sortedByOrder().map(
           (opensource) => Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -114,7 +116,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '5. 학력'),
+        RCategory('5. 학력'),
         Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.education.map(
           (education) => RHistory(
@@ -124,7 +126,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '6. 수상 및 자격증'),
+        RCategory('6. 수상 및 자격증'),
         Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.award.map(
           (award) => RHistory(
@@ -134,7 +136,7 @@ class ResumePdf extends Pdf {
           ),
         ),
         Padding(padding: const EdgeInsets.only(top: 16)),
-        RCategory(title: '7. 기타'),
+        RCategory('7. 기타'),
         Padding(padding: const EdgeInsets.only(top: 8)),
         ...config.etc.map(
           (etc) => RHistory(

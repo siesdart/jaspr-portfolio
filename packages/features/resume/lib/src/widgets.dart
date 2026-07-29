@@ -1,4 +1,6 @@
+import 'package:collection/collection.dart';
 import 'package:core/core.dart';
+import 'package:markdown/markdown.dart' as md;
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 
@@ -22,14 +24,14 @@ class RBullet extends StatelessWidget {
 }
 
 class RCategory extends StatelessWidget {
-  RCategory({required this.title});
+  RCategory(this.text);
 
-  final String title;
+  final String text;
 
   @override
   Widget build(Context context) {
     return Text(
-      title,
+      text,
       textScaleFactor: 1.2,
       style: TextStyle(fontWeight: .bold),
     );
@@ -81,14 +83,14 @@ class RHistory extends StatelessWidget {
 }
 
 class RParagraph extends StatelessWidget {
-  RParagraph({required this.content});
+  RParagraph(this.text);
 
-  final String content;
+  final String text;
 
   @override
   Widget build(Context context) {
     return Paragraph(
-      text: content,
+      text: text,
       margin: EdgeInsets.zero,
       style: Theme.of(context).defaultTextStyle.copyWith(lineSpacing: 1.2),
     );
@@ -167,5 +169,86 @@ class RTitle extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class RMarkdown extends StatelessWidget {
+  RMarkdown(this.text);
+
+  final String text;
+
+  @override
+  Widget build(Context context) {
+    final nodes = md.Document(
+      extensionSet: md.ExtensionSet.gitHubWeb,
+    ).parse(text);
+
+    return Column(
+      crossAxisAlignment: .start,
+      children: _buildMarkdown(nodes),
+    );
+  }
+
+  List<Widget> _buildMarkdown(Iterable<md.Node> nodes) {
+    return nodes.map((node) {
+      if (node is md.Element) {
+        switch (node.tag) {
+          case 'p':
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: RParagraph(node.textContent),
+            );
+          case 'a':
+            return RUrlLink(
+              url: node.attributes['href'] ?? '',
+              text: node.textContent,
+            );
+          case 'ol':
+            return Column(
+              crossAxisAlignment: .start,
+              children: _buildMarkdown(node.children ?? [])
+                  .mapIndexed(
+                    (i, e) => Padding(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      child: Row(
+                        crossAxisAlignment: .start,
+                        children: <Widget>[
+                          Text('${i + 1}. '),
+                          Expanded(child: e),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
+            );
+          case 'ul':
+            return Column(
+              crossAxisAlignment: .start,
+              children: _buildMarkdown(node.children ?? [])
+                  .map(
+                    (e) => Padding(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      child: Row(
+                        crossAxisAlignment: .start,
+                        children: <Widget>[
+                          RBullet(),
+                          Expanded(child: e),
+                        ],
+                      ),
+                    ),
+                  )
+                  .toList(),
+            );
+          default:
+            return Wrap(
+              children: _buildMarkdown(node.children ?? []),
+            );
+        }
+      } else if (node is md.Text) {
+        return Text(node.text);
+      } else {
+        return SizedBox.shrink();
+      }
+    }).toList();
   }
 }

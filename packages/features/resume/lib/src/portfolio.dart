@@ -18,7 +18,7 @@ class PortfolioPdf extends Pdf {
   final List<Project> projects;
 
   @override
-  Iterable<Widget> buildPages(Map<String, ImageProvider> images) sync* {
+  Stream<SpanningWidget> buildPages(Map<String, ImageProvider> images) async* {
     yield Column(
       crossAxisAlignment: .start,
       children: [
@@ -32,7 +32,7 @@ class PortfolioPdf extends Pdf {
                 Row(
                   mainAxisAlignment: .spaceBetween,
                   children: [
-                    RCategory(title: project.title),
+                    RCategory(project.title),
                     Text(project.year.toString(), textScaleFactor: 0.8),
                   ],
                 ),
@@ -52,7 +52,7 @@ class PortfolioPdf extends Pdf {
                     child: Image(images[project.id]!),
                   ),
                 */
-                RParagraph(content: project.content),
+                RMarkdown(project.content),
                 Text(
                   project.tags.map((e) => '#$e').join(' '),
                   style: const TextStyle(color: PdfColors.grey),

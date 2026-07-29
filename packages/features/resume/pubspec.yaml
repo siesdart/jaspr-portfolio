@@ -11,6 +11,7 @@ dependencies:
   core: ^1.0.0
   html: ^0.15.6
   http: ^1.6.0
+  markdown: ^7.3.1
   pdf: ^3.12.0
 
 dev_dependencies:

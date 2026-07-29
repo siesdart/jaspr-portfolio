@@ -11,23 +11,39 @@ abstract class Pdf {
   final String? author;
 
   Future<Uint8List> buildData() async {
-    final doc = Document(
-      title: title,
-      author: author,
-      theme: await themeData(),
-    );
+    final doc = Document(title: title, author: author);
+    final theme = await buildTheme();
     final images = await loadImages();
-    doc.addPage(MultiPage(build: (context) => buildPages(images).toList()));
+    final pages = await buildPages(images).toList();
+
+    doc.addPage(
+      MultiPage(
+        theme: theme,
+        build: (context) => [
+          Partitions(
+            children: pages.map((page) => Partition(child: page)).toList(),
+          ),
+        ],
+      ),
+    );
     return doc.save();
   }
 
-  Future<ThemeData> themeData() async {
+  Future<ThemeData> buildTheme() async {
     final base = await networkFont('/fonts/IBMPlexSansKR-Regular.ttf');
     final bold = await networkFont('/fonts/IBMPlexSansKR-Bold.ttf');
-    return ThemeData.withFont(base: base, bold: bold);
+    final fallback = await networkFont(
+      '/fonts/NotoSansKR-VariableFont_wght.ttf',
+    );
+
+    return ThemeData.withFont(
+      base: base,
+      bold: bold,
+      fontFallback: [fallback],
+    );
   }
 
   Future<Map<String, ImageProvider>> loadImages() async => {};
 
-  Iterable<Widget> buildPages(Map<String, ImageProvider> images);
+  Stream<SpanningWidget> buildPages(Map<String, ImageProvider> images);
 }
