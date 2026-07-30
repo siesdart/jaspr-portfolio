@@ -10,26 +10,22 @@ class Project extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    switch (context.watch(projectsProvider)) {
-      case AsyncData(value: final projects):
-        return .fragment(
-          projects
-              .groupByYear()
-              .map(
-                (entry) => li(classes: 'flex flex-col gap-1', [
-                  span(
-                    classes: 'text-muted-foreground',
-                    [.text(entry.key.toString())],
-                  ),
-                  ul(
-                    entry.value.sortedByOrder().map(ProjectItem.new).toList(),
-                  ),
-                ]),
-              )
-              .toList(),
-        );
-      default:
-        return const .empty();
-    }
+    final content = context.watch(contentProvider);
+    return .fragment(
+      content.projects
+          .groupByYear()
+          .map(
+            (entry) => li(classes: 'flex flex-col gap-1', [
+              span(
+                classes: 'text-muted-foreground',
+                [.text(entry.key.toString())],
+              ),
+              ul(
+                entry.value.sortedByOrder().map(ProjectItem.new).toList(),
+              ),
+            ]),
+          )
+          .toList(),
+    );
   }
 }

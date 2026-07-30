@@ -9,20 +9,12 @@ import 'package:universal_web/web.dart';
 class Resume extends StatelessComponent {
   const Resume({
     required this.config,
-    required this.introduction,
-    required this.skill,
-    required this.careers,
-    required this.projects,
-    required this.opensources,
+    required this.content,
     super.key,
   });
 
   final Config config;
-  final String? introduction;
-  final String? skill;
-  final List<Career>? careers;
-  final List<Project>? projects;
-  final List<Opensource>? opensources;
+  final Content content;
 
   @override
   Component build(BuildContext context) {
@@ -56,13 +48,6 @@ class Resume extends StatelessComponent {
 
           document.body?.appendChild(iframe);
         },
-        disabled: [
-          introduction,
-          skill,
-          careers,
-          projects,
-          opensources,
-        ].any((e) => e == null),
         children: const [.text('이력서')],
       ),
       Button(
@@ -70,10 +55,9 @@ class Resume extends StatelessComponent {
         onClick: () => _downloadPdf(
           PortfolioPdf(
             config: config,
-            projects: projects!,
+            projects: content.projects,
           ),
         ),
-        disabled: projects == null,
         children: const [.text('포트폴리오')],
       ),
     ]);

@@ -18,6 +18,7 @@ class App extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
+    final content = context.watch(contentProvider);
 
     return .fragment([
       const a(
@@ -51,14 +52,11 @@ class App extends StatelessComponent {
                     settings: const RouteSettings(priority: 0.7),
                     builder: (context, state) => const ProjectsPage(),
                   ),
-                  if (context.watch(projectsProvider) case AsyncData(
-                    value: final projects,
-                  ))
-                    for (final project in projects)
-                      Route(
-                        path: '/projects/${project.id}',
-                        builder: (context, state) => ProjectDetailPage(project),
-                      ),
+                  for (final project in content.projects)
+                    Route(
+                      path: '/projects/${project.id}',
+                      builder: (context, state) => ProjectDetailPage(project),
+                    ),
                 ],
               ),
             ],

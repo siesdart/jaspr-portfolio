@@ -8,11 +8,7 @@ class Introduction extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    switch (context.watch(introductionProvider)) {
-      case AsyncData(value: final introduction):
-        return MarkdownArticle(content: introduction);
-      default:
-        return const .empty();
-    }
+    final content = context.watch(contentProvider);
+    return MarkdownArticle(content: content.introduction);
   }
 }

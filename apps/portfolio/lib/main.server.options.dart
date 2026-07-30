@@ -38,9 +38,5 @@ ServerOptions get defaultServerOptions => ServerOptions(
 
 Map<String, Object?> __resumeResume(_resume.Resume c) => {
   'config': c.config.toJson(),
-  'introduction': c.introduction,
-  'skill': c.skill,
-  'careers': c.careers?.map((i) => i.toJson()).toList(),
-  'projects': c.projects?.map((i) => i.toJson()).toList(),
-  'opensources': c.opensources?.map((i) => i.toJson()).toList(),
+  'content': c.content.toJson(),
 };

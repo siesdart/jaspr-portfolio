@@ -10,31 +10,27 @@ class Skill extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    switch (context.watch(skillProvider)) {
-      case AsyncData(value: final skill):
-        return MarkdownArticle(
-          content: skill,
-          components: [
-            CustomComponent(
-              pattern: 'SkillIcon-dev',
-              builder: (name, attributes, child) => SkillIcon.dev(
-                icon: attributes['icon'] ?? '',
-                alt: attributes['alt'],
-                delay: attributes['delay'],
-              ),
-            ),
-            CustomComponent(
-              pattern: 'SkillIcon',
-              builder: (name, attributes, child) => SkillIcon(
-                src: attributes['src'] ?? '',
-                alt: attributes['alt'],
-                delay: attributes['delay'],
-              ),
-            ),
-          ],
-        );
-      default:
-        return const .empty();
-    }
+    final content = context.watch(contentProvider);
+    return MarkdownArticle(
+      content: content.skill,
+      components: [
+        CustomComponent(
+          pattern: 'SkillIcon-dev',
+          builder: (name, attributes, child) => SkillIcon.dev(
+            icon: attributes['icon'] ?? '',
+            alt: attributes['alt'],
+            delay: attributes['delay'],
+          ),
+        ),
+        CustomComponent(
+          pattern: 'SkillIcon',
+          builder: (name, attributes, child) => SkillIcon(
+            src: attributes['src'] ?? '',
+            alt: attributes['alt'],
+            delay: attributes['delay'],
+          ),
+        ),
+      ],
+    );
   }
 }

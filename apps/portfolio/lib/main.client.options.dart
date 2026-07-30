@@ -6,10 +6,8 @@
 
 import 'package:jaspr/client.dart';
 
-import 'package:core/src/career.dart' as _career;
 import 'package:core/src/config.dart' as _config;
-import 'package:core/src/opensource.dart' as _opensource;
-import 'package:core/src/project.dart' as _project;
+import 'package:core/src/content.dart' as _content;
 import 'package:portfolio/components/resume.dart' deferred as _resume;
 
 /// Default [ClientOptions] for use with your Jaspr project.
@@ -33,17 +31,7 @@ ClientOptions get defaultClientOptions => ClientOptions(
     'resume': ClientLoader(
       (p) => _resume.Resume(
         config: _config.Config.fromJson(p['config'] as String),
-        introduction: p['introduction'] as String?,
-        skill: p['skill'] as String?,
-        careers: (p['careers'] as List<Object?>?)
-            ?.map((i) => _career.Career.fromJson(i as String))
-            .toList(),
-        projects: (p['projects'] as List<Object?>?)
-            ?.map((i) => _project.Project.fromJson(i as String))
-            .toList(),
-        opensources: (p['opensources'] as List<Object?>?)
-            ?.map((i) => _opensource.Opensource.fromJson(i as String))
-            .toList(),
+        content: _content.Content.fromJson(p['content'] as String),
       ),
       loader: _resume.loadLibrary,
     ),

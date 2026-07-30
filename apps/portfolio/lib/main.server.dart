@@ -1,9 +1,13 @@
+import 'dart:io' as io;
+
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:portfolio/app.dart';
+import 'package:portfolio/app_data/app_bootstrap_loader.dart';
 import 'package:portfolio/config.dart';
+import 'package:portfolio/content.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:portfolio/providers/content.dart';
 import 'package:portfolio/service_locator.dart';
@@ -15,11 +19,14 @@ void main() async {
   configureDependencies();
   initializeMappers();
 
-  final config = await loadConfigFile();
+  final appData = await AppBootstrapLoader(
+    configLoader: ConfigFileLoader(io.File('config.yaml')),
+    contentLoader: ContentDirectoryLoader(io.Directory('content')),
+  ).load();
 
   runApp(
     Document(
-      title: config.title,
+      title: appData.config.title,
       head: [
         ...['regular', '700'].map(
           (weight) => link(
@@ -34,32 +41,34 @@ void main() async {
         const link(rel: 'stylesheet', href: 'styles.css'),
         meta(
           id: 'og-site-name',
-          attributes: {'property': 'og:site_name', 'content': config.title},
+          attributes: {
+            'property': 'og:site_name',
+            'content': appData.config.title,
+          },
         ),
         meta(
           id: 'og-locale',
-          attributes: {'property': 'og:locale', 'content': config.locale},
+          attributes: {
+            'property': 'og:locale',
+            'content': appData.config.locale,
+          },
         ),
         const meta(
           id: 'og-type',
           attributes: {'property': 'og:type', 'content': 'website'},
         ),
       ],
-      lang: config.locale.split('_')[0],
+      lang: appData.config.locale.split('_')[0],
       meta: {
-        'description': config.description,
+        'description': appData.config.description,
         'robots': 'index, follow',
         'twitter:card': 'summary',
       },
       body: Builder(
         builder: (context) => ProviderScope(
-          overrides: [configProvider.overrideWith((ref) => config)],
-          sync: [
-            introductionProvider.syncWith('introduction'),
-            skillProvider.syncWith('skill'),
-            careersProvider.syncWith('careers'),
-            projectsProvider.syncWith('projects'),
-            opensourcesProvider.syncWith('opensources'),
+          overrides: [
+            configProvider.overrideWith((ref) => appData.config),
+            contentProvider.overrideWith((ref) => appData.content),
           ],
           child: const App(),
         ),

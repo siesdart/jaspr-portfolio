@@ -12,11 +12,7 @@ class Aside extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final config = context.watch(configProvider);
-    final introduction = context.watch(introductionProvider);
-    final skill = context.watch(skillProvider);
-    final careers = context.watch(careersProvider);
-    final projects = context.watch(projectsProvider);
-    final opensources = context.watch(opensourcesProvider);
+    final content = context.watch(contentProvider);
 
     return aside(
       classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60',
@@ -55,14 +51,7 @@ class Aside extends StatelessComponent {
         div(
           classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2 print:hidden',
           [
-            Resume(
-              config: config,
-              introduction: introduction.value,
-              skill: skill.value,
-              careers: careers.value,
-              projects: projects.value,
-              opensources: opensources.value,
-            ),
+            Resume(config: config, content: content),
           ],
         ),
       ],

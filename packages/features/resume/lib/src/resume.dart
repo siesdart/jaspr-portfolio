@@ -93,8 +93,9 @@ class ResumePdf extends Pdf {
                 RUrlLink(url: 'https://github.com/${opensource.repo}'),
                 if (opensource.contribution != null) ...[
                   Padding(padding: const EdgeInsets.only(top: 4)),
-                  ...opensource.contribution!.map(
-                    (contribution) => Row(
+                  ...opensource.contribution!.map((contribution) {
+                    final title = contribution.title ?? 'Title unavailable';
+                    return Row(
                       crossAxisAlignment: .start,
                       children: <Widget>[
                         RBullet(),
@@ -102,14 +103,14 @@ class ResumePdf extends Pdf {
                           child: Column(
                             crossAxisAlignment: .start,
                             children: [
-                              Text('${contribution.title} #${contribution.id}'),
+                              Text('$title #${contribution.id}'),
                               Text(contribution.description),
                             ],
                           ),
                         ),
                       ],
-                    ),
-                  ),
+                    );
+                  }),
                 ],
               ],
             ),

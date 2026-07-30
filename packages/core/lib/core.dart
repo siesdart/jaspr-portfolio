@@ -6,6 +6,7 @@ import 'package:dart_mappable/dart_mappable.dart';
 export 'core.init.dart';
 export 'src/career.dart';
 export 'src/config.dart';
+export 'src/content.dart';
 export 'src/file.dart';
 export 'src/history.dart';
 export 'src/opensource.dart';
