@@ -85,7 +85,7 @@ class ResumePdf extends Pdf {
               crossAxisAlignment: .start,
               children: [
                 Text(
-                  opensource.repo.split('/')[1],
+                  opensource.repo,
                   style: const TextStyle(fontWeight: .bold),
                 ),
                 Text(opensource.description),

@@ -13,10 +13,7 @@ class OpensourceItem extends StatelessComponent {
   Component build(BuildContext context) {
     return li(classes: 'flex flex-col items-start gap-1', [
       div(classes: 'flex items-center gap-2', [
-        h3(
-          classes: 'font-medium',
-          [.text(opensource.repo.split('/')[1])],
-        ),
+        h3(classes: 'font-medium', [.text(opensource.repo)]),
         a(
           href: 'https://github.com/${opensource.repo}',
           target: .blank,
