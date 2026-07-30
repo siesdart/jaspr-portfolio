@@ -14,6 +14,9 @@ dependencies:
     - git: flutter-it/get_it
       skills:
         - get-it-expert
+    - git: siesdart/skills
+      skills:
+        - dart-melos-upgrade
     - addyosmani/web-quality-skills
   mcp: []
 includes: auto
