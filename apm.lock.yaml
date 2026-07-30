@@ -1,5 +1,5 @@
 lockfile_version: '1'
-generated_at: '2026-07-30T07:37:36.726801+00:00'
+generated_at: '2026-07-30T07:41:41.171931+00:00'
 apm_version: 0.26.0
 dependencies:
 - repo_url: addyosmani/web-quality-skills
@@ -116,8 +116,8 @@ dependencies:
 - repo_url: schultek/jaspr
   name: jaspr
   host: github.com
-  resolved_commit: 36fb0691023c08133dd93393cb12c904fa3248a7
-  version: unknown
+  resolved_commit: 2443a6a832aa425e831b9962cd126278f4031597
+  version: 0.0.0
   virtual_path: packages/jaspr
   is_virtual: true
   package_type: skill_bundle
@@ -322,7 +322,7 @@ dependencies:
     .agents/skills/jaspr-styling/references/grid.md: sha256:484a25623da7dbe590ec943629b7df4959ef6501748f768ee7c75a5cc9105bb9
     .agents/skills/jaspr-styling/references/sizing.md: sha256:8e6944f7926b472e73d4a13e0c012c6cd34c484fc23c6705aa04eb7113e811de
     .agents/skills/jaspr-styling/references/typography.md: sha256:7b72f4959c64a1cdac29ec3cac27f7fe04327f1c24fbf92de36cf9b04f31bcb1
-  content_hash: sha256:0dd7e8296a97bacab6aaba8365fc6a9c8749f5d88d981ee4c1da58d490d7df22
+  content_hash: sha256:2d6d7d46eca3af0cce26ee9b0d8f0426e8a49212547e3ab0d5c4d1293c94bd59
 - repo_url: siesdart/skills
   name: skills
   host: github.com
