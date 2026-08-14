@@ -1,99 +1,120 @@
 ---
 name: dart-melos-upgrade
-description: Upgrade all packages and dependencies in the Melos monorepo to their latest resolvable versions. Use this skill whenever the user asks to upgrade, update, run outdated, or bump packages or dependencies in this codebase.
-metadata:
-  model: models/gemini-3.5-flash
-  last_modified: Mon, 25 May 2026 05:12:00 GMT
+description: Upgrade dependencies in a Dart or Flutter Melos monorepo to the latest mutually resolvable versions when the user asks to upgrade, update, check outdated packages, or bump dependencies.
 ---
 
-# Upgrading Monorepo Dependencies with Melos
+# Upgrade dependencies in a Melos monorepo
 
-This skill provides a systematic and safe workflow for upgrading package dependencies to their latest resolvable versions within a Melos monorepo.
+Use this workflow from the repository root. Keep dependency constraints intentional, resolve the workspace completely, and report every relevant change or blocker.
 
----
+## Workflow
 
-## Contents
+### 1. Establish the workspace
 
-- [Core Concepts](#core-concepts)
-- [Workflow: Upgrading Dependencies](#workflow-upgrading-dependencies)
-- [Step 1: Audit Outdated Packages](#step-1-audit-outdated-packages)
-- [Step 2: Update pubspec.yaml Constraints](#step-2-update-pubspecyaml-constraints)
-- [Step 3: Execute Upgrades and Bootstrap](#step-3-execute-upgrades-and-bootstrap)
-- [Step 4: Summarize Results](#step-4-summarize-results)
-- [Examples](#examples)
+Confirm that the current directory is the Melos workspace root and that the repository contains its Melos configuration and package manifests.
 
----
+Before editing, inspect the working tree and preserve unrelated user changes. Record the starting state of relevant `pubspec.yaml` and lockfiles so the final summary can distinguish this upgrade from pre-existing changes.
 
-## Core Concepts
+Completion criterion: the workspace root, package manifests, Melos configuration, and pre-existing changes are identified.
 
-Understanding the output columns of `melos outdated`:
+### 2. Audit outdated dependencies
 
-- **Current:** The version currently resolved and recorded in `pubspec.lock`.
-- **Upgradable:** The latest version allowed by the existing constraints in `pubspec.yaml`. These can be updated using a simple upgrade command without editing any files.
-- **Resolvable:** The absolute latest version that can be resolved when factoring in all other package constraints in the monorepo. Upgrading to these versions requires editing the constraints in `pubspec.yaml` files.
-- **Latest:** The absolute latest published version of the package (excluding prereleases).
+Run:
 
----
+```sh
+melos outdated
+```
 
-## Workflow: Upgrading Dependencies
+Classify each dependency using the audit columns:
 
-Follow this five-step workflow to perform the dependency upgrade process.
+- **Current**: the version currently resolved in `pubspec.lock`.
+- **Upgradable**: the newest version allowed by the existing constraint.
+- **Resolvable**: the newest version that can be resolved with all workspace constraints.
+- **Latest**: the newest published stable version, which may not be resolvable in this workspace.
 
-### Step 1: Audit Outdated Packages
+Use **Resolvable** as the default upgrade target. Include a dependency when its **Current** version differs from **Resolvable**. If the audit reports a conflict, an unavailable version, or a package that cannot be upgraded, record it for the final report rather than forcing a constraint.
 
-First, identify which packages in the monorepo are outdated.
+Completion criterion: every audit entry is classified as upgradeable, already current, or blocked, and the target version for every proposed change is recorded.
 
-1.  **Run the Audit Command:** Run `melos outdated` in the workspace root.
-2.  **Identify Upgrade Candidates:** Focus on dependencies where **Current** is different from **Resolvable**.
+### 3. Update dependency constraints
 
-### Step 2: Update pubspec.yaml Constraints
+For every proposed change, edit the owning package's `pubspec.yaml`. Update only the relevant dependency entry under `dependencies`, `dev_dependencies`, or another existing dependency section.
 
-Modify the corresponding `pubspec.yaml` files to bump the constraints to match their **Resolvable** versions.
+Preserve the existing constraint style and intent:
 
-1.  **Locate pubspec.yaml files:** Locate the `pubspec.yaml` for each package or application listed in the audit output.
-2.  **Update Dependencies:** Update the version strings of candidate packages under `dependencies` or `dev_dependencies`.
-3.  **CRITICAL: Preserve Constraint Prefixes:**
-    - Always preserve existing prefixes like caret (`^`) or tilde (`~`) if they were present.
-    - _Example:_ If the current entry is `jaspr: ^0.22.0` and the resolvable version is `0.22.2`, update it to `jaspr: ^0.22.2`.
-    - _Example:_ If the current entry is `path: 1.8.0` (pinned) and the resolvable version is `1.9.0`, update it to `path: 1.9.0`.
+- `^0.22.0` → `^0.22.2`
+- `~1.8.0` → `~1.9.0`
+- `1.8.0` → `1.9.0`
+- Keep path, git, hosted, SDK, and other non-version sources unchanged unless the audit explicitly identifies them as the target.
 
-### Step 3: Execute Upgrades and Bootstrap
+Do not replace a constraint with the **Latest** version merely because it is newer. If a constraint must be widened or a major version must be adopted, explain the reason and assess the resulting compatibility impact before making that edit.
 
-Resolve the newly modified constraints across the monorepo.
+Completion criterion: every intended `Current` → `Resolvable` change is present in the correct manifest, all existing constraint prefixes and sources are preserved, and no unrelated manifest content changed.
 
-1.  **Run the Upgrade Command:** Run `melos upgrade` to resolve new constraints and update lockfiles.
-2.  **Run Bootstrap:** Run `melos bootstrap` to link all local packages and resolve their dependencies.
+### 4. Resolve and bootstrap the workspace
 
-### Step 4: Summarize Results
+Resolve the edited constraints and update lockfiles:
 
-Provide a clear and concise summary of the updated dependencies, highlighting:
+```sh
+melos upgrade
+```
 
-- Any major or minor version jumps.
-- Any unresolved dependencies (e.g., locked by conflicting constraints).
+Then link local packages and complete workspace setup:
 
----
+```sh
+melos bootstrap
+```
 
-## Examples
+If either command fails, inspect the resolver output, identify the conflicting package or constraint, and report the blocker. Apply another manifest edit only when it is directly required to resolve the requested upgrade and its impact is understood.
 
-### Preserving Prefixes in pubspec.yaml
+Completion criterion: both commands complete successfully, or the exact failing command, package, and resolver reason are captured.
 
-When updating dependencies in any monorepo `pubspec.yaml`:
+### 5. Verify the result
 
-- **Before:**
+Inspect the resulting diff and confirm that:
 
-  ```yaml
-  dependencies:
-    http: ^0.13.0
-    meta: 1.7.0
-  ```
+- each requested dependency is resolved at the intended version;
+- lockfiles and manifests agree with the resolution;
+- local packages remain linked correctly;
+- no unrelated files or dependency changes were introduced.
 
-- **Resolvable Versions:**
-  - `http`: `0.13.5`
-  - `meta`: `1.8.0`
+Run the repository's existing validation commands when they are discoverable and relevant, such as the package tests, analyzer, or formatter checks. Do not invent project-specific commands when no established command is present.
 
-- **After (Correct):**
-  ```yaml
-  dependencies:
-    http: ^0.13.5
-    meta: 1.8.0
-  ```
+Completion criterion: the final diff has been reviewed, every target dependency has a verified outcome, and validation results or validation blockers are recorded.
+
+## Final report
+
+Summarize:
+
+- changed dependencies with `old → new` versions and owning packages;
+- major or minor version jumps and any compatibility concerns;
+- validation commands and their outcomes;
+- dependencies that remained unchanged or were blocked, including the resolver reason;
+- files changed by the upgrade.
+
+Separate pre-existing changes from changes made during this workflow.
+
+## Constraint example
+
+Given:
+
+```yaml
+dependencies:
+  http: ^0.13.0
+  meta: 1.7.0
+```
+
+and these **Resolvable** versions:
+
+```text
+http: 0.13.5
+meta: 1.8.0
+```
+
+update to:
+
+```yaml
+dependencies:
+  http: ^0.13.5
+  meta: 1.8.0
+```

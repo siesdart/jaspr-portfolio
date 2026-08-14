@@ -1,6 +1,6 @@
 lockfile_version: '1'
-generated_at: '2026-07-30T07:41:41.171931+00:00'
-apm_version: 0.26.0
+generated_at: '2026-08-14T14:08:35.511405+00:00'
+apm_version: 0.28.0
 dependencies:
 - repo_url: addyosmani/web-quality-skills
   name: web-quality-skills
@@ -41,8 +41,8 @@ dependencies:
 - repo_url: anthropics/skills
   name: skills
   host: github.com
-  resolved_commit: b29e7cf65e5cb78a5ac33d582270551bc74a14eb
-  version: b29e7cf
+  resolved_commit: f6656c1256d5a8adfa37db9110046ef20bac644c
+  version: f6656c1
   package_type: marketplace_plugin
   deployed_files:
   - .agents/skills/frontend-design
@@ -51,14 +51,14 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/frontend-design/LICENSE.txt: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
     .agents/skills/frontend-design/SKILL.md: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
-  content_hash: sha256:e70bb797e38685e0065690263ac50c0f7fe3fa8505492a64924e1bfe0a26a6ea
+  content_hash: sha256:cedf08aec3870812a8b89ab44e701b6029535eb0ac79c62ea1c6d3c20da60c18
   skill_subset:
   - frontend-design
 - repo_url: dart-lang/skills
   name: skills
   host: github.com
-  resolved_commit: 83ba6311412300f1b20c43978965ba15ef45c9ba
-  version: unknown
+  resolved_commit: 58b8343914d35a9c6d5f32077190a1f52fb02591
+  version: 0.0.0
   package_type: skill_bundle
   deployed_files:
   - .agents/skills/dart-add-unit-test
@@ -86,7 +86,7 @@ dependencies:
   - .agents/skills/dart-use-primary-constructors
   - .agents/skills/dart-use-primary-constructors/SKILL.md
   deployed_file_hashes:
-    .agents/skills/dart-add-unit-test/SKILL.md: sha256:1f52a9c88c35ba01d12c1a65cbe5c6034e9dde3799b49fe931d08baadf79be53
+    .agents/skills/dart-add-unit-test/SKILL.md: sha256:02428fa20c2cb90afcaf17a52c559641b85eb04f2765a54da2bc72ca858c1fce
     .agents/skills/dart-build-cli-app/SKILL.md: sha256:39c82e4ca39fadc8d065bad8c39a08cd719a3fc481b6a74ed6175f33ee3fb412
     .agents/skills/dart-collect-coverage/SKILL.md: sha256:229035193bfd785368c48e3dd8ee059df43fcbdfe227dfd8a9a0178b995ee6c6
     .agents/skills/dart-fix-runtime-errors/SKILL.md: sha256:0c18be0cbda925cb1322c2c47a52c288cce1dc34218705a20c4c071eed1b066d
@@ -98,7 +98,7 @@ dependencies:
     .agents/skills/dart-use-ffigen/SKILL.md: sha256:129ae526e854ea73e829dfa0f4f90fa5cb6e9b80a86aefd1bdd5d761afa4b676
     .agents/skills/dart-use-pattern-matching/SKILL.md: sha256:39d71b585417a2cca7958d41e19916303053c654a4de5aade8564addfaba1968
     .agents/skills/dart-use-primary-constructors/SKILL.md: sha256:598d2fcb7641f6715861827840698450c3e8d077b4e92326e8bffe87e5b23c0c
-  content_hash: sha256:ee653c24fd2a99a1718b963ec959cbbc9d81dafc5c8887c5b2fa18f8146b61aa
+  content_hash: sha256:aa3b89d09d3ea180df5a79c4f03a4d579f0474da4b01b480e60f7bee8ac6e3aa
 - repo_url: flutter-it/get_it
   name: get_it
   host: github.com
@@ -116,7 +116,7 @@ dependencies:
 - repo_url: schultek/jaspr
   name: jaspr
   host: github.com
-  resolved_commit: 2443a6a832aa425e831b9962cd126278f4031597
+  resolved_commit: e087165b968fab866b37b7a19025829781bb9f32
   version: 0.0.0
   virtual_path: packages/jaspr
   is_virtual: true
@@ -225,8 +225,8 @@ dependencies:
   - .agents/skills/jaspr-styling/references/sizing.md
   - .agents/skills/jaspr-styling/references/typography.md
   deployed_file_hashes:
-    .agents/skills/jaspr-convert-html/SKILL.md: sha256:2293823d58123d7c52998f5cf38fd660bc9c62919e8313f3912f3c638684d372
-    .agents/skills/jaspr-fundamentals/SKILL.md: sha256:208a83ed72bd8ea618af1958c08c565d3f7f92c87bbd95ba6a5711366745d176
+    .agents/skills/jaspr-convert-html/SKILL.md: sha256:77e4150ec2dcf7c185bece7753d1c405445ba264fab881be50663523743f077e
+    .agents/skills/jaspr-fundamentals/SKILL.md: sha256:bc877285673bb981cb94f9cad0c5c41aec92902101fdd8e2ba7aa2a94f00a1f8
     .agents/skills/jaspr-fundamentals/references/html/a.md: sha256:55a8c5da1a6c321f18cce93d6f6b23c317e88a97145a826cefe69b268f8a239d
     .agents/skills/jaspr-fundamentals/references/html/article.md: sha256:e56993d80d3e639063e46a88535cc3b8b5d3da61779818c87a77f44ebd56f974
     .agents/skills/jaspr-fundamentals/references/html/aside.md: sha256:30bf0faeff48f130c679e04e7b72627cd2968b1becd15a07fd807355f6af35f5
@@ -312,9 +312,9 @@ dependencies:
     .agents/skills/jaspr-fundamentals/references/html/ul.md: sha256:e35a108063a55aae3f73479659f684c194b6713d565b170a65a0880a8bc40311
     .agents/skills/jaspr-fundamentals/references/html/video.md: sha256:fd95b5f95b9a9eaa4244f9ff0cf567b390f792b4ce7b467fd9cc093ad3c410e8
     .agents/skills/jaspr-fundamentals/references/html/wbr.md: sha256:0dc1406ed633e313aebb57ff3e4a094d8abea49856a394824e673790470e0e0d
-    .agents/skills/jaspr-js-interop/SKILL.md: sha256:50921514e32b66d558baf23209fad129ee30a6c9f888d17f24684b227ddda256
-    .agents/skills/jaspr-pre-rendering-and-hydration/SKILL.md: sha256:7d34654292b7e039fd7a8f646089a2bee51a810860b3a49c2a4415f4bccf2413
-    .agents/skills/jaspr-styling/SKILL.md: sha256:e95c591ddcf4c6c0549f25a49afb1b3823dbab27cc5987f6bdb64cea040b4e40
+    .agents/skills/jaspr-js-interop/SKILL.md: sha256:0fb3b7ced0b998a26ab99b133d475ad7205524efe06f8fe2a76776c757a73b58
+    .agents/skills/jaspr-pre-rendering-and-hydration/SKILL.md: sha256:2a2ae0b08a919d32a9e153fb3215268b471ac547a970a13673849921c25486ea
+    .agents/skills/jaspr-styling/SKILL.md: sha256:51a285c0bb5a71e5bde42def3d66c205b8e9081e825709b1e3dc21b343937b20
     .agents/skills/jaspr-styling/references/animation.md: sha256:ad457fe2dfe1a9c491103de813cce918a60d08df0169f1b04c80fa9a5b7aa052
     .agents/skills/jaspr-styling/references/box.md: sha256:ef8be15e69bd8d87952a0cf21751284edc4f8d02b1c10d9c730cda1426e7b4c7
     .agents/skills/jaspr-styling/references/color.md: sha256:f827bf5c115310b44844655a2ed076adde653ae4054901246cc8639493a18a44
@@ -322,19 +322,19 @@ dependencies:
     .agents/skills/jaspr-styling/references/grid.md: sha256:484a25623da7dbe590ec943629b7df4959ef6501748f768ee7c75a5cc9105bb9
     .agents/skills/jaspr-styling/references/sizing.md: sha256:8e6944f7926b472e73d4a13e0c012c6cd34c484fc23c6705aa04eb7113e811de
     .agents/skills/jaspr-styling/references/typography.md: sha256:7b72f4959c64a1cdac29ec3cac27f7fe04327f1c24fbf92de36cf9b04f31bcb1
-  content_hash: sha256:2d6d7d46eca3af0cce26ee9b0d8f0426e8a49212547e3ab0d5c4d1293c94bd59
+  content_hash: sha256:d8affc911d243ef3458d5050bdafd4ad8fd4db718f1c570f873f4ee702efb86a
 - repo_url: siesdart/skills
   name: skills
   host: github.com
-  resolved_commit: 4f9d7fa2370c0d7da81de14c9df5bf750b0dcb86
-  version: unknown
+  resolved_commit: 5b0ef524f2f0fc6cb52bf1339d4e9a9b5dd45780
+  version: 0.0.0
   package_type: skill_bundle
   deployed_files:
   - .agents/skills/dart-melos-upgrade
   - .agents/skills/dart-melos-upgrade/SKILL.md
   deployed_file_hashes:
-    .agents/skills/dart-melos-upgrade/SKILL.md: sha256:995e1a7bac2183ab3daf4ad0ee9816440c5e3384f00ce10772f0ae3146723d5c
-  content_hash: sha256:8b7f0543b0db0c6c3cd3a4c30daca2925c49041d411f3e95fed376327e409a43
+    .agents/skills/dart-melos-upgrade/SKILL.md: sha256:111f689fd8f5d64e9c383a2997b6d73444ebf5043539d56e3ea481bde39fb0f5
+  content_hash: sha256:2ad1182ccf1d6b0a3a2c52732f301a9b45f6190c9ecf94a34715dd01fdf0b8f0
   skill_subset:
   - dart-melos-upgrade
 deployments:
@@ -436,7 +436,7 @@ deployments:
   owners:
   - dart-lang/skills
   active_owner: dart-lang/skills
-  content_hash: sha256:1f52a9c88c35ba01d12c1a65cbe5c6034e9dde3799b49fe931d08baadf79be53
+  content_hash: sha256:02428fa20c2cb90afcaf17a52c559641b85eb04f2765a54da2bc72ca858c1fce
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/dart-build-cli-app
@@ -526,7 +526,7 @@ deployments:
   owners:
   - siesdart/skills
   active_owner: siesdart/skills
-  content_hash: sha256:995e1a7bac2183ab3daf4ad0ee9816440c5e3384f00ce10772f0ae3146723d5c
+  content_hash: sha256:111f689fd8f5d64e9c383a2997b6d73444ebf5043539d56e3ea481bde39fb0f5
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/dart-migrate-to-checks-package
@@ -715,7 +715,7 @@ deployments:
   owners:
   - schultek/jaspr/packages/jaspr
   active_owner: schultek/jaspr/packages/jaspr
-  content_hash: sha256:2293823d58123d7c52998f5cf38fd660bc9c62919e8313f3912f3c638684d372
+  content_hash: sha256:77e4150ec2dcf7c185bece7753d1c405445ba264fab881be50663523743f077e
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/jaspr-fundamentals
@@ -733,7 +733,7 @@ deployments:
   owners:
   - schultek/jaspr/packages/jaspr
   active_owner: schultek/jaspr/packages/jaspr
-  content_hash: sha256:208a83ed72bd8ea618af1958c08c565d3f7f92c87bbd95ba6a5711366745d176
+  content_hash: sha256:bc877285673bb981cb94f9cad0c5c41aec92902101fdd8e2ba7aa2a94f00a1f8
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/jaspr-fundamentals/references/html/a.md
@@ -1516,7 +1516,7 @@ deployments:
   owners:
   - schultek/jaspr/packages/jaspr
   active_owner: schultek/jaspr/packages/jaspr
-  content_hash: sha256:50921514e32b66d558baf23209fad129ee30a6c9f888d17f24684b227ddda256
+  content_hash: sha256:0fb3b7ced0b998a26ab99b133d475ad7205524efe06f8fe2a76776c757a73b58
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/jaspr-pre-rendering-and-hydration
@@ -1534,7 +1534,7 @@ deployments:
   owners:
   - schultek/jaspr/packages/jaspr
   active_owner: schultek/jaspr/packages/jaspr
-  content_hash: sha256:7d34654292b7e039fd7a8f646089a2bee51a810860b3a49c2a4415f4bccf2413
+  content_hash: sha256:2a2ae0b08a919d32a9e153fb3215268b471ac547a970a13673849921c25486ea
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/jaspr-styling
@@ -1552,7 +1552,7 @@ deployments:
   owners:
   - schultek/jaspr/packages/jaspr
   active_owner: schultek/jaspr/packages/jaspr
-  content_hash: sha256:e95c591ddcf4c6c0549f25a49afb1b3823dbab27cc5987f6bdb64cea040b4e40
+  content_hash: sha256:51a285c0bb5a71e5bde42def3d66c205b8e9081e825709b1e3dc21b343937b20
 - kind: project-relative
   target: agent-skills
   value: .agents/skills/jaspr-styling/references/animation.md
