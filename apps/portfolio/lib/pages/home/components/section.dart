@@ -2,13 +2,19 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Section extends StatelessComponent {
-  const Section({
+  const Section.content({
     required this.title,
-    this.child,
-    this.children,
+    required this.child,
     this.id,
     super.key,
-  });
+  }) : children = null;
+
+  const Section.list({
+    required this.title,
+    required this.children,
+    this.id,
+    super.key,
+  }) : child = null;
 
   final String? id;
   final String title;
@@ -28,8 +34,8 @@ class Section extends StatelessComponent {
             [.text(title)],
           ),
         ]),
-        if (child != null) div([child!]),
-        if (children != null) ul(classes: 'space-y-8', children!),
+        if (child case final content?) div([content]),
+        if (children case final items?) ul(classes: 'space-y-8', items),
       ],
     );
   }

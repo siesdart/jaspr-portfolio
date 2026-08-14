@@ -26,30 +26,19 @@ class ProjectHeader extends StatelessComponent {
               classes: 'font-medium text-lg',
               [.text(project.title)],
             ),
-            a(
-              classes: cn([
-                'transition-opacity hover:opacity-80',
-                {'pointer-events-none': project.repo == null},
-              ]),
-              href: 'https://github.com/${project.repo}',
-              target: .blank,
-              attributes: {
-                'aria-label': '${project.repo} github repo',
-                'rel': 'noopener noreferrer',
-              },
-              [
-                Icon(
-                  'github',
-                  classes: cn([
-                    'size-6',
-                    if (project.repo == null)
-                      'fill-muted-foreground'
-                    else
-                      'fill-foreground',
-                  ]),
-                ),
-              ],
-            ),
+            if (project.repo != null)
+              a(
+                classes: 'transition-opacity hover:opacity-80',
+                href: 'https://github.com/${project.repo}',
+                target: .blank,
+                attributes: {
+                  'aria-label': '${project.repo} github repo',
+                  'rel': 'noopener noreferrer',
+                },
+                const [
+                  Icon('github', classes: 'size-6 fill-foreground'),
+                ],
+              ),
             if (project.repo != null)
               img(
                 src:

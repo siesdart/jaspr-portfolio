@@ -35,42 +35,42 @@ class HomePage extends StatelessComponent {
           ),
         ],
       ),
-      const Section(
+      const Section.content(
         id: 'intro',
         title: '1. 소개',
         child: Introduction(),
       ),
-      const Section(
+      const Section.content(
         id: 'skill',
         title: '2. 기술 스택',
         child: Skill(),
       ),
-      const Section(
+      const Section.list(
         id: 'career',
         title: '3. 경력',
         children: [Career()],
       ),
-      const Section(
+      const Section.list(
         id: 'project',
         title: '4. 프로젝트',
         children: [Project()],
       ),
-      const Section(
+      const Section.list(
         id: 'opensource',
         title: '5. 오픈소스',
         children: [Opensource()],
       ),
-      Section(
+      Section.list(
         id: 'edu',
         title: '6. 학력',
         children: config.education.map(HistoryItem.new).toList(),
       ),
-      Section(
+      Section.list(
         id: 'award',
         title: '7. 수상 및 자격증',
         children: config.award.map(HistoryItem.new).toList(),
       ),
-      Section(
+      Section.list(
         id: 'etc',
         title: '8. 기타',
         children: config.etc.map(HistoryItem.new).toList(),
