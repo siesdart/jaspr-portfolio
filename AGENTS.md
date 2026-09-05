@@ -24,3 +24,8 @@ Before executing any CLI commands, find the relevant Melos script in `pubspec.ya
 
 - **Build the application for production:**
   `melos build`
+
+## Portfolio content
+
+Do not exaggerate descriptions or arbitrarily write content that does not exist.
+Write all content after verifying and reviewing its authenticity through user interviews.
