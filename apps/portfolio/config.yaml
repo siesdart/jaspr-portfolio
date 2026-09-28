@@ -49,6 +49,10 @@ award:
     title: 제32회 한국정보올림피아드 경시대회
     content: 중등부 동상
 etc:
+  - period: "2026.09 ~ 2026.10"
+    imageUrl: icons/wanted.png
+    title: 원티드 AI Championship
+    content: 2026
   - period: "2026.05 ~ 현재"
     imageUrl: icons/othello.png
     title: 한국오델로협회
