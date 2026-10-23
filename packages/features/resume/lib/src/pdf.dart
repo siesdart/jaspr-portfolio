@@ -26,7 +26,7 @@ abstract class Pdf {
         ],
       ),
     );
-    return doc.save();
+    return await doc.save();
   }
 
   Future<ThemeData> buildTheme() async {
@@ -36,11 +36,7 @@ abstract class Pdf {
       '/fonts/NotoSansKR-VariableFont_wght.ttf',
     );
 
-    return ThemeData.withFont(
-      base: base,
-      bold: bold,
-      fontFallback: [fallback],
-    );
+    return ThemeData.withFont(base: base, bold: bold, fontFallback: [fallback]);
   }
 
   Future<Map<String, ImageProvider>> loadImages() async => {};

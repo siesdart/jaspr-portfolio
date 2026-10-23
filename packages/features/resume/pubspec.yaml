@@ -9,10 +9,10 @@ environment:
 dependencies:
   collection: ^1.19.1
   core: ^1.0.0
-  html: ^0.15.6
+  html: ^0.15.7
   http: ^1.6.0
   markdown: ^7.3.1
-  pdf: ^3.13.0
+  pdf: ^3.13.1
 
 dev_dependencies:
-  very_good_analysis: ^10.3.0
+  very_good_analysis: ^11.0.0
