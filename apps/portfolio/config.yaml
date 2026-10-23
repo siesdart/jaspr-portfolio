@@ -36,6 +36,10 @@ award:
     imageUrl: icons/toeic.svg
     title: TOEIC
     content: 830(LC 415, RC 415)
+  - period: "2020.02"
+    imageUrl: icons/kgov.png
+    title: 한국사능력검정시험
+    content: 1급
   - period: "2019.05 ~ 2021.05"
     imageUrl: icons/topcit.svg
     title: TOPCIT
