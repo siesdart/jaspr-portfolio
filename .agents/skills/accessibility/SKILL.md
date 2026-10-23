@@ -4,12 +4,23 @@ description: Audit and improve web accessibility following WCAG 2.2 guidelines. 
 license: MIT
 metadata:
   author: web-quality-skills
-  version: "1.1"
+  version: "2.0"
 ---
 
 # Accessibility (a11y)
 
 Comprehensive accessibility guidelines based on WCAG 2.2 and Lighthouse accessibility audits. Goal: make content usable by everyone, including people with disabilities.
+
+## Evidence-led audit workflow
+
+When a rendered page is available:
+
+1. Run a live Lighthouse Accessibility audit when that capability is available; with Chrome DevTools MCP, use `lighthouse_audit`. Use mobile navigation mode for a general public page or snapshot mode when reloading would lose authenticated or user-created state.
+2. Use failed audit nodes to localize the relevant component or template instead of searching the whole repository for generic patterns.
+3. Inspect a rendered accessibility-tree snapshot for names, roles, states, landmarks, and heading structure; with Chrome DevTools MCP, use `take_snapshot`. Exercise the affected flow with the keyboard.
+4. Fix the source, then re-run the same audit and manual interaction.
+
+If the live tools are unavailable, use Lighthouse CLI or axe for automated coverage and complete the same manual checks. Automated tools detect only a subset of accessibility barriers: a score of 100 is not WCAG conformance, and a low score does not replace issue-level evidence.
 
 ## WCAG Principles: POUR
 
@@ -394,6 +405,9 @@ Use `aria-live` regions to announce dynamic content changes without moving focus
 ## Testing checklist
 
 ### Automated testing
+
+Prefer a live Lighthouse audit that returns failing rendered nodes directly to the agent. With Chrome DevTools MCP, this is `lighthouse_audit`. Otherwise:
+
 ```bash
 # Lighthouse accessibility audit
 npx lighthouse https://example.com --only-categories=accessibility
@@ -445,6 +459,6 @@ See the [screen reader commands reference](references/A11Y-PATTERNS.md#screen-re
 - [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
 - [Deque axe Rules](https://dequeuniversity.com/rules/axe/)
-- [Web Quality Audit](../../../apm_modules/addyosmani/web-quality-skills/skills/web-quality-audit/SKILL.md)
+- [Web Quality Audit](../web-quality-audit/SKILL.md)
 - [WCAG criteria reference](references/WCAG.md)
 - [Accessibility code patterns](references/A11Y-PATTERNS.md)
