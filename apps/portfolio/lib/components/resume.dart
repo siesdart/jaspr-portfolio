@@ -29,14 +29,6 @@ class Resume extends StatelessComponent {
 
   void _printPage(String path) {
     final iframe = document.createElement('iframe') as HTMLIFrameElement;
-    iframe.style.position = 'fixed';
-    iframe.style.right = '0';
-    iframe.style.bottom = '0';
-    iframe.style.width = '0';
-    iframe.style.height = '0';
-    iframe.style.border = '0';
-    iframe.src = '${window.location.origin}$path';
-
     iframe.onLoad.listen((_) {
       final printWindow = iframe.contentWindow;
       if (printWindow == null) return;
@@ -50,7 +42,8 @@ class Resume extends StatelessComponent {
         ..focus()
         ..print();
     });
-
+    iframe.style.display = 'none';
+    iframe.src = '${window.location.origin}$path';
     document.body?.appendChild(iframe);
   }
 }
