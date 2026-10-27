@@ -2,18 +2,9 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:ui/src/cn.dart';
 
-enum ButtonVariant {
-  primary,
-  secondary,
-  ghost,
-  link,
-}
+enum ButtonVariant { primary, secondary, ghost, link }
 
-enum ButtonSize {
-  small,
-  medium,
-  large,
-}
+enum ButtonSize { small, medium, large }
 
 String buttonVariants({
   ButtonVariant variant = ButtonVariant.primary,

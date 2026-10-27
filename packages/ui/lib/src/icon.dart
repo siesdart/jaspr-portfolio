@@ -15,11 +15,7 @@ class Icon extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     if (icons.containsKey(name)) {
-      return svg(
-        classes: classes,
-        viewBox: '0 0 24 24',
-        icons[name]!,
-      );
+      return svg(classes: classes, viewBox: '0 0 24 24', icons[name]!);
     }
 
     return i(

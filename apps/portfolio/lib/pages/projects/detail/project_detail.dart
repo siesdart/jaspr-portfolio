@@ -54,40 +54,32 @@ class ProjectDetailPage extends StatelessComponent {
           ),
         ],
       ),
-      article(
-        classes: 'prose flex flex-col gap-2 max-w-full',
-        [
-          ProjectHeader(project: project),
-          if (project.files != null && project.files!.isNotEmpty)
-            ProjectAttachments(files: project.files!),
-          if (project.image != null)
-            figure(
-              [
-                Image(
-                  classes: 'max-h-96 w-full object-contain',
-                  src: project.image!,
-                  alt: '${project.title} image',
-                  attributes: const {'fetchpriority': 'high'},
-                ),
-              ],
+      article(classes: 'prose flex flex-col gap-2 max-w-full', [
+        ProjectHeader(project: project),
+        if (project.files != null && project.files!.isNotEmpty)
+          ProjectAttachments(files: project.files!),
+        if (project.image != null)
+          figure([
+            Image(
+              classes: 'max-h-96 w-full object-contain',
+              src: project.image!,
+              alt: '${project.title} image',
+              attributes: const {'fetchpriority': 'high'},
             ),
-          MarkdownArticle(content: project.content),
-          Tags(classes: 'not-prose', project.tags),
-        ],
-      ),
-      nav(
-        classes: 'flex justify-center',
-        [
-          Link(
-            classes: buttonVariants(
-              variant: ButtonVariant.ghost,
-              size: ButtonSize.large,
-            ),
-            to: '/projects',
-            children: const [Icon('chevron-left'), .text('목록으로')],
+          ]),
+        MarkdownArticle(content: project.content),
+        Tags(classes: 'not-prose', project.tags),
+      ]),
+      nav(classes: 'flex justify-center', [
+        Link(
+          classes: buttonVariants(
+            variant: ButtonVariant.ghost,
+            size: ButtonSize.large,
           ),
-        ],
-      ),
+          to: '/projects',
+          children: const [Icon('chevron-left'), .text('목록으로')],
+        ),
+      ]),
     ]);
   }
 }

@@ -68,10 +68,7 @@ class RHistory extends StatelessWidget {
             child: Column(
               crossAxisAlignment: .start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(fontWeight: .bold),
-                ),
+                Text(title, style: const TextStyle(fontWeight: .bold)),
                 ...children,
               ],
             ),
@@ -137,10 +134,7 @@ class RTitle extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: config.name,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      fontWeight: .bold,
-                    ),
+                    style: const TextStyle(fontSize: 18, fontWeight: .bold),
                   ),
                   const TextSpan(text: '  '),
                   TextSpan(text: config.site.first.title),
@@ -153,10 +147,7 @@ class RTitle extends StatelessWidget {
               style: const TextStyle(color: PdfColors.grey800),
             ),
             Padding(padding: const EdgeInsets.only(top: 2)),
-            RUrlLink(
-              text: config.mail,
-              url: 'mailto:${config.mail}',
-            ),
+            RUrlLink(text: config.mail, url: 'mailto:${config.mail}'),
           ],
         ),
         Spacer(),
@@ -183,10 +174,7 @@ class RMarkdown extends StatelessWidget {
       extensionSet: md.ExtensionSet.gitHubWeb,
     ).parse(text);
 
-    return Column(
-      crossAxisAlignment: .start,
-      children: _buildMarkdown(nodes),
-    );
+    return Column(crossAxisAlignment: .start, children: _buildMarkdown(nodes));
   }
 
   List<Widget> _buildMarkdown(Iterable<md.Node> nodes) {
@@ -240,9 +228,7 @@ class RMarkdown extends StatelessWidget {
                   .toList(),
             );
           default:
-            return Wrap(
-              children: _buildMarkdown(node.children ?? []),
-            );
+            return Wrap(children: _buildMarkdown(node.children ?? []));
         }
       } else if (node is md.Text) {
         return Text(node.text);

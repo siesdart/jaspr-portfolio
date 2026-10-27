@@ -27,43 +27,28 @@ class SkillIcon extends StatelessComponent {
       classes:
           'inline-block bg-secondary p-2 rounded-full hover:bg-secondary/80 lg:p-4 md:animate-[float_6s_ease-in-out_infinite] motion-reduce:animate-none!',
       styles: delay != null ? Styles(raw: {'animation-delay': delay!}) : null,
-      [
-        Image(
-          classes: 'aspect-square size-8 lg:size-12',
-          src: src,
-          alt: alt,
-        ),
-      ],
+      [Image(classes: 'aspect-square size-8 lg:size-12', src: src, alt: alt)],
     );
   }
 
   @css
   static List<StyleRule> get styles => [
-    css.keyframes(
-      'float',
-      {
-        '0%': const Styles(
-          transform: Transform.translate(x: Unit.pixels(0), y: Unit.pixels(0)),
-        ),
-        '25%': const Styles(
-          transform: Transform.translate(x: Unit.pixels(2), y: Unit.pixels(-5)),
-        ),
-        '50%': const Styles(
-          transform: Transform.translate(
-            x: Unit.pixels(0),
-            y: Unit.pixels(-10),
-          ),
-        ),
-        '75%': const Styles(
-          transform: Transform.translate(
-            x: Unit.pixels(-2),
-            y: Unit.pixels(-5),
-          ),
-        ),
-        '100%': const Styles(
-          transform: Transform.translate(x: Unit.pixels(0), y: Unit.pixels(0)),
-        ),
-      },
-    ),
+    css.keyframes('float', {
+      '0%': const Styles(
+        transform: Transform.translate(x: Unit.pixels(0), y: Unit.pixels(0)),
+      ),
+      '25%': const Styles(
+        transform: Transform.translate(x: Unit.pixels(2), y: Unit.pixels(-5)),
+      ),
+      '50%': const Styles(
+        transform: Transform.translate(x: Unit.pixels(0), y: Unit.pixels(-10)),
+      ),
+      '75%': const Styles(
+        transform: Transform.translate(x: Unit.pixels(-2), y: Unit.pixels(-5)),
+      ),
+      '100%': const Styles(
+        transform: Transform.translate(x: Unit.pixels(0), y: Unit.pixels(0)),
+      ),
+    }),
   ];
 }

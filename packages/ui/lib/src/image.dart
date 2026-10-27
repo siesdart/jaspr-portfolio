@@ -33,10 +33,7 @@ class Image extends StatelessComponent {
       width: width,
       height: height,
       loading: loading,
-      attributes: {
-        'onError': "this.src='$src'",
-        ...?attributes,
-      },
+      attributes: {'onError': "this.src='$src'", ...?attributes},
     );
   }
 }

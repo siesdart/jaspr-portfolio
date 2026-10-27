@@ -22,11 +22,7 @@ class ContentDirectoryLoader implements AppDataLoader<Content> {
   Future<Content> load() async {
     final introduction = await readFile(root, 'introduction.md');
     final skill = await readFile(root, 'skill.md');
-    final careers = await readDirectory(
-      root,
-      'careers',
-      CareerMapper.fromJson,
-    );
+    final careers = await readDirectory(root, 'careers', CareerMapper.fromJson);
     final projects = await readDirectory(
       root,
       'projects',
@@ -129,10 +125,7 @@ class ContentDirectoryLoader implements AppDataLoader<Content> {
 
     try {
       final pullRequest = await _github.pullRequests
-          .get(
-            RepositorySlug.full(repository),
-            contribution.id,
-          )
+          .get(RepositorySlug.full(repository), contribution.id)
           .timeout(const Duration(seconds: 3));
       final title = _titles[key] ??=
           pullRequest.title ?? (throw StateError('Pull request title missing'));

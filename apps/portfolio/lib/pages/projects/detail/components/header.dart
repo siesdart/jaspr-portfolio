@@ -10,53 +10,36 @@ class ProjectHeader extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return header(
-      classes: 'not-prose flex flex-col gap-1',
-      [
-        div(
-          classes: 'flex items-center gap-2',
-          [
-            svg(
-              classes: 'size-3 shrink-0',
-              styles: Styles(raw: {'fill': '#${project.color}'}),
-              viewBox: '0 0 16 16',
-              const [circle(cx: '8', cy: '8', r: '8', [])],
-            ),
-            h4(
-              classes: 'font-medium text-lg',
-              [.text(project.title)],
-            ),
-            if (project.repo != null)
-              a(
-                classes: 'transition-opacity hover:opacity-80',
-                href: 'https://github.com/${project.repo}',
-                target: .blank,
-                attributes: {
-                  'aria-label': '${project.repo} github repo',
-                  'rel': 'noopener noreferrer',
-                },
-                const [
-                  Icon('github', classes: 'size-6 fill-foreground'),
-                ],
-              ),
-            if (project.repo != null)
-              img(
-                src:
-                    'https://img.shields.io/github/stars/${project.repo}?style=flat',
-                alt: 'github stars',
-              ),
-            const div(classes: 'flex-1', []),
-            span(
-              classes: 'font-light text-sm',
-              [.text(project.year.toString())],
-            ),
-          ],
+    return header(classes: 'not-prose flex flex-col gap-1', [
+      div(classes: 'flex items-center gap-2', [
+        svg(
+          classes: 'size-3 shrink-0',
+          styles: Styles(raw: {'fill': '#${project.color}'}),
+          viewBox: '0 0 16 16',
+          const [circle(cx: '8', cy: '8', r: '8', [])],
         ),
-        h5(
-          classes: 'font-light text-sm',
-          [.text(project.introduction)],
-        ),
-      ],
-    );
+        h4(classes: 'font-medium text-lg', [.text(project.title)]),
+        if (project.repo != null)
+          a(
+            classes: 'transition-opacity hover:opacity-80',
+            href: 'https://github.com/${project.repo}',
+            target: .blank,
+            attributes: {
+              'aria-label': '${project.repo} github repo',
+              'rel': 'noopener noreferrer',
+            },
+            const [Icon('github', classes: 'size-6 fill-foreground')],
+          ),
+        if (project.repo != null)
+          img(
+            src:
+                'https://img.shields.io/github/stars/${project.repo}?style=flat',
+            alt: 'github stars',
+          ),
+        const div(classes: 'flex-1', []),
+        span(classes: 'font-light text-sm', [.text(project.year.toString())]),
+      ]),
+      h5(classes: 'font-light text-sm', [.text(project.introduction)]),
+    ]);
   }
 }

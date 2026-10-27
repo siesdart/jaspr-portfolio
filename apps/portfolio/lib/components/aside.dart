@@ -14,48 +14,34 @@ class Aside extends StatelessComponent {
     final config = context.watch(configProvider);
     final content = context.watch(contentProvider);
 
-    return aside(
-      classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60',
-      [
-        h4(
-          classes:
-              'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
-          [.text(config.name)],
+    return aside(classes: 'flex flex-col gap-2 w-56 lg:fixed lg:top-60', [
+      h4(
+        classes:
+            'self-center font-semibold tracking-wide lg:text-lg lg:tracking-wider',
+        [.text(config.name)],
+      ),
+      ...config.site.map(
+        (site) => _buildItem(
+          Icon(site.icon ?? 'link', classes: 'size-6 fill-foreground'),
+          site.title,
+          site.url,
         ),
-        ...config.site.map(
-          (site) => _buildItem(
-            Icon(
-              site.icon ?? 'link',
-              classes: 'size-6 fill-foreground',
-            ),
-            site.title,
-            site.url,
-          ),
-        ),
-        const hr(classes: 'border-border my-1 lg:my-2'),
-        _buildItem(
-          const Icon(
-            'cake',
-            classes: 'size-6 stroke-foreground',
-          ),
-          config.birth,
-        ),
-        _buildItem(
-          const Icon(
-            'mail',
-            classes: 'size-6 stroke-foreground',
-          ),
-          config.mail,
-          'mailto:${config.mail}',
-        ),
-        div(
-          classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2 print:hidden',
-          [
-            Resume(config: config, content: content),
-          ],
-        ),
-      ],
-    );
+      ),
+      const hr(classes: 'border-border my-1 lg:my-2'),
+      _buildItem(
+        const Icon('cake', classes: 'size-6 stroke-foreground'),
+        config.birth,
+      ),
+      _buildItem(
+        const Icon('mail', classes: 'size-6 stroke-foreground'),
+        config.mail,
+        'mailto:${config.mail}',
+      ),
+      div(
+        classes: 'self-center flex flex-col gap-1 mt-1 lg:mt-2 print:hidden',
+        [Resume(config: config, content: content)],
+      ),
+    ]);
   }
 
   Component _buildItem(Component svg, String title, [String? href]) {

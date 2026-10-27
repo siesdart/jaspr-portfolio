@@ -11,10 +11,9 @@ class HistoryItem extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return li(classes: 'flex gap-2 lg:gap-3', [
-      span(
-        classes: 'flex-none w-20 text-muted-foreground lg:w-20',
-        [.text(history.period)],
-      ),
+      span(classes: 'flex-none w-20 text-muted-foreground lg:w-20', [
+        .text(history.period),
+      ]),
       Image(
         classes: 'flex-none aspect-square size-12',
         src: history.imageUrl,

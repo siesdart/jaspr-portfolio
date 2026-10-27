@@ -14,10 +14,7 @@ class ResumePdf extends Pdf {
     required this.careers,
     required this.projects,
     required this.opensources,
-  }) : super(
-         title: '${config.name}의 이력서',
-         author: config.name,
-       );
+  }) : super(title: '${config.name}의 이력서', author: config.name);
 
   final Config config;
   final String introduction;

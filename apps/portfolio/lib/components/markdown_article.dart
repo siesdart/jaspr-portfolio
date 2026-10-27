@@ -19,17 +19,11 @@ class MarkdownArticle extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return article(
-      classes: cn(['prose max-w-full', classes]),
-      [
-        Content.wrapTheme(
-          const ContentTheme.none(),
-          child: Markdown(
-            content: content,
-            components: components,
-          ),
-        ),
-      ],
-    );
+    return article(classes: cn(['prose max-w-full', classes]), [
+      Content.wrapTheme(
+        const ContentTheme.none(),
+        child: Markdown(content: content, components: components),
+      ),
+    ]);
   }
 }

@@ -22,16 +22,10 @@ class CareerItem extends StatelessComponent {
         div(classes: 'flex-1 flex flex-col justify-center ml-1', [
           h3(classes: 'font-medium', [.text(career.company)]),
           span(classes: 'font-light', [.text(career.role)]),
-          span(
-            classes: 'text-muted-foreground',
-            [.text(career.period)],
-          ),
+          span(classes: 'text-muted-foreground', [.text(career.period)]),
         ]),
       ]),
-      MarkdownArticle(
-        classes: 'leading-7 -my-4',
-        content: career.content,
-      ),
+      MarkdownArticle(classes: 'leading-7 -my-4', content: career.content),
       Tags(classes: 'mt-1', career.tags),
     ]);
   }

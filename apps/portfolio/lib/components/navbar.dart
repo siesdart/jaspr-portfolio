@@ -11,13 +11,10 @@ class Navbar extends StatelessComponent {
     return const nav(
       classes: 'sticky top-0 z-10 flex flex-col px-4 py-2 bg-background',
       [
-        div(
-          classes: 'flex justify-end text-lg uppercase print:hidden',
-          [
-            NavLink(name: 'About', path: '/'),
-            NavLink(name: 'Projects', path: 'projects'),
-          ],
-        ),
+        div(classes: 'flex justify-end text-lg uppercase print:hidden', [
+          NavLink(name: 'About', path: '/'),
+          NavLink(name: 'Projects', path: 'projects'),
+        ]),
         Title(
           classes: 'ml-56 hidden flex-col self-center lg:flex',
           size: TitleSize.large,

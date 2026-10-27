@@ -32,11 +32,7 @@ class Opensource with OpensourceMappable {
 
 @MappableClass()
 class Contribution with ContributionMappable {
-  Contribution({
-    required this.id,
-    required this.description,
-    this.title,
-  });
+  Contribution({required this.id, required this.description, this.title});
 
   final int id;
   final String? title;

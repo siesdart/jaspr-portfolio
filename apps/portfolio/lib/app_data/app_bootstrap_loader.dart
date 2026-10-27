@@ -18,9 +18,6 @@ class AppBootstrapLoader implements AppDataLoader<AppData> {
       contentLoader.load(),
     ]);
 
-    return AppData(
-      config: loaded[0] as Config,
-      content: loaded[1] as Content,
-    );
+    return AppData(config: loaded[0] as Config, content: loaded[1] as Content);
   }
 }

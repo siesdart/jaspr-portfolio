@@ -21,35 +21,19 @@ class HomePage extends StatelessComponent {
       Document.head(
         children: [
           link(rel: 'canonical', href: config.url),
-          meta(
-            attributes: {'property': 'og:title', 'content': config.title},
-          ),
+          meta(attributes: {'property': 'og:title', 'content': config.title}),
           meta(
             attributes: {
               'property': 'og:description',
               'content': config.description,
             },
           ),
-          meta(
-            attributes: {'property': 'og:url', 'content': config.url},
-          ),
+          meta(attributes: {'property': 'og:url', 'content': config.url}),
         ],
       ),
-      const Section.content(
-        id: 'intro',
-        title: '1. 소개',
-        child: Introduction(),
-      ),
-      const Section.content(
-        id: 'skill',
-        title: '2. 기술 스택',
-        child: Skill(),
-      ),
-      const Section.list(
-        id: 'career',
-        title: '3. 경력',
-        children: [Career()],
-      ),
+      const Section.content(id: 'intro', title: '1. 소개', child: Introduction()),
+      const Section.content(id: 'skill', title: '2. 기술 스택', child: Skill()),
+      const Section.list(id: 'career', title: '3. 경력', children: [Career()]),
       const Section.list(
         id: 'project',
         title: '4. 프로젝트',

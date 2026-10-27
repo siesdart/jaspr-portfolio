@@ -7,11 +7,7 @@ import 'package:universal_web/web.dart';
 
 @client
 class Resume extends StatelessComponent {
-  const Resume({
-    required this.config,
-    required this.content,
-    super.key,
-  });
+  const Resume({required this.config, required this.content, super.key});
 
   final Config config;
   final Content content;
@@ -53,10 +49,7 @@ class Resume extends StatelessComponent {
       Button(
         size: ButtonSize.large,
         onClick: () => _downloadPdf(
-          PortfolioPdf(
-            config: config,
-            projects: content.projects,
-          ),
+          PortfolioPdf(config: config, projects: content.projects),
         ),
         children: const [.text('포트폴리오')],
       ),

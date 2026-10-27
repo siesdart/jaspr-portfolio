@@ -9,8 +9,6 @@ class Career extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final content = context.watch(contentProvider);
-    return .fragment(
-      content.careers.map(CareerItem.new).toList(),
-    );
+    return .fragment(content.careers.map(CareerItem.new).toList());
   }
 }

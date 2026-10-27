@@ -9,8 +9,6 @@ class Opensource extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     final content = context.watch(contentProvider);
-    return .fragment(
-      content.opensources.map(OpensourceItem.new).toList(),
-    );
+    return .fragment(content.opensources.map(OpensourceItem.new).toList());
   }
 }

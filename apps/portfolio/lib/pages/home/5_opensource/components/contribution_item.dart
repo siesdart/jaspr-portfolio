@@ -23,17 +23,11 @@ class ContributionItem extends StatelessComponent {
           href: 'https://github.com/${opensource.repo}/pull/${contribution.id}',
           target: .blank,
           attributes: const {'rel': 'noopener noreferrer'},
-          [
-            const .text('#'),
-            .text(contribution.id.toString()),
-          ],
+          [const .text('#'), .text(contribution.id.toString())],
         ),
       ]),
       const br(),
-      span(
-        classes: 'font-light',
-        [.text(contribution.description)],
-      ),
+      span(classes: 'font-light', [.text(contribution.description)]),
     ]);
   }
 }

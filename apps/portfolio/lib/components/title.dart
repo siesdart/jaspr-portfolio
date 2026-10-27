@@ -5,17 +5,10 @@ import 'package:jaspr_router/jaspr_router.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:ui/ui.dart';
 
-enum TitleSize {
-  small,
-  large,
-}
+enum TitleSize { small, large }
 
 class Title extends StatelessComponent {
-  const Title({
-    required this.size,
-    this.classes,
-    super.key,
-  });
+  const Title({required this.size, this.classes, super.key});
 
   final TitleSize size;
   final String? classes;
@@ -25,37 +18,33 @@ class Title extends StatelessComponent {
     final config = context.watch(configProvider);
     final index = config.title.indexOf('.');
 
-    return div(
-      classes: classes,
-      [
-        Link(
-          to: '/',
-          replace: true,
-          child: h2(
-            classes: cn([
-              'font-semibold text-primary',
-              if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
-            ]),
-            [
-              .text('(${config.title.substring(0, index)}'),
-              span(
-                classes: 'text-primary/80',
-                [.text('${config.title.substring(index)})')],
-              ),
-            ],
-          ),
-        ),
-        h3(
+    return div(classes: classes, [
+      Link(
+        to: '/',
+        replace: true,
+        child: h2(
           classes: cn([
-            'font-light text-muted-foreground',
-            if (size == TitleSize.large)
-              'mt-2 text-end text-xl'
-            else
-              'mt-1 text-center',
+            'font-semibold text-primary',
+            if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
           ]),
-          [.text(config.description)],
+          [
+            .text('(${config.title.substring(0, index)}'),
+            span(classes: 'text-primary/80', [
+              .text('${config.title.substring(index)})'),
+            ]),
+          ],
         ),
-      ],
-    );
+      ),
+      h3(
+        classes: cn([
+          'font-light text-muted-foreground',
+          if (size == TitleSize.large)
+            'mt-2 text-end text-xl'
+          else
+            'mt-1 text-center',
+        ]),
+        [.text(config.description)],
+      ),
+    ]);
   }
 }

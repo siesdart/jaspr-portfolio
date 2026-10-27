@@ -21,12 +21,7 @@ class OpensourceItem extends StatelessComponent {
             'aria-label': '${opensource.repo} github repo',
             'rel': 'noopener noreferrer',
           },
-          const [
-            Icon(
-              'github',
-              classes: 'size-6 fill-foreground',
-            ),
-          ],
+          const [Icon('github', classes: 'size-6 fill-foreground')],
         ),
         img(
           src:
@@ -34,23 +29,18 @@ class OpensourceItem extends StatelessComponent {
           alt: 'github stars',
         ),
       ]),
-      span(
-        classes: 'font-light',
-        [.text(opensource.description)],
-      ),
-      span(
-        classes: 'font-extralight',
-        [const .text('Role: '), .text(opensource.role)],
-      ),
+      span(classes: 'font-light', [.text(opensource.description)]),
+      span(classes: 'font-extralight', [
+        const .text('Role: '),
+        .text(opensource.role),
+      ]),
       if (opensource.contribution != null)
         ul(
           classes: 'list-disc ml-5 mt-1 space-y-2',
           opensource.contribution!
               .map(
-                (contribution) => ContributionItem(
-                  contribution,
-                  opensource: opensource,
-                ),
+                (contribution) =>
+                    ContributionItem(contribution, opensource: opensource),
               )
               .toList(),
         ),

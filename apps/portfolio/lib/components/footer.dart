@@ -9,9 +9,7 @@ class Footer extends StatelessComponent {
     return const footer(
       classes:
           'flex justify-center border-t border-border mx-2 py-6 lg:py-8 print:hidden',
-      [
-        JasprBadge.darkTwoTone(),
-      ],
+      [JasprBadge.darkTwoTone()],
     );
   }
 }

@@ -6,13 +6,8 @@ import 'package:resume/src/utils.dart';
 import 'package:resume/src/widgets.dart';
 
 class PortfolioPdf extends Pdf {
-  PortfolioPdf({
-    required this.config,
-    required this.projects,
-  }) : super(
-         title: '${config.name}의 포트폴리오',
-         author: config.name,
-       );
+  PortfolioPdf({required this.config, required this.projects})
+    : super(title: '${config.name}의 포트폴리오', author: config.name);
 
   final Config config;
   final List<Project> projects;
