@@ -7,6 +7,7 @@ import 'package:portfolio/components/footer.dart';
 import 'package:portfolio/components/header.dart';
 import 'package:portfolio/components/navbar.dart';
 import 'package:portfolio/pages/home/home.dart';
+import 'package:portfolio/pages/portfolio_print/portfolio_print.dart';
 import 'package:portfolio/pages/projects/detail/project_detail.dart';
 import 'package:portfolio/pages/projects/projects.dart';
 import 'package:portfolio/providers/config.dart';
@@ -57,6 +58,11 @@ class App extends StatelessComponent {
                       path: '/projects/${project.id}',
                       builder: (context, state) => ProjectDetailPage(project),
                     ),
+                  Route(
+                    path: '/portfolio-print',
+                    settings: const RouteSettings(priority: 0),
+                    builder: (context, state) => const PortfolioPrintPage(),
+                  ),
                 ],
               ),
             ],

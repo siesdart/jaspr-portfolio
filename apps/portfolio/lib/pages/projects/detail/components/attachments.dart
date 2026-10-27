@@ -13,7 +13,7 @@ class ProjectAttachments extends StatelessComponent {
     if (files.isEmpty) return const .fragment([]);
 
     return ul(
-      classes: 'not-prose flex flex-wrap gap-3 list-none',
+      classes: 'flex flex-wrap gap-3 list-none',
       files
           .map(
             (file) => li([

@@ -3,10 +3,7 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
 import 'package:jaspr_router/jaspr_router.dart';
-import 'package:portfolio/components/markdown_article.dart';
-import 'package:portfolio/components/tags.dart';
-import 'package:portfolio/pages/projects/detail/components/attachments.dart';
-import 'package:portfolio/pages/projects/detail/components/header.dart';
+import 'package:portfolio/pages/projects/detail/components/article.dart';
 import 'package:portfolio/providers/config.dart';
 import 'package:ui/ui.dart';
 
@@ -54,22 +51,7 @@ class ProjectDetailPage extends StatelessComponent {
           ),
         ],
       ),
-      article(classes: 'prose flex flex-col gap-2 max-w-full', [
-        ProjectHeader(project: project),
-        if (project.files != null && project.files!.isNotEmpty)
-          ProjectAttachments(files: project.files!),
-        if (project.image != null)
-          figure([
-            Image(
-              classes: 'max-h-96 w-full object-contain',
-              src: project.image!,
-              alt: '${project.title} image',
-              attributes: const {'fetchpriority': 'high'},
-            ),
-          ]),
-        MarkdownArticle(content: project.content),
-        Tags(classes: 'not-prose', project.tags),
-      ]),
+      ProjectArticle(project: project),
       nav(classes: 'flex justify-center', [
         Link(
           classes: buttonVariants(

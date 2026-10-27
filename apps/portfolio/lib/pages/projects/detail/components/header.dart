@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:portfolio/pages/projects/detail/components/attachments.dart';
 import 'package:ui/ui.dart';
 
 class ProjectHeader extends StatelessComponent {
@@ -10,7 +11,7 @@ class ProjectHeader extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return header(classes: 'not-prose flex flex-col gap-1', [
+    return header(classes: 'flex flex-col gap-1', [
       div(classes: 'flex items-center gap-2', [
         svg(
           classes: 'size-3 shrink-0',
@@ -39,7 +40,11 @@ class ProjectHeader extends StatelessComponent {
         const div(classes: 'flex-1', []),
         span(classes: 'font-light text-sm', [.text(project.year.toString())]),
       ]),
-      h5(classes: 'font-light text-sm', [.text(project.introduction)]),
+      div(classes: 'flex items-center justify-between gap-2', [
+        h5(classes: 'font-light text-sm', [.text(project.introduction)]),
+        if (project.files != null && project.files!.isNotEmpty)
+          ProjectAttachments(files: project.files!),
+      ]),
     ]);
   }
 }
