@@ -36,20 +36,19 @@ class Resume extends StatelessComponent {
     iframe.style.height = '0';
     iframe.style.border = '0';
     iframe.src = '${window.location.origin}$path';
+
     iframe.onLoad.listen((_) {
       final printWindow = iframe.contentWindow;
       if (printWindow == null) return;
 
+      final closePrint = () {
+        document.body?.removeChild(iframe);
+      }.toJS;
       printWindow
+        ..onbeforeunload = closePrint
+        ..onafterprint = closePrint
         ..focus()
         ..print();
-      window.setTimeout(
-        () {
-          document.body?.removeChild(iframe);
-        }.toJS,
-        null,
-        1000,
-      );
     });
 
     document.body?.appendChild(iframe);
