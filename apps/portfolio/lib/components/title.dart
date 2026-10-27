@@ -24,7 +24,7 @@ class Title extends StatelessComponent {
         replace: true,
         child: h2(
           classes: cn([
-            'font-semibold text-primary',
+            'font-semibold text-primary text-center',
             if (size == TitleSize.large) 'text-7xl' else 'text-4xl',
           ]),
           [
