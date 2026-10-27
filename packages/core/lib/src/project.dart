@@ -15,6 +15,7 @@ class Project with ProjectMappable {
     required this.order,
     required this.repo,
     required this.color,
+    required this.url,
     required this.image,
     required this.tags,
     required this.files,
@@ -28,6 +29,7 @@ class Project with ProjectMappable {
   final int order;
   final String? repo;
   final String color;
+  final String? url;
   final String? image;
   final List<String> tags;
   final List<File>? files;

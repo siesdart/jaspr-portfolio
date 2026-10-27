@@ -6,6 +6,7 @@ year: 2020
 order: 1
 repo: sparcs-kaist/otl-app
 color: 00B4AB
+url: https://play.google.com/store/apps/details?id=org.sparcs.otlplus
 image: projects/otl.webp
 tags: [Dart, Flutter, Provider]
 ---

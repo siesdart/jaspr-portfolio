@@ -6,6 +6,7 @@ year: 2019
 order: 1
 repo: siesdart/KAIST_GenChem
 color: 00B4AB
+url: https://play.google.com/store/apps/details?id=me.blog.ghwhsbsb123.gencheminkaist
 image: projects/genchem.png
 tags: [Dart, Flutter, Riverpod, Firebase]
 ---

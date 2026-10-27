@@ -40,6 +40,8 @@ class ProjectMapper extends ClassMapperBase<Project> {
   static const Field<Project, String> _f$repo = Field('repo', _$repo);
   static String _$color(Project v) => v.color;
   static const Field<Project, String> _f$color = Field('color', _$color);
+  static String? _$url(Project v) => v.url;
+  static const Field<Project, String> _f$url = Field('url', _$url);
   static String? _$image(Project v) => v.image;
   static const Field<Project, String> _f$image = Field('image', _$image);
   static List<String> _$tags(Project v) => v.tags;
@@ -58,6 +60,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
     #order: _f$order,
     #repo: _f$repo,
     #color: _f$color,
+    #url: _f$url,
     #image: _f$image,
     #tags: _f$tags,
     #files: _f$files,
@@ -73,6 +76,7 @@ class ProjectMapper extends ClassMapperBase<Project> {
       order: data.dec(_f$order),
       repo: data.dec(_f$repo),
       color: data.dec(_f$color),
+      url: data.dec(_f$url),
       image: data.dec(_f$image),
       tags: data.dec(_f$tags),
       files: data.dec(_f$files),
@@ -147,6 +151,7 @@ abstract class ProjectCopyWith<$R, $In extends Project, $Out>
     int? order,
     String? repo,
     String? color,
+    String? url,
     String? image,
     List<String>? tags,
     List<File>? files,
@@ -188,6 +193,7 @@ class _ProjectCopyWithImpl<$R, $Out>
     int? order,
     Object? repo = $none,
     String? color,
+    Object? url = $none,
     Object? image = $none,
     List<String>? tags,
     Object? files = $none,
@@ -201,6 +207,7 @@ class _ProjectCopyWithImpl<$R, $Out>
       if (order != null) #order: order,
       if (repo != $none) #repo: repo,
       if (color != null) #color: color,
+      if (url != $none) #url: url,
       if (image != $none) #image: image,
       if (tags != null) #tags: tags,
       if (files != $none) #files: files,
@@ -216,6 +223,7 @@ class _ProjectCopyWithImpl<$R, $Out>
     order: data.get(#order, or: $value.order),
     repo: data.get(#repo, or: $value.repo),
     color: data.get(#color, or: $value.color),
+    url: data.get(#url, or: $value.url),
     image: data.get(#image, or: $value.image),
     tags: data.get(#tags, or: $value.tags),
     files: data.get(#files, or: $value.files),

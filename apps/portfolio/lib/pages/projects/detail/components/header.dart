@@ -37,6 +37,17 @@ class ProjectHeader extends StatelessComponent {
                 'https://img.shields.io/github/stars/${project.repo}?style=flat',
             alt: 'github stars',
           ),
+        if (project.url != null)
+          a(
+            classes: 'transition-opacity hover:opacity-80',
+            href: project.url!,
+            target: .blank,
+            attributes: {
+              'aria-label': '${project.title} website',
+              'rel': 'noopener noreferrer',
+            },
+            const [Icon('external-link', classes: 'size-6 stroke-foreground')],
+          ),
         const div(classes: 'flex-1', []),
         span(classes: 'font-light text-sm', [.text(project.year.toString())]),
       ]),
