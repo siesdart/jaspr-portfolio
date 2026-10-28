@@ -27,7 +27,7 @@ tags: [TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]
 
 - 프로젝트 수행 당시는 아직 LLM 초창기라 활용에 신중했기에 사용하지 않았습니다.
 
-## 4. 핵심 기술적 의사결정 및 문제 해결
+## 4. 핵심 의사결정 및 문제 해결
 
 ### 1) Node.js Transform 기반 스트림 처리 파이프라인 설계
 
