@@ -37,7 +37,7 @@ class Title extends StatelessComponent {
       ),
       h3(
         classes: cn([
-          'font-light text-muted-foreground',
+          'text-muted-foreground',
           if (size == TitleSize.large)
             'mt-2 text-end text-xl'
           else

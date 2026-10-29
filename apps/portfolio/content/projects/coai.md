@@ -25,7 +25,7 @@ tags: [TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]
   
 ## 3. LLM 활용 방향 및 범위
 
-- 프로젝트 수행 당시는 아직 LLM 초창기라 활용에 신중했기에 사용하지 않았습니다.
+- 서비스 자체는 LangChain 및 OpenAI API를 연동하는 플랫폼이었으나, 프로젝트 수행 당시는 LLM 초창기였기에 코드 작성 및 설계는 LLM 활용 없이 직접 진행하였습니다.
 
 ## 4. 핵심 의사결정 및 문제 해결
 
