@@ -1,4 +1,4 @@
-<div class="not-prose relative w-full flex flex-col items-center gap-12 md:block md:h-[750px]">
+<div class="not-prose relative w-full flex flex-col items-center gap-12 md:block md:h-[750px] print:hidden">
   <div class="flex flex-col items-center gap-4 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
     <span class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Language</span>
     <div class="flex flex-wrap justify-center gap-3 max-w-[120px] lg:max-w-[180px]">
