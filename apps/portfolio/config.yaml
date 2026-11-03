@@ -1,14 +1,11 @@
 title: siesdart.fly.dev
-description: 자신만의 철학을 바탕으로 집요하게 고민하는 개발자
+description: 과정에 있어 집요하게 고민하고 설계하는 개발자
 url: https://siesdart.fly.dev
 locale: ko_KR
 name: 박현우
 site:
   - title: siesdart
     url: https://github.com/siesdart
-    icon: github
-  - title: (구) Winrobrine
-    url: https://github.com/Winrobrine-zz
     icon: github
   - title: LinkedIn
     url: https://www.linkedin.com/in/현우-박-3380b4342
@@ -19,7 +16,7 @@ education:
   - period: 2019-03 ~ 2027-02(예정)
     imageUrl: icons/kaist.svg
     title: 한국과학기술원(KAIST)
-    content: 전산학부 · 기술경영학부 학사
+    content: 전산학부 · 기술경영학부 학사[2026-12-21부터 풀타임 입사 가능]
 award:
   - period: "2025.01"
     imageUrl: icons/toeic.svg

@@ -12,15 +12,18 @@ class Header extends StatelessComponent {
       classes:
           'grid grid-cols-1 place-items-center gap-y-1 px-6 lg:grid-rows-[auto] lg:grid-cols-[14rem_auto] lg:place-items-start lg:gap-x-8 lg:px-8',
       [
-        div(classes: 'w-56 lg:fixed lg:top-8 lg:row-start-2 lg:z-20', [
-          Image(
-            classes:
-                'aspect-square size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
-            src: 'profile.jpg',
-            alt: 'profile image',
-            attributes: {'fetchpriority': 'high'},
-          ),
-        ]),
+        div(
+          classes: 'w-56 lg:fixed lg:top-8 lg:row-start-2 lg:z-20 print:hidden',
+          [
+            Image(
+              classes:
+                  'aspect-square size-32 mx-auto object-cover overflow-hidden rounded-full lg:size-48',
+              src: 'profile.jpg',
+              alt: 'profile image',
+              attributes: {'fetchpriority': 'high'},
+            ),
+          ],
+        ),
         Title(classes: 'mx-auto lg:hidden', size: TitleSize.small),
       ],
     );
