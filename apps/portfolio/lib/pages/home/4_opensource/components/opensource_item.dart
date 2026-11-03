@@ -1,7 +1,7 @@
 import 'package:core/core.dart';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:portfolio/pages/home/5_opensource/components/contribution_item.dart';
+import 'package:portfolio/pages/home/4_opensource/components/contribution_item.dart';
 import 'package:ui/ui.dart';
 
 class OpensourceItem extends StatelessComponent {

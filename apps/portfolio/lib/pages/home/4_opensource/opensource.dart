@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_riverpod/jaspr_riverpod.dart';
-import 'package:portfolio/pages/home/5_opensource/components/opensource_item.dart';
+import 'package:portfolio/pages/home/4_opensource/components/opensource_item.dart';
 import 'package:portfolio/providers/content.dart';
 
 class Opensource extends StatelessComponent {
