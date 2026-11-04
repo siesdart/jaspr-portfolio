@@ -7,7 +7,7 @@ order: 2
 repo: estherjsong/madweek4
 color: 3178C6
 image: projects/coai.png
-tags: [TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]
+tags: [HTML, CSS, JavaScript, React, TypeScript, Express, PostgreSQL, Drizzle ORM, LangChain]
 ---
 
 ## 1. 프로젝트 개요
