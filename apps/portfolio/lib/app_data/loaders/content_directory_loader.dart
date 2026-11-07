@@ -65,7 +65,10 @@ class ContentDirectoryLoader implements AppDataLoader<Content> {
     try {
       final files = await directory
           .list()
-          .where((entry) => entry is io.File)
+          .where(
+            (entry) =>
+                entry is io.File && !p.basename(entry.path).startsWith('-'),
+          )
           .cast<io.File>()
           .toList();
       final values = await Future.wait(
