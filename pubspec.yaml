@@ -8,7 +8,6 @@ workspace:
   - apps/portfolio
   - packages/core
   - packages/ui
-  - packages/features/resume
 
 dev_dependencies:
   melos: ^8.9.0

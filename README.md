@@ -16,7 +16,7 @@ This project is a personal portfolio website designed to be clean, scalable, and
 - **Content-Driven**: Portfolio content such as projects, careers, and skills are managed through simple Markdown and YAML files, allowing for easy updates without touching the Dart source code.
 - **PDF Resume Generation**: Includes a feature to dynamically generate a downloadable PDF version of the resume from the same content source.
 - **Reusable UI Components**: A dedicated `ui` package provides a library of reusable components, ensuring a consistent design system across the application.
-- **Clean Architecture**: Follows a clean architecture with a clear separation of concerns between data models (`core`), features (`features/*`), UI components (`ui`), and the main application (`apps/portfolio`).
+- **Clean Architecture**: Follows a clean architecture with a clear separation of concerns between data models (`core`), UI components (`ui`), and the main application (`apps/portfolio`).
 - **AI Agent Harness**: Ships with a multi-agent AI harness (powered by [Antigravity](https://antigravity.google)) for analyzing and refining the resume content — making this more than just a static portfolio site.
 
 ## 📂 Project Structure
@@ -29,8 +29,6 @@ The project is a monorepo with the following structure:
 │   └── portfolio/      # The main Jaspr web application
 ├── packages
 │   ├── core/           # Core data models and business logic
-│   ├── features
-│   │   └── resume/     # Logic for PDF resume generation
 │   └── ui/             # Reusable UI components
 └── pubspec.yaml        # Workspace configuration (Melos)
 ```
