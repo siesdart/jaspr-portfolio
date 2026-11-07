@@ -31,8 +31,8 @@ class Section extends StatelessComponent {
           [.text(title)],
         ),
       ]),
-      if (child case final content?) div([content]),
-      if (children case final items?) ul(classes: 'space-y-8', items),
+      ?child,
+      if (children case final items?) ul(classes: 'space-y-6', items),
     ]);
   }
 }

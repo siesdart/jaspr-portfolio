@@ -21,7 +21,7 @@ class MarkdownArticle extends StatelessComponent {
   Component build(BuildContext context) {
     return article(
       classes: cn([
-        'prose max-w-full prose-headings:my-4 prose-hr:my-8',
+        'prose max-w-full prose-headings:my-4 prose-hr:my-8 prose-ul:my-0 prose-p:my-3',
         classes,
       ]),
       [
