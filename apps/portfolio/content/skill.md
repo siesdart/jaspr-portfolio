@@ -1,10 +1,3 @@
-**Core Expertise (Frontend)**
-
-- **Languages**: HTML5/CSS3, JavaScript, TypeScript, Dart
-- **Frameworks & Libraries**: React, Next.js, Jaspr, Tailwind CSS, shadcn/ui, Zustand, TanStack Query, TanStack Router, Storybook
-- **AI Tooling**: Claude Code, Codex, Antigravity, Agent Skills, MCP
-
-**Secondary**
-
-- **Desktop & Mobile**: C#/WPF, Dart/Flutter
-- **Backend**: Express
+- **Languages**: HTML5, CSS3, JavaScript, TypeScript, C#, Dart
+- **Frameworks & Libraries**: React, Next.js, WPF, Flutter, Jaspr, Tailwind CSS, shadcn/ui, Zustand, TanStack Query, TanStack Router, Storybook, Turborepo
+- **AI Tool**: Claude Code, Codex, Antigravity, Agent Skills, MCP
